@@ -4,12 +4,14 @@
     "edition": "2024",
     "name": "Acolyte",
     "source": {
-      "book": "PHB2024"
+      "book": "PHB2024",
+      "page": 178
     },
     "origin": "seed",
     "schemaVersion": 1,
     "kind": "background",
     "data": {
+      "description": "You devoted yourself to service in a temple, either nestled in a town or secluded in a sacred grove. There you performed rites in honor of a god or pantheon. You served under a priest and studied religion. Thanks to your priest's instruction and your own devotion, you also learned how to channel a modicum of divine power in service to your place of worship and the people who prayed there.",
       "skillProficiencies": [
         "insight",
         "religion"
@@ -17,7 +19,13 @@
       "toolProficiencies": [
         "tool-calligraphers-supplies"
       ],
-      "equipment": [],
+      "equipment": [
+        "calligraphers-supplies",
+        "book",
+        "holy-water",
+        "parchment",
+        "robe"
+      ],
       "abilityScoreOptions": [
         "int",
         "wis",
@@ -27,16 +35,84 @@
     }
   },
   {
-    "id": "2024/background/criminal",
+    "id": "2024/background/artisan",
     "edition": "2024",
-    "name": "Criminal",
+    "name": "Artisan",
     "source": {
-      "book": "PHB2024"
+      "book": "PHB2024",
+      "page": 178
     },
     "origin": "seed",
     "schemaVersion": 1,
     "kind": "background",
     "data": {
+      "description": "You began mopping floors and scrubbing counters in an artisan's workshop for a few coppers per day as soon as you were strong enough to carry a bucket. When you were old enough to apprentice, you learned to create basic crafts of your own, as well as how to sweet-talk the occasional demanding customer.\n\nYour trade demands both patience and a good eye, and you have developed both. You know what quality work looks like, and you know how to talk to the people who pay for it.",
+      "skillProficiencies": [
+        "investigation",
+        "persuasion"
+      ],
+      "toolProficiencies": [
+        "tool-artisans-tools"
+      ],
+      "equipment": [
+        "smiths-tools",
+        "pouch",
+        "clothes-travelers"
+      ],
+      "abilityScoreOptions": [
+        "str",
+        "dex",
+        "int"
+      ],
+      "grantedFeatRef": "2024/feat/extracted-crafter"
+    }
+  },
+  {
+    "id": "2024/background/charlatan",
+    "edition": "2024",
+    "name": "Charlatan",
+    "source": {
+      "book": "PHB2024",
+      "page": 179
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "Once you were old enough to order an ale, you soon had a favorite stool in every tavern within ten miles of where you were born. As you traveled the circuit from public house to watering hole, you learned to prey on unfortunates who were in the market for a comforting lie or two — a lost heirloom that could be recovered for a modest fee, or a miracle tonic that cured everything but the ailment it was sold for.\n\nYou are a master of the well-timed lie and the forged document, and you have rarely stayed anywhere long enough to be held to account for either.",
+      "skillProficiencies": [
+        "deception",
+        "sleightOfHand"
+      ],
+      "toolProficiencies": [
+        "tool-forgery-kit"
+      ],
+      "equipment": [
+        "forgery-kit",
+        "clothes-fine",
+        "pouch"
+      ],
+      "abilityScoreOptions": [
+        "dex",
+        "con",
+        "cha"
+      ],
+      "grantedFeatRef": "2024/feat/skilled"
+    }
+  },
+  {
+    "id": "2024/background/criminal",
+    "edition": "2024",
+    "name": "Criminal",
+    "source": {
+      "book": "PHB2024",
+      "page": 179
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You learned to earn your coin in dark alleyways, cutting purses or burgling warehouses. Perhaps you were part of a small gang of like-minded wrongdoers who looked out for each other. Or maybe you were a lone wolf, fending for yourself against the local thieves' guild and more fearsome lawbreakers.\n\nEither way, you learned early that the surest way to survive is to see trouble coming before it sees you.",
       "skillProficiencies": [
         "sleightOfHand",
         "stealth"
@@ -44,7 +120,12 @@
       "toolProficiencies": [
         "tool-thieves-tools"
       ],
-      "equipment": [],
+      "equipment": [
+        "thieves-tools",
+        "crowbar",
+        "clothes-travelers",
+        "pouch"
+      ],
       "abilityScoreOptions": [
         "dex",
         "con",
@@ -54,16 +135,259 @@
     }
   },
   {
-    "id": "2024/background/sage",
+    "id": "2024/background/entertainer",
     "edition": "2024",
-    "name": "Sage",
+    "name": "Entertainer",
     "source": {
-      "book": "PHB2024"
+      "book": "PHB2024",
+      "page": 179
     },
     "origin": "seed",
     "schemaVersion": 1,
     "kind": "background",
     "data": {
+      "description": "You spent much of your youth following roving fairs and carnivals, performing odd jobs for musicians and acrobats in exchange for lessons. You may have learned to walk a tightrope, juggle knives, or coax a crowd into silence with nothing but a well-held note.\n\nWherever your talents lie, you know how to read a room — and how to keep an audience's attention long after they meant to leave.",
+      "skillProficiencies": [
+        "acrobatics",
+        "performance"
+      ],
+      "toolProficiencies": [
+        "tool-musical-instrument"
+      ],
+      "equipment": [
+        "lute",
+        "costume",
+        "mirror",
+        "perfume",
+        "pouch"
+      ],
+      "abilityScoreOptions": [
+        "str",
+        "dex",
+        "cha"
+      ],
+      "grantedFeatRef": "2024/feat/musician"
+    }
+  },
+  {
+    "id": "2024/background/farmer",
+    "edition": "2024",
+    "name": "Farmer",
+    "source": {
+      "book": "PHB2024",
+      "page": 180
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You grew up close to the land. Years tending animals and crops gave you patience, a strong back, and an eye for weather that no almanac can teach. You know the rhythm of the seasons and the value of an honest day's labor.\n\nWhat drew you away from the fields? A wandering stranger's stories, a bad harvest, or simply the certainty that the horizon held more than the next furrow.",
+      "skillProficiencies": [
+        "animalHandling",
+        "nature"
+      ],
+      "toolProficiencies": [
+        "tool-carpenters-tools"
+      ],
+      "equipment": [
+        "carpenters-tools",
+        "healers-kit",
+        "pot-iron",
+        "shovel",
+        "pouch"
+      ],
+      "abilityScoreOptions": [
+        "str",
+        "con",
+        "wis"
+      ],
+      "grantedFeatRef": "2024/feat/tough"
+    }
+  },
+  {
+    "id": "2024/background/guard",
+    "edition": "2024",
+    "name": "Guard",
+    "source": {
+      "book": "PHB2024",
+      "page": 180
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "Your feet ache when you remember the countless hours you spent at your post in the tower. You were second watch on the wall, and you kept the people of your city safe — pacing the parapet through long cold nights, calling out the hours, and watching the road for anything that moved when it shouldn't.\n\nYou learned to stay awake, stay alert, and notice the one detail that was out of place.",
+      "skillProficiencies": [
+        "athletics",
+        "perception"
+      ],
+      "toolProficiencies": [
+        "tool-gaming-set"
+      ],
+      "equipment": [
+        "dice",
+        "rope",
+        "lantern-hooded",
+        "pouch"
+      ],
+      "abilityScoreOptions": [
+        "str",
+        "int",
+        "wis"
+      ],
+      "grantedFeatRef": "2024/feat/alert"
+    }
+  },
+  {
+    "id": "2024/background/guide",
+    "edition": "2024",
+    "name": "Guide",
+    "source": {
+      "book": "PHB2024",
+      "page": 180
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You came of age outdoors, far from settled lands. Your home was anywhere you chose to spread your bedroll. There are wilds to explore, and you have the skills to survive them — reading a trail, finding water, and moving quietly enough that the things which hunt there never notice you pass.\n\nSome part of the natural world has taken an interest in you, and a trace of its magic answers when you call.",
+      "skillProficiencies": [
+        "stealth",
+        "survival"
+      ],
+      "toolProficiencies": [
+        "tool-cartographers-tools"
+      ],
+      "equipment": [
+        "cartographer-tools",
+        "bedroll",
+        "rope",
+        "tent",
+        "pouch"
+      ],
+      "abilityScoreOptions": [
+        "dex",
+        "con",
+        "wis"
+      ],
+      "grantedFeatRef": "2024/feat/magic-initiate"
+    }
+  },
+  {
+    "id": "2024/background/hermit",
+    "edition": "2024",
+    "name": "Hermit",
+    "source": {
+      "book": "PHB2024",
+      "page": 181
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You spent your early years secluded in a hut or monastery located far from settlements. In those days, your only companions were the creatures of the forest and those who would occasionally visit to bring news of the outside world and supplies.\n\nThe solitude allowed you to spend many hours pondering the mysteries of creation — and to learn which herbs mend a wound and which end a life.",
+      "skillProficiencies": [
+        "medicine",
+        "religion"
+      ],
+      "toolProficiencies": [
+        "tool-herbalism-kit"
+      ],
+      "equipment": [
+        "herbalism-kit",
+        "bedroll",
+        "book",
+        "lamp",
+        "pouch"
+      ],
+      "abilityScoreOptions": [
+        "con",
+        "wis",
+        "cha"
+      ],
+      "grantedFeatRef": "2024/feat/extracted-healer"
+    }
+  },
+  {
+    "id": "2024/background/merchant",
+    "edition": "2024",
+    "name": "Merchant",
+    "source": {
+      "book": "PHB2024",
+      "page": 181
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You were apprenticed to a trader, caravan master, or shopkeeper. For a time, you learned the value of a coin and the weight of a bargain. You might have wandered from town to town with a mule and a cart, or kept the ledgers of a busy storefront.\n\nYou know how to size up a stranger's purse and their intentions in the same glance, and how to walk away from a deal that isn't one.",
+      "skillProficiencies": [
+        "animalHandling",
+        "persuasion"
+      ],
+      "toolProficiencies": [
+        "tool-navigators-tools"
+      ],
+      "equipment": [
+        "navigators-tools",
+        "pouch",
+        "clothes-fine"
+      ],
+      "abilityScoreOptions": [
+        "con",
+        "int",
+        "cha"
+      ],
+      "grantedFeatRef": "2024/feat/lucky"
+    }
+  },
+  {
+    "id": "2024/background/noble",
+    "edition": "2024",
+    "name": "Noble",
+    "source": {
+      "book": "PHB2024",
+      "page": 181
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You were raised in a castle, surrounded by wealth, power, and privilege. Your family of minor aristocrats might have been elevated to the nobility recently or generations ago.\n\nEither way, you learned the etiquette of the court, the histories of the great houses, and the delicate art of getting what you want from people who outrank you.",
+      "skillProficiencies": [
+        "history",
+        "persuasion"
+      ],
+      "toolProficiencies": [
+        "tool-gaming-set"
+      ],
+      "equipment": [
+        "dice",
+        "clothes-fine",
+        "perfume",
+        "pouch"
+      ],
+      "abilityScoreOptions": [
+        "str",
+        "int",
+        "cha"
+      ],
+      "grantedFeatRef": "2024/feat/skilled"
+    }
+  },
+  {
+    "id": "2024/background/sage",
+    "edition": "2024",
+    "name": "Sage",
+    "source": {
+      "book": "PHB2024",
+      "page": 182
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You spent your formative years traveling between manors and monasteries, performing odd jobs and errands for those who could pay. Your travels brought you into contact with libraries and the scholars who tended them.\n\nEvery hour you could steal went into their books. You learned to chase a question through a stack of crumbling volumes — and picked up a spell or two along the way.",
       "skillProficiencies": [
         "arcana",
         "history"
@@ -71,7 +395,13 @@
       "toolProficiencies": [
         "tool-calligraphers-supplies"
       ],
-      "equipment": [],
+      "equipment": [
+        "calligraphers-supplies",
+        "book",
+        "parchment",
+        "robe",
+        "pouch"
+      ],
       "abilityScoreOptions": [
         "con",
         "int",
@@ -81,28 +411,141 @@
     }
   },
   {
-    "id": "2024/background/soldier",
+    "id": "2024/background/sailor",
     "edition": "2024",
-    "name": "Soldier",
+    "name": "Sailor",
     "source": {
-      "book": "PHB2024"
+      "book": "PHB2024",
+      "page": 182
     },
     "origin": "seed",
     "schemaVersion": 1,
     "kind": "background",
     "data": {
+      "description": "You lived as a seafarer, wind at your back and decks swaying beneath your feet. You have perched on barstools in more ports of call than you can remember, faced mighty storms, and swapped stories with folk who live beneath the waves.\n\nYou can climb rigging in the dark, hold your footing on a pitching deck, and handle yourself when a disagreement in a dockside tavern turns physical.",
+      "skillProficiencies": [
+        "acrobatics",
+        "perception"
+      ],
+      "toolProficiencies": [
+        "tool-navigators-tools"
+      ],
+      "equipment": [
+        "navigators-tools",
+        "rope",
+        "dagger",
+        "pouch"
+      ],
+      "abilityScoreOptions": [
+        "str",
+        "dex",
+        "wis"
+      ],
+      "grantedFeatRef": "2024/feat/extracted-tavern-brawler"
+    }
+  },
+  {
+    "id": "2024/background/scribe",
+    "edition": "2024",
+    "name": "Scribe",
+    "source": {
+      "book": "PHB2024",
+      "page": 182
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You spent formative years in a scriptorium, a monastery, or a government office, learning to write with a clear hand and to copy documents without error. Perhaps you transcribed dry ledgers, or illuminated manuscripts, or drafted correspondence for someone who could not read.\n\nThe work taught you precision and patience, and an eye that catches the one altered word in a page of text.",
+      "skillProficiencies": [
+        "investigation",
+        "perception"
+      ],
+      "toolProficiencies": [
+        "tool-calligraphers-supplies"
+      ],
+      "equipment": [
+        "calligraphers-supplies",
+        "ink",
+        "ink-pen",
+        "parchment",
+        "lamp",
+        "pouch"
+      ],
+      "abilityScoreOptions": [
+        "dex",
+        "int",
+        "wis"
+      ],
+      "grantedFeatRef": "2024/feat/skilled"
+    }
+  },
+  {
+    "id": "2024/background/soldier",
+    "edition": "2024",
+    "name": "Soldier",
+    "source": {
+      "book": "PHB2024",
+      "page": 183
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You began training for war as soon as you reached adulthood and carry precious few memories of a life before you took up arms. Battle is in your blood. Sometimes you catch yourself reflexively performing the basic fighting exercises you learned first.\n\nEventually, you put that training to use on the battlefield, protecting the realm by ending lives.",
       "skillProficiencies": [
         "athletics",
         "intimidation"
       ],
-      "toolProficiencies": [],
-      "equipment": [],
+      "toolProficiencies": [
+        "tool-gaming-set"
+      ],
+      "equipment": [
+        "dice",
+        "healers-kit",
+        "clothes-travelers",
+        "pouch"
+      ],
       "abilityScoreOptions": [
         "str",
         "dex",
         "con"
       ],
       "grantedFeatRef": "2024/feat/savage-attacker"
+    }
+  },
+  {
+    "id": "2024/background/wayfarer",
+    "edition": "2024",
+    "name": "Wayfarer",
+    "source": {
+      "book": "PHB2024",
+      "page": 183
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You grew up on the streets surrounded by similarly ill-fated castoffs, some of them friends and some of them rivals. You slept where you could and did odd jobs for food. At times, when the hunger became unbearable, you resorted to theft — but you always found ways to make it up to the people whose things you took.\n\nYou never had much, but you always had your wits, your feet, and an uncanny sense for when your luck was about to turn.",
+      "skillProficiencies": [
+        "insight",
+        "stealth"
+      ],
+      "toolProficiencies": [
+        "tool-thieves-tools"
+      ],
+      "equipment": [
+        "thieves-tools",
+        "bedroll",
+        "dagger",
+        "pouch"
+      ],
+      "abilityScoreOptions": [
+        "dex",
+        "wis",
+        "cha"
+      ],
+      "grantedFeatRef": "2024/feat/lucky"
     }
   }
 ]
