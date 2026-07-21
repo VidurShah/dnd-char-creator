@@ -10,6 +10,7 @@
     "schemaVersion": 1,
     "kind": "class",
     "data": {
+      "description": "Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are an embodiment of nature's resilience, cunning, and fury. They claim no mastery over nature; instead they see themselves as extensions of its indomitable will.",
       "hitDie": "d8",
       "savingThrowProficiencies": [
         "int",
@@ -824,7 +825,7 @@
     "schemaVersion": 1,
     "kind": "feature",
     "data": {
-      "description": "You are immune to the Poisoned condition, and you have Resistance to a damage type associated with your current land choice in the Circle Spells feature, as shown in the Nature's Ward table.\nNature\u2019s Ward\nLand Type Resistance\nArid Fire\nPolar Cold\nLand Type Resistance\nTemperate Lightning\nTropical Poison"
+      "description": "You are immune to the Poisoned condition, and you have Resistance to a damage type associated with your current land choice in the Circle Spells feature, as shown in the Nature's Ward table.\nNature’s Ward\nLand Type Resistance\nArid Fire\nPolar Cold\nLand Type Resistance\nTemperate Lightning\nTropical Poison"
     }
   },
   {

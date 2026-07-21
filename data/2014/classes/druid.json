@@ -10,6 +10,7 @@
     "schemaVersion": 1,
     "kind": "class",
     "data": {
+      "description": "Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are an embodiment of nature's resilience, cunning, and fury. They claim no mastery over nature; instead they see themselves as extensions of its indomitable will.",
       "hitDie": "d8",
       "savingThrowProficiencies": [
         "int",

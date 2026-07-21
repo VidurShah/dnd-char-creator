@@ -10,6 +10,7 @@
     "schemaVersion": 1,
     "kind": "class",
     "data": {
+      "description": "Every fighter can swing an axe, fence with a rapier, wield a longsword, or blast foes at range with a crossbow. Likewise, a fighter is adept with shield and armor. Beyond that basic degree of familiarity, each fighter specializes in a certain style of combat all their own.",
       "hitDie": "d10",
       "savingThrowProficiencies": [
         "str",

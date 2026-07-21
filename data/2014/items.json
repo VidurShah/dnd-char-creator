@@ -18,7 +18,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": ""
+      "description": "A frame of beads on rods, used for rapid arithmetic. Favored by merchants, quartermasters, and anyone who needs to tally a hoard."
     }
   },
   {
@@ -150,7 +150,7 @@
       },
       "weight": 10,
       "attunement": false,
-      "description": ""
+      "description": "A day's ration of grain and hay for a mount or pack animal. Beasts that go unfed cannot travel at full pace for long."
     }
   },
   {
@@ -194,7 +194,7 @@
       },
       "weight": 1,
       "attunement": false,
-      "description": ""
+      "description": "A fletched shaft loosed from a bow. Ammunition can be recovered after a battle — roughly half of what was fired is usually salvageable."
     }
   },
   {
@@ -202,7 +202,7 @@
     "edition": "2014",
     "name": "Backpack",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -216,7 +216,7 @@
       },
       "weight": 5,
       "attunement": false,
-      "description": ""
+      "description": "A Backpack holds up to 30 pounds within 1 cubic foot. It can also serve as a saddlebag."
     }
   },
   {
@@ -532,7 +532,7 @@
     "edition": "2014",
     "name": "Barrel",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -546,7 +546,7 @@
       },
       "weight": 70,
       "attunement": false,
-      "description": ""
+      "description": "A Barrel holds up to 40 gallons of liquid or up to 4 cubic feet of dry goods."
     }
   },
   {
@@ -554,7 +554,7 @@
     "edition": "2014",
     "name": "Basket",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -568,7 +568,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": ""
+      "description": "A Basket holds up to 40 pounds within 2 cubic feet."
     }
   },
   {
@@ -590,7 +590,7 @@
       },
       "weight": 4,
       "attunement": false,
-      "description": "",
+      "description": "A single-headed axe balanced for war rather than woodcutting. Can be swung one-handed or gripped in both for heavier blows.",
       "weapon": {
         "damageDice": "1d8",
         "damageType": "slashing",
@@ -610,7 +610,7 @@
     "edition": "2014",
     "name": "Bedroll",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -624,7 +624,7 @@
       },
       "weight": 7,
       "attunement": false,
-      "description": ""
+      "description": "A Bedroll sleeps one Small or Medium creature. While in a Bedroll, you automatically succeed on saving throws against extreme cold (see “Gameplay Toolbox”)."
     }
   },
   {
@@ -632,7 +632,7 @@
     "edition": "2014",
     "name": "Bell",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -646,7 +646,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": ""
+      "description": "When rung as a Utilize action, a Bell produces a sound that can be heard up to 60 feet away."
     }
   },
   {
@@ -668,7 +668,7 @@
       },
       "weight": 1,
       "attunement": false,
-      "description": ""
+      "description": "The headgear and mouthpiece used to steer a riding animal. Required, along with a saddle, to control a mount reliably."
     }
   },
   {
@@ -676,7 +676,7 @@
     "edition": "2014",
     "name": "Blanket",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -690,7 +690,7 @@
       },
       "weight": 3,
       "attunement": false,
-      "description": ""
+      "description": "While wrapped in a blanket, you have Advantage on saving throws against extreme cold (see “Gameplay Toolbox”)."
     }
   },
   {
@@ -756,7 +756,7 @@
       },
       "weight": 1,
       "attunement": false,
-      "description": "",
+      "description": "A slender tube that fires a needle on a puff of breath. Nearly silent, which is usually the whole point.",
       "weapon": {
         "damageDice": "1",
         "damageType": "piercing",
@@ -790,7 +790,7 @@
       },
       "weight": 1,
       "attunement": false,
-      "description": ""
+      "description": "A slender dart fired from a blowgun, easily concealed and often coated with poison."
     }
   },
   {
@@ -820,7 +820,7 @@
     "edition": "2014",
     "name": "Bottle, glass",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -834,7 +834,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": ""
+      "description": "A Glass Bottle holds up to 11/2 pints."
     }
   },
   {
@@ -856,7 +856,7 @@
       },
       "weight": 20,
       "attunement": false,
-      "description": "",
+      "description": "A fitted metal chest piece worn over leather, leaving the arms and legs free. Protects the vitals while allowing good mobility.",
       "armor": {
         "baseAc": 14,
         "addDexMod": true,
@@ -892,7 +892,7 @@
     "edition": "2014",
     "name": "Bucket",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -906,7 +906,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": ""
+      "description": "A Bucket holds up to half a cubic foot of contents."
     }
   },
   {
@@ -914,7 +914,7 @@
     "edition": "2014",
     "name": "Burglar's Pack",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -927,7 +927,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A Burglar's Pack contains the following items: Backpack, Ball Bearings, Bell, 10 Candles, Crowbar, Hooded Lantern, 7 flasks of Oil, 5 days of Rations, Rope, Tinderbox, and Waterskin."
     }
   },
   {
@@ -992,7 +992,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A pack animal bred for arid travel, able to carry a load for days between waterings. Slower than a horse, but far more forgiving of a dry road."
     }
   },
   {
@@ -1058,7 +1058,7 @@
       },
       "weight": 600,
       "attunement": false,
-      "description": ""
+      "description": "An enclosed four-wheeled vehicle drawn by draft animals, built for passengers rather than cargo. Comfortable, conspicuous, and expensive."
     }
   },
   {
@@ -1080,7 +1080,7 @@
       },
       "weight": 200,
       "attunement": false,
-      "description": ""
+      "description": "A two-wheeled vehicle pulled by a single draft animal, used to haul goods along roads and farm tracks."
     }
   },
   {
@@ -1212,7 +1212,7 @@
       },
       "weight": 55,
       "attunement": false,
-      "description": "",
+      "description": "A full suit of interlocking rings worn over quilted padding, covering the body and including gauntlets. Heavy, noisy, and genuinely protective.",
       "armor": {
         "baseAc": 16,
         "addDexMod": false,
@@ -1240,7 +1240,7 @@
       },
       "weight": 20,
       "attunement": false,
-      "description": "",
+      "description": "A shirt of interlocking metal rings worn between layers of clothing, concealable under a tunic.",
       "armor": {
         "baseAc": 13,
         "addDexMod": true,
@@ -1268,7 +1268,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": ""
+      "description": "A stick of soft white chalk. Adventurers use it to mark passages already explored — the difference between mapping a dungeon and wandering it twice."
     }
   },
   {
@@ -1290,7 +1290,7 @@
       },
       "weight": 100,
       "attunement": false,
-      "description": ""
+      "description": "A light two-wheeled vehicle drawn by one or more horses, fast over open ground and traditionally used in war and racing."
     }
   },
   {
@@ -1298,7 +1298,7 @@
     "edition": "2014",
     "name": "Chest",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -1312,7 +1312,7 @@
       },
       "weight": 25,
       "attunement": false,
-      "description": ""
+      "description": "A Chest holds up to 12 cubic feet of contents."
     }
   },
   {
@@ -1356,7 +1356,7 @@
       },
       "weight": 3,
       "attunement": false,
-      "description": ""
+      "description": "Ordinary garments of the sort worn by laborers and townsfolk. Unremarkable enough to draw no attention at all, which is occasionally the point."
     }
   },
   {
@@ -1378,7 +1378,7 @@
       },
       "weight": 4,
       "attunement": false,
-      "description": ""
+      "description": "Theatrical garments made to be seen from a distance — bright, exaggerated, and convincing under stage light if not close inspection."
     }
   },
   {
@@ -1386,7 +1386,7 @@
     "edition": "2014",
     "name": "Clothes, fine",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -1400,7 +1400,7 @@
       },
       "weight": 6,
       "attunement": false,
-      "description": ""
+      "description": "Fine Clothes are made of expensive fabrics and adorned with expertly crafted details. Some events and locations admit only people wearing these clothes."
     }
   },
   {
@@ -1408,7 +1408,7 @@
     "edition": "2014",
     "name": "Clothes, traveler's",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -1422,7 +1422,7 @@
       },
       "weight": 4,
       "attunement": false,
-      "description": ""
+      "description": "Traveler's Clothes are resilient garments designed for travel in various environments."
     }
   },
   {
@@ -1444,7 +1444,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": "",
+      "description": "A shaped length of hardwood. The simplest weapon there is, and available absolutely everywhere.",
       "weapon": {
         "damageDice": "1d4",
         "damageType": "bludgeoning",
@@ -1544,7 +1544,7 @@
       },
       "weight": 1.5,
       "attunement": false,
-      "description": ""
+      "description": "A short heavy quarrel fired from a crossbow, carried in a case at the hip."
     }
   },
   {
@@ -1566,7 +1566,7 @@
       },
       "weight": 3,
       "attunement": false,
-      "description": "",
+      "description": "A small crossbow that can be fired one-handed, favored by those who need a ranged weapon they can conceal.",
       "weapon": {
         "damageDice": "1d6",
         "damageType": "piercing",
@@ -1601,7 +1601,7 @@
       },
       "weight": 18,
       "attunement": false,
-      "description": "",
+      "description": "A large crossbow with tremendous stopping power, slow to crank back between shots.",
       "weapon": {
         "damageDice": "1d10",
         "damageType": "piercing",
@@ -1637,7 +1637,7 @@
       },
       "weight": 5,
       "attunement": false,
-      "description": "",
+      "description": "A light crossbow that trades raw power for a faster reload. Simple enough that almost anyone can use one.",
       "weapon": {
         "damageDice": "1d8",
         "damageType": "piercing",
@@ -1716,7 +1716,7 @@
       },
       "weight": 1,
       "attunement": false,
-      "description": "",
+      "description": "A short blade for thrusting, light enough to throw and small enough to hide. The most commonly carried weapon in the world.",
       "weapon": {
         "damageDice": "1d4",
         "damageType": "piercing",
@@ -1752,7 +1752,7 @@
       },
       "weight": 0.25,
       "attunement": false,
-      "description": "",
+      "description": "A weighted throwing spike, small enough to carry by the handful.",
       "weapon": {
         "damageDice": "1d4",
         "damageType": "piercing",
@@ -1794,7 +1794,7 @@
     "edition": "2014",
     "name": "Diplomat's Pack",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -1807,7 +1807,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A Diplomat's Pack contains the following items: Chest, Fine Clothes, Ink, 5 Ink Pens, Lamp, 2 Map or Scroll Cases, 4 flasks of Oil, 5 sheets of Paper, 5 sheets of Parchment, Perfume, and Tinderbox."
     }
   },
   {
@@ -1850,7 +1850,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A small, stubborn, and remarkably strong beast of burden. Carries more than its size suggests and eats less than a horse."
     }
   },
   {
@@ -1902,7 +1902,7 @@
     "edition": "2014",
     "name": "Dungeoneer's Pack",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -1915,7 +1915,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A Dungeoneer's Pack contains the following items: Backpack, Caltrops, Crowbar, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin."
     }
   },
   {
@@ -1936,7 +1936,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "An enormous beast of burden capable of hauling loads no horse could manage, used for heavy labor and, in some lands, for war."
     }
   },
   {
@@ -1979,7 +1979,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "Includes a backpack, a bedroll, two costumes, five candles, five days of rations, a waterskin, a disguise kit, and a little bag of sand or other stage props."
     }
   },
   {
@@ -1987,7 +1987,7 @@
     "edition": "2014",
     "name": "Explorer's Pack",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -2000,7 +2000,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "An Explorer’s Pack contains the following items: Backpack, Bedroll, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin."
     }
   },
   {
@@ -2044,7 +2044,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": "",
+      "description": "A spiked or weighted head on a chain, which swings around a defender's shield rather than into it.",
       "weapon": {
         "damageDice": "1d8",
         "damageType": "bludgeoning",
@@ -2075,7 +2075,7 @@
       },
       "weight": 1,
       "attunement": false,
-      "description": ""
+      "description": "A vessel for drink — a stoppered flask for the road, or a tankard for the tavern."
     }
   },
   {
@@ -2140,7 +2140,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A large oared warship with a shallow draft, crewed by dozens of rowers. Fast in calm water and formidable when it rams."
     }
   },
   {
@@ -2162,7 +2162,7 @@
       },
       "weight": 6,
       "attunement": false,
-      "description": "",
+      "description": "A long polearm with a single-edged blade at its end, used to strike from beyond an enemy's reach.",
       "weapon": {
         "damageDice": "1d10",
         "damageType": "slashing",
@@ -2205,7 +2205,7 @@
     "edition": "2014",
     "name": "Grappling hook",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -2219,7 +2219,7 @@
       },
       "weight": 4,
       "attunement": false,
-      "description": ""
+      "description": "As a Utilize action, you can throw the Grappling Hook at a railing, a ledge, or another catch within 50 feet of yourself, and the hook catches on if you succeed on a DC 13 Dexterity (Acrobatics) check. If you tied a Rope to the hook, you can then climb it."
     }
   },
   {
@@ -2241,7 +2241,7 @@
       },
       "weight": 7,
       "attunement": false,
-      "description": "",
+      "description": "An enormous two-handed axe. What it lacks in finesse it repays in devastating single blows.",
       "weapon": {
         "damageDice": "1d12",
         "damageType": "slashing",
@@ -2275,7 +2275,7 @@
       },
       "weight": 10,
       "attunement": false,
-      "description": "",
+      "description": "A massive two-handed bludgeon, often little more than a shaped tree limb.",
       "weapon": {
         "damageDice": "1d8",
         "damageType": "bludgeoning",
@@ -2308,7 +2308,7 @@
       },
       "weight": 6,
       "attunement": false,
-      "description": "",
+      "description": "A huge two-handed blade requiring room to swing and the strength to control it.",
       "weapon": {
         "damageDice": "2d6",
         "damageType": "slashing",
@@ -2342,7 +2342,7 @@
       },
       "weight": 6,
       "attunement": false,
-      "description": "",
+      "description": "A polearm combining an axe blade and a spike on a long haft — able to cut, thrust, and pull a rider from the saddle.",
       "weapon": {
         "damageDice": "1d10",
         "damageType": "slashing",
@@ -2377,7 +2377,7 @@
       },
       "weight": 40,
       "attunement": false,
-      "description": "",
+      "description": "Shaped metal plates covering most of the body, without the full leg protection of plate. Its bulk hampers any attempt at stealth.",
       "armor": {
         "baseAc": 15,
         "addDexMod": true,
@@ -2405,7 +2405,7 @@
       },
       "weight": 3,
       "attunement": false,
-      "description": ""
+      "description": "A simple carpenter's hammer, used for driving pitons and nails. Not built as a weapon, though it has served as one in desperate moments."
     }
   },
   {
@@ -2427,7 +2427,7 @@
       },
       "weight": 10,
       "attunement": false,
-      "description": ""
+      "description": "A heavy two-handed hammer for breaking stone and driving spikes. Slow to swing but very hard to argue with."
     }
   },
   {
@@ -2449,7 +2449,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": "",
+      "description": "A light axe balanced for one hand and for throwing.",
       "weapon": {
         "damageDice": "1d6",
         "damageType": "slashing",
@@ -2528,7 +2528,7 @@
       },
       "weight": 12,
       "attunement": false,
-      "description": "",
+      "description": "Crude armor of thick furs and pelts, common among barbaric tribes and among creatures with no access to smiths.",
       "armor": {
         "baseAc": 12,
         "addDexMod": true,
@@ -2599,7 +2599,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A heavy horse bred for pulling rather than speed, used with wagons, plows, and carriages."
     }
   },
   {
@@ -2620,7 +2620,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A saddle horse bred for endurance and pace, the standard mount for overland travel."
     }
   },
   {
@@ -2642,7 +2642,7 @@
       },
       "weight": 1,
       "attunement": false,
-      "description": ""
+      "description": "A sealed glass frame of running sand that measures a fixed interval — useful for timing watches, rituals, and spell durations."
     }
   },
   {
@@ -2686,7 +2686,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": ""
+      "description": "A stoppered bottle of black ink, enough for a great deal of writing. Essential for scribes, spellbooks, and forged documents alike."
     }
   },
   {
@@ -2694,7 +2694,7 @@
     "edition": "2014",
     "name": "Ink pen",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -2708,7 +2708,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": ""
+      "description": "Using Ink, an Ink Pen is used to write or draw."
     }
   },
   {
@@ -2730,7 +2730,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": "",
+      "description": "A light spear made to be thrown, carried several at a time.",
       "weapon": {
         "damageDice": "1d6",
         "damageType": "piercing",
@@ -2786,7 +2786,7 @@
       },
       "weight": 4,
       "attunement": false,
-      "description": ""
+      "description": "An earthenware vessel for carrying and pouring liquid."
     }
   },
   {
@@ -2829,7 +2829,7 @@
       },
       "weight": 25,
       "attunement": false,
-      "description": ""
+      "description": "A sturdy wooden ladder ten feet in length. Awkward to carry through a dungeon and invaluable once you need it."
     }
   },
   {
@@ -2873,7 +2873,7 @@
       },
       "weight": 6,
       "attunement": false,
-      "description": "",
+      "description": "A long spear used from horseback, devastating on the charge and unwieldy on foot.",
       "weapon": {
         "damageDice": "1d12",
         "damageType": "piercing",
@@ -2951,7 +2951,7 @@
       },
       "weight": 10,
       "attunement": false,
-      "description": "",
+      "description": "A breastplate and shoulder protectors of leather stiffened in boiling oil, with the rest left supple for movement.",
       "armor": {
         "baseAc": 11,
         "addDexMod": true,
@@ -3000,7 +3000,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": "",
+      "description": "A small balanced hammer that can be thrown as readily as swung.",
       "weapon": {
         "damageDice": "1d4",
         "damageType": "bludgeoning",
@@ -3079,7 +3079,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": "",
+      "description": "A tall bow of great draw weight and range, demanding years of training to use well.",
       "weapon": {
         "damageDice": "1d8",
         "damageType": "piercing",
@@ -3113,7 +3113,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A narrow oared vessel built for speed and shallow water, able to run right up onto a beach. Favored by raiders and coastal traders."
     }
   },
   {
@@ -3135,7 +3135,7 @@
       },
       "weight": 3,
       "attunement": false,
-      "description": "",
+      "description": "A straight double-edged blade, the classic knightly weapon. Can be gripped in one hand or two.",
       "weapon": {
         "damageDice": "1d8",
         "damageType": "slashing",
@@ -3213,7 +3213,7 @@
       },
       "weight": 4,
       "attunement": false,
-      "description": "",
+      "description": "A flanged metal head on a short haft, made to crush armor that a blade would only glance off.",
       "weapon": {
         "damageDice": "1d6",
         "damageType": "bludgeoning",
@@ -3311,7 +3311,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A large, loyal war dog trained to guard and to fight. Small folk sometimes ride them as mounts."
     }
   },
   {
@@ -3333,7 +3333,7 @@
       },
       "weight": 10,
       "attunement": false,
-      "description": "",
+      "description": "A massive two-handed hammer that delivers crushing force to anything it lands on.",
       "weapon": {
         "damageDice": "2d6",
         "damageType": "bludgeoning",
@@ -3389,7 +3389,7 @@
       },
       "weight": 0.5,
       "attunement": false,
-      "description": ""
+      "description": "A polished steel hand mirror. Used for signaling, for looking around corners, and for meeting the gaze of things you should not look at directly."
     }
   },
   {
@@ -3411,7 +3411,7 @@
       },
       "weight": 4,
       "attunement": false,
-      "description": "",
+      "description": "A spiked metal head on a shaft, combining the puncture of a pick with the impact of a mace.",
       "weapon": {
         "damageDice": "1d8",
         "damageType": "piercing",
@@ -3441,7 +3441,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A sure-footed hybrid of horse and donkey, prized for carrying heavy loads over rough mountain trails."
     }
   },
   {
@@ -3471,7 +3471,7 @@
     "edition": "2014",
     "name": "Net",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -3485,7 +3485,7 @@
       },
       "weight": 3,
       "attunement": false,
-      "description": ""
+      "description": "When you take the Attack action, you can replace one of your attacks with throwing a Net. Target a creature you can see within 15 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or have the Restrained condition until it escapes. The target succeeds automatically if it is Huge or larger.\nTo escape, the target or a creature within 5 feet of it must take an action to make a DC 10 Strength (Athletics) check, freeing the Restrained creature on a success. Destroying the Net (AC 10; 5 HP; Immunity to Bludgeoning, Poison, and Psychic damage) also frees the target, ending the effect."
     }
   },
   {
@@ -3551,7 +3551,7 @@
       },
       "weight": 8,
       "attunement": false,
-      "description": "",
+      "description": "Quilted layers of cloth and batting. Cheap and light, but it rustles — anyone sneaking in it is at a disadvantage.",
       "armor": {
         "baseAc": 11,
         "addDexMod": true,
@@ -3622,7 +3622,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": ""
+      "description": "A single sheet of fine paper — lighter and smoother than parchment, and more expensive."
     }
   },
   {
@@ -3644,7 +3644,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": ""
+      "description": "A single sheet of treated animal skin prepared for writing. Durable enough to survive centuries in a dry vault."
     }
   },
   {
@@ -3666,7 +3666,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": ""
+      "description": "A small vial of scented oil. Worn to impress, or to cover the smell of where you have just been."
     }
   },
   {
@@ -3688,7 +3688,7 @@
       },
       "weight": 10,
       "attunement": false,
-      "description": ""
+      "description": "A heavy iron pick for breaking rock, used to open seams of ore and, on occasion, walls."
     }
   },
   {
@@ -3710,7 +3710,7 @@
       },
       "weight": 18,
       "attunement": false,
-      "description": "",
+      "description": "An extremely long thrusting spear, used in formation to hold cavalry at bay.",
       "weapon": {
         "damageDice": "1d10",
         "damageType": "piercing",
@@ -3745,7 +3745,7 @@
       },
       "weight": 0.25,
       "attunement": false,
-      "description": ""
+      "description": "An iron spike driven into rock or timber to anchor a rope. Climbers place them by the dozen."
     }
   },
   {
@@ -3767,7 +3767,7 @@
       },
       "weight": 65,
       "attunement": false,
-      "description": "",
+      "description": "Shaped interlocking metal plates covering the entire body, worn over padding and chain. The finest armor money can buy, and priced accordingly.",
       "armor": {
         "baseAc": 18,
         "addDexMod": false,
@@ -3861,7 +3861,7 @@
       },
       "weight": 7,
       "attunement": false,
-      "description": ""
+      "description": "A ten-foot wooden pole. The classic instrument of dungeon caution — for probing floors, triggering traps, and reaching what you would rather not touch."
     }
   },
   {
@@ -3882,7 +3882,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A small riding horse suited to Small characters, or to carrying modest loads."
     }
   },
   {
@@ -3890,7 +3890,7 @@
     "edition": "2014",
     "name": "Pot, iron",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -3904,7 +3904,7 @@
       },
       "weight": 10,
       "attunement": false,
-      "description": ""
+      "description": "An Iron Pot holds up to 1 gallon."
     }
   },
   {
@@ -3956,7 +3956,7 @@
     "edition": "2014",
     "name": "Priest's Pack",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -3969,7 +3969,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A Priest's Pack contains the following items: Backpack, Blanket, Holy Water, Lamp, 7 days of Rations, Robe, and Tinderbox."
     }
   },
   {
@@ -3991,7 +3991,7 @@
       },
       "weight": 4,
       "attunement": false,
-      "description": "",
+      "description": "A stout wooden pole, used two-handed for sweeping strikes or one-handed as a walking staff.",
       "weapon": {
         "damageDice": "1d6",
         "damageType": "bludgeoning",
@@ -4070,7 +4070,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": "",
+      "description": "A slender thrusting sword that rewards precision and footwork over brute strength.",
       "weapon": {
         "damageDice": "1d8",
         "damageType": "piercing",
@@ -4147,7 +4147,7 @@
       },
       "weight": 40,
       "attunement": false,
-      "description": "",
+      "description": "Leather armor studded with heavy rings sewn into it. Inferior to chain mail, and usually worn only by those who cannot afford better.",
       "armor": {
         "baseAc": 14,
         "addDexMod": false,
@@ -4174,7 +4174,7 @@
       },
       "weight": 4,
       "attunement": false,
-      "description": ""
+      "description": "Loose flowing garments, worn by scholars, priests, and mages, often marked with the colors or symbols of an order."
     }
   },
   {
@@ -4269,7 +4269,7 @@
     "edition": "2014",
     "name": "Sack",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -4283,7 +4283,7 @@
       },
       "weight": 0.5,
       "attunement": false,
-      "description": ""
+      "description": "A Sack holds up to 30 pounds within 1 cubic foot."
     }
   },
   {
@@ -4349,7 +4349,7 @@
       },
       "weight": 15,
       "attunement": false,
-      "description": ""
+      "description": "A saddle rigged for carrying cargo rather than a rider, with frames and straps for securing a load."
     }
   },
   {
@@ -4371,7 +4371,7 @@
       },
       "weight": 25,
       "attunement": false,
-      "description": ""
+      "description": "A standard riding saddle. Without one, staying mounted through anything sudden becomes considerably harder."
     }
   },
   {
@@ -4393,7 +4393,7 @@
       },
       "weight": 8,
       "attunement": false,
-      "description": ""
+      "description": "Paired bags slung across a mount's back for carrying supplies within easy reach."
     }
   },
   {
@@ -4414,7 +4414,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A seagoing merchant vessel with masts and a hold, capable of long ocean voyages with a trained crew."
     }
   },
   {
@@ -4436,7 +4436,7 @@
       },
       "weight": 45,
       "attunement": false,
-      "description": "",
+      "description": "A coat and leggings of leather covered with overlapping metal scales. The weight and rigidity make stealth difficult.",
       "armor": {
         "baseAc": 14,
         "addDexMod": true,
@@ -4472,7 +4472,7 @@
     "edition": "2014",
     "name": "Scholar's Pack",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -4485,7 +4485,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A Scholar's Pack contains the following items: Backpack, Blanket, Book, Ink, Ink Pen, Lamp, 10 flasks of Oil, 10 sheets of Parchment, and Tinderbox."
     }
   },
   {
@@ -4507,7 +4507,7 @@
       },
       "weight": 3,
       "attunement": false,
-      "description": "",
+      "description": "A curved single-edged blade, light and quick, built for slashing.",
       "weapon": {
         "damageDice": "1d6",
         "damageType": "slashing",
@@ -4541,7 +4541,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": ""
+      "description": "A stick of wax melted to seal letters and documents, usually impressed with a signet ring to prove the sender."
     }
   },
   {
@@ -4585,7 +4585,7 @@
       },
       "weight": 6,
       "attunement": false,
-      "description": "",
+      "description": "A board of wood or metal carried in one hand. Wielding it grants a bonus to Armor Class, but occupies the hand entirely.",
       "armor": {
         "baseAc": 2,
         "addDexMod": false,
@@ -4612,7 +4612,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": "",
+      "description": "A compact bow that can be used on the move and from horseback.",
       "weapon": {
         "damageDice": "1d6",
         "damageType": "piercing",
@@ -4646,7 +4646,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": "",
+      "description": "A short stabbing blade, light and quick, well suited to fighting with a weapon in each hand.",
       "weapon": {
         "damageDice": "1d6",
         "damageType": "piercing",
@@ -4667,7 +4667,7 @@
     "edition": "2014",
     "name": "Shovel",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -4681,7 +4681,7 @@
       },
       "weight": 5,
       "attunement": false,
-      "description": ""
+      "description": "Working for 1 hour, you can use a Shovel to dig a hole that is 5 feet on each side in soil or similar material."
     }
   },
   {
@@ -4703,7 +4703,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": "",
+      "description": "A curved harvesting blade pressed into service as a weapon. Common among druids and farmhands.",
       "weapon": {
         "damageDice": "1d4",
         "damageType": "slashing",
@@ -4723,7 +4723,7 @@
     "edition": "2014",
     "name": "Signal whistle",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -4737,7 +4737,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": ""
+      "description": "When blown as a Utilize action, a Signal Whistle produces a sound that can be heard up to 600 feet away."
     }
   },
   {
@@ -4759,7 +4759,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": ""
+      "description": "A ring bearing an engraved personal or family crest, pressed into wax to authenticate documents. Proof of identity — and a tempting thing to steal."
     }
   },
   {
@@ -4781,7 +4781,7 @@
       },
       "weight": 300,
       "attunement": false,
-      "description": ""
+      "description": "A runnered vehicle for hauling cargo across snow and ice where wheels would only sink."
     }
   },
   {
@@ -4803,7 +4803,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": "",
+      "description": "A leather cradle on cords, whirled to hurl a bullet with surprising force. Cheap, silent, and easily hidden.",
       "weapon": {
         "damageDice": "1d4",
         "damageType": "bludgeoning",
@@ -4836,7 +4836,7 @@
       },
       "weight": 1.5,
       "attunement": false,
-      "description": ""
+      "description": "Cast lead shot for a sling, heavier and truer in flight than an ordinary stone."
     }
   },
   {
@@ -4902,7 +4902,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": ""
+      "description": "A bar of soap. Underrated by adventurers until the third week underground."
     }
   },
   {
@@ -4924,7 +4924,7 @@
       },
       "weight": 3,
       "attunement": false,
-      "description": "",
+      "description": "A simple thrusting weapon that can also be thrown, and can be gripped two-handed for extra force.",
       "weapon": {
         "damageDice": "1d6",
         "damageType": "piercing",
@@ -4982,7 +4982,7 @@
       },
       "weight": 5,
       "attunement": false,
-      "description": ""
+      "description": "A heavy iron spike, driven in to wedge a door shut, anchor a rope, or hold something closed that very much wants to open."
     }
   },
   {
@@ -5004,7 +5004,7 @@
       },
       "weight": 60,
       "attunement": false,
-      "description": "",
+      "description": "Vertical strips of metal riveted to a backing of leather, worn over cloth padding, with articulated joints.",
       "armor": {
         "baseAc": 17,
         "addDexMod": false,
@@ -5076,7 +5076,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": ""
+      "description": "A day of shelter, feed, and care for a mount at an inn or livery."
     }
   },
   {
@@ -5142,7 +5142,7 @@
       },
       "weight": 13,
       "attunement": false,
-      "description": "",
+      "description": "Tough but flexible leather reinforced with close-set rivets and spikes.",
       "armor": {
         "baseAc": 12,
         "addDexMod": true,
@@ -5301,7 +5301,7 @@
       },
       "weight": 4,
       "attunement": false,
-      "description": "",
+      "description": "A three-pronged spear, associated with fishers, gladiators, and the sea.",
       "weapon": {
         "damageDice": "1d6",
         "damageType": "piercing",
@@ -5344,7 +5344,7 @@
     "edition": "2014",
     "name": "Vial",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -5358,7 +5358,7 @@
       },
       "weight": 0,
       "attunement": false,
-      "description": ""
+      "description": "A Vial holds up to 4 ounces."
     }
   },
   {
@@ -5402,7 +5402,7 @@
       },
       "weight": 400,
       "attunement": false,
-      "description": ""
+      "description": "A large four-wheeled vehicle drawn by draft animals, built to haul heavy cargo over long distances."
     }
   },
   {
@@ -5446,7 +5446,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": "",
+      "description": "A weapon with a narrow armor-piercing spike, designed to punch through plate that a blade would skate across.",
       "weapon": {
         "damageDice": "1d8",
         "damageType": "piercing",
@@ -5477,7 +5477,7 @@
       },
       "weight": 2,
       "attunement": false,
-      "description": "",
+      "description": "A heavy hammer built for war, delivering crushing blows against armored foes.",
       "weapon": {
         "damageDice": "1d8",
         "damageType": "bludgeoning",
@@ -5510,7 +5510,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A destrier trained for battle: it does not panic at the sound of steel, and it will fight alongside its rider."
     }
   },
   {
@@ -5531,7 +5531,7 @@
         "currency": "gp"
       },
       "attunement": false,
-      "description": ""
+      "description": "A large armed vessel built for battle at sea, carrying a substantial crew and heavy weapons."
     }
   },
   {
@@ -5539,7 +5539,7 @@
     "edition": "2014",
     "name": "Waterskin",
     "source": {
-      "book": "SRD5.1"
+      "book": "PHB2024"
     },
     "origin": "seed",
     "schemaVersion": 1,
@@ -5553,7 +5553,7 @@
       },
       "weight": 5,
       "attunement": false,
-      "description": ""
+      "description": "A Waterskin holds up to 4 pints. If you don't drink sufficient water, you risk dehydration (see “Rules Glossary”)."
     }
   },
   {
@@ -5597,7 +5597,7 @@
       },
       "weight": 1,
       "attunement": false,
-      "description": ""
+      "description": "A shaped stone for honing blades. A few minutes' work keeps an edge that would otherwise dull with use."
     }
   },
   {
@@ -5619,7 +5619,7 @@
       },
       "weight": 3,
       "attunement": false,
-      "description": "",
+      "description": "A long braided lash that strikes at a distance and can be used to disarm or entangle.",
       "weapon": {
         "damageDice": "1d4",
         "damageType": "slashing",

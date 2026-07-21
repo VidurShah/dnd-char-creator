@@ -11,6 +11,7 @@
     "origin": "seed",
     "schemaVersion": 1,
     "data": {
+      "description": "Masters of invention, artificers use ingenuity and magic to unlock extraordinary capabilities in objects. They see magic as a complex system waiting to be decoded and harnessed — infusing mundane items with arcane power and building devices that channel it on demand.",
       "hitDie": "d8",
       "savingThrowProficiencies": [
         "con",

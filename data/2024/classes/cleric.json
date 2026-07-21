@@ -10,6 +10,7 @@
     "schemaVersion": 1,
     "kind": "class",
     "data": {
+      "description": "Divine magic, as the name suggests, is the power of the gods, flowing from them into the world. Clerics are conduits for that power, manifesting it as miraculous effects — but they are more than mere priests. They are imbued with divine magic and sent to serve a cause in the world.",
       "hitDie": "d8",
       "savingThrowProficiencies": [
         "wis",
