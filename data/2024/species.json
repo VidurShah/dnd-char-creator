@@ -10,11 +10,34 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Dragonborn walk proudly through a world that greets them with fearful incomprehension. Their scaled bodies and draconic breath mark their descent from a dragon progenitor, and their lineage determines both the element they exhale and the harm they shrug off.",
       "size": "medium",
       "speed": 30,
       "traits": [
         "2024/feature/trait-darkvision-60",
-        "2024/feature/trait-draconic-flight"
+        "2024/feature/trait-draconic-flight",
+        "2024/feature/trait-draconic-ancestry",
+        "2024/feature/trait-breath-weapon",
+        "2024/feature/trait-damage-resistance"
+      ],
+      "decisionPoints": [
+        {
+          "decisionId": "dragonborn/ancestry",
+          "prompt": "Choose your Draconic Ancestry",
+          "count": 1,
+          "options": [
+            "Black (Acid)",
+            "Blue (Lightning)",
+            "Brass (Fire)",
+            "Bronze (Lightning)",
+            "Copper (Acid)",
+            "Gold (Fire)",
+            "Green (Poison)",
+            "Red (Fire)",
+            "Silver (Cold)",
+            "White (Cold)"
+          ]
+        }
       ]
     }
   },
@@ -29,6 +52,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Dwarves are a stoic people who trace their origins to the deep places of the world. Long-lived and stubborn, they are shaped by stone: they sense its secrets through their feet, endure poison that would fell others, and build to last centuries.",
       "size": "medium",
       "speed": 30,
       "traits": [
@@ -50,6 +74,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Elves are magical people of otherworldly grace, descended from the fey realms. They do not sleep so much as trance, remaining semiconscious through four hours of meditation. Their lineage — drow, high, or wood — shapes the innate magic they wield.",
       "size": "medium",
       "speed": 30,
       "traits": [
@@ -58,6 +83,18 @@
         "2024/feature/trait-fey-ancestry",
         "2024/feature/trait-keen-senses",
         "2024/feature/trait-trance"
+      ],
+      "decisionPoints": [
+        {
+          "decisionId": "elf/lineage",
+          "prompt": "Choose your Elven Lineage",
+          "count": 1,
+          "options": [
+            "Drow",
+            "High Elf",
+            "Wood Elf"
+          ]
+        }
       ]
     }
   },
@@ -72,12 +109,24 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Gnomes are small, energetic folk with an inexhaustible appetite for invention and discovery. Their minds resist magical intrusion in ways few can explain, and their lineage grants them either the illusions of the forest or the tinkering of the rocks.",
       "size": "small",
       "speed": 30,
       "traits": [
         "2024/feature/trait-darkvision-60",
         "2024/feature/trait-gnomish-cunning",
         "2024/feature/trait-gnomish-lineage"
+      ],
+      "decisionPoints": [
+        {
+          "decisionId": "gnome/lineage",
+          "prompt": "Choose your Gnomish Lineage",
+          "count": 1,
+          "options": [
+            "Forest Gnome",
+            "Rock Gnome"
+          ]
+        }
       ]
     }
   },
@@ -92,12 +141,28 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Goliaths carry the blood of giants. They stand well over seven feet tall, and the particular kind of giant in their ancestry grants them a distinct supernatural knack — a burst of flame, a chilling touch, or a sudden surge of endurance.",
       "size": "medium",
       "speed": 35,
       "traits": [
         "2024/feature/trait-giant-ancestry",
         "2024/feature/trait-large-form",
         "2024/feature/trait-powerful-build"
+      ],
+      "decisionPoints": [
+        {
+          "decisionId": "goliath/giant-ancestry",
+          "prompt": "Choose your Giant Ancestry",
+          "count": 1,
+          "options": [
+            "Cloud Giant (Cloud’s Jaunt)",
+            "Fire Giant (Fire’s Burn)",
+            "Frost Giant (Frost’s Chill)",
+            "Hill Giant (Hill’s Tumble)",
+            "Stone Giant (Stone’s Endurance)",
+            "Storm Giant (Storm’s Thunder)"
+          ]
+        }
       ]
     }
   },
@@ -112,6 +177,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Halflings are an affable, cheerful people who value home and hearth above wealth or glory. They are famously lucky, hard to frighten, and small enough to slip out of sight behind creatures much larger than themselves.",
       "size": "small",
       "speed": 30,
       "traits": [
@@ -133,6 +199,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Humans are the most adaptable and ambitious of the common peoples. They build, they wander, and they leave their mark everywhere they go — a versatility reflected in their resourcefulness, their skillfulness, and their sheer range.",
       "size": "medium",
       "speed": 30,
       "traits": [
@@ -153,6 +220,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Orcs trace their origins to Bahgtru and Luthic, who granted them relentless endurance and a burst of speed in the face of danger. They see in the dark, run down what they hunt, and are famously difficult to put down for good.",
       "size": "medium",
       "speed": 30,
       "traits": [
@@ -173,12 +241,25 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Tieflings carry a fiendish legacy inherited from an ancestor bound to the Lower Planes. Abyssal, chthonic, or infernal, that legacy shows in horns, tails, unsettling eyes — and in magic that surfaces as they grow into their power.",
       "size": "medium",
       "speed": 30,
       "traits": [
         "2024/feature/trait-darkvision-60",
         "2024/feature/trait-fiendish-legacy",
         "2024/feature/trait-otherworldly-presence"
+      ],
+      "decisionPoints": [
+        {
+          "decisionId": "tiefling/legacy",
+          "prompt": "Choose your Fiendish Legacy",
+          "count": 1,
+          "options": [
+            "Abyssal",
+            "Chthonic",
+            "Infernal"
+          ]
+        }
       ]
     }
   },
@@ -558,6 +639,7 @@
     "origin": "seed",
     "schemaVersion": 1,
     "data": {
+      "description": "Aasimar are mortals who carry a spark of the Upper Planes within their souls. Descended from humans touched by celestial power, they can call on that heritage to heal, to shield, and — at need — to reveal themselves in radiant, terrifying glory.",
       "size": "medium",
       "speed": 30,
       "traits": [
@@ -579,6 +661,51 @@
     "schemaVersion": 1,
     "data": {
       "description": "Creature Type: Humanoid\nSize: Medium (about 4-7 feet tall) or Small (about 2-4 feet tall), chosen when you select this species\nSpeed: 30 feet\n\nAs an Aasimar, you have these special traits.\nCelestial Resistance. You have Resistance to Necrotic damage and Radiant damage.\nDarkvision. You have Darkvision with a range of 60 feet.\nHealing Hands. As a Magic action, you touch a creature and roll a number of d4s equal to your Proficiency Bonus. The creature regains a number of Hit Points equal to the total rolled. Once you use this trait, you can't use it again until you finish a Long Rest.\nLight Bearer. You know the Light cantrip. Charisma is your spellcasting ability for it.\nCelestial Revelation. When you reach character level 3, you can transform as a Bonus Action using one of the options below (choose the option each time you transform). The transformation lasts for 1 minute or until you end it (no action required). Once you transform, you can't do so again until you finish a Long Rest.\nOnce on each of your turns before the transformation ends, you can deal extra damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your Proficiency Bonus, and the extra damage's type is either Necrotic for Necrotic Shroud or Radiant for Heavenly Wings and Inner Radiance.\n\nHere are the transformation options:\nHeavenly Wings. Two spectral wings sprout from your back temporarily. Until the transformation ends, you have a Fly Speed equal to your Speed.\nInner Radiance. Searing light temporarily radiates from your eyes and mouth. For the duration, you shed Bright Light in a 10-foot radius and Dim Light for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes Radiant damage equal to your Proficiency Bonus.\nNecrotic Shroud. Your eyes briefly become pools of darkness, and flightless wings sprout from your back temporarily. Creatures other than your allies within 10 feet of you must succeed on a Charisma saving throw (DC 8 plus your Charisma modifier and Proficiency Bonus) or have the Frightened condition until the end of your next turn."
+    }
+  },
+  {
+    "id": "2024/feature/trait-draconic-ancestry",
+    "edition": "2024",
+    "name": "Draconic Ancestry",
+    "source": {
+      "book": "PHB2024",
+      "page": 195
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your lineage stems from a dragon progenitor. Choose the kind of dragon from the Draconic Ancestors table. Your choice affects your Breath Weapon and Damage Resistance traits as well as your appearance."
+    }
+  },
+  {
+    "id": "2024/feature/trait-breath-weapon",
+    "edition": "2024",
+    "name": "Breath Weapon",
+    "source": {
+      "book": "PHB2024",
+      "page": 195
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (your choice). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry trait. On a successful save, a creature takes half as much damage.\n\nThis damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).\n\nYou can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/trait-damage-resistance",
+    "edition": "2024",
+    "name": "Damage Resistance",
+    "source": {
+      "book": "PHB2024",
+      "page": 195
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Resistance to the damage type determined by your Draconic Ancestry trait."
     }
   }
 ]
