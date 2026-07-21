@@ -1,0 +1,108 @@
+[
+  {
+    "id": "2024/background/acolyte",
+    "edition": "2024",
+    "name": "Acolyte",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "skillProficiencies": [
+        "insight",
+        "religion"
+      ],
+      "toolProficiencies": [
+        "tool-calligraphers-supplies"
+      ],
+      "equipment": [],
+      "abilityScoreOptions": [
+        "int",
+        "wis",
+        "cha"
+      ],
+      "grantedFeatRef": "2024/feat/magic-initiate"
+    }
+  },
+  {
+    "id": "2024/background/criminal",
+    "edition": "2024",
+    "name": "Criminal",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "skillProficiencies": [
+        "sleightOfHand",
+        "stealth"
+      ],
+      "toolProficiencies": [
+        "tool-thieves-tools"
+      ],
+      "equipment": [],
+      "abilityScoreOptions": [
+        "dex",
+        "con",
+        "int"
+      ],
+      "grantedFeatRef": "2024/feat/alert"
+    }
+  },
+  {
+    "id": "2024/background/sage",
+    "edition": "2024",
+    "name": "Sage",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "skillProficiencies": [
+        "arcana",
+        "history"
+      ],
+      "toolProficiencies": [
+        "tool-calligraphers-supplies"
+      ],
+      "equipment": [],
+      "abilityScoreOptions": [
+        "con",
+        "int",
+        "wis"
+      ],
+      "grantedFeatRef": "2024/feat/magic-initiate"
+    }
+  },
+  {
+    "id": "2024/background/soldier",
+    "edition": "2024",
+    "name": "Soldier",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "skillProficiencies": [
+        "athletics",
+        "intimidation"
+      ],
+      "toolProficiencies": [],
+      "equipment": [],
+      "abilityScoreOptions": [
+        "str",
+        "dex",
+        "con"
+      ],
+      "grantedFeatRef": "2024/feat/savage-attacker"
+    }
+  }
+]

@@ -1,0 +1,1076 @@
+[
+  {
+    "id": "2014/class/ranger",
+    "edition": "2014",
+    "name": "Ranger",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "class",
+    "data": {
+      "hitDie": "d10",
+      "savingThrowProficiencies": [
+        "str",
+        "dex"
+      ],
+      "armorProficiencies": [
+        "light-armor",
+        "medium-armor",
+        "shields"
+      ],
+      "weaponProficiencies": [
+        "simple-weapons",
+        "martial-weapons"
+      ],
+      "toolProficiencies": [],
+      "skillChoice": {
+        "count": 3,
+        "options": [
+          "animalHandling",
+          "athletics",
+          "insight",
+          "investigation",
+          "nature",
+          "perception",
+          "stealth",
+          "survival"
+        ]
+      },
+      "spellcasting": {
+        "progression": "half",
+        "ability": "wis",
+        "knownOrPrepared": "known"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "featureRefs": [
+            "2014/feature/ranger-favored-enemy-1-type",
+            "2014/feature/ranger-natural-explorer-1-terrain-type"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "favored_enemies": 1,
+            "favored_terrain": 1,
+            "spells_known": 0,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 2,
+          "featureRefs": [
+            "2014/feature/ranger-fighting-style",
+            "2014/feature/ranger-spellcasting-ranger"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "favored_enemies": 1,
+            "favored_terrain": 1,
+            "spells_known": 2,
+            "spell_slots_level_1": 2,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 3,
+          "featureRefs": [
+            "2014/feature/ranger-archetype",
+            "2014/feature/ranger-primeval-awareness"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "favored_enemies": 1,
+            "favored_terrain": 1,
+            "spells_known": 3,
+            "spell_slots_level_1": 3,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 4,
+          "featureRefs": [
+            "2014/feature/ranger-ability-score-improvement-1"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "favored_enemies": 1,
+            "favored_terrain": 1,
+            "spells_known": 3,
+            "spell_slots_level_1": 3,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 5,
+          "featureRefs": [
+            "2014/feature/ranger-extra-attack"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "favored_enemies": 1,
+            "favored_terrain": 1,
+            "spells_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 2,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 6,
+          "featureRefs": [
+            "2014/feature/ranger-favored-enemy-2-types",
+            "2014/feature/ranger-natural-explorer-2-terrain-types"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 2,
+            "spells_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 2,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 7,
+          "featureRefs": [
+            "2014/feature/ranger-archetype-improvement-1"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 2,
+            "spells_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 8,
+          "featureRefs": [
+            "2014/feature/ranger-ability-score-improvement-2",
+            "2014/feature/ranger-lands-stride"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 2,
+            "spells_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 9,
+          "featureRefs": [],
+          "proficiencyBonus": 4,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 2,
+            "spells_known": 6,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 2,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 10,
+          "featureRefs": [
+            "2014/feature/ranger-natural-explorer-3-terrain-types",
+            "2014/feature/ranger-hide-in-plain-sight"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 3,
+            "spells_known": 6,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 2,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 11,
+          "featureRefs": [
+            "2014/feature/ranger-archetype-improvement-2"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 3,
+            "spells_known": 7,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 12,
+          "featureRefs": [
+            "2014/feature/ranger-ability-score-improvement-3"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 3,
+            "spells_known": 7,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 13,
+          "featureRefs": [],
+          "proficiencyBonus": 5,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 3,
+            "spells_known": 8,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 1,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 14,
+          "featureRefs": [
+            "2014/feature/ranger-favored-enemy-3-enemies",
+            "2014/feature/ranger-vanish"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 8,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 1,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 15,
+          "featureRefs": [
+            "2014/feature/ranger-archetype-improvement-3"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 9,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 2,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 16,
+          "featureRefs": [
+            "2014/feature/ranger-ability-score-improvement-4"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 9,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 2,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 17,
+          "featureRefs": [],
+          "proficiencyBonus": 6,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 1
+          }
+        },
+        {
+          "level": 18,
+          "featureRefs": [
+            "2014/feature/ranger-feral-senses"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 1
+          }
+        },
+        {
+          "level": 19,
+          "featureRefs": [
+            "2014/feature/ranger-ability-score-improvement-5"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 11,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2
+          }
+        },
+        {
+          "level": 20,
+          "featureRefs": [
+            "2014/feature/ranger-foe-slayer"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 11,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2
+          }
+        }
+      ],
+      "startingEquipment": {
+        "fixed": [
+          "explorers-pack",
+          "longbow",
+          "arrow",
+          "dagger",
+          "dagger"
+        ],
+        "choices": [
+          {
+            "prompt": "(a) scale mail or (b) leather armor",
+            "options": [
+              [
+                "scale-mail"
+              ],
+              [
+                "leather-armor"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) two shortswords or (b) two simple melee weapons",
+            "options": [
+              [
+                "shortsword",
+                "shortsword"
+              ],
+              [
+                "quarterstaff",
+                "quarterstaff"
+              ]
+            ]
+          }
+        ],
+        "goldAlternative": 125
+      }
+    }
+  },
+  {
+    "id": "2014/feature/ranger-favored-enemy-1-type",
+    "edition": "2014",
+    "name": "Favored Enemy (1 type)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.\n\nChoose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.\n\nYou have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.\n\nWhen you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.\n\nYou choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-natural-explorer-1-terrain-type",
+    "edition": "2014",
+    "name": "Natural Explorer (1 terrain type)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.\n\nWhile traveling for an hour or more in your favored terrain, you gain the following benefits:\n\n- Difficult terrain doesn't slow your group's travel.\n\n- Your group can't become lost except by magical means.\n\n- Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.\n\n- If you are traveling alone, you can move stealthily at a normal pace.\n\n- When you forage, you find twice as much food as you normally would.\n\n- While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.\n\nYou choose additional favored terrain types at 6th and 10th level."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-fighting-style",
+    "edition": "2014",
+    "name": "Fighting Style",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-spellcasting-ranger",
+    "edition": "2014",
+    "name": "Spellcasting: Ranger",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-archetype",
+    "edition": "2014",
+    "name": "Ranger Archetype",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose an archetype that you strive to emulate, such as the Hunter. Your choice grants you features at 3rd level and again at 7th, 11th, and 15th level."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-primeval-awareness",
+    "edition": "2014",
+    "name": "Primeval Awareness",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 3rd level, you can use your action and expend one ranger spell slot to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, and undead. This feature doesn't reveal the creatures' location or number."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-ability-score-improvement-1",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-extra-attack",
+    "edition": "2014",
+    "name": "Extra Attack",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-favored-enemy-2-types",
+    "edition": "2014",
+    "name": "Favored Enemy (2 types)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.\n\nChoose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.\n\nYou have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.\n\nWhen you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.\n\nYou choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-natural-explorer-2-terrain-types",
+    "edition": "2014",
+    "name": "Natural Explorer (2 terrain types)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.\n\nWhile traveling for an hour or more in your favored terrain, you gain the following benefits:\n\n- Difficult terrain doesn't slow your group's travel.\n\n- Your group can't become lost except by magical means.\n\n- Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.\n\n- If you are traveling alone, you can move stealthily at a normal pace.\n\n- When you forage, you find twice as much food as you normally would.\n\n- While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.\n\nYou choose additional favored terrain types at 6th and 10th level."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-archetype-improvement-1",
+    "edition": "2014",
+    "name": "Ranger Archetype feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose an archetype that you strive to emulate, such as the Hunter. Your choice grants you features at 3rd level and again at 7th, 11th, and 15th level."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-ability-score-improvement-2",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-lands-stride",
+    "edition": "2014",
+    "name": "Land's Stride",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 8th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.\n\nIn addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the entangle spell."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-natural-explorer-3-terrain-types",
+    "edition": "2014",
+    "name": "Natural Explorer (3 terrain types)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.\n\nWhile traveling for an hour or more in your favored terrain, you gain the following benefits:\n\n- Difficult terrain doesn't slow your group's travel.\n\n- Your group can't become lost except by magical means.\n\n- Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.\n\n- If you are traveling alone, you can move stealthily at a normal pace.\n\n- When you forage, you find twice as much food as you normally would.\n\n- While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.\n\nYou choose additional favored terrain types at 6th and 10th level."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-hide-in-plain-sight",
+    "edition": "2014",
+    "name": "Hide in Plain Sight",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other naturally occurring materials with which to create your camouflage.\n\nOnce you are camouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Dexterity (Stealth) checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must camouflage yourself again to gain this benefit."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-archetype-improvement-2",
+    "edition": "2014",
+    "name": "Ranger Archetype feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose an archetype that you strive to emulate, such as the Hunter. Your choice grants you features at 3rd level and again at 7th, 11th, and 15th level."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-ability-score-improvement-3",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-favored-enemy-3-enemies",
+    "edition": "2014",
+    "name": "Favored Enemy (3 enemies)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.\n\nChoose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.\n\nYou have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.\n\nWhen you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.\n\nYou choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-vanish",
+    "edition": "2014",
+    "name": "Vanish",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-archetype-improvement-3",
+    "edition": "2014",
+    "name": "Ranger Archetype feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose an archetype that you strive to emulate, such as the Hunter. Your choice grants you features at 3rd level and again at 7th, 11th, and 15th level."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-ability-score-improvement-4",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-feral-senses",
+    "edition": "2014",
+    "name": "Feral Senses",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 18th level, you gain preternatural senses that help you fight creatures you can't see. When you attack a creature you can't see, your inability to see it doesn't impose disadvantage on your attack rolls against it.\n\nYou are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn't hidden from you and you aren't blinded or deafened."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-ability-score-improvement-5",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/ranger-foe-slayer",
+    "edition": "2014",
+    "name": "Foe Slayer",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied."
+    }
+  },
+  {
+    "id": "2014/subclass/hunter",
+    "edition": "2014",
+    "name": "Hunter",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "subclass",
+    "data": {
+      "parentClassRef": "2014/class/ranger",
+      "description": "Emulating the Hunter archetype means accepting your place as a bulwark between civilization and the terrors of the wilderness. As you walk the Hunter's path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/hunter-hunters-prey"
+        ],
+        "7": [
+          "2014/feature/hunter-defensive-tactics"
+        ],
+        "11": [
+          "2014/feature/hunter-multiattack"
+        ],
+        "15": [
+          "2014/feature/hunter-superior-hunters-defense"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/hunter-hunters-prey",
+    "edition": "2014",
+    "name": "Hunter's Prey",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you gain one of the following features of your choice.\n\nColossus Slayer\n\nGiant Killer\n\nHorde Breaker"
+    }
+  },
+  {
+    "id": "2014/feature/hunter-defensive-tactics",
+    "edition": "2014",
+    "name": "Defensive Tactics",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 7th level, you gain one of the following features of your choice.\n\nEscape the Horde\n\nMultiattack Defense\n\nSteel Will"
+    }
+  },
+  {
+    "id": "2014/feature/hunter-multiattack",
+    "edition": "2014",
+    "name": "Multiattack",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 11th level, you gain one of the following features of your choice.\n\nVolley\n\nWhirlwind Attack"
+    }
+  },
+  {
+    "id": "2014/feature/hunter-superior-hunters-defense",
+    "edition": "2014",
+    "name": "Superior Hunter's Defense",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 15th level, you gain one of the following features of your choice.\n\nEvasion\n\nStand Against the Tide\n\nUncanny Dodge"
+    }
+  },
+  {
+    "id": "2014/subclass/fey-wanderer",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Fey Wanderer",
+    "source": {
+      "book": "TCE",
+      "page": 58
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/ranger",
+      "description": "Fey Wanderers serve fey lords and ladies, or the mysterious powers of the Feywild itself.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/extracted-dreadful-strikes",
+          "2014/feature/extracted-fey-wanderer-magic"
+        ],
+        "7": [
+          "2014/feature/extracted-otherworldly-glamour"
+        ],
+        "11": [
+          "2014/feature/extracted-beguiling-twist"
+        ],
+        "15": [
+          "2014/feature/extracted-fey-reinforcements",
+          "2014/feature/extracted-misty-wanderer"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/swarmkeeper",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Swarmkeeper",
+    "source": {
+      "book": "TCE",
+      "page": 60
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/ranger",
+      "description": "Swarmkeepers are bonded to a swarm of tiny, magical creatures.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/extracted-gathered-swarm",
+          "2014/feature/extracted-swarmkeeper-magic"
+        ],
+        "7": [
+          "2014/feature/extracted-writhing-tide"
+        ],
+        "11": [
+          "2014/feature/extracted-mighty-swarm"
+        ],
+        "15": [
+          "2014/feature/extracted-swarming-dispersal"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/extracted-dreadful-strikes",
+    "edition": "2014",
+    "name": "Dreadful Strikes",
+    "source": {
+      "book": "TCE",
+      "page": 58
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can augment your weapon strikes with mind-scarring magic, drawn from the gloomy hollows of the Feywild. When you hit a creature with a weapon, you can deal an extra 1d4 psychic damage to the target, which can take this extra damage only once per turn.\nThe extra damage increases to 1d6 when you reach 11th level in this class."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-fey-wanderer-magic",
+    "edition": "2014",
+    "name": "Fey Wanderer Magic",
+    "source": {
+      "book": "TCE",
+      "page": 58
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn an additional spell when you reach certain levels in this class, as shown in the Fey Wanderer Spells table. Each spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.\n\nFey Wanderer Spells:\n3rd: charm person\n5th: misty step\n9th: dispel magic\n13th: dimension door\n17th: mislead\n\nYou also possess a preternatural blessing from a fey ally or a place of fey power. Choose your blessing from the Feywild Gifts table or determine it randomly."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-otherworldly-glamour",
+    "edition": "2014",
+    "name": "Otherworldly Glamour",
+    "source": {
+      "book": "TCE",
+      "page": 59
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your fey qualities give you a supernatural charm. As a result, whenever you make a Charisma check, you gain a bonus to the check equal to your Wisdom modifier (minimum of +1).\nIn addition, you gain proficiency in one of the following skills of your choice: Deception, Performance, or Persuasion."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-beguiling-twist",
+    "edition": "2014",
+    "name": "Beguiling Twist",
+    "source": {
+      "book": "TCE",
+      "page": 59
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The magic of the Feywild guards your mind. You have advantage on saving throws against being charmed or frightened.\nIn addition, whenever you or a creature you can see within 120 feet of you succeeds on a saving throw against being charmed or frightened, you can use your reaction to force a different creature you can see within 120 feet of you to make a Wisdom saving throw against your spell save DC. If the save fails, the target is charmed or frightened by you (your choice) for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-fey-reinforcements",
+    "edition": "2014",
+    "name": "Fey Reinforcements",
+    "source": {
+      "book": "TCE",
+      "page": 59
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The royal courts of the Feywild have blessed you with the assistance of fey beings: you know summon fey (a spell in chapter 3). It doesn't count against the number of ranger spells you know, and you can cast it without a material component. You can also cast it once without a spell slot, and you regain the ability to do so when you finish a long rest.\nWhenever you start casting the spell, you can modify it so that it doesn't require concentration. If you do so, the spell's duration becomes 1 minute for that casting."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-misty-wanderer",
+    "edition": "2014",
+    "name": "Misty Wanderer",
+    "source": {
+      "book": "TCE",
+      "page": 59
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can slip in and out of the Feywild to move in a blink of an eye: you can cast misty step without expending a spell slot. You can do so a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a long rest.\nIn addition, whenever you cast misty step, you can bring along one willing creature you can see within 5 feet of you. That creature teleports to an unoccupied space of your choice within 5 feet of your destination space."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-gathered-swarm",
+    "edition": "2014",
+    "name": "Gathered Swarm",
+    "source": {
+      "book": "TCE",
+      "page": 60
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "A swarm of intangible nature spirits has bonded itself to you and can assist you in battle. Until you die, the swarm remains in your space, crawling on you or flying and skittering around you within your space. You determine its appearance, or you generate its appearance by rolling on the Swarm Appearance table.\n\nOnce on each of your turns, you can cause the swarm to assist you in one of the following ways, immediately after you hit a creature with an attack:\n- The attack's target takes 1d6 piercing damage from the swarm.\n- The attack's target must succeed on a Strength saving throw against your spell save DC or be moved by the swarm up to 15 feet horizontally in a direction of your choice.\n- You are moved by the swarm 5 feet horizontally in a direction of your choice."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-swarmkeeper-magic",
+    "edition": "2014",
+    "name": "Swarmkeeper Magic",
+    "source": {
+      "book": "TCE",
+      "page": 60
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn the mage hand cantrip if you don't already know it. When you cast it, the hand takes the form of your swarming nature spirits.\nYou also learn an additional spell of 1st level or higher when you reach certain levels in this class, as shown in the Swarmkeeper Spells table. Each spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.\n\nSwarmkeeper Spells:\n3rd: faerie fire, mage hand\n5th: web\n9th: gaseous form\n13th: arcane eye\n17th: insect plague"
+    }
+  },
+  {
+    "id": "2014/feature/extracted-writhing-tide",
+    "edition": "2014",
+    "name": "Writhing Tide",
+    "source": {
+      "book": "TCE",
+      "page": 60
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can condense part of your swarm into a focused mass that lifts you up. As a bonus action, you gain a flying speed of 10 feet and can hover. This effect lasts for 1 minute or until you are incapacitated.\nYou can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-mighty-swarm",
+    "edition": "2014",
+    "name": "Mighty Swarm",
+    "source": {
+      "book": "TCE",
+      "page": 60
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your Gathered Swarm grows mightier in the following ways:\n- The damage of Gathered Swarm increases to 1d8.\n- If a creature fails its saving throw against being moved by Gathered Swarm, you can also cause the swarm to knock the creature prone.\n- When you are moved by Gathered Swarm, it gives you half cover until the start of your next turn."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-swarming-dispersal",
+    "edition": "2014",
+    "name": "Swarming Dispersal",
+    "source": {
+      "book": "TCE",
+      "page": 60
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can discorporate into your swarm, avoiding danger. When you take damage, you can use your reaction to give yourself resistance to that damage. You vanish into your swarm and then teleport to an unoccupied space that you can see within 30 feet of you, where you reappear with the swarm.\nYou can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+    }
+  }
+]

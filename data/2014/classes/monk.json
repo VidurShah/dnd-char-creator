@@ -1,0 +1,1063 @@
+[
+  {
+    "id": "2014/class/monk",
+    "edition": "2014",
+    "name": "Monk",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "class",
+    "data": {
+      "hitDie": "d8",
+      "savingThrowProficiencies": [
+        "str",
+        "dex"
+      ],
+      "armorProficiencies": [],
+      "weaponProficiencies": [
+        "simple-weapons",
+        "shortswords"
+      ],
+      "toolProficiencies": [],
+      "skillChoice": {
+        "count": 2,
+        "options": [
+          "acrobatics",
+          "athletics",
+          "history",
+          "insight",
+          "religion",
+          "stealth"
+        ]
+      },
+      "levels": [
+        {
+          "level": 1,
+          "featureRefs": [
+            "2014/feature/monk-unarmored-defense",
+            "2014/feature/monk-martial-arts"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 4,
+            "ki_points": 0,
+            "unarmored_movement": 0
+          }
+        },
+        {
+          "level": 2,
+          "featureRefs": [
+            "2014/feature/monk-ki",
+            "2014/feature/monk-flurry-of-blows",
+            "2014/feature/monk-patient-defense",
+            "2014/feature/monk-step-of-the-wind",
+            "2014/feature/monk-unarmored-movement-1"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 4,
+            "ki_points": 2,
+            "unarmored_movement": 10
+          }
+        },
+        {
+          "level": 3,
+          "featureRefs": [
+            "2014/feature/monk-monastic-tradition",
+            "2014/feature/monk-deflect-missiles"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 4,
+            "ki_points": 3,
+            "unarmored_movement": 10
+          }
+        },
+        {
+          "level": 4,
+          "featureRefs": [
+            "2014/feature/monk-ability-score-improvement-1",
+            "2014/feature/monk-slow-fall"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 4,
+            "ki_points": 4,
+            "unarmored_movement": 10
+          }
+        },
+        {
+          "level": 5,
+          "featureRefs": [
+            "2014/feature/monk-extra-attack",
+            "2014/feature/monk-stunning-strike"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 6,
+            "ki_points": 5,
+            "unarmored_movement": 10
+          }
+        },
+        {
+          "level": 6,
+          "featureRefs": [
+            "2014/feature/monk-ki-empowered-strikes",
+            "2014/feature/monk-monastic-tradition-improvement-1"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 6,
+            "ki_points": 6,
+            "unarmored_movement": 15
+          }
+        },
+        {
+          "level": 7,
+          "featureRefs": [
+            "2014/feature/monk-evasion",
+            "2014/feature/monk-stillness-of-mind"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 6,
+            "ki_points": 7,
+            "unarmored_movement": 15
+          }
+        },
+        {
+          "level": 8,
+          "featureRefs": [
+            "2014/feature/monk-ability-score-improvement-2"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 6,
+            "ki_points": 8,
+            "unarmored_movement": 15
+          }
+        },
+        {
+          "level": 9,
+          "featureRefs": [
+            "2014/feature/monk-unarmored-movement-2"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 6,
+            "ki_points": 9,
+            "unarmored_movement": 15
+          }
+        },
+        {
+          "level": 10,
+          "featureRefs": [
+            "2014/feature/monk-purity-of-body"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 6,
+            "ki_points": 10,
+            "unarmored_movement": 20
+          }
+        },
+        {
+          "level": 11,
+          "featureRefs": [
+            "2014/feature/monk-monastic-tradition-improvement-2"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 8,
+            "ki_points": 11,
+            "unarmored_movement": 20
+          }
+        },
+        {
+          "level": 12,
+          "featureRefs": [
+            "2014/feature/monk-ability-score-improvement-3"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 8,
+            "ki_points": 12,
+            "unarmored_movement": 20
+          }
+        },
+        {
+          "level": 13,
+          "featureRefs": [
+            "2014/feature/monk-tongue-of-the-sun-and-moon"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 8,
+            "ki_points": 13,
+            "unarmored_movement": 20
+          }
+        },
+        {
+          "level": 14,
+          "featureRefs": [
+            "2014/feature/monk-diamond-soul"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 8,
+            "ki_points": 14,
+            "unarmored_movement": 25
+          }
+        },
+        {
+          "level": 15,
+          "featureRefs": [
+            "2014/feature/monk-timeless-body"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 8,
+            "ki_points": 15,
+            "unarmored_movement": 25
+          }
+        },
+        {
+          "level": 16,
+          "featureRefs": [
+            "2014/feature/monk-ability-score-improvement-4"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 8,
+            "ki_points": 16,
+            "unarmored_movement": 25
+          }
+        },
+        {
+          "level": 17,
+          "featureRefs": [
+            "2014/feature/monk-monastic-tradition-improvement-3"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 10,
+            "ki_points": 17,
+            "unarmored_movement": 25
+          }
+        },
+        {
+          "level": 18,
+          "featureRefs": [
+            "2014/feature/monk-empty-body"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 10,
+            "ki_points": 18,
+            "unarmored_movement": 30
+          }
+        },
+        {
+          "level": 19,
+          "featureRefs": [
+            "2014/feature/monk-ability-score-improvement-5"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 10,
+            "ki_points": 19,
+            "unarmored_movement": 30
+          }
+        },
+        {
+          "level": 20,
+          "featureRefs": [
+            "2014/feature/monk-perfect-self"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 10,
+            "ki_points": 20,
+            "unarmored_movement": 30
+          }
+        }
+      ],
+      "startingEquipment": {
+        "fixed": [
+          "dart",
+          "dart",
+          "dart",
+          "dart",
+          "dart",
+          "dart",
+          "dart",
+          "dart",
+          "dart",
+          "dart"
+        ],
+        "choices": [
+          {
+            "prompt": "(a) a shortsword or (b) any simple weapon",
+            "options": [
+              [
+                "shortsword"
+              ],
+              [
+                "quarterstaff"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) a dungeoneer's pack or (b) an explorer's pack",
+            "options": [
+              [
+                "dungeoneers-pack"
+              ],
+              [
+                "explorers-pack"
+              ]
+            ]
+          }
+        ],
+        "goldAlternative": 12
+      }
+    }
+  },
+  {
+    "id": "2014/feature/monk-unarmored-defense",
+    "edition": "2014",
+    "name": "Unarmored Defense",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier."
+    }
+  },
+  {
+    "id": "2014/feature/monk-martial-arts",
+    "edition": "2014",
+    "name": "Martial Arts",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 1st level, your practice of martial arts gives you mastery of combat styles that use unarmed strikes and monk weapons, which are shortswords and any simple melee weapons that don't have the two- handed or heavy property.\n\nYou gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield:\n\n- You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.\n\n- You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of Table: The Monk.\n\n- When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn.\n\nCertain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon."
+    }
+  },
+  {
+    "id": "2014/feature/monk-ki",
+    "edition": "2014",
+    "name": "Ki",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 2nd level, your training allows you to harness the mystic energy of ki. Your access to this energy is represented by a number of ki points. Your monk level determines the number of points you have, as shown in the Ki Points column of Table: The Monk.\n\nYou can spend these points to fuel various ki features. You start knowing three such features: Flurry of Blows, Patient Defense, and Step of the Wind. You learn more ki features as you gain levels in this class.\n\nWhen you spend a ki point, it is unavailable until you finish a short or long rest, at the end of which you draw all of your expended ki back into yourself. You must spend at least 30 minutes of the rest meditating to regain your ki points.\n\nSome of your ki features require your target to make a saving throw to resist the feature's effects. The saving throw DC is calculated as follows:\n\nKi save DC = 8 + your proficiency bonus + your Wisdom modifier"
+    }
+  },
+  {
+    "id": "2014/feature/monk-flurry-of-blows",
+    "edition": "2014",
+    "name": "Flurry of Blows",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action."
+    }
+  },
+  {
+    "id": "2014/feature/monk-patient-defense",
+    "edition": "2014",
+    "name": "Patient Defense",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can spend 1 ki point to take the Dodge action as a bonus action on your turn."
+    }
+  },
+  {
+    "id": "2014/feature/monk-step-of-the-wind",
+    "edition": "2014",
+    "name": "Step of the Wind",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can spend 1 ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn."
+    }
+  },
+  {
+    "id": "2014/feature/monk-unarmored-movement-1",
+    "edition": "2014",
+    "name": "Unarmored Movement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 2nd level, your speed increases by 10 feet while you are not wearing armor or wielding a shield. This bonus increases when you reach certain monk levels, as shown in Table: The Monk.\n\nAt 9th level, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the move."
+    }
+  },
+  {
+    "id": "2014/feature/monk-monastic-tradition",
+    "edition": "2014",
+    "name": "Monastic Tradition",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 3rd level, you commit yourself to a monastic tradition, such as the Way of the Open Hand. Your tradition grants you features at 3rd level and again at 6th, 11th, and 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/monk-deflect-missiles",
+    "edition": "2014",
+    "name": "Deflect Missiles",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 3rd level, you can use your reaction to deflect or catch the missile when you are hit by a ranged weapon attack. When you do so, the damage you take from the attack is reduced by 1d10 + your Dexterity modifier + your monk level.\n\nIf you reduce the damage to 0, you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free. If you catch a missile in this way, you can spend 1 ki point to make a ranged attack with the weapon or piece of ammunition you just caught, as part of the same reaction. You make this attack with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the attack, which has a normal range of 20 feet and a long range of 60 feet."
+    }
+  },
+  {
+    "id": "2014/feature/monk-ability-score-improvement-1",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/monk-slow-fall",
+    "edition": "2014",
+    "name": "Slow Fall",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 4th level, you can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your monk level."
+    }
+  },
+  {
+    "id": "2014/feature/monk-extra-attack",
+    "edition": "2014",
+    "name": "Extra Attack",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
+    }
+  },
+  {
+    "id": "2014/feature/monk-stunning-strike",
+    "edition": "2014",
+    "name": "Stunning Strike",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 5th level, you can interfere with the flow of ki in an opponent's body. When you hit another creature with a melee weapon attack, you can spend 1 ki point to attempt a stunning strike. The target must succeed on a Constitution saving throw or be stunned until the end of your next turn."
+    }
+  },
+  {
+    "id": "2014/feature/monk-ki-empowered-strikes",
+    "edition": "2014",
+    "name": "Ki Empowered Strikes",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 6th level, your unarmed strikes count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+    }
+  },
+  {
+    "id": "2014/feature/monk-monastic-tradition-improvement-1",
+    "edition": "2014",
+    "name": "Monastic Tradition feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 3rd level, you commit yourself to a monastic tradition, such as the Way of the Open Hand. Your tradition grants you features at 3rd level and again at 6th, 11th, and 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/monk-evasion",
+    "edition": "2014",
+    "name": "Evasion",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 7th level, your instinctive agility lets you dodge out of the way of certain area effects, such as a blue dragon's lightning breath or a fireball spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail."
+    }
+  },
+  {
+    "id": "2014/feature/monk-stillness-of-mind",
+    "edition": "2014",
+    "name": "Stillness of Mind",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be charmed or frightened."
+    }
+  },
+  {
+    "id": "2014/feature/monk-ability-score-improvement-2",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/monk-unarmored-movement-2",
+    "edition": "2014",
+    "name": "Unarmored Movement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 2nd level, your speed increases by 10 feet while you are not wearing armor or wielding a shield. This bonus increases when you reach certain monk levels, as shown in Table: The Monk.\n\nAt 9th level, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the move."
+    }
+  },
+  {
+    "id": "2014/feature/monk-purity-of-body",
+    "edition": "2014",
+    "name": "Purity of Body",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 10th level, your mastery of the ki flowing through you makes you immune to disease and poison."
+    }
+  },
+  {
+    "id": "2014/feature/monk-monastic-tradition-improvement-2",
+    "edition": "2014",
+    "name": "Monastic Tradition feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 3rd level, you commit yourself to a monastic tradition, such as the Way of the Open Hand. Your tradition grants you features at 3rd level and again at 6th, 11th, and 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/monk-ability-score-improvement-3",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/monk-tongue-of-the-sun-and-moon",
+    "edition": "2014",
+    "name": "Tongue of the Sun and Moon",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 13th level, you learn to touch the ki of other minds so that you understand all spoken languages. Moreover, any creature that can understand a language can understand what you say."
+    }
+  },
+  {
+    "id": "2014/feature/monk-diamond-soul",
+    "edition": "2014",
+    "name": "Diamond Soul",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 14th level, your mastery of ki grants you proficiency in all saving throws.\n\nAdditionally, whenever you make a saving throw and fail, you can spend 1 ki point to reroll it and take the second result."
+    }
+  },
+  {
+    "id": "2014/feature/monk-timeless-body",
+    "edition": "2014",
+    "name": "Timeless Body",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 15th level, your ki sustains you so that you suffer none of the frailty of old age, and you can't be aged magically. You can still die of old age, however. In addition, you no longer need food or water."
+    }
+  },
+  {
+    "id": "2014/feature/monk-ability-score-improvement-4",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/monk-monastic-tradition-improvement-3",
+    "edition": "2014",
+    "name": "Monastic Tradition feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 3rd level, you commit yourself to a monastic tradition, such as the Way of the Open Hand. Your tradition grants you features at 3rd level and again at 6th, 11th, and 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/monk-empty-body",
+    "edition": "2014",
+    "name": "Empty Body",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 18th level, you can use your action to spend 4 ki points to become invisible for 1 minute. During that time, you also have resistance to all damage but force damage.\n\nAdditionally, you can spend 8 ki points to cast the astral projection spell, without needing material components. When you do so, you can't take any other creatures with you."
+    }
+  },
+  {
+    "id": "2014/feature/monk-ability-score-improvement-5",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/monk-perfect-self",
+    "edition": "2014",
+    "name": "Perfect Self",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 20th level, when you roll for initiative and have no ki points remaining, you regain 4 ki points."
+    }
+  },
+  {
+    "id": "2014/subclass/open-hand",
+    "edition": "2014",
+    "name": "Open Hand",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "subclass",
+    "data": {
+      "parentClassRef": "2014/class/monk",
+      "description": "Monks of the Way of the Open Hand are the ultimate masters of martial arts combat, whether armed or unarmed. They learn techniques to push and trip their opponents, manipulate ki to heal damage to their bodies, and practice advanced meditation that can protect them from harm.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/open-hand-technique"
+        ],
+        "6": [
+          "2014/feature/open-hand-wholeness-of-body"
+        ],
+        "11": [
+          "2014/feature/open-hand-tranquility"
+        ],
+        "17": [
+          "2014/feature/open-hand-quivering-palm"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/open-hand-technique",
+    "edition": "2014",
+    "name": "Open Hand Technique",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting when you choose this tradition at 3rd level, you can manipulate your enemy's ki when you harness your own. Whenever you hit a creature with one of the attacks granted by your Flurry of Blows, you can impose one of the following effects on that target:\n\n- It must succeed on a Dexterity saving throw or be knocked prone.\n\n- It must make a Strength saving throw. If it fails, you can push it up to 15 feet away from you.\n\n- It can't take reactions until the end of your next turn."
+    }
+  },
+  {
+    "id": "2014/feature/open-hand-wholeness-of-body",
+    "edition": "2014",
+    "name": "Wholeness of Body",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 6th level, you gain the ability to heal yourself. As an action, you can regain hit points equal to three times your monk level. You must finish a long rest before you can use this feature again."
+    }
+  },
+  {
+    "id": "2014/feature/open-hand-tranquility",
+    "edition": "2014",
+    "name": "Tranquility",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 11th level, you can enter a special meditation that surrounds you with an aura of peace. At the end of a long rest, you gain the effect of a sanctuary spell that lasts until the start of your next long rest (the spell can end early as normal). The saving throw DC for the spell equals 8 + your Wisdom modifier + your proficiency bonus."
+    }
+  },
+  {
+    "id": "2014/feature/open-hand-quivering-palm",
+    "edition": "2014",
+    "name": "Quivering Palm",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 17th level, you gain the ability to set up lethal vibrations in someone's body. When you hit a creature with an unarmed strike, you can spend 3 ki points to start these imperceptible vibrations, which last for a number of days equal to your monk level. The vibrations are harmless unless you use your action to end them. To do so, you and the target must be on the same plane of existence. When you use this action, the creature must make a Constitution saving throw. If it fails, it is reduced to 0 hit points. If it succeeds, it takes 10d10 necrotic damage.\n\nYou can have only one creature under the effect of this feature at a time. You can choose to end the vibrations harmlessly without using an action."
+    }
+  },
+  {
+    "id": "2014/subclass/way-of-mercy",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Way of Mercy",
+    "source": {
+      "book": "TCE",
+      "page": 49
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/monk",
+      "description": "Monks of the Way of Mercy learn techniques to manipulate life force, using it to heal or harm.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/extracted-implements-of-mercy",
+          "2014/feature/extracted-hand-of-healing",
+          "2014/feature/extracted-hand-of-harm"
+        ],
+        "6": [
+          "2014/feature/extracted-physician-s-touch"
+        ],
+        "11": [
+          "2014/feature/extracted-flurry-of-healing-and-harm"
+        ],
+        "17": [
+          "2014/feature/extracted-hand-of-ultimate-mercy"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/way-of-the-astral-self",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Way of the Astral Self",
+    "source": {
+      "book": "TCE",
+      "page": 50
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/monk",
+      "description": "Monks of the Way of the Astral Self reach deep within themselves to project the visage of their spirit's astral form.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/extracted-arms-of-the-astral-self",
+          "2014/feature/extracted-visage-of-the-astral-self"
+        ],
+        "6": [
+          "2014/feature/extracted-body-of-the-astral-self"
+        ],
+        "17": [
+          "2014/feature/extracted-awakened-astral-self"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/extracted-implements-of-mercy",
+    "edition": "2014",
+    "name": "Implements of Mercy",
+    "source": {
+      "book": "TCE",
+      "page": 49
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency in the Insight and Medicine skills, and you gain proficiency with the herbalism kit.\nYou also gain a special mask, which you often wear when using the features of this subclass. You determine its appearance, or generate it randomly by rolling on the Merciful Mask table."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-hand-of-healing",
+    "edition": "2014",
+    "name": "Hand of Healing",
+    "source": {
+      "book": "TCE",
+      "page": 49
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your mystical touch can mend wounds. As an action, you can spend 1 ki point to touch a creature and restore a number of hit points equal to a roll of your Martial Arts die + your Wisdom modifier.\nWhen you use your Flurry of Blows, you can replace one of the unarmed strikes with a use of this feature without spending a ki point for the healing."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-hand-of-harm",
+    "edition": "2014",
+    "name": "Hand of Harm",
+    "source": {
+      "book": "TCE",
+      "page": 50
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You use your ki to inflict wounds. When you hit a creature with an unarmed strike, you can spend 1 ki point to deal extra necrotic damage equal to one roll of your Martial Arts die + your Wisdom modifier.\nYou can use this feature only once per turn."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-physician-s-touch",
+    "edition": "2014",
+    "name": "Physician's Touch",
+    "source": {
+      "book": "TCE",
+      "page": 50
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can administer even greater cures with a touch, and if you feel its necessary, you can use your knowledge to cause harm.\nWhen you use Hand of Healing on a creature, you can also end one disease or one of the following conditions affecting the creature: blinded, deafened, paralyzed, poisoned, or stunned.\nWhen you use Hand of Harm on a creature, you can subject that creature to the poisoned condition until the end of your next turn."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-flurry-of-healing-and-harm",
+    "edition": "2014",
+    "name": "Flurry of Healing and Harm",
+    "source": {
+      "book": "TCE",
+      "page": 50
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can now mete out a flurry of comfort and hurt. When you use Flurry of Blows, you can now replace each of the unarmed strikes with a use of your Hand of Healing, without spending ki points for the healing.\nIn addition, when you make an unarmed strike with Flurry of Blows, you can use Hand of Harm with that strike without spending the ki point for Hand of Harm. You can still use Hand of Harm only once per turn."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-hand-of-ultimate-mercy",
+    "edition": "2014",
+    "name": "Hand of Ultimate Mercy",
+    "source": {
+      "book": "TCE",
+      "page": 50
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your mastery of life energy opens the door to the ultimate mercy. As an action, you can touch the corpse of a creature that died within the past 24 hours and expend 5 ki points. The creature then returns to life, regaining a number of hit points equal to 4d10 + your Wisdom modifier. If the creature died while subject to any of the following conditions, it revives with them removed: blinded, deafened, paralyzed, poisoned, and stunned.\nOnce you use this feature, you cant use it again until you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-arms-of-the-astral-self",
+    "edition": "2014",
+    "name": "Arms of the Astral Self",
+    "source": {
+      "book": "TCE",
+      "page": 50
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your mastery of your ki allows you to summon a portion of your astral self. As a bonus action, you can spend 1 ki point to summon the arms of your astral self. When you do so, each creature of your choice that you can see within 10 feet of you must succeed on a Dexterity saving throw or take force damage equal to two rolls of your Martial Arts die.\nFor 10 minutes, these spectral arms hover near your shoulders or surround your arms (your choice). You determine the arms appearance, and they vanish early if you are incapacitated or die.\nWhile the spectral arms are present, you gain the following benefits:\n- You can use your Wisdom modifier in place of your Strength modifier when making Strength checks and Strength saving throws.\n- You can use the spectral arms to make unarmed strikes.\n- When you make an unarmed strike with the arms on your turn, your reach for it is 5 feet greater than normal.\n- The unarmed strikes you make with the arms can use your Wisdom modifier in place of your Strength or Dexterity modifier for the attack and damage rolls, and their damage type is force."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-visage-of-the-astral-self",
+    "edition": "2014",
+    "name": "Visage of the Astral Self",
+    "source": {
+      "book": "TCE",
+      "page": 50
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can summon the visage of your astral self. As a bonus action, or as part of the bonus action you take to activate Arms of the Astral Self, you can spend 1 ki point to summon this visage for 10 minutes. It vanishes early if you are incapacitated or die.\nThe spectral visage covers your face like a helmet or mask. You determine its appearance.\nWhile the spectral visage is present, you gain the following benefits:\n- Astral Sight. You can see normally in darkness, both magical and nonmagical, to a distance of 120 feet.\n- Wisdom of the Spirit. You have advantage on Wisdom (Insight) and Charisma (Intimidation) checks.\n- Word of the Spirit. When you speak, you can direct your words to a creature of your choice that you can see within 60 feet of you, making it so only that creature can hear you. Alternatively, you can amplify your voice so that all creatures within 600 feet can hear you."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-body-of-the-astral-self",
+    "edition": "2014",
+    "name": "Body of the Astral Self",
+    "source": {
+      "book": "TCE",
+      "page": 51
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you have both your astral arms and visage summoned, you can cause the body of your astral self to appear (no action required). This spectral body covers your physical form like a suit of armor, connecting with the arms and visage. You determine its appearance.\nWhile the spectral body is present, you gain the following benefits:\n- Deflect Energy. When you take acid, cold, fire, force, lightning, or thunder damage, you can use your reaction to deflect it. When you do so, the damage you take is reduced by 1d10 + your Wisdom modifier (minimum reduction of 1).\n- Empowered Arms. Once on each of your turns when you hit a target with the Arms of the Astral Self, you can deal extra damage to the target equal to your Martial Arts die."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-awakened-astral-self",
+    "edition": "2014",
+    "name": "Awakened Astral Self",
+    "source": {
+      "book": "TCE",
+      "page": 51
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your connection to your astral self is complete, allowing you to unleash its full potential. As a bonus action, you can spend 5 ki points to summon the arms, visage, and body of your astral self and awaken it for 10 minutes. This awakening ends early if you are incapacitated or die.\nWhile your astral self is awakened, you gain the following benefits:\n- Armor of the Spirit. You gain a +2 bonus to Armor Class.\n- Astral Barrage. Whenever you use the Extra Attack feature to attack twice, you can instead attack three times if all the attacks are made with your astral arms."
+    }
+  }
+]

@@ -1,0 +1,566 @@
+[
+  {
+    "id": "2014/feature/background-acolyte",
+    "edition": "2014",
+    "name": "Shelter of the Faithful",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.\n\nYou might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there. This could be the temple where you used to serve, if you remain on good terms with it, or a temple where you have found a new home. While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple."
+    }
+  },
+  {
+    "id": "2014/background/acolyte",
+    "edition": "2014",
+    "name": "Acolyte",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine. You are not necessarily a cleric — performing sacred rites is not the same thing as channeling divine power.\n\nChoose a god, a pantheon of gods, or some other quasi-divine being, and work with your DM to detail the nature of your religious service. Were you a lesser functionary in a temple, raised from childhood to assist the priests in the sacred rites? Or were you a high priest who suddenly experienced a call to serve your god in a different way? Perhaps you were the leader of a small cult outside of any established temple structure, or even an occult group that served a fiendish master that you now deny.",
+      "skillProficiencies": [
+        "insight",
+        "religion"
+      ],
+      "toolProficiencies": [],
+      "equipment": [
+        "clothes-common",
+        "pouch"
+      ],
+      "featureRef": "2014/feature/background-acolyte"
+    }
+  },
+  {
+    "id": "2014/feature/background-charlatan",
+    "edition": "2014",
+    "name": "False Identity",
+    "source": {
+      "book": "PHB2014",
+      "page": 128
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have created a second identity that includes documentation, established acquaintances, and disguises that allow you to assume that persona. Additionally, you can forge documents including official papers and personal letters, as long as you have seen an example of the kind of document or the handwriting you are trying to copy."
+    }
+  },
+  {
+    "id": "2014/background/charlatan",
+    "edition": "2014",
+    "name": "Charlatan",
+    "source": {
+      "book": "PHB2014",
+      "page": 128
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You have always had a way with people. You know what makes them tick, you can tease out their hearts' desires after a few minutes of conversation, and with a few leading questions you can read them like they were children's books. It's a useful talent, and one that you're perfectly willing to use for your advantage.\n\nYou know what people want and you excel at making them think they are getting it. You are a con artist, a swindler, and a master of the well-timed lie. Whether you cheat at cards, sell false relics, or promise cures that do nothing, you have made your living off the gullibility of others — and you have rarely been caught.",
+      "skillProficiencies": [
+        "deception",
+        "sleightOfHand"
+      ],
+      "toolProficiencies": [
+        "disguise-kit",
+        "forgery-kit"
+      ],
+      "equipment": [
+        "clothes-fine",
+        "disguise-kit",
+        "pouch"
+      ],
+      "featureRef": "2014/feature/background-charlatan"
+    }
+  },
+  {
+    "id": "2014/feature/background-criminal",
+    "edition": "2014",
+    "name": "Criminal Contact",
+    "source": {
+      "book": "PHB2014",
+      "page": 129
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you."
+    }
+  },
+  {
+    "id": "2014/background/criminal",
+    "edition": "2014",
+    "name": "Criminal",
+    "source": {
+      "book": "PHB2014",
+      "page": 129
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You are an experienced criminal with a history of breaking the law. You have spent a lot of time among other criminals and still have contacts within the criminal underworld. You're far closer than most people to the world of murder, theft, and violence that pervades the underbelly of civilization, and you have survived up to this point by flouting the rules and regulations of society.\n\nWhether you were a burglar, a fence, a highway robber, or an enforcer for a local crime boss, you learned early that the law is written by those with power — and that the surest way to survive is to know the right people and owe the right favors.",
+      "skillProficiencies": [
+        "deception",
+        "stealth"
+      ],
+      "toolProficiencies": [
+        "thieves-tools",
+        "dice-set"
+      ],
+      "equipment": [
+        "crowbar",
+        "clothes-common",
+        "pouch"
+      ],
+      "featureRef": "2014/feature/background-criminal"
+    }
+  },
+  {
+    "id": "2014/feature/background-entertainer",
+    "edition": "2014",
+    "name": "By Popular Demand",
+    "source": {
+      "book": "PHB2014",
+      "page": 130
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble's court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you."
+    }
+  },
+  {
+    "id": "2014/background/entertainer",
+    "edition": "2014",
+    "name": "Entertainer",
+    "source": {
+      "book": "PHB2014",
+      "page": 130
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You thrive in front of an audience. You know how to entrance them, entertain them, and even inspire them. Your poetics can stir the hearts of those who hear you, awakening grief or joy, laughter or anger. Your music raises their spirits or captures their sorrow. Your dance steps captivate, your humor cuts to the quick.\n\nWhatever techniques you use, your art is your life. Perhaps you were a wandering minstrel who never slept in the same town twice, or the star of a travelling troupe, or a storyteller whose tales kept a village fed through a long winter. You have honed your craft against the hardest judge there is: a crowd that can simply walk away.",
+      "skillProficiencies": [
+        "acrobatics",
+        "performance"
+      ],
+      "toolProficiencies": [
+        "disguise-kit",
+        "lute"
+      ],
+      "equipment": [
+        "lute",
+        "clothes-costume",
+        "pouch"
+      ],
+      "featureRef": "2014/feature/background-entertainer"
+    }
+  },
+  {
+    "id": "2014/feature/background-folk-hero",
+    "edition": "2014",
+    "name": "Rustic Hospitality",
+    "source": {
+      "book": "PHB2014",
+      "page": 131
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Since you come from the ranks of the common folk, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you."
+    }
+  },
+  {
+    "id": "2014/background/folk-hero",
+    "edition": "2014",
+    "name": "Folk Hero",
+    "source": {
+      "book": "PHB2014",
+      "page": 131
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.\n\nSomething happened that set you on your path — a defining event that revealed your courage to everyone, including yourself. Perhaps you stood up to a tyrant's agents, or led a militia against raiders, or saved livestock and neighbors from a flood. Whatever it was, the people who were there have not forgotten, and neither have you.",
+      "skillProficiencies": [
+        "animalHandling",
+        "survival"
+      ],
+      "toolProficiencies": [
+        "smiths-tools"
+      ],
+      "equipment": [
+        "smiths-tools",
+        "shovel",
+        "pot-iron",
+        "clothes-common",
+        "pouch"
+      ],
+      "featureRef": "2014/feature/background-folk-hero"
+    }
+  },
+  {
+    "id": "2014/feature/background-guild-artisan",
+    "edition": "2014",
+    "name": "Guild Membership",
+    "source": {
+      "book": "PHB2014",
+      "page": 133
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As an established and respected member of a guild, you can rely on certain benefits that membership provides. Your fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings.\n\nGuilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild's coffers.\n\nYou must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild's good graces."
+    }
+  },
+  {
+    "id": "2014/background/guild-artisan",
+    "edition": "2014",
+    "name": "Guild Artisan",
+    "source": {
+      "book": "PHB2014",
+      "page": 132
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You are a member of an artisan's guild, skilled in a particular field and closely associated with other artisans. You are a well-established part of the mercantile world, freed by talent and wealth from the constraints of a feudal social order. You learned your skills as an apprentice to a master artisan, under the sponsorship of your guild, until you became a master in your own right.\n\nYour guild is more than a trade association — it is a family, a political bloc, and a safety net. In return for dues and loyalty, it offers you a standing that no unaffiliated craftsman can match.",
+      "skillProficiencies": [
+        "insight",
+        "persuasion"
+      ],
+      "toolProficiencies": [
+        "smiths-tools"
+      ],
+      "equipment": [
+        "smiths-tools",
+        "clothes-travelers",
+        "pouch"
+      ],
+      "featureRef": "2014/feature/background-guild-artisan"
+    }
+  },
+  {
+    "id": "2014/feature/background-hermit",
+    "edition": "2014",
+    "name": "Discovery",
+    "source": {
+      "book": "PHB2014",
+      "page": 134
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature. It could be a site that no one else has ever seen. You might have uncovered a fact that has long been forgotten, or unearthed some relic of the past that could rewrite history. It might be information that would be damaging to the people who consigned you to exile, and hence the reason for your return to society.\n\nWork with your DM to determine the details of your discovery and its impact on the campaign."
+    }
+  },
+  {
+    "id": "2014/background/hermit",
+    "edition": "2014",
+    "name": "Hermit",
+    "source": {
+      "book": "PHB2014",
+      "page": 134
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You lived in seclusion — either in a sheltered community such as a monastery, or entirely alone — for a formative part of your life. In your time apart from the clamor of society, you found quiet, solitude, and perhaps some of the answers you were looking for.\n\nWhat was the reason for your isolation, and what changed to allow you to end it? Perhaps you were seeking spiritual enlightenment, or fleeing a crime, or nursing a wound that would not heal in company. Whatever drove you into seclusion, you emerged from it carrying something the world outside does not yet know.",
+      "skillProficiencies": [
+        "medicine",
+        "religion"
+      ],
+      "toolProficiencies": [
+        "herbalism-kit"
+      ],
+      "equipment": [
+        "blanket",
+        "clothes-common",
+        "herbalism-kit",
+        "pouch"
+      ],
+      "featureRef": "2014/feature/background-hermit"
+    }
+  },
+  {
+    "id": "2014/feature/background-noble",
+    "edition": "2014",
+    "name": "Position of Privilege",
+    "source": {
+      "book": "PHB2014",
+      "page": 135
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to."
+    }
+  },
+  {
+    "id": "2014/background/noble",
+    "edition": "2014",
+    "name": "Noble",
+    "source": {
+      "book": "PHB2014",
+      "page": 135
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a title but no land.\n\nWork with your DM to come up with an appropriate title and determine how much authority that title carries. A noble title comes with obligations as well as privileges — to your family, to the people who live on your land, and to whoever granted the title in the first place.",
+      "skillProficiencies": [
+        "history",
+        "persuasion"
+      ],
+      "toolProficiencies": [
+        "dice-set"
+      ],
+      "equipment": [
+        "clothes-fine",
+        "signet-ring",
+        "pouch"
+      ],
+      "featureRef": "2014/feature/background-noble"
+    }
+  },
+  {
+    "id": "2014/feature/background-outlander",
+    "edition": "2014",
+    "name": "Wanderer",
+    "source": {
+      "book": "PHB2014",
+      "page": 136
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, and so forth."
+    }
+  },
+  {
+    "id": "2014/background/outlander",
+    "edition": "2014",
+    "name": "Outlander",
+    "source": {
+      "book": "PHB2014",
+      "page": 136
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You grew up in the wilds, far from civilization and the comforts of town and technology. You've witnessed the migration of herds larger than forests, survived weather more extreme than any city-dweller could comprehend, and enjoyed the solitude of being the only thinking creature for miles in any direction.\n\nThe wilds are in your blood, whether you were a nomad, an explorer, a recluse, a hunter-gatherer, or even a marauder. Even in places where you don't know the specific features of the terrain, you know the ways of the wild.",
+      "skillProficiencies": [
+        "athletics",
+        "survival"
+      ],
+      "toolProficiencies": [
+        "horn"
+      ],
+      "equipment": [
+        "staff",
+        "hunting-trap",
+        "clothes-travelers",
+        "pouch"
+      ],
+      "featureRef": "2014/feature/background-outlander"
+    }
+  },
+  {
+    "id": "2014/feature/background-sage",
+    "edition": "2014",
+    "name": "Researcher",
+    "source": {
+      "book": "PHB2014",
+      "page": 138
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign."
+    }
+  },
+  {
+    "id": "2014/background/sage",
+    "edition": "2014",
+    "name": "Sage",
+    "source": {
+      "book": "PHB2014",
+      "page": 137
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.\n\nYou might have been a librarian, a professor, a wizard's apprentice, or a wandering scholar with no fixed post. What unites every sage is the conviction that any question worth asking has an answer written down somewhere — and the patience to go find it.",
+      "skillProficiencies": [
+        "arcana",
+        "history"
+      ],
+      "toolProficiencies": [],
+      "equipment": [
+        "ink-1-ounce-bottle",
+        "ink-pen",
+        "small-knife",
+        "clothes-common",
+        "pouch"
+      ],
+      "featureRef": "2014/feature/background-sage"
+    }
+  },
+  {
+    "id": "2014/feature/background-sailor",
+    "edition": "2014",
+    "name": "Ship's Passage",
+    "source": {
+      "book": "PHB2014",
+      "page": 139
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you need to, you can secure free passage on a sailing ship for yourself and your adventuring companions. You might sail on the ship you served on, or another ship you have good relations with (perhaps one captained by a former crewmate). Because you're calling in a favor, you can't be certain of a schedule or route that will meet your every need. Your DM will determine how long it takes to get where you need to go. In return for your free passage, you and your companions are expected to assist the crew during the voyage."
+    }
+  },
+  {
+    "id": "2014/background/sailor",
+    "edition": "2014",
+    "name": "Sailor",
+    "source": {
+      "book": "PHB2014",
+      "page": 139
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You sailed on a seagoing vessel for years. In that time, you faced down mighty storms, monsters of the deep, and those who wanted to sink your craft to the bottomless depths. Your first love is the distant line of the horizon, but the time has come to try your hand at something new.\n\nDiscuss the nature of the ship you served aboard with your DM. Was it a merchant vessel, a naval ship, a ship of exploration, or a pirate ship? How famous (or infamous) is it? What sort of reputation do you have among its crew?",
+      "skillProficiencies": [
+        "athletics",
+        "perception"
+      ],
+      "toolProficiencies": [
+        "navigators-tools"
+      ],
+      "equipment": [
+        "rope-hempen-50-feet",
+        "clothes-common",
+        "pouch"
+      ],
+      "featureRef": "2014/feature/background-sailor"
+    }
+  },
+  {
+    "id": "2014/feature/background-soldier",
+    "edition": "2014",
+    "name": "Military Rank",
+    "source": {
+      "book": "PHB2014",
+      "page": 140
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can invoke your rank to exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized."
+    }
+  },
+  {
+    "id": "2014/background/soldier",
+    "edition": "2014",
+    "name": "Soldier",
+    "source": {
+      "book": "PHB2014",
+      "page": 140
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, and learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war.\n\nWhen you choose this background, work with your DM to determine which military organization you were a part of, how far through its ranks you progressed, and what kind of experiences you had during your military career.",
+      "skillProficiencies": [
+        "athletics",
+        "intimidation"
+      ],
+      "toolProficiencies": [
+        "dice-set"
+      ],
+      "equipment": [
+        "dice-set",
+        "clothes-common",
+        "pouch"
+      ],
+      "featureRef": "2014/feature/background-soldier"
+    }
+  },
+  {
+    "id": "2014/feature/background-urchin",
+    "edition": "2014",
+    "name": "City Secrets",
+    "source": {
+      "book": "PHB2014",
+      "page": 141
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would normally allow."
+    }
+  },
+  {
+    "id": "2014/background/urchin",
+    "edition": "2014",
+    "name": "Urchin",
+    "source": {
+      "book": "PHB2014",
+      "page": 141
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "background",
+    "data": {
+      "description": "You grew up on the streets alone, orphaned, and poor. You had no one to watch over you or to provide for you, so you learned to provide for yourself. You fought fiercely over food and kept a constant watch out for other desperate souls who might steal from you. You slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the advantage of medicine or a place to recuperate.\n\nYou have survived despite all odds, and did so through cunning, strength, speed, or some combination of each. You begin your adventuring career with enough money to live modestly but securely for at least ten days. How did you come by that money? What allowed you to break free of your desperate circumstances and embark on a better life?",
+      "skillProficiencies": [
+        "sleightOfHand",
+        "stealth"
+      ],
+      "toolProficiencies": [
+        "disguise-kit",
+        "thieves-tools"
+      ],
+      "equipment": [
+        "small-knife",
+        "mirror-steel",
+        "perfume-vial",
+        "clothes-common",
+        "pouch"
+      ],
+      "featureRef": "2014/feature/background-urchin"
+    }
+  }
+]

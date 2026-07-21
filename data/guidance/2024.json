@@ -1,0 +1,101 @@
+[
+  {
+    "classRef": "2024/class/barbarian",
+    "recommendedAbilities": ["str", "con", "dex"],
+    "abilityRationale": "Strength drives your attacks and damage; Constitution keeps you standing (and boosts HP every level); Dexterity helps your no-armor AC and initiative.",
+    "subclasses": [
+      { "subclassRef": "2024/subclass/path-of-the-berserker", "rationale": "The simplest barbarian — more rage-fueled damage, no extra rules to track." },
+      { "subclassRef": "2024/subclass/path-of-the-zealot", "rationale": "Extra healing and resilience baked into your rage — very forgiving in a tough fight." }
+    ]
+  },
+  {
+    "classRef": "2024/class/bard",
+    "recommendedAbilities": ["cha", "dex", "con"],
+    "abilityRationale": "Charisma powers your spells and most of your class features; Dexterity and Constitution round out survivability since Bards wear light armor at best.",
+    "subclasses": [
+      { "subclassRef": "2024/subclass/college-of-lore", "rationale": "More magical secrets and expertise — the most flexible, hardest-to-go-wrong pick." },
+      { "subclassRef": "2024/subclass/college-of-valor", "rationale": "Leans into weapon combat alongside your spells if you want a more martial Bard." }
+    ]
+  },
+  {
+    "classRef": "2024/class/cleric",
+    "recommendedAbilities": ["wis", "con", "str"],
+    "abilityRationale": "Wisdom drives your spellcasting; Constitution keeps you alive in melee range; Strength (or Dexterity instead) depends on whether you fight up close.",
+    "subclasses": [
+      { "subclassRef": "2024/subclass/life-domain", "rationale": "The best healer in the game and very forgiving to play — a great first Cleric." },
+      { "subclassRef": "2024/subclass/war-domain", "rationale": "A front-line fighting Cleric with bonus attacks and strong buffs for the party." }
+    ]
+  },
+  {
+    "classRef": "2024/class/druid",
+    "recommendedAbilities": ["wis", "con", "dex"],
+    "abilityRationale": "Wisdom drives spells and Wild Shape DCs; Constitution and Dexterity both matter since you'll spend time both as yourself and as a beast.",
+    "subclasses": [
+      { "subclassRef": "2024/subclass/circle-of-the-land", "rationale": "Extra spells and a burst of healing/damage — flexible and reliable for a first Druid." }
+    ]
+  },
+  {
+    "classRef": "2024/class/fighter",
+    "recommendedAbilities": ["str", "con", "dex"],
+    "abilityRationale": "Strength (or Dexterity for a finesse/ranged build) drives your attacks; Constitution is huge for a class that gets the most hit points and the most attacks.",
+    "subclasses": [
+      { "subclassRef": "2024/subclass/champion", "rationale": "The lowest-maintenance subclass in the game — better crits, nothing to manage." }
+    ]
+  },
+  {
+    "classRef": "2024/class/monk",
+    "recommendedAbilities": ["dex", "wis", "con"],
+    "abilityRationale": "Dexterity drives your attacks and AC; Wisdom boosts that same AC and your saves; Constitution helps you survive being in melee with light armor.",
+    "subclasses": [
+      { "subclassRef": "2024/subclass/warrior-of-the-open-hand", "rationale": "The most straightforward martial-arts monk — reliable control effects on your unarmed strikes." }
+    ]
+  },
+  {
+    "classRef": "2024/class/paladin",
+    "recommendedAbilities": ["str", "cha", "con"],
+    "abilityRationale": "Strength drives your attacks; Charisma powers your spells, auras, and smites; Constitution keeps a heavily-armored front-liner standing.",
+    "subclasses": [
+      { "subclassRef": "2024/subclass/oath-of-devotion", "rationale": "Classic 'holy knight' — strong at controlling and disabling a single dangerous enemy." }
+    ]
+  },
+  {
+    "classRef": "2024/class/ranger",
+    "recommendedAbilities": ["dex", "wis", "con"],
+    "abilityRationale": "Dexterity drives most Ranger weapon choices and AC; Wisdom powers your spells; Constitution is always worth investing in.",
+    "subclasses": [
+      { "subclassRef": "2024/subclass/hunter", "rationale": "The most reliable damage output and the simplest to play — a safe first pick." }
+    ]
+  },
+  {
+    "classRef": "2024/class/rogue",
+    "recommendedAbilities": ["dex", "con", "wis"],
+    "abilityRationale": "Dexterity drives your attacks, AC, and most of your skills; Constitution and Wisdom round out survivability and perception.",
+    "subclasses": [
+      { "subclassRef": "2024/subclass/thief", "rationale": "More item/utility tricks and the best at using magic items — flexible, easy to use." }
+    ]
+  },
+  {
+    "classRef": "2024/class/sorcerer",
+    "recommendedAbilities": ["cha", "con", "dex"],
+    "abilityRationale": "Charisma is your entire spellcasting engine; Constitution matters a lot since Sorcerers have the fewest hit points of any full caster.",
+    "subclasses": [
+      { "subclassRef": "2024/subclass/draconic-sorcery", "rationale": "Extra hit points and AC baked in — the most forgiving Sorcerer subclass for a first try." }
+    ]
+  },
+  {
+    "classRef": "2024/class/warlock",
+    "recommendedAbilities": ["cha", "con", "dex"],
+    "abilityRationale": "Charisma powers Eldritch Blast and all your spells; Constitution and Dexterity help you survive with fewer, shorter-recharging spell slots.",
+    "subclasses": [
+      { "subclassRef": "2024/subclass/fiend-patron", "rationale": "Temporary hit points whenever you drop an enemy — very forgiving in a fight." }
+    ]
+  },
+  {
+    "classRef": "2024/class/wizard",
+    "recommendedAbilities": ["int", "con", "dex"],
+    "abilityRationale": "Intelligence drives every Wizard spell and the DCs behind them; Constitution and Dexterity cover the gap left by no armor and the fewest hit points of any class.",
+    "subclasses": [
+      { "subclassRef": "2024/subclass/evoker", "rationale": "Lets you cast damaging spells without catching your own allies in them — very beginner-friendly." }
+    ]
+  }
+]

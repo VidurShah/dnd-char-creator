@@ -1,0 +1,967 @@
+[
+  {
+    "id": "2014/class/wizard",
+    "edition": "2014",
+    "name": "Wizard",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "class",
+    "data": {
+      "hitDie": "d6",
+      "savingThrowProficiencies": [
+        "int",
+        "wis"
+      ],
+      "armorProficiencies": [],
+      "weaponProficiencies": [
+        "daggers",
+        "darts",
+        "slings",
+        "quarterstaffs",
+        "crossbows-light"
+      ],
+      "toolProficiencies": [],
+      "skillChoice": {
+        "count": 2,
+        "options": [
+          "arcana",
+          "history",
+          "insight",
+          "investigation",
+          "medicine",
+          "religion"
+        ]
+      },
+      "spellcasting": {
+        "progression": "full",
+        "ability": "int",
+        "knownOrPrepared": "prepared"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "featureRefs": [
+            "2014/feature/wizard-spellcasting-wizard",
+            "2014/feature/wizard-arcane-recovery"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "arcane_recovery_levels": 1,
+            "cantrips_known": 3,
+            "spell_slots_level_1": 2,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 2,
+          "featureRefs": [
+            "2014/feature/wizard-arcane-tradition"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "arcane_recovery_levels": 1,
+            "cantrips_known": 3,
+            "spell_slots_level_1": 3,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 3,
+          "featureRefs": [],
+          "proficiencyBonus": 2,
+          "columns": {
+            "arcane_recovery_levels": 2,
+            "cantrips_known": 3,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 2,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 4,
+          "featureRefs": [
+            "2014/feature/wizard-ability-score-improvement-1"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "arcane_recovery_levels": 2,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 5,
+          "featureRefs": [],
+          "proficiencyBonus": 3,
+          "columns": {
+            "arcane_recovery_levels": 3,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 2,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 6,
+          "featureRefs": [
+            "2014/feature/wizard-arcane-tradition-improvement-1"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "arcane_recovery_levels": 3,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 7,
+          "featureRefs": [],
+          "proficiencyBonus": 3,
+          "columns": {
+            "arcane_recovery_levels": 4,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 1,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 8,
+          "featureRefs": [
+            "2014/feature/wizard-ability-score-improvement-2"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "arcane_recovery_levels": 4,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 2,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 9,
+          "featureRefs": [],
+          "proficiencyBonus": 4,
+          "columns": {
+            "arcane_recovery_levels": 5,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 1,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 10,
+          "featureRefs": [
+            "2014/feature/wizard-arcane-tradition-improvement-2"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "arcane_recovery_levels": 5,
+            "cantrips_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 11,
+          "featureRefs": [],
+          "proficiencyBonus": 4,
+          "columns": {
+            "arcane_recovery_levels": 6,
+            "cantrips_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 12,
+          "featureRefs": [
+            "2014/feature/wizard-ability-score-improvement-3"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "arcane_recovery_levels": 6,
+            "cantrips_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 13,
+          "featureRefs": [],
+          "proficiencyBonus": 5,
+          "columns": {
+            "arcane_recovery_levels": 7,
+            "cantrips_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 14,
+          "featureRefs": [
+            "2014/feature/wizard-arcane-tradition-improvement-3"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "arcane_recovery_levels": 7,
+            "cantrips_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 15,
+          "featureRefs": [],
+          "proficiencyBonus": 5,
+          "columns": {
+            "arcane_recovery_levels": 8,
+            "cantrips_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 1,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 16,
+          "featureRefs": [
+            "2014/feature/wizard-ability-score-improvement-4"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "arcane_recovery_levels": 8,
+            "cantrips_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 1,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 17,
+          "featureRefs": [],
+          "proficiencyBonus": 6,
+          "columns": {
+            "arcane_recovery_levels": 9,
+            "cantrips_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 1,
+            "spell_slots_level_9": 1
+          }
+        },
+        {
+          "level": 18,
+          "featureRefs": [
+            "2014/feature/wizard-spell-mastery"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "arcane_recovery_levels": 9,
+            "cantrips_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 3,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 1,
+            "spell_slots_level_9": 1
+          }
+        },
+        {
+          "level": 19,
+          "featureRefs": [
+            "2014/feature/wizard-ability-score-improvement-5"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "arcane_recovery_levels": 10,
+            "cantrips_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 3,
+            "spell_slots_level_6": 2,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 1,
+            "spell_slots_level_9": 1
+          }
+        },
+        {
+          "level": 20,
+          "featureRefs": [
+            "2014/feature/wizard-signature-spell"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "arcane_recovery_levels": 10,
+            "cantrips_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 3,
+            "spell_slots_level_6": 2,
+            "spell_slots_level_7": 2,
+            "spell_slots_level_8": 1,
+            "spell_slots_level_9": 1
+          }
+        }
+      ],
+      "startingEquipment": {
+        "fixed": [
+          "spellbook"
+        ],
+        "choices": [
+          {
+            "prompt": "(a) a quarterstaff or (b) a dagger",
+            "options": [
+              [
+                "quarterstaff"
+              ],
+              [
+                "dagger"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) a component pouch or (b) an arcane focus",
+            "options": [
+              [
+                "component-pouch"
+              ],
+              [
+                "wand"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) a scholar's pack or (b) an explorer's pack",
+            "options": [
+              [
+                "scholars-pack"
+              ],
+              [
+                "explorers-pack"
+              ]
+            ]
+          }
+        ],
+        "goldAlternative": 100
+      }
+    }
+  },
+  {
+    "id": "2014/feature/wizard-spellcasting-wizard",
+    "edition": "2014",
+    "name": "Spellcasting: Wizard",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
+    }
+  },
+  {
+    "id": "2014/feature/wizard-arcane-recovery",
+    "edition": "2014",
+    "name": "Arcane Recovery",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.\n\nFor example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots."
+    }
+  },
+  {
+    "id": "2014/feature/wizard-arcane-tradition",
+    "edition": "2014",
+    "name": "Arcane Tradition",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of eight schools, such as Evocation.\n\nYour choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/wizard-ability-score-improvement-1",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/wizard-arcane-tradition-improvement-1",
+    "edition": "2014",
+    "name": "Arcane Tradition feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of eight schools, such as Evocation.\n\nYour choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/wizard-ability-score-improvement-2",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/wizard-arcane-tradition-improvement-2",
+    "edition": "2014",
+    "name": "Arcane Tradition feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of eight schools, such as Evocation.\n\nYour choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/wizard-ability-score-improvement-3",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/wizard-arcane-tradition-improvement-3",
+    "edition": "2014",
+    "name": "Arcane Tradition feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of eight schools, such as Evocation.\n\nYour choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/wizard-ability-score-improvement-4",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/wizard-spell-mastery",
+    "edition": "2014",
+    "name": "Spell Mastery",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your spellbook. You can cast those spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.\n\nBy spending 8 hours in study, you can exchange one or both of the spells you chose for different spells of the same levels."
+    }
+  },
+  {
+    "id": "2014/feature/wizard-ability-score-improvement-5",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/wizard-signature-spell",
+    "edition": "2014",
+    "name": "Signature Spell",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 20th level, you gain mastery over two powerful spells and can cast them with little effort. Choose two 3rd-level wizard spells in your spellbook as your signature spells. You always have these spells prepared, they don't count against the number of spells you have prepared, and you can cast each of them once at 3rd level without expending a spell slot. When you do so, you can't do so again until you finish a short or long rest.\n\nIf you want to cast either spell at a higher level, you must expend a spell slot as normal."
+    }
+  },
+  {
+    "id": "2014/subclass/evocation",
+    "edition": "2014",
+    "name": "Evocation",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "subclass",
+    "data": {
+      "parentClassRef": "2014/class/wizard",
+      "description": "You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.",
+      "featuresByLevel": {
+        "2": [
+          "2014/feature/evocation-savant",
+          "2014/feature/evocation-sculpt-spells"
+        ],
+        "6": [
+          "2014/feature/evocation-potent-cantrip"
+        ],
+        "10": [
+          "2014/feature/evocation-empowered-evocation"
+        ],
+        "14": [
+          "2014/feature/evocation-overchannel"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/evocation-savant",
+    "edition": "2014",
+    "name": "Evocation Savant",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning when you select this school at 2nd level, the gold and time you must spend to copy an evocation spell into your spellbook is halved."
+    }
+  },
+  {
+    "id": "2014/feature/evocation-sculpt-spells",
+    "edition": "2014",
+    "name": "Sculpt Spells",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 2nd level, you can create pockets of relative safety within the effects of your evocation spells. When you cast an evocation spell that affects other creatures that you can see, you can choose a number of them equal to 1 + the spell's level. The chosen creatures automatically succeed on their saving throws against the spell, and they take no damage if they would normally take half damage on a successful save."
+    }
+  },
+  {
+    "id": "2014/feature/evocation-potent-cantrip",
+    "edition": "2014",
+    "name": "Potent Cantrip",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 6th level, your damaging cantrips affect even creatures that avoid the brunt of the effect. When a creature succeeds on a saving throw against your cantrip, the creature takes half the cantrip's damage (if any) but suffers no additional effect from the cantrip."
+    }
+  },
+  {
+    "id": "2014/feature/evocation-empowered-evocation",
+    "edition": "2014",
+    "name": "Empowered Evocation",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 10th level, you can add your Intelligence modifier to one damage roll of any wizard evocation spell you cast."
+    }
+  },
+  {
+    "id": "2014/feature/evocation-overchannel",
+    "edition": "2014",
+    "name": "Overchannel",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 14th level, you can increase the power of your simpler spells. When you cast a wizard spell of 1st through 5th level that deals damage, you can deal maximum damage with that spell.\n\nThe first time you do so, you suffer no adverse effect. If you use this feature again before you finish a long rest, you take 2d12 necrotic damage for each level of the spell, immediately after you cast it. Each time you use this feature again before finishing a long rest, the necrotic damage per spell level increases by 1d12. This damage ignores resistance and immunity."
+    }
+  },
+  {
+    "id": "2014/subclass/bladesinging",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Bladesinging",
+    "source": {
+      "book": "TCE",
+      "page": 76
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/wizard",
+      "description": "Bladesingers use a graceful combination of weapon skill and magic.",
+      "featuresByLevel": {
+        "2": [
+          "2014/feature/extracted-training-in-war-and-song",
+          "2014/feature/extracted-bladesong"
+        ],
+        "6": [
+          "2014/feature/extracted-extra-attack-bladesinging"
+        ],
+        "10": [
+          "2014/feature/extracted-song-of-defense"
+        ],
+        "14": [
+          "2014/feature/extracted-song-of-victory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/order-of-scribes",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Order of Scribes",
+    "source": {
+      "book": "TCE",
+      "page": 77
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/wizard",
+      "description": "Wizards of the Order of Scribes maintain a special relationship with the magic of the written word.",
+      "featuresByLevel": {
+        "2": [
+          "2014/feature/extracted-wizardly-quill",
+          "2014/feature/extracted-awakened-spellbook"
+        ],
+        "6": [
+          "2014/feature/extracted-manifest-mind"
+        ],
+        "10": [
+          "2014/feature/extracted-master-scrivener"
+        ],
+        "14": [
+          "2014/feature/extracted-one-with-the-word"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/extracted-training-in-war-and-song",
+    "edition": "2014",
+    "name": "Training in War and Song",
+    "source": {
+      "book": "TCE",
+      "page": 76
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency with light armor, and you gain proficiency with one type of one-handed melee weapon of your choice.\nYou also gain proficiency in the Performance skill if you don't already have it."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-bladesong",
+    "edition": "2014",
+    "name": "Bladesong",
+    "source": {
+      "book": "TCE",
+      "page": 76
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can invoke an elven magic called the Bladesong, provided that you aren't wearing medium or heavy armor or using a shield. It graces you with supernatural speed, agility, and focus.\nYou can use a bonus action to start the Bladesong, which lasts for 1 minute. It ends early if you are incapacitated, if you don medium or heavy armor or a shield, or if you use two hands to make an attack with a weapon. You can also dismiss the Bladesong at any time (no action required).\nWhile your Bladesong is active, you gain the following benefits:\n- You gain a bonus to your AC equal to your Intelligence modifier (minimum of +1).\n- Your walking speed increases by 10 feet.\n- You have advantage on Dexterity (Acrobatics) checks.\n- You gain a bonus to any Constitution saving throw you make to maintain your concentration on a spell. The bonus equals your Intelligence modifier (minimum of +1).\nYou can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-extra-attack-bladesinging",
+    "edition": "2014",
+    "name": "Extra Attack (Bladesinging)",
+    "source": {
+      "book": "TCE",
+      "page": 77
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can attack twice, instead of once, whenever you take the Attack action on your turn. Moreover, you can cast one of your cantrips in place of one of those attacks."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-song-of-defense",
+    "edition": "2014",
+    "name": "Song of Defense",
+    "source": {
+      "book": "TCE",
+      "page": 77
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can direct your magic to absorb damage while your Bladesong is active. When you take damage, you can use your reaction to expend one spell slot and reduce that damage to you by an amount equal to five times the spell slot's level."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-song-of-victory",
+    "edition": "2014",
+    "name": "Song of Victory",
+    "source": {
+      "book": "TCE",
+      "page": 77
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can add your Intelligence modifier (minimum of +1) to the damage of your melee weapon attacks while your Bladesong is active."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-wizardly-quill",
+    "edition": "2014",
+    "name": "Wizardly Quill",
+    "source": {
+      "book": "TCE",
+      "page": 77
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a bonus action, you can magically create a Tiny quill in your free hand. The magic quill has the following properties:\n- The quill doesn't require ink. When you write with it, it produces ink in a color of your choice on the writing surface.\n- The time you must spend to copy a spell into your spellbook equals 2 minutes per spell level if you use the quill for the transcription.\n- You can erase anything you write with the quill if you wave the feather over the text as a bonus action, provided the text is within 5 feet of you.\nThis quill disappears if you create another one or if you die."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-awakened-spellbook",
+    "edition": "2014",
+    "name": "Awakened Spellbook",
+    "source": {
+      "book": "TCE",
+      "page": 77
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Using specially prepared inks and ancient incantations passed down by your wizardly order, you have awakened an arcane sentience within your spellbook.\nWhile you are holding the book, it grants you the following benefits:\n- You can use the book as a spellcasting focus for your wizard spells.\n- When you cast a wizard spell with a spell slot, you can temporarily replace its damage type with a type that appears in another spell in your spellbook, which magically alters the spell's formula for this casting only. The latter spell must be of the same level as the spell slot you expend.\n- When you cast a wizard spell as a ritual, you can use the spell's normal casting time, rather than adding 10 minutes to it. Once you use this benefit, you can't do so again until you finish a long rest.\nIf necessary, you can replace the book over the course of a short rest by using your Wizardly Quill to write arcane sigils in a blank book or a magic spellbook to which you're attuned. At the end of the rest, your spellbook's consciousness is summoned into the new book, which the consciousness transforms into your spellbook, along with all its spells. If the previous book still existed somewhere, all the spells vanish from its pages."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-manifest-mind",
+    "edition": "2014",
+    "name": "Manifest Mind",
+    "source": {
+      "book": "TCE",
+      "page": 78
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can conjure forth the mind of your Awakened Spellbook. As a bonus action while the book is on your person, you can cause the mind to manifest as a Tiny spectral object, hovering in an unoccupied space of your choice within 60 feet of you. The spectral mind is intangible and doesn't occupy its space, and it sheds dim light in a 10-foot radius. It looks like a ghostly tome, a cascade of text, or a scholar from the past (your choice).\nWhile manifested, the spectral mind can hear and see, and it has darkvision with a range of 60 feet. The mind can telepathically share with you what it sees and hears (no action required).\nWhenever you cast a wizard spell on your turn, you can cast it as if you were in the spectral mind's space, instead of your own, using its senses. You can do so a number of times per day equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.\nAs a bonus action, you can cause the spectral mind to hover up to 30 feet to an unoccupied space that you or it can see. It can pass through creatures but not objects.\nThe spectral mind stops manifesting if it is ever more than 300 feet away from you, if someone casts dispel magic on it, if the Awakened Spellbook is destroyed, if you die, or if you dismiss the spectral mind as a bonus action.\nOnce you conjure the mind, you can't do so again until you finish a long rest, unless you expend a spell slot of any level to conjure it again."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-master-scrivener",
+    "edition": "2014",
+    "name": "Master Scrivener",
+    "source": {
+      "book": "TCE",
+      "page": 78
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Whenever you finish a long rest, you can create one magic scroll by touching your Wizardly Quill to a blank piece of paper or parchment and causing one spell from your Awakened Spellbook to be copied onto the scroll. The spellbook must be within 5 feet of you when you make the scroll.\nThe chosen spell must be of 1st or 2nd level and must have a casting time of 1 action. Once in the scroll, the spell's power is enhanced, counting as one level higher than normal. You can cast the spell from the scroll by reading it as an action. The scroll is unintelligible to anyone else, and the spell vanishes from the scroll when you cast it or when you finish your next long rest.\nYou are also adept at crafting spell scrolls, which are described in the treasure chapter of the Dungeon Master's Guide. The gold and time you must spend to make such a scroll are halved if you use your Wizardly Quill."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-one-with-the-word",
+    "edition": "2014",
+    "name": "One with the Word",
+    "source": {
+      "book": "TCE",
+      "page": 78
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your connection to your Awakened Spellbook has become so profound that your soul has become entwined with it. While the book is on your person, you have advantage on all Intelligence (Arcana) checks, as the spellbook helps you remember magical lore.\nMoreover, if you take damage while your spellbook's mind is manifested, you can prevent all of that damage to you by using your reaction to dismiss the spectral mind, using its magic to save yourself. Then roll 3d6. The spellbook temporarily loses spells of your choice that have a combined spell level equal to that roll or higher. For example, if the roll's total is 9, spells vanish from the book that have a combined level of at least 9, which could mean one 9th-level spell, three 3rd-level spells, or some other combination. If there aren't enough spells in the book to cover this cost, you drop to 0 hit points.\nUntil you finish 1d6 long rests, you are incapable of casting the lost spells, even if you find them on a scroll or in another spellbook. After you finish the required number of rests, the spells reappear in the spellbook.\nOnce you use this reaction, you can't do so again until you finish a long rest."
+    }
+  }
+]

@@ -1,0 +1,824 @@
+[
+  {
+    "id": "2014/class/fighter",
+    "edition": "2014",
+    "name": "Fighter",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "class",
+    "data": {
+      "hitDie": "d10",
+      "savingThrowProficiencies": [
+        "str",
+        "con"
+      ],
+      "armorProficiencies": [
+        "all-armor",
+        "shields"
+      ],
+      "weaponProficiencies": [
+        "simple-weapons",
+        "martial-weapons"
+      ],
+      "toolProficiencies": [],
+      "skillChoice": {
+        "count": 2,
+        "options": [
+          "acrobatics",
+          "animalHandling",
+          "athletics",
+          "history",
+          "insight",
+          "intimidation",
+          "perception",
+          "survival"
+        ]
+      },
+      "levels": [
+        {
+          "level": 1,
+          "featureRefs": [
+            "2014/feature/fighter-fighting-style",
+            "2014/feature/fighter-second-wind"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "action_surges": 0,
+            "indomitable_uses": 0,
+            "extra_attacks": 0
+          }
+        },
+        {
+          "level": 2,
+          "featureRefs": [
+            "2014/feature/fighter-action-surge-1-use"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 0
+          }
+        },
+        {
+          "level": 3,
+          "featureRefs": [
+            "2014/feature/fighter-martial-archetype"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 0
+          }
+        },
+        {
+          "level": 4,
+          "featureRefs": [
+            "2014/feature/fighter-ability-score-improvement-1"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 0
+          }
+        },
+        {
+          "level": 5,
+          "featureRefs": [
+            "2014/feature/fighter-extra-attack-1"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 1
+          }
+        },
+        {
+          "level": 6,
+          "featureRefs": [
+            "2014/feature/fighter-ability-score-improvement-2"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 1
+          }
+        },
+        {
+          "level": 7,
+          "featureRefs": [
+            "2014/feature/fighter-martial-archetype-improvement-1"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 1
+          }
+        },
+        {
+          "level": 8,
+          "featureRefs": [
+            "2014/feature/fighter-ability-score-improvement-3"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 1
+          }
+        },
+        {
+          "level": 9,
+          "featureRefs": [
+            "2014/feature/fighter-indomitable-1-use"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 1,
+            "extra_attacks": 1
+          }
+        },
+        {
+          "level": 10,
+          "featureRefs": [
+            "2014/feature/fighter-martial-archetype-improvement-2"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 1,
+            "extra_attacks": 1
+          }
+        },
+        {
+          "level": 11,
+          "featureRefs": [
+            "2014/feature/fighter-extra-attack-2"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 1,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 12,
+          "featureRefs": [
+            "2014/feature/fighter-ability-score-improvement-4"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 1,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 13,
+          "featureRefs": [
+            "2014/feature/fighter-indomitable-2-uses"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 2,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 14,
+          "featureRefs": [
+            "2014/feature/fighter-ability-score-improvement-5"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 2,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 15,
+          "featureRefs": [
+            "2014/feature/fighter-martial-archetype-improvement-3"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 2,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 16,
+          "featureRefs": [
+            "2014/feature/fighter-ability-score-improvement-6"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 2,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 17,
+          "featureRefs": [
+            "2014/feature/fighter-action-surge-2-uses",
+            "2014/feature/fighter-indomitable-3-uses"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "action_surges": 2,
+            "indomitable_uses": 3,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 18,
+          "featureRefs": [
+            "2014/feature/fighter-martial-archetype-improvement-4"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "action_surges": 2,
+            "indomitable_uses": 3,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 19,
+          "featureRefs": [
+            "2014/feature/fighter-ability-score-improvement-7"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "action_surges": 2,
+            "indomitable_uses": 3,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 20,
+          "featureRefs": [
+            "2014/feature/fighter-extra-attack-3"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "action_surges": 2,
+            "indomitable_uses": 3,
+            "extra_attacks": 3
+          }
+        }
+      ],
+      "startingEquipment": {
+        "fixed": [],
+        "choices": [
+          {
+            "prompt": "(a) chain mail or (b) leather armor, a longbow, and 20 arrows",
+            "options": [
+              [
+                "chain-mail"
+              ],
+              [
+                "leather-armor",
+                "longbow",
+                "arrow"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) a martial weapon and a shield or (b) two martial weapons",
+            "options": [
+              [
+                "longsword",
+                "shield"
+              ],
+              [
+                "longsword",
+                "shortsword"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) a light crossbow and 20 bolts or (b) two handaxes",
+            "options": [
+              [
+                "crossbow-light",
+                "crossbow-bolt"
+              ],
+              [
+                "handaxe",
+                "handaxe"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) a dungeoneer's pack or (b) an explorer's pack",
+            "options": [
+              [
+                "dungeoneers-pack"
+              ],
+              [
+                "explorers-pack"
+              ]
+            ]
+          }
+        ],
+        "goldAlternative": 125
+      }
+    }
+  },
+  {
+    "id": "2014/feature/fighter-fighting-style",
+    "edition": "2014",
+    "name": "Fighting Style",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-second-wind",
+    "edition": "2014",
+    "name": "Second Wind",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-action-surge-1-use",
+    "edition": "2014",
+    "name": "Action Surge (1 use)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.\n\nOnce you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-martial-archetype",
+    "edition": "2014",
+    "name": "Martial Archetype",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques, such as Champion. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-ability-score-improvement-1",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-extra-attack-1",
+    "edition": "2014",
+    "name": "Extra Attack",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn. The number of attacks increases to three when you reach 11th level in this class and to four when you reach 20th level in this class."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-ability-score-improvement-2",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-martial-archetype-improvement-1",
+    "edition": "2014",
+    "name": "Martial Archetype feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques, such as Champion. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-ability-score-improvement-3",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-indomitable-1-use",
+    "edition": "2014",
+    "name": "Indomitable (1 use)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest. You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-martial-archetype-improvement-2",
+    "edition": "2014",
+    "name": "Martial Archetype feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques, such as Champion. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-extra-attack-2",
+    "edition": "2014",
+    "name": "Extra Attack (2)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn. The number of attacks increases to three when you reach 11th level in this class and to four when you reach 20th level in this class."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-ability-score-improvement-4",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-indomitable-2-uses",
+    "edition": "2014",
+    "name": "Indomitable (2 uses)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest. You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-ability-score-improvement-5",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-martial-archetype-improvement-3",
+    "edition": "2014",
+    "name": "Martial Archetype feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques, such as Champion. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-ability-score-improvement-6",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-action-surge-2-uses",
+    "edition": "2014",
+    "name": "Action Surge (2 uses)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.\n\nOnce you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-indomitable-3-uses",
+    "edition": "2014",
+    "name": "Indomitable (3 uses)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest. You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-martial-archetype-improvement-4",
+    "edition": "2014",
+    "name": "Martial Archetype feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques, such as Champion. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-ability-score-improvement-7",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/fighter-extra-attack-3",
+    "edition": "2014",
+    "name": "Extra Attack (3)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn. The number of attacks increases to three when you reach 11th level in this class and to four when you reach 20th level in this class."
+    }
+  },
+  {
+    "id": "2014/subclass/champion",
+    "edition": "2014",
+    "name": "Champion",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "subclass",
+    "data": {
+      "parentClassRef": "2014/class/fighter",
+      "description": "The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/champion-improved-critical"
+        ],
+        "7": [
+          "2014/feature/champion-remarkable-athlete"
+        ],
+        "10": [
+          "2014/feature/champion-additional-fighting-style"
+        ],
+        "15": [
+          "2014/feature/champion-superior-critical"
+        ],
+        "18": [
+          "2014/feature/champion-survivor"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/champion-improved-critical",
+    "edition": "2014",
+    "name": "Improved Critical",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning when you choose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20."
+    }
+  },
+  {
+    "id": "2014/feature/champion-remarkable-athlete",
+    "edition": "2014",
+    "name": "Remarkable Athlete",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 7th level, you can add half your proficiency bonus (round up) to any Strength, Dexterity, or Constitution check you make that doesn't already use your proficiency bonus. In addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength modifier."
+    }
+  },
+  {
+    "id": "2014/feature/champion-additional-fighting-style",
+    "edition": "2014",
+    "name": "Additional Fighting Style",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 10th level, you can choose a second option from the Fighting Style class feature."
+    }
+  },
+  {
+    "id": "2014/feature/champion-superior-critical",
+    "edition": "2014",
+    "name": "Superior Critical",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 15th level, your weapon attacks score a critical hit on a roll of 18-20."
+    }
+  },
+  {
+    "id": "2014/feature/champion-survivor",
+    "edition": "2014",
+    "name": "Survivor",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don't gain this benefit if you have 0 hit points."
+    }
+  },
+  {
+    "id": "2014/subclass/rune-knight",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Rune Knight",
+    "source": {
+      "book": "TCE",
+      "page": 49
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/fighter",
+      "description": "You are a fighter who augments your martial prowess with the might of runes carved into stone and steel.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/extracted-giant-s-might"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/psi-warrior",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Psi Warrior",
+    "source": {
+      "book": "TCE",
+      "page": 47
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/fighter",
+      "description": "You are a fighter who has augmented your physical might with psionic power.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/extracted-psionic-power-psi-warrior"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/extracted-psionic-power-psi-warrior",
+    "edition": "2014",
+    "name": "Psionic Power",
+    "source": {
+      "book": "TCE",
+      "page": 47
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You harbor a wellspring of psionic energy within yourself. This energy is represented by your Psionic Energy dice, which are each a d6. You have a number of these dice equal to twice your proficiency bonus, and they fuel various psionic powers you have, which are detailed below.\n\nSome of your powers expend the Psionic Energy die they use, as specified in a power's description, and you can't use a power if it requires you to use a die when your dice are all expended. You regain all your expended Psionic Energy dice when you finish a long rest. In addition, as a bonus action, you can regain one expended Psionic Energy die, but you can't do so again until you finish a short or long rest.\n\nWhen you reach certain levels in this class, the size of your Psionic Energy dice increases: at 5th level (d8), 11th level (d10), and 17th level (d12).\n\nPowers:\n• Protective Field. When you or another creature you can see within 30 feet of you takes damage, you can use your reaction to expend one Psionic Energy die, roll the die, and reduce the damage taken by the number rolled plus your Intelligence modifier (minimum reduction of 1), as you create a momentary shield of telekinetic force.\n• Psionic Strike. You can propel your weapons with psionic force. Once on each of your turns, immediately after you hit a target within 30 feet of you with an attack and deal damage to it with a weapon, you can expend one Psionic Energy die, rolling it and dealing force damage to the target equal to the number rolled plus your Intelligence modifier.\n• Telekinetic Movement. You can move an object or a creature with your mind. As an action, you target one loose object that is Large or smaller or one willing creature, other than yourself. If you can see the target and it is within 30 feet of you, you can move it up to 30 feet to an unoccupied space you can see. Alternatively, if it is a Tiny object, you can move it to or from your hand. Either way, you can move the target horizontally, vertically, or both. Once you take this action, you can't do so again until you finish a short or long rest, unless you expend a Psionic Energy die to take it again."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-giant-s-might",
+    "edition": "2014",
+    "name": "Giant's Might",
+    "source": {
+      "book": "TCE",
+      "page": 49
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have learned how to imbue yourself with the might of giants. As a bonus action, you magically gain the following benefits, which last for 1 minute:\n\n• If you are smaller than Large, you become Large, along with anything you are wearing. If you lack the room to become Large, your size doesn't change.\n• You have advantage on Strength checks and Strength saving throws.\n• Once on each of your turns, one of your attacks with a weapon or an unarmed strike can deal an extra 1d6 damage to a target on a hit.\n\nYou can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest."
+    }
+  }
+]

@@ -1,0 +1,752 @@
+[
+  {
+    "id": "2014/feature/extracted-silver-tongue",
+    "edition": "2014",
+    "name": "Silver Tongue",
+    "source": {
+      "book": "TCE",
+      "page": 34
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are a master at saying the right thing at the right time. When you make a Charisma (Persuasion) or Charisma (Deception) check, you can treat a d20 roll of 9 or lower as a 10."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-dedicated-weapon",
+    "edition": "2014",
+    "name": "Dedicated Weapon",
+    "source": {
+      "book": "TCE",
+      "page": 48
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Whenever you finish a short or long rest, you can touch one weapon, focus your ki on it, and then count that weapon as a monk weapon until you use this feature again.\nThe chosen weapon must meet these criteria:\n- The weapon must be a simple or martial weapon.\n- You must be proficient with it.\n- It must lack the heavy and special properties."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-ki-fueled-attack",
+    "edition": "2014",
+    "name": "Ki-Fueled Attack",
+    "source": {
+      "book": "TCE",
+      "page": 48
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "If you spend 1 ki point or more as part of your action on your turn, you can make one attack with an unarmed strike or a monk weapon as a bonus action before the end of the turn."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-quickened-healing",
+    "edition": "2014",
+    "name": "Quickened Healing",
+    "source": {
+      "book": "TCE",
+      "page": 49
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As an action, you can spend 2 ki points and roll a Martial Arts die. You regain a number of hit points equal to the number rolled plus your proficiency bonus."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-focused-aim",
+    "edition": "2014",
+    "name": "Focused Aim",
+    "source": {
+      "book": "TCE",
+      "page": 49
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you miss with an attack roll, you can spend 1 to 3 ki points to increase your attack roll by 2 for each of these ki points you spend, potentially turning the miss into a hit."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-blessed-warrior",
+    "edition": "2014",
+    "name": "Blessed Warrior",
+    "source": {
+      "book": "TCE",
+      "page": 52
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn two cantrips of your choice from the cleric spell list. They count as paladin spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the cleric spell list."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-blind-fighting",
+    "edition": "2014",
+    "name": "Blind Fighting",
+    "source": {
+      "book": "TCE",
+      "page": 52
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have blindsight with a range of 10 feet. Within that range, you can effectively see anything that isnt behind total cover, even if youre blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-interception",
+    "edition": "2014",
+    "name": "Interception",
+    "source": {
+      "book": "TCE",
+      "page": 53
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature you can see hits a target, other than you, within 5 feet of you with an attack, you can use your reaction to reduce the damage the target takes by 1d10 + your proficiency bonus (to a minimum of 0 damage). You must be wielding a shield or a simple or martial weapon to use this reaction."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-harness-divine-power",
+    "edition": "2014",
+    "name": "Harness Divine Power",
+    "source": {
+      "book": "TCE",
+      "page": 53
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can expend a use of your Channel Divinity to fuel your spells. As a bonus action, you touch your holy symbol, utter a prayer, and regain one expended spell slot, the level of which can be no higher than half your proficiency bonus (rounded up). The number of times you can use this feature is based on the level youve reached in this class: 3rd level, once; 7th level, twice; and 15th level, thrice. You regain all expended uses when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-martial-versatility",
+    "edition": "2014",
+    "name": "Martial Versatility",
+    "source": {
+      "book": "TCE",
+      "page": 53
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to paladins. This replacement represents a shift of focus in your martial practice."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-deft-explorer",
+    "edition": "2014",
+    "name": "Deft Explorer",
+    "source": {
+      "book": "TCE",
+      "page": 56
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are an unsurpassed explorer and survivor, both in the wilderness and in dealing with others on your travels. You gain the Canny benefit below, and you gain an additional benefit below when you reach 6th level and 10th level in this class.\n\nCanny (1st Level)\nChoose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses the chosen skill.\nYou can also speak, read, and write two additional languages of your choice.\n\nRoving (6th Level)\nYour walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed.\n\nTireless (10th Level)\nAs an action, you can give yourself a number of temporary hit points equal to 1d8 + your Wisdom modifier (minimum of 1 temporary hit point). You can use this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.\nIn addition, whenever you finish a short rest, your exhaustion level, if any, is decreased by 1."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-favored-foe",
+    "edition": "2014",
+    "name": "Favored Foe",
+    "source": {
+      "book": "TCE",
+      "page": 56
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you hit a creature with an attack roll, you can call on your mystical bond with nature to mark the target as your favored enemy for 1 minute or until you lose your concentration (as if you were concentrating on a spell).\nThe first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you can increase that damage by 1d4.\nYou can use this feature to mark a favored enemy a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.\nThis feature's extra damage increases when you reach certain levels in this class: to 1d6 at 6th level and to 1d8 at 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-druidic-warrior",
+    "edition": "2014",
+    "name": "Druidic Warrior",
+    "source": {
+      "book": "TCE",
+      "page": 57
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn two cantrips of your choice from the druid spell list. They count as ranger spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-thrown-weapon-fighting",
+    "edition": "2014",
+    "name": "Thrown Weapon Fighting",
+    "source": {
+      "book": "TCE",
+      "page": 57
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can draw a weapon that has the thrown property as part of the attack you make with the weapon.\nIn addition, when you hit with a ranged attack using a thrown weapon, you gain a +2 bonus to the damage roll."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-spellcasting-focus-ranger",
+    "edition": "2014",
+    "name": "Spellcasting Focus (Ranger)",
+    "source": {
+      "book": "TCE",
+      "page": 57
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can use a druidic focus as a spellcasting focus for your ranger spells. A druidic focus might be a sprig of mistletoe or holly, a wand or rod made of yew or another special wood, a staff drawn whole from a living tree, or an object incorporating feathers, fur, bones, and teeth from sacred animals."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-primal-awareness",
+    "edition": "2014",
+    "name": "Primal Awareness",
+    "source": {
+      "book": "TCE",
+      "page": 57
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can focus your awareness through the interconnections of nature: you learn additional spells when you reach certain levels in this class if you don't already know them, as shown in the Primal Awareness Spells table. These spells don't count against the number of ranger spells you know.\n\nPrimal Awareness Spells:\n3rd: speak with animals\n5th: beast sense\n9th: speak with plants\n13th: locate creature\n17th: commune with nature\n\nYou can cast each of these spells once without expending a spell slot. Once you cast a spell in this way, you can't do so again until you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-martial-versatility-ranger",
+    "edition": "2014",
+    "name": "Martial Versatility (Ranger)",
+    "source": {
+      "book": "TCE",
+      "page": 57
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to rangers. This replacement represents a shift of focus in your martial practice."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-nature-s-veil",
+    "edition": "2014",
+    "name": "Nature's Veil",
+    "source": {
+      "book": "TCE",
+      "page": 57
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You draw on the powers of nature to hide yourself from view briefly. As a bonus action, you can magically become invisible, along with any equipment you are wearing or carrying, until the start of your next turn.\nYou can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-primal-companion",
+    "edition": "2014",
+    "name": "Primal Companion",
+    "source": {
+      "book": "TCE",
+      "page": 61
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You magically summon a primal beast, which draws strength from your bond with nature. The beast is friendly to you and your companions and obeys your commands. Choose its stat block—Beast of the Land, Beast of the Sea, or Beast of the Sky—which uses your proficiency bonus (PB) in several places. You also determine the kind of animal the beast is, choosing a kind appropriate for the stat block. Whatever kind you choose, the beast bears primal markings, indicating its mystical origin.\nIn combat, the beast acts during your turn. It can move and use its reaction on its own, but the only action it takes is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. You can also sacrifice one of your attacks when you take the Attack action to command the beast to take the Attack action. If you are incapacitated, the beast can take any action of its choice, not just Dodge.\nIf the beast has died within the last hour, you can use your action to touch it and expend a spell slot of 1st level or higher. The beast returns to life after 1 minute with all its hit points restored.\nWhen you finish a long rest, you can summon a different primal beast. The new beast appears in an unoccupied space within 5 feet of you, and you choose its stat block and appearance. If you already have a beast from this feature, it vanishes when the new beast appears. The beast also vanishes if you die."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-steady-aim",
+    "edition": "2014",
+    "name": "Steady Aim",
+    "source": {
+      "book": "TCE",
+      "page": 62
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a bonus action, you give yourself advantage on your next attack roll on the current turn. You can use this bonus action only if you haven't moved during this turn, and after you use the bonus action, your speed is 0 until the end of the current turn."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-whispers-of-the-dead",
+    "edition": "2014",
+    "name": "Whispers of the Dead",
+    "source": {
+      "book": "TCE",
+      "page": 62
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Echoes of those who have died cling to you. Whenever you finish a short or long rest, you can choose one skill or tool proficiency that you lack and gain it, as a ghostly presence shares its knowledge with you. You lose this proficiency when you use this feature to choose a different proficiency that you lack."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-wails-from-the-grave",
+    "edition": "2014",
+    "name": "Wails from the Grave",
+    "source": {
+      "book": "TCE",
+      "page": 62
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As you nudge someone closer to the grave, you can channel the power of death to harm someone else as well. Immediately after you deal your Sneak Attack damage to a creature on your turn, you can target a second creature that you can see within 30 feet of the first creature. Roll half the number of Sneak Attack dice for your level (round up), and the second creature takes necrotic damage equal to the roll's total, as wails of the dead sound around them for a moment.\nYou can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-tokens-of-the-departed",
+    "edition": "2014",
+    "name": "Tokens of the Departed",
+    "source": {
+      "book": "TCE",
+      "page": 63
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a life ends in your presence, you're able to snatch a token from the departing soul, a sliver of its life essence that takes physical form: as a reaction when a creature you can see dies within 30 feet of you, you can open your free hand and cause a Tiny trinket to appear there, a soul trinket. The DM determines the trinket's form or has you roll on the Trinkets table in the Player's Handbook to generate it.\nYou can have a maximum number of soul trinkets equal to your proficiency bonus, and you can't create one while at your maximum.\nYou can use soul trinkets in the following ways:\n- While a soul trinket is on your person, you have advantage on death saving throws and Constitution saving throws, for your vitality is enhanced by the life essence within the object.\n- When you deal Sneak Attack damage on your turn, you can destroy one of your soul trinkets that's on your person and then immediately use Wails from the Grave, without expending a use of that feature.\n- As an action, you can destroy one of your soul trinkets, no matter where it's located. When you do so, you can ask the spirit associated with the trinket one question. The spirit appears to you and answers in a language it knew in life. It's under no obligation to be truthful, and it answers as concisely as possible, eager to be free. The spirit knows only what it knew in life, as determined by the DM."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-ghost-walk",
+    "edition": "2014",
+    "name": "Ghost Walk",
+    "source": {
+      "book": "TCE",
+      "page": 63
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can phase partially into the realm of the dead, becoming like a ghost. As a bonus action, you assume a spectral form. While in this form, you have a flying speed of 10 feet, you can hover, and attack rolls have disadvantage against you. You can also move through creatures and objects as if they were difficult terrain, but you take 1d10 force damage if you end your turn inside a creature or an object.\nYou stay in this form for 10 minutes or until you end it as a bonus action. To use this feature again, you must finish a long rest or destroy one of your soul trinkets as part of the bonus action you use to activate Ghost Walk."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-death-s-friend",
+    "edition": "2014",
+    "name": "Death's Friend",
+    "source": {
+      "book": "TCE",
+      "page": 63
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your association with death has become so close that you gain the following benefits:\n- When you use your Wails from the Grave, you can deal the necrotic damage to both the first and the second creature.\n- At the end of a long rest, a soul trinket appears in your hand if you don't have any soul trinkets, as the spirits of the dead are drawn to you."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-seeking-spell",
+    "edition": "2014",
+    "name": "Seeking Spell",
+    "source": {
+      "book": "TCE",
+      "page": 66
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "If you make an attack roll for a spell and miss, you can spend 2 sorcery points to reroll the d20, and you must use the new roll.\nYou can use Seeking Spell even if you have already used a different Metamagic option during the casting of the spell."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-transmuted-spell",
+    "edition": "2014",
+    "name": "Transmuted Spell",
+    "source": {
+      "book": "TCE",
+      "page": 66
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you cast a spell that deals a type of damage from the following list, you can spend 1 sorcery point to change that damage type to one of the other listed types: acid, cold, fire, lightning, poison, thunder."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-sorcerous-versatility",
+    "edition": "2014",
+    "name": "Sorcerous Versatility",
+    "source": {
+      "book": "TCE",
+      "page": 66
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing the magic within you flowing in new ways:\n- Replace one of the options you chose for the Metamagic feature with a different Metamagic option available to you.\n- Replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the sorcerer spell list."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-magical-guidance",
+    "edition": "2014",
+    "name": "Magical Guidance",
+    "source": {
+      "book": "TCE",
+      "page": 66
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can tap into your inner wellspring of magic to try to conjure success from failure. When you make an ability check that fails, you can spend 1 sorcery point to reroll the d20, and you must use the new roll, potentially turning the failure into a success."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-pact-of-the-talisman",
+    "edition": "2014",
+    "name": "Pact of the Talisman",
+    "source": {
+      "book": "TCE",
+      "page": 70
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your patron gives you an amulet, a talisman that can aid the wearer when the need is great. When the wearer fails an ability check, they can add a d4 to the roll, potentially turning the roll into a success. This benefit can be used a number of times equal to your proficiency bonus, and all expended uses are restored when you finish a long rest.\nIf you lose the talisman, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous amulet. The talisman turns to ash when you die."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-eldritch-versatility",
+    "edition": "2014",
+    "name": "Eldritch Versatility",
+    "source": {
+      "book": "TCE",
+      "page": 70
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change of focus in your occult studies:\n- Replace one cantrip you learned from this class's Pact Magic feature with another cantrip from the warlock spell list.\n- Replace the option you chose for the Pact Boon feature with one of that feature's other options.\n- If you're 12th level or higher, replace one spell from your Mystic Arcanum feature with another warlock spell of the same level.\nIf this change makes you ineligible for any of your Eldritch Invocations, you must also replace them now, choosing invocations for which you qualify."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-bond-of-the-talisman",
+    "edition": "2014",
+    "name": "Bond of the Talisman",
+    "source": {
+      "book": "TCE",
+      "page": 70
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "While someone else is wearing your talisman, you can use your action to teleport to the unoccupied space closest to them, provided the two of you are on the same plane of existence. The wearer of your talisman can do the same thing, using their action to teleport to you. The teleportation can be used a number of times equal to your proficiency bonus, and all expended uses are restored when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-eldritch-mind",
+    "edition": "2014",
+    "name": "Eldritch Mind",
+    "source": {
+      "book": "TCE",
+      "page": 71
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have advantage on Constitution saving throws that you make to maintain your concentration on a spell."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-far-scribe",
+    "edition": "2014",
+    "name": "Far Scribe",
+    "source": {
+      "book": "TCE",
+      "page": 71
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "A new page appears in your Book of Shadows. With your permission, a creature can use its action to write its name on that page, which can contain a number of names equal to your proficiency bonus.\nYou can cast the sending spell, targeting a creature whose name is on the page, without using a spell slot and without using material components. To do so, you must write the message on the page. The target hears the message in their mind, and if the target replies, their message appears on the page, rather than in your mind. The writing disappears after 1 minute.\nAs an action, you can magically erase a name on the page by touching it."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-gift-of-the-protectors",
+    "edition": "2014",
+    "name": "Gift of the Protectors",
+    "source": {
+      "book": "TCE",
+      "page": 71
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "A new page appears in your Book of Shadows. With your permission, a creature can use its action to write its name on that page, which can contain a number of names equal to your proficiency bonus.\nWhen any creature whose name is on the page is reduced to 0 hit points but not killed outright, the creature magically drops to 1 hit point instead. Once this magic is triggered, no creature can benefit from it until you finish a long rest.\nAs an action, you can magically erase a name on the page by touching it."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-investment-of-the-chain-master",
+    "edition": "2014",
+    "name": "Investment of the Chain Master",
+    "source": {
+      "book": "TCE",
+      "page": 71
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you cast find familiar, you infuse the summoned familiar with a measure of your eldritch power, granting the creature the following benefits:\n- The familiar gains either a flying speed or a swimming speed (your choice) of 40 feet.\n- As a bonus action, you can command the familiar to take the Attack action.\n- The familiar's weapon attacks are considered magical for the purpose of overcoming immunity and resistance to nonmagical attacks.\n- If the familiar forces a creature to make a saving throw, it uses your spell save DC.\n- When the familiar takes damage, you can use your reaction to grant it resistance against that damage."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-protection-of-the-talisman",
+    "edition": "2014",
+    "name": "Protection of the Talisman",
+    "source": {
+      "book": "TCE",
+      "page": 71
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When the wearer of your talisman fails a saving throw, they can add a d4 to the roll, potentially turning the save into a success. This benefit can be used a number of times equal to your proficiency bonus, and all expended uses are restored when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-rebuke-of-the-talisman",
+    "edition": "2014",
+    "name": "Rebuke of the Talisman",
+    "source": {
+      "book": "TCE",
+      "page": 71
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When the wearer of your talisman is hit by an attacker you can see within 30 feet of you, you can use your reaction to deal psychic damage to the attacker equal to your proficiency bonus and push it up to 10 feet away from the talisman's wearer."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-undying-servitude",
+    "edition": "2014",
+    "name": "Undying Servitude",
+    "source": {
+      "book": "TCE",
+      "page": 71
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can cast animate dead without using a spell slot. Once you do so, you can't cast it in this way again until you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-cantrip-formulas",
+    "edition": "2014",
+    "name": "Cantrip Formulas",
+    "source": {
+      "book": "TCE",
+      "page": 76
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have scribed a set of arcane formulas in your spellbook that you can use to formulate a cantrip in your mind. Whenever you finish a long rest and consult those formulas in your spellbook, you can replace one wizard cantrip you know with another cantrip from the wizard spell list."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-group-assistance",
+    "edition": "2014",
+    "name": "Group Assistance",
+    "source": {
+      "book": "TCE",
+      "page": 83
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Having a group patron gives an adventuring group a common purpose, which inspires better coordination in the form of guidance and encouragement. As a result of this unity, each member of the party can grant advantage to an ability check, an attack roll, or a saving throw of another member of the party. To grant advantage in this way, a character and the chosen target must be able to see or hear each other, and neither can be incapacitated. Once a party member grants this advantage, that individual can't do so again until they finish a long rest."
+    }
+  },
+  {
+    "id": "2014/background/extracted-academy-group-patron",
+    "edition": "2014",
+    "name": "Academy (Group Patron)",
+    "source": {
+      "book": "TCE",
+      "page": 84
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "An academy unites a network of learned individuals, allowing them to share their knowledge, further their research, and support common goals.\n\nAcademy Perks:\n- Compensation. The academy pays for the work you do on its behalf. On average, the academy pays each member of your group 1 gp per day, or enough to sustain a modest lifestyle. Alternatively, you receive a bounty (at least 250 gp) for each artifact or relevant discovery you bring back from your adventures and donate to the academy.\n- Documentation. Each member of your group has identification denoting your affiliation with the academy. The academy also secures documentation, letters of introduction, and traveling papers if your work requires them. Such documents grant you special status, such as access to forbidden regions or neutral standing in embattled areas.\n- Research. You can call in a favor to delegate the work of researching lore (a downtime activity described in the Player's Handbook and Xanathar's Guide to Everything) to a colleague, contact, librarian, or research assistant. You're responsible for covering expenses incurred as part of this research, and the DM determines its success or failure.\n- Resources. You can call in a favor from faculty members to access resources not available to the public—dangerous relics or magic items, spellbooks, gear, and the like. Additionally, you can consult with the faculty of your academy as the experts in various fields.\n- Training. When you undergo training as a downtime activity (as described in the Player's Handbook or Xanathar's Guide to Everything), you pay half the normal cost, assuming the academy teaches that subject. In addition, you can gain proficiency in the Arcana, History, Nature, or Religion skills by this method, as if you were learning a language. A character can learn only one of these skills in this way."
+    }
+  },
+  {
+    "id": "2014/background/extracted-ancient-being-group-patron",
+    "edition": "2014",
+    "name": "Ancient Being (Group Patron)",
+    "source": {
+      "book": "TCE",
+      "page": 86
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your group is bound to the designs of an ancient being of tremendous power and influence.\n\nAncient Being Perks:\n- Equipment. You can purchase common magic items from your patron contact. The DM determines the available stock or can call for a group Intelligence (Investigation) check to ascertain if the ancient being's network can successfully locate a desired item. The DC for this check is 10 in a city, 15 in a town, and 20 in a village. If the check fails, 1d8 days must pass before the same item can be searched for again in that community. The DM sets the price of a common magic item or determines it randomly: 2d4 × 10 gp, or half as much for a consumable item such as a potion or scroll.\n- Research. If you can contact your patron or their agents, your group makes ability checks made to research lore related to your patron's interests and influence with advantage.\n- Sanctuary. Your patron's agents have safe houses or other secure gatherings spread across a wide region. Your group knows how to locate these friendly enclaves and can maintain a modest lifestyle in one for no cost. In return, you must defend the sanctuary or protect the secret of its existence.\n- Strange Gifts. Your patron grants your group a small measure of esoteric power. At 5th level, and again at 13th, you gain one supernatural gift as described in the treasure chapter of the Dungeon Master's Guide. The DM determines which supernatural gifts are available."
+    }
+  },
+  {
+    "id": "2014/background/extracted-aristocrat-group-patron",
+    "edition": "2014",
+    "name": "Aristocrat (Group Patron)",
+    "source": {
+      "book": "TCE",
+      "page": 89
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your group serves at the pleasure of a member of the nobility.\n\nAristocrat Perks:\n- Expenses. Your patron reimburses you for extraordinary expenses incurred as part of your work. You are required to account for your expenses and must explain any extraordinary expenditures, but routine travel, ordinary equipment, and basic services don't draw a second glance.\n- Immunity. As long as you remain in the aristocrat's good graces, you are nearly immune to prosecution under the laws within the aristocrat's sphere of influence. When you are carrying out your orders, you have a great deal of leeway in how you choose to go about that, and the law isn't an obstacle. Committing serious crimes—especially if they are unrelated or unnecessary for the assigned work—is a sure way to fall out of your patron's good graces, however.\n- Luxury. Your patron deigns to host you at their home or in other luxurious accommodations for a brief period as reward for a job well done. Such a stay typically lasts for no longer than two weeks per year, during which you maintain an aristocratic lifestyle for no cost. You must defend the locale if necessary, but you're largely afforded time to relax as you please.\n- Salary. Your employment under an aristocratic patron brings an income of 1 gp per day, or enough to maintain a modest lifestyle. At the DM's discretion, your salary increases or decreases depending on the aristocrat's nature, the type of work, and the length of your employment."
+    }
+  },
+  {
+    "id": "2014/background/extracted-criminal-syndicate-group-patron",
+    "edition": "2014",
+    "name": "Criminal Syndicate (Group Patron)",
+    "source": {
+      "book": "TCE",
+      "page": 91
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "A network of criminals employs your group.\n\nCriminal Syndicate Perks:\n- Assignments. The syndicate doesn't pay you directly, but it assigns you to particular tasks on behalf of its clients or the organization. Someone hires the syndicate to perform a task (such as an assassination), and the syndicate passes 85 percent of the fee on to your group. If the aim is to enrich the syndicate (such as by pulling off a heist), you have the privilege of keeping 85 percent of what you steal.\n- Contraband. You have access to your syndicate's business in contraband, such as poisons or narcotics. You don't receive a discount on these goods, but you can always find someplace to purchase them.\n- Fences. Fences are useful for selling not just illicit goods but also expensive items such as works of art and magic items. In the case of magic items, this allows you to delegate the work of finding a buyer (a downtime activity described in the Dungeon Master's Guide and Xanathar's Guide to Everything) to the fence. When using the syndicate's fences, you run no risk of a double-cross or other mishap in finding a buyer, but the syndicate takes 20 percent of the sale price as a finder's fee.\n- Safe Houses. Your group knows how to locate these nondescript redoubts and can maintain a poor lifestyle in one for no cost. Revealing a safe house, whether purposefully or by accident, causes you to lose favor with the syndicate and may see you banned from using them.\n- Syndicate-Owned Businesses. The syndicate owns several businesses, primarily as fronts for laundering money. When you buy from one of these businesses, you get a 5 percent discount. The DM decides what goods and services are available."
+    }
+  },
+  {
+    "id": "2014/background/extracted-guild-group-patron",
+    "edition": "2014",
+    "name": "Guild (Group Patron)",
+    "source": {
+      "book": "TCE",
+      "page": 93
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your group has ties to a powerful consortium of professionals who work together for mutual benefit.\n\nGuild Perks:\nThese perks require an annual contribution of 15 gp paid to the guild (replacing the 5 gp per month cost for characters with the Guild Artisan background). These dues fund the guild's services and activities.\n- Accommodations. You can stay at your organization's guildhall. The rooms are comparable to those in a comfortable inn, but at a modest price (5 sp per day).\n- Equipment. You can requisition the use of specialized tools, laboratories, libraries, or other crafting space and equipment to use within the guildhall. When you make an ability check with a set of artisan's tools using the guild's equipment, add double your normal proficiency bonus to the check.\n- Resources. You can leverage the guild's extensive contacts to locate exotic materials for crafting, spell components, or magic items, or buyers for them (a downtime activity in the Dungeon Master's Guide and Xanathar's Guide to Everything). You can locate or sell legal commodities using the guild's resources, and any prices tip in your favor by 10 percent.\n- Training. The guild retains knowledgeable tutors in subjects pertinent to its interests. When you undertake the training downtime activity (as described in the Player's Handbook and Xanathar's Guide to Everything), the training takes half as long if you are studying a subject the guild specializes in. The DM decides if the guild has tutors available for a given subject."
+    }
+  },
+  {
+    "id": "2014/background/extracted-military-force-group-patron",
+    "edition": "2014",
+    "name": "Military Force (Group Patron)",
+    "source": {
+      "book": "TCE",
+      "page": 96
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your group serves as a team of soldiers in a larger military force, one dedicated to combat missions or other dangerous tasks.\n\nMilitary Force Perks:\n- Armory. You can purchase nonmagical weapons and armor at a 20 percent discount at a facility associated with your military force. You can buy magic items at the DM's discretion, but you receive no discount.\n- Chain of Command. You are part of a hierarchy that provides you with orders. If you cause trouble in your own nation, you answer to your officers, not local law enforcement.\n- Official Access. Your rank in the military force grants you access to places that are off limits to civilians. With your commander's permission, you can enter dangerous training grounds or military installations, like an army's regional headquarters or armory."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-battle-readiness",
+    "edition": "2014",
+    "name": "Battle Readiness",
+    "source": {
+      "book": "TCE",
+      "page": 1
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The sidekick has advantage on initiative rolls."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-improved-defense",
+    "edition": "2014",
+    "name": "Improved Defense",
+    "source": {
+      "book": "TCE",
+      "page": 1
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The sidekick's Armor Class increases by 1."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-indomitable",
+    "edition": "2014",
+    "name": "Indomitable",
+    "source": {
+      "book": "TCE",
+      "page": 1
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The sidekick can reroll a saving throw that it fails, but it must use the new roll. When it uses this feature, it can't use the feature again until it finishes a long rest.\n\nThe sidekick can use this feature twice between long rests starting at 18th level."
+    }
+  }
+]

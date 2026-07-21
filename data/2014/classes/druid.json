@@ -1,0 +1,931 @@
+[
+  {
+    "id": "2014/class/druid",
+    "edition": "2014",
+    "name": "Druid",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "class",
+    "data": {
+      "hitDie": "d8",
+      "savingThrowProficiencies": [
+        "int",
+        "wis"
+      ],
+      "armorProficiencies": [
+        "light-armor",
+        "medium-armor",
+        "shields"
+      ],
+      "weaponProficiencies": [
+        "clubs",
+        "daggers",
+        "javelins",
+        "maces",
+        "quarterstaffs",
+        "sickles",
+        "spears",
+        "darts",
+        "slings",
+        "scimitars"
+      ],
+      "toolProficiencies": [
+        "herbalism-kit"
+      ],
+      "skillChoice": {
+        "count": 2,
+        "options": [
+          "arcana",
+          "animalHandling",
+          "insight",
+          "medicine",
+          "nature",
+          "perception",
+          "religion",
+          "survival"
+        ]
+      },
+      "spellcasting": {
+        "progression": "full",
+        "ability": "wis",
+        "knownOrPrepared": "prepared"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "featureRefs": [
+            "2014/feature/druid-spellcasting-druid",
+            "2014/feature/druid-druidic"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "wild_shape_max_cr": 0,
+            "wild_shape_swim": false,
+            "wild_shape_fly": false,
+            "cantrips_known": 2,
+            "spell_slots_level_1": 2,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 2,
+          "featureRefs": [
+            "2014/feature/druid-wild-shape-cr-1-4-or-below-no-flying-or-swim-speed",
+            "2014/feature/druid-circle"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "wild_shape_max_cr": 0.25,
+            "wild_shape_swim": false,
+            "wild_shape_fly": false,
+            "cantrips_known": 2,
+            "spell_slots_level_1": 3,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 3,
+          "featureRefs": [],
+          "proficiencyBonus": 2,
+          "columns": {
+            "wild_shape_max_cr": 0.25,
+            "wild_shape_swim": false,
+            "wild_shape_fly": false,
+            "cantrips_known": 2,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 2,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 4,
+          "featureRefs": [
+            "2014/feature/druid-wild-shape-cr-1-2-or-below-no-flying-speed",
+            "2014/feature/druid-ability-score-improvement-1"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "wild_shape_max_cr": 0.5,
+            "wild_shape_swim": true,
+            "wild_shape_fly": false,
+            "cantrips_known": 3,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 5,
+          "featureRefs": [],
+          "proficiencyBonus": 3,
+          "columns": {
+            "wild_shape_max_cr": 0.5,
+            "wild_shape_swim": true,
+            "wild_shape_fly": false,
+            "cantrips_known": 3,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 2,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 6,
+          "featureRefs": [
+            "2014/feature/druid-circle-improvement-1"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "wild_shape_max_cr": 0.5,
+            "wild_shape_swim": true,
+            "wild_shape_fly": false,
+            "cantrips_known": 3,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 7,
+          "featureRefs": [],
+          "proficiencyBonus": 3,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": false,
+            "cantrips_known": 3,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 1,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 8,
+          "featureRefs": [
+            "2014/feature/druid-wild-shape-cr-1-or-below",
+            "2014/feature/druid-ability-score-improvement-2"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": true,
+            "cantrips_known": 3,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 2,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 9,
+          "featureRefs": [],
+          "proficiencyBonus": 4,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": true,
+            "cantrips_known": 3,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 1,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 10,
+          "featureRefs": [
+            "2014/feature/druid-circle-improvement-2"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": true,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 11,
+          "featureRefs": [],
+          "proficiencyBonus": 4,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": true,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 12,
+          "featureRefs": [
+            "2014/feature/druid-ability-score-improvement-3"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": true,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 13,
+          "featureRefs": [],
+          "proficiencyBonus": 5,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": true,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 14,
+          "featureRefs": [
+            "2014/feature/druid-circle-improvement-3"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": true,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 15,
+          "featureRefs": [],
+          "proficiencyBonus": 5,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": true,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 1,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 16,
+          "featureRefs": [
+            "2014/feature/druid-ability-score-improvement-4"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": true,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 1,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 17,
+          "featureRefs": [],
+          "proficiencyBonus": 6,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": true,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 1,
+            "spell_slots_level_9": 1
+          }
+        },
+        {
+          "level": 18,
+          "featureRefs": [
+            "2014/feature/druid-timeless-body",
+            "2014/feature/druid-beast-spells"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": true,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 3,
+            "spell_slots_level_6": 1,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 1,
+            "spell_slots_level_9": 1
+          }
+        },
+        {
+          "level": 19,
+          "featureRefs": [
+            "2014/feature/druid-ability-score-improvement-5"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": true,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 3,
+            "spell_slots_level_6": 2,
+            "spell_slots_level_7": 1,
+            "spell_slots_level_8": 1,
+            "spell_slots_level_9": 1
+          }
+        },
+        {
+          "level": 20,
+          "featureRefs": [
+            "2014/feature/druid-archdruid"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "wild_shape_max_cr": 1,
+            "wild_shape_swim": true,
+            "wild_shape_fly": true,
+            "cantrips_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 3,
+            "spell_slots_level_6": 2,
+            "spell_slots_level_7": 2,
+            "spell_slots_level_8": 1,
+            "spell_slots_level_9": 1
+          }
+        }
+      ],
+      "startingEquipment": {
+        "fixed": [
+          "leather-armor",
+          "explorers-pack",
+          "totem"
+        ],
+        "choices": [
+          {
+            "prompt": "(a) a wooden shield or (b) any simple weapon",
+            "options": [
+              [
+                "shield"
+              ],
+              [
+                "dagger"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) a scimitar or (b) any simple melee weapon",
+            "options": [
+              [
+                "scimitar"
+              ],
+              [
+                "quarterstaff"
+              ]
+            ]
+          }
+        ],
+        "goldAlternative": 50
+      }
+    }
+  },
+  {
+    "id": "2014/feature/druid-spellcasting-druid",
+    "edition": "2014",
+    "name": "Spellcasting: Druid",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
+    }
+  },
+  {
+    "id": "2014/feature/druid-druidic",
+    "edition": "2014",
+    "name": "Druidic",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
+    }
+  },
+  {
+    "id": "2014/feature/druid-wild-shape-cr-1-4-or-below-no-flying-or-swim-speed",
+    "edition": "2014",
+    "name": "Wild Shape (CR 1/4 or below, no flying or swim speed)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.\n\nYour druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.\n\nYou can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature. You can revert to your normal form earlier by using a bonus action on your turn. You automatically revert if you fall unconscious, drop to 0 hit points, or die.\n\nWhile you are transformed, the following rules apply:\n\n- Your game statistics are replaced by the statistics of the beast, but you retain your alignment, personality, and Intelligence, Wisdom, and Charisma scores. You also retain all of your skill and saving throw proficiencies, in addition to gaining those of the creature. If the creature has the same proficiency as you and the bonus in its stat block is higher than yours, use the creature's bonus instead of yours. If the creature has any legendary or lair actions, you can't use them.\n\n- When you transform, you assume the beast's hit points and Hit Dice. When you revert to your normal form, you return to the number of hit points you had before you transformed. However, if you revert as a result of dropping to 0 hit points, any excess damage carries over to your normal form. For example, if you take 10 damage in animal form and have only 1 hit point left, you revert and take 9 damage. As long as the excess damage doesn't reduce your normal form to 0 hit points, you aren't knocked unconscious.\n\n- You can't cast spells, and your ability to speak or take any action that requires hands is limited to the capabilities of your beast form. Transforming doesn't break your concentration on a spell you've already cast, however, or prevent you from taking actions that are part of a spell, such as call lightning, that you've already cast.\n\n- You retain the benefit of any features from your class, race, or other source and can use them if the new form is physically capable of doing so. However, you can't use any of your special senses, such as darkvision, unless your new form also has that sense.\n\n- You choose whether your equipment falls to the ground in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the GM decides whether it is practical for the new form to wear a piece of equipment, based on the creature's shape and size. Your equipment doesn't change size or shape to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge with it. Equipment that merges with the form has no effect until you leave the form."
+    }
+  },
+  {
+    "id": "2014/feature/druid-circle",
+    "edition": "2014",
+    "name": "Druid Circle",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 2nd level, you choose to identify with a circle of druids, such as the Circle of the Land. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/druid-wild-shape-cr-1-2-or-below-no-flying-speed",
+    "edition": "2014",
+    "name": "Wild Shape (CR 1/2 or below, no flying speed)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.\n\nYour druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.\n\nYou can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature. You can revert to your normal form earlier by using a bonus action on your turn. You automatically revert if you fall unconscious, drop to 0 hit points, or die.\n\nWhile you are transformed, the following rules apply:\n\n- Your game statistics are replaced by the statistics of the beast, but you retain your alignment, personality, and Intelligence, Wisdom, and Charisma scores. You also retain all of your skill and saving throw proficiencies, in addition to gaining those of the creature. If the creature has the same proficiency as you and the bonus in its stat block is higher than yours, use the creature's bonus instead of yours. If the creature has any legendary or lair actions, you can't use them.\n\n- When you transform, you assume the beast's hit points and Hit Dice. When you revert to your normal form, you return to the number of hit points you had before you transformed. However, if you revert as a result of dropping to 0 hit points, any excess damage carries over to your normal form. For example, if you take 10 damage in animal form and have only 1 hit point left, you revert and take 9 damage. As long as the excess damage doesn't reduce your normal form to 0 hit points, you aren't knocked unconscious.\n\n- You can't cast spells, and your ability to speak or take any action that requires hands is limited to the capabilities of your beast form. Transforming doesn't break your concentration on a spell you've already cast, however, or prevent you from taking actions that are part of a spell, such as call lightning, that you've already cast.\n\n- You retain the benefit of any features from your class, race, or other source and can use them if the new form is physically capable of doing so. However, you can't use any of your special senses, such as darkvision, unless your new form also has that sense.\n\n- You choose whether your equipment falls to the ground in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the GM decides whether it is practical for the new form to wear a piece of equipment, based on the creature's shape and size. Your equipment doesn't change size or shape to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge with it. Equipment that merges with the form has no effect until you leave the form."
+    }
+  },
+  {
+    "id": "2014/feature/druid-ability-score-improvement-1",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/druid-circle-improvement-1",
+    "edition": "2014",
+    "name": "Druid Circle feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 2nd level, you choose to identify with a circle of druids, such as the Circle of the Land. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/druid-wild-shape-cr-1-or-below",
+    "edition": "2014",
+    "name": "Wild Shape (CR 1 or below)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.\n\nYour druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.\n\nYou can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature. You can revert to your normal form earlier by using a bonus action on your turn. You automatically revert if you fall unconscious, drop to 0 hit points, or die.\n\nWhile you are transformed, the following rules apply:\n\n- Your game statistics are replaced by the statistics of the beast, but you retain your alignment, personality, and Intelligence, Wisdom, and Charisma scores. You also retain all of your skill and saving throw proficiencies, in addition to gaining those of the creature. If the creature has the same proficiency as you and the bonus in its stat block is higher than yours, use the creature's bonus instead of yours. If the creature has any legendary or lair actions, you can't use them.\n\n- When you transform, you assume the beast's hit points and Hit Dice. When you revert to your normal form, you return to the number of hit points you had before you transformed. However, if you revert as a result of dropping to 0 hit points, any excess damage carries over to your normal form. For example, if you take 10 damage in animal form and have only 1 hit point left, you revert and take 9 damage. As long as the excess damage doesn't reduce your normal form to 0 hit points, you aren't knocked unconscious.\n\n- You can't cast spells, and your ability to speak or take any action that requires hands is limited to the capabilities of your beast form. Transforming doesn't break your concentration on a spell you've already cast, however, or prevent you from taking actions that are part of a spell, such as call lightning, that you've already cast.\n\n- You retain the benefit of any features from your class, race, or other source and can use them if the new form is physically capable of doing so. However, you can't use any of your special senses, such as darkvision, unless your new form also has that sense.\n\n- You choose whether your equipment falls to the ground in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the GM decides whether it is practical for the new form to wear a piece of equipment, based on the creature's shape and size. Your equipment doesn't change size or shape to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge with it. Equipment that merges with the form has no effect until you leave the form."
+    }
+  },
+  {
+    "id": "2014/feature/druid-ability-score-improvement-2",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/druid-circle-improvement-2",
+    "edition": "2014",
+    "name": "Druid Circle feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 2nd level, you choose to identify with a circle of druids, such as the Circle of the Land. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/druid-ability-score-improvement-3",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/druid-circle-improvement-3",
+    "edition": "2014",
+    "name": "Druid Circle feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 2nd level, you choose to identify with a circle of druids, such as the Circle of the Land. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/druid-ability-score-improvement-4",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/druid-timeless-body",
+    "edition": "2014",
+    "name": "Timeless Body",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year."
+    }
+  },
+  {
+    "id": "2014/feature/druid-beast-spells",
+    "edition": "2014",
+    "name": "Beast Spells",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components."
+    }
+  },
+  {
+    "id": "2014/feature/druid-ability-score-improvement-5",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/druid-archdruid",
+    "edition": "2014",
+    "name": "Archdruid",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 20th level, you can use your Wild Shape an unlimited number of times.\n\nAdditionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape."
+    }
+  },
+  {
+    "id": "2014/subclass/land",
+    "edition": "2014",
+    "name": "Land",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "subclass",
+    "data": {
+      "parentClassRef": "2014/class/druid",
+      "description": "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites.",
+      "featuresByLevel": {
+        "2": [
+          "2014/feature/land-bonus-cantrip",
+          "2014/feature/land-natural-recovery"
+        ],
+        "6": [
+          "2014/feature/land-druid-lands-stride"
+        ],
+        "10": [
+          "2014/feature/land-natures-ward"
+        ],
+        "14": [
+          "2014/feature/land-natures-sanctuary"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/land-bonus-cantrip",
+    "edition": "2014",
+    "name": "Bonus Cantrip",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you choose this circle at 2nd level, you learn one additional druid cantrip of your choice."
+    }
+  },
+  {
+    "id": "2014/feature/land-natural-recovery",
+    "edition": "2014",
+    "name": "Natural Recovery",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 2nd level, you can regain some of your magical energy by sitting in meditation and communing with nature. During a short rest, you choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your druid level (rounded up), and none of the slots can be 6th level or higher. You can't use this feature again until you finish a long rest.\n\nFor example, when you are a 4th-level druid, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level slot or two 1st-level slots."
+    }
+  },
+  {
+    "id": "2014/feature/land-druid-lands-stride",
+    "edition": "2014",
+    "name": "Land's Stride",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 6th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.\n\nIn addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the entangle spell."
+    }
+  },
+  {
+    "id": "2014/feature/land-natures-ward",
+    "edition": "2014",
+    "name": "Nature's Ward",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 10th level, you can't be charmed or frightened by elementals or fey, and you are immune to poison and disease."
+    }
+  },
+  {
+    "id": "2014/feature/land-natures-sanctuary",
+    "edition": "2014",
+    "name": "Nature's Sanctuary",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 14th level, creatures of the natural world sense your connection to nature and become hesitant to attack you. When a beast or plant creature attacks you, that creature must make a Wisdom saving throw against your druid spell save DC. On a failed save, the creature must choose a different target, or the attack automatically misses. On a successful save, the creature is immune to this effect for 24 hours. The creature is aware of this effect before it makes its attack against you."
+    }
+  },
+  {
+    "id": "2014/subclass/circle-of-spores",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Circle of Spores",
+    "source": {
+      "book": "TCE",
+      "page": 40
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/druid",
+      "description": "You have dedicated yourself to a mastery of the cycle of life and death, having learned that rot and decay fuel new beginnings.",
+      "featuresByLevel": {
+        "2": [
+          "2014/feature/extracted-halo-of-spores"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/circle-of-wildfire",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Circle of Wildfire",
+    "source": {
+      "book": "TCE",
+      "page": 44
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/druid",
+      "description": "You have unlocked the secrets of wildfire, a phenomenon that brings devastation and rebirth in equal measure.",
+      "featuresByLevel": {
+        "2": [
+          "2014/feature/extracted-summon-wildfire-spirit"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/extracted-halo-of-spores",
+    "edition": "2014",
+    "name": "Halo of Spores",
+    "source": {
+      "book": "TCE",
+      "page": 40
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are surrounded by invisible, necrotic spores that are harmless until you unleash them on a creature nearby. When a creature you can see moves into a space within 10 feet of you or starts its turn there, you can use your reaction to deal 1d4 necrotic damage to that creature unless it succeeds on a Constitution saving throw against your spell save DC. The necrotic damage increases to 1d6 at 6th level, 1d8 at 10th level, and 1d10 at 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-summon-wildfire-spirit",
+    "edition": "2014",
+    "name": "Summon Wildfire Spirit",
+    "source": {
+      "book": "TCE",
+      "page": 44
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can summon the primal spirit bound to your soul. As an action, you can expend one use of your Wild Shape feature to summon your wildfire spirit, rather than assuming a beast form.\n\nThe spirit appears in an unoccupied space of your choice that you can see within 30 feet of you. Each creature within 10 feet of the spirit (other than you) when it appears must succeed on a Dexterity saving throw against your spell save DC or take 2d6 fire damage.\n\nThe spirit is friendly to you and your companions and obeys your commands. See this creature's game statistics in the Wildfire Spirit stat block, which uses your proficiency bonus (PB) in several places. You determine the spirit's appearance. Some spirits take the form of a humanoid figure made of gnarled branches covered in flame, while others look like beasts wreathed in fire.\n\nIn combat, the spirit shares your initiative count, but it takes its turn immediately after yours. The only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the spirit can take any action of its choice, not just Dodge.\n\nThe spirit manifests for 1 hour, until it is reduced to 0 hit points, until you use this feature to summon the spirit again, or until you die."
+    }
+  }
+]

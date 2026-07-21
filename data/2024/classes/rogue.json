@@ -1,0 +1,707 @@
+[
+  {
+    "id": "2024/class/rogue",
+    "edition": "2024",
+    "name": "Rogue",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "class",
+    "data": {
+      "hitDie": "d8",
+      "savingThrowProficiencies": [
+        "dex",
+        "int"
+      ],
+      "armorProficiencies": [
+        "light-armor"
+      ],
+      "weaponProficiencies": [
+        "simple-weapons",
+        "longswords",
+        "rapiers",
+        "scimitars",
+        "shortswords",
+        "whips",
+        "hand-crossbows"
+      ],
+      "toolProficiencies": [
+        "tool-thieves-tools"
+      ],
+      "skillChoice": {
+        "count": 4,
+        "options": [
+          "acrobatics",
+          "athletics",
+          "deception",
+          "insight",
+          "intimidation",
+          "investigation",
+          "perception",
+          "performance",
+          "persuasion",
+          "sleightOfHand",
+          "stealth"
+        ]
+      },
+      "levels": [
+        {
+          "level": 1,
+          "featureRefs": [
+            "2024/feature/rogue-expertise",
+            "2024/feature/rogue-sneak-attack",
+            "2024/feature/rogue-thieves-cant",
+            "2024/feature/rogue-weapon-mastery"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "sneak_attack_dice_count": 1,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 2,
+          "featureRefs": [
+            "2024/feature/rogue-cunning-action"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "sneak_attack_dice_count": 1,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 3,
+          "featureRefs": [
+            "2024/feature/rogue-steady-aim",
+            "2024/feature/rogue-rogue-subclass",
+            "2024/feature/rogue-fast-hands",
+            "2024/feature/rogue-second-story-work"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "sneak_attack_dice_count": 2,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 4,
+          "featureRefs": [
+            "2024/feature/rogue-ability-score-improvement"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "sneak_attack_dice_count": 2,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 5,
+          "featureRefs": [
+            "2024/feature/rogue-cunning-strike",
+            "2024/feature/rogue-uncanny-dodge"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "sneak_attack_dice_count": 3,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 6,
+          "featureRefs": [],
+          "proficiencyBonus": 3,
+          "columns": {
+            "sneak_attack_dice_count": 3,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 7,
+          "featureRefs": [
+            "2024/feature/rogue-evasion",
+            "2024/feature/rogue-reliable-talent"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "sneak_attack_dice_count": 4,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 8,
+          "featureRefs": [],
+          "proficiencyBonus": 3,
+          "columns": {
+            "sneak_attack_dice_count": 4,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 9,
+          "featureRefs": [
+            "2024/feature/rogue-supreme-sneak"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "sneak_attack_dice_count": 5,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 10,
+          "featureRefs": [],
+          "proficiencyBonus": 4,
+          "columns": {
+            "sneak_attack_dice_count": 5,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 11,
+          "featureRefs": [
+            "2024/feature/rogue-improved-cunning-strike"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "sneak_attack_dice_count": 6,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 12,
+          "featureRefs": [],
+          "proficiencyBonus": 4,
+          "columns": {
+            "sneak_attack_dice_count": 6,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 13,
+          "featureRefs": [
+            "2024/feature/rogue-use-magic-device"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "sneak_attack_dice_count": 7,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 14,
+          "featureRefs": [
+            "2024/feature/rogue-devious-strikes"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "sneak_attack_dice_count": 7,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 15,
+          "featureRefs": [
+            "2024/feature/rogue-slippery-mind"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "sneak_attack_dice_count": 8,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 16,
+          "featureRefs": [],
+          "proficiencyBonus": 5,
+          "columns": {
+            "sneak_attack_dice_count": 8,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 17,
+          "featureRefs": [
+            "2024/feature/rogue-thief-s-reflexes"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "sneak_attack_dice_count": 9,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 18,
+          "featureRefs": [
+            "2024/feature/rogue-elusive"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "sneak_attack_dice_count": 9,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 19,
+          "featureRefs": [
+            "2024/feature/rogue-epic-boon"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "sneak_attack_dice_count": 10,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 20,
+          "featureRefs": [
+            "2024/feature/rogue-stroke-of-luck"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "sneak_attack_dice_count": 10,
+            "sneak_attack_dice_value": 6
+          }
+        }
+      ],
+      "startingEquipment": {
+        "fixed": [
+          "leather-armor",
+          "rapier",
+          "shortbow",
+          "arrows",
+          "thieves-tools",
+          "burglars-pack",
+          "dagger",
+          "dagger"
+        ],
+        "choices": [],
+        "goldAlternative": 100
+      }
+    }
+  },
+  {
+    "id": "2024/feature/rogue-ability-score-improvement",
+    "edition": "2024",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain the Ability Score Improvement feat (see \"Feats\") or another feat of your choice for which you qualify. You gain this feature again at Rogue levels 8, 10, 12, and 16."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-cunning-action",
+    "edition": "2024",
+    "name": "Cunning Action",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your quick thinking and agility allow you to move and act quickly. On your turn, you can take one of the following actions as a Bonus Action: Dash, Disengage, or Hide."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-cunning-strike",
+    "edition": "2024",
+    "name": "Cunning Strike",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You've developed cunning ways to use your Sneak Attack. When you deal Sneak Attack damage, you can add one of the following Cunning Strike effects.\n Each effect has a die cost, which is the number of Sneak Attack damage dice you must forgo to add the effect. You remove the die before rolling, and the effect occurs immediately after the attack's damage is dealt. For example, if you add the Poison effect, remove 1d6 from the Sneak Attack's damage before rolling.\n If a Cunning Strike effect requires a saving throw, the DC equals 8 plus your Dexterity modifier and Proficiency Bonus.\n Poison (Cost: 1d6). You add a toxin to your strike, forcing the target to make a Constitution saving throw. On a failed save, the target has the Poisoned condition for 1 minute. At the end of each of its turns, the Poisoned target repeats the save, ending the effect on itself on a success.\n To use this effect, you must have a Poisoner's Kit on your person.\n Trip (Cost: 1d6). If the target is Large or smaller, it must succeed on a Dexterity saving throw or have the Prone condition.\n Withdraw (Cost: 1d6). Immediately after the attack, you move up to half your Speed without provoking Opportunity Attacks."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-devious-strikes",
+    "edition": "2024",
+    "name": "Devious Strikes",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You've practiced new ways to use your Sneak Attack deviously. The following effects are now among your Cunning Strike options.\n Daze (Cost: 2d6). The target must succeed on a Constitution saving throw, or on its next turn, it can do only one of the following: move or take an action or a Bonus Action.\n Knock Out (Cost: 6d6). The target must succeed on a Constitution saving throw, or it has the Unconscious condition for 1 minute or until it takes any damage. The Unconscious target repeats the save at the end of each of its turns, ending the effect on itself on a success.\n Obscure (Cost: 3d6). The target must succeed on a Dexterity saving throw, or it has the Blinded condition until the end of its next turn."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-elusive",
+    "edition": "2024",
+    "name": "Elusive",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You're so evasive that attackers rarely gain the upper hand against you. No attack roll can have Advantage against you unless you have the Incapacitated condition."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-epic-boon",
+    "edition": "2024",
+    "name": "Epic Boon",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain an Epic Boon feat (see \"Feats\") or another feat of your choice for which you qualify. Boon of the Night Spirit is recommended."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-evasion",
+    "edition": "2024",
+    "name": "Evasion",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can nimbly dodge out of the way of certain dangers.\n When you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail. You can't use this feature if you have the Incapacitated condition."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-expertise",
+    "edition": "2024",
+    "name": "Expertise",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain Expertise in two of your skill proficiencies of your choice. Sleight of Hand and Stealth are recommended if you have proficiency in them.\n At Rogue level 6, you gain Expertise in two more of your skill proficiencies of your choice."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-improved-cunning-strike",
+    "edition": "2024",
+    "name": "Improved Cunning Strike",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can use up to two Cunning Strike effects when you deal Sneak Attack damage, paying the die cost for each effect."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-reliable-talent",
+    "edition": "2024",
+    "name": "Reliable Talent",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Whenever you make an ability check that uses one of your skill or tool proficiencies, you can treat a d20 roll of 9 or lower as a 10."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-slippery-mind",
+    "edition": "2024",
+    "name": "Slippery Mind",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your cunning mind is exceptionally difficult to control.\n You gain proficiency in Wisdom and Charisma saving throws."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-sneak-attack",
+    "edition": "2024",
+    "name": "Sneak Attack",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack roll if you have Advantage on the roll and the attack uses a Finesse or a Ranged weapon. The extra damage's type is the same as the weapon's type.\n You don't need Advantage on the attack roll if at least one of your allies is within 5 feet of the target, the ally doesn't have the Incapacitated condition, and you don't have Disadvantage on the attack roll.\n The extra damage increases as you gain Rogue levels, as shown in the Sneak Attack column of the Rogue Features table."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-steady-aim",
+    "edition": "2024",
+    "name": "Steady Aim",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a Bonus Action, you give yourself Advantage on your next attack roll on the current turn. You can use this feature only if you haven't moved during this turn, and after you use it, your Speed is 0 until the end of the current turn."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-stroke-of-luck",
+    "edition": "2024",
+    "name": "Stroke of Luck",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have a marvelous knack for succeeding when you need to. If you fail a D20 Test, you can turn the roll into a 20.\n Once you use this feature, you can't use it again until you finish a Short or Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-rogue-subclass",
+    "edition": "2024",
+    "name": "Rogue Subclass",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain a Rogue subclass of your choice. A subclass is a specialization that grants you features at certain Rogue levels. For the rest of your career, you gain each of your subclass's features that are of your Rogue level or lower."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-thieves-cant",
+    "edition": "2024",
+    "name": "Thieves' Cant",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You picked up various languages in the communities where you plied your roguish talents. You know Thieves' Cant and one other language of your choice, which you choose from the language tables in \"Character Creation.\""
+    }
+  },
+  {
+    "id": "2024/feature/rogue-uncanny-dodge",
+    "edition": "2024",
+    "name": "Uncanny Dodge",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When an attacker that you can see hits you with an attack roll, you can take a Reaction to halve the attack's damage against you (round down)."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-weapon-mastery",
+    "edition": "2024",
+    "name": "Weapon Mastery",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Daggers and Shortbows.\n Whenever you finish a Long Rest, you can change the kinds of weapons you chose. For example, you could switch to using the mastery properties of Scimitars and Shortswords."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-fast-hands",
+    "edition": "2024",
+    "name": "Fast Hands",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a Bonus Action, you can do one of the following.\n Sleight of Hand. Make a Dexterity (Sleight of Hand) check to pick a lock or disarm a trap with Thieves' Tools or to pick a pocket.\n Use an Object. Take the Utilize action, or take the Magic action to use a magic item that requires that action."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-second-story-work",
+    "edition": "2024",
+    "name": "Second-Story Work",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You've trained to get into especially hard-to-reach places, granting you these benefits.\n Climber. You gain a Climb Speed equal to your Speed.\n Jumper. You can determine your jump distance using your Dexterity rather than your Strength."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-supreme-sneak",
+    "edition": "2024",
+    "name": "Supreme Sneak",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain the following Cunning Strike option.\n Stealth Attack (Cost: 1d6). If you have the Hide action's Invisible condition, this attack doesn't end that condition on you if you end the turn behind Three-Quarters Cover or Total Cover."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-thief-s-reflexes",
+    "edition": "2024",
+    "name": "Thief's Reflexes",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal Initiative and your second turn at your Initiative minus 10."
+    }
+  },
+  {
+    "id": "2024/feature/rogue-use-magic-device",
+    "edition": "2024",
+    "name": "Use Magic Device",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You've learned how to maximize use of magic items, granting you the following benefits.\n Attunement. You can attune to up to four magic items at once.\n Charges. Whenever you use a magic item property that expends charges, roll 1d6. On a roll of 6, you use the property without expending the charges.\n Scrolls. You can use any Spell Scroll, using Intelligence as your spellcasting ability for the spell. If the spell is a cantrip or a level 1 spell, you can cast it reliably.\n If the scroll contains a higher-level spell, you must first succeed on an Intelligence (Arcana) check (DC 10 plus the spell's level). On a successful check, you cast the spell from the scroll. On a failed check, the scroll disintegrates."
+    }
+  },
+  {
+    "id": "2024/subclass/thief",
+    "edition": "2024",
+    "name": "Thief",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "subclass",
+    "data": {
+      "parentClassRef": "2024/class/rogue",
+      "description": "A mix of burglar, treasure hunter, and explorer, you are the epitome of an adventurer. In addition to improving your agility and stealth, you gain abilities useful for delving into ruins and getting maximum benefit from the magic items you find there.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/thief-fast-hands",
+          "2024/feature/thief-second-story-work"
+        ],
+        "9": [
+          "2024/feature/thief-supreme-sneak"
+        ],
+        "13": [
+          "2024/feature/thief-use-magic-device"
+        ],
+        "17": [
+          "2024/feature/thief-thief-s-reflexes"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/feature/thief-fast-hands",
+    "edition": "2024",
+    "name": "Fast Hands",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a Bonus Action, you can do one of the following.\n  Sleight of Hand. Make a Dexterity (Sleight of Hand) check to pick a lock or disarm a trap with Thieves' Tools or to pick a pocket.\n  Use an Object. Take the Utilize action, or take the Magic action to use a magic item that requires that action."
+    }
+  },
+  {
+    "id": "2024/feature/thief-second-story-work",
+    "edition": "2024",
+    "name": "Second-Story Work",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You've trained to get into especially hard-to-reach places, granting you these benefits.\n  Climber. You gain a Climb Speed equal to your Speed.\n  Jumper. You can determine your jump distance using your Dexterity rather than your Strength."
+    }
+  },
+  {
+    "id": "2024/feature/thief-supreme-sneak",
+    "edition": "2024",
+    "name": "Supreme Sneak",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain the following Cunning Strike option.\n  Stealth Attack (Cost: 1d6). If you have the Hide action's Invisible condition, this attack doesn't end that condition on you if you end the turn behind Three-Quarters Cover or Total Cover."
+    }
+  },
+  {
+    "id": "2024/feature/thief-use-magic-device",
+    "edition": "2024",
+    "name": "Use Magic Device",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You've learned how to maximize use of magic items, granting you the following benefits.\n  Attunement. You can attune to up to four magic items at once.\n  Charges. Whenever you use a magic item property that expends charges, roll 1d6. On a roll of 6, you use the property without expending the charges.\n  Scrolls. You can use any Spell Scroll, using Intelligence as your spellcasting ability for the spell. If the spell is a cantrip or a level 1 spell, you can cast it reliably. If the scroll contains a higher-level spell, you must first succeed on an Intelligence (Arcana) check (DC 10 plus the spell's level). On a successful check, you cast the spell from the scroll. On a failed check, the scroll disintegrates."
+    }
+  },
+  {
+    "id": "2024/feature/thief-thief-s-reflexes",
+    "edition": "2024",
+    "name": "Thief's Reflexes",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal Initiative and your second turn at your Initiative minus 10."
+    }
+  }
+]

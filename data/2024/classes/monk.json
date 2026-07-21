@@ -1,0 +1,771 @@
+[
+  {
+    "id": "2024/class/monk",
+    "edition": "2024",
+    "name": "Monk",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "class",
+    "data": {
+      "hitDie": "d8",
+      "savingThrowProficiencies": [
+        "str",
+        "dex"
+      ],
+      "armorProficiencies": [],
+      "weaponProficiencies": [
+        "simple-weapons",
+        "scimitars",
+        "shortswords",
+        "hand-crossbows"
+      ],
+      "toolProficiencies": [],
+      "skillChoice": {
+        "count": 2,
+        "options": [
+          "acrobatics",
+          "athletics",
+          "history",
+          "insight",
+          "religion",
+          "stealth"
+        ]
+      },
+      "levels": [
+        {
+          "level": 1,
+          "featureRefs": [
+            "2024/feature/monk-martial-arts",
+            "2024/feature/monk-unarmored-defense"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 4,
+            "ki_points": 0,
+            "unarmored_movement": 0
+          }
+        },
+        {
+          "level": 2,
+          "featureRefs": [
+            "2024/feature/monk-monk-s-focus",
+            "2024/feature/monk-unarmored-movement",
+            "2024/feature/monk-uncanny-metabolism"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 4,
+            "ki_points": 2,
+            "unarmored_movement": 10
+          }
+        },
+        {
+          "level": 3,
+          "featureRefs": [
+            "2024/feature/monk-deflect-attacks",
+            "2024/feature/monk-monk-subclass",
+            "2024/feature/monk-open-hand-technique"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 4,
+            "ki_points": 3,
+            "unarmored_movement": 10
+          }
+        },
+        {
+          "level": 4,
+          "featureRefs": [
+            "2024/feature/monk-ability-score-improvement",
+            "2024/feature/monk-slow-fall"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 4,
+            "ki_points": 4,
+            "unarmored_movement": 10
+          }
+        },
+        {
+          "level": 5,
+          "featureRefs": [
+            "2024/feature/monk-extra-attack",
+            "2024/feature/monk-stunning-strike"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 6,
+            "ki_points": 5,
+            "unarmored_movement": 10
+          }
+        },
+        {
+          "level": 6,
+          "featureRefs": [
+            "2024/feature/monk-empowered-strikes",
+            "2024/feature/monk-wholeness-of-body"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 6,
+            "ki_points": 6,
+            "unarmored_movement": 15
+          }
+        },
+        {
+          "level": 7,
+          "featureRefs": [
+            "2024/feature/monk-evasion"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 6,
+            "ki_points": 7,
+            "unarmored_movement": 15
+          }
+        },
+        {
+          "level": 8,
+          "featureRefs": [],
+          "proficiencyBonus": 3,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 6,
+            "ki_points": 8,
+            "unarmored_movement": 15
+          }
+        },
+        {
+          "level": 9,
+          "featureRefs": [
+            "2024/feature/monk-acrobatic-movement"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 6,
+            "ki_points": 9,
+            "unarmored_movement": 15
+          }
+        },
+        {
+          "level": 10,
+          "featureRefs": [
+            "2024/feature/monk-heightened-focus",
+            "2024/feature/monk-self-restoration"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 6,
+            "ki_points": 10,
+            "unarmored_movement": 20
+          }
+        },
+        {
+          "level": 11,
+          "featureRefs": [
+            "2024/feature/monk-fleet-step"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 8,
+            "ki_points": 11,
+            "unarmored_movement": 20
+          }
+        },
+        {
+          "level": 12,
+          "featureRefs": [],
+          "proficiencyBonus": 4,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 8,
+            "ki_points": 12,
+            "unarmored_movement": 20
+          }
+        },
+        {
+          "level": 13,
+          "featureRefs": [
+            "2024/feature/monk-deflect-energy"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 8,
+            "ki_points": 13,
+            "unarmored_movement": 20
+          }
+        },
+        {
+          "level": 14,
+          "featureRefs": [
+            "2024/feature/monk-disciplined-survivor"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 8,
+            "ki_points": 14,
+            "unarmored_movement": 25
+          }
+        },
+        {
+          "level": 15,
+          "featureRefs": [
+            "2024/feature/monk-perfect-focus"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 8,
+            "ki_points": 15,
+            "unarmored_movement": 25
+          }
+        },
+        {
+          "level": 16,
+          "featureRefs": [],
+          "proficiencyBonus": 5,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 8,
+            "ki_points": 16,
+            "unarmored_movement": 25
+          }
+        },
+        {
+          "level": 17,
+          "featureRefs": [
+            "2024/feature/monk-quivering-palm"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 10,
+            "ki_points": 17,
+            "unarmored_movement": 25
+          }
+        },
+        {
+          "level": 18,
+          "featureRefs": [
+            "2024/feature/monk-superior-defense"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 10,
+            "ki_points": 18,
+            "unarmored_movement": 30
+          }
+        },
+        {
+          "level": 19,
+          "featureRefs": [
+            "2024/feature/monk-epic-boon"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 10,
+            "ki_points": 19,
+            "unarmored_movement": 30
+          }
+        },
+        {
+          "level": 20,
+          "featureRefs": [
+            "2024/feature/monk-body-and-mind"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "martial_arts_dice_count": 1,
+            "martial_arts_dice_value": 10,
+            "ki_points": 20,
+            "unarmored_movement": 30
+          }
+        }
+      ],
+      "startingEquipment": {
+        "fixed": [
+          "shortsword",
+          "dart",
+          "dart",
+          "dart",
+          "dart",
+          "dart",
+          "dart",
+          "dart",
+          "dart",
+          "dart",
+          "dart",
+          "dungeoneer-pack"
+        ],
+        "choices": [],
+        "goldAlternative": 25
+      }
+    }
+  },
+  {
+    "id": "2024/feature/monk-ability-score-improvement",
+    "edition": "2024",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain the Ability Score Improvement feat (see \"Feats\") or another feat of your choice for which you qualify. You gain this feature again at Monk levels 8, 12, and 16."
+    }
+  },
+  {
+    "id": "2024/feature/monk-acrobatic-movement",
+    "edition": "2024",
+    "name": "Acrobatic Movement",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "While you aren't wearing armor or wielding a Shield, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the movement."
+    }
+  },
+  {
+    "id": "2024/feature/monk-body-and-mind",
+    "edition": "2024",
+    "name": "Body and Mind",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have developed your body and mind to new heights. Your Dexterity and Wisdom scores increase by 4, to a maximum of 25."
+    }
+  },
+  {
+    "id": "2024/feature/monk-deflect-attacks",
+    "edition": "2024",
+    "name": "Deflect Attacks",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When an attack roll hits you and its damage includes Bludgeoning, Piercing, or Slashing damage, you can take a Reaction to reduce the attack's total damage against you. The reduction equals 1d10 plus your Dexterity modifier and Monk level.\n  If you reduce the damage to 0, you can expend 1 Focus Point to redirect some of the attack's force. If you do so, choose a creature you can see within 5 feet of yourself if the attack was a melee attack or a creature you can see within 60 feet of yourself that isn't behind Total Cover if the attack was a ranged attack. That creature must succeed on a Dexterity saving throw or take damage equal to two rolls of your Martial Arts die plus your Dexterity modifier. The damage is the same type dealt by the attack."
+    }
+  },
+  {
+    "id": "2024/feature/monk-deflect-energy",
+    "edition": "2024",
+    "name": "Deflect Energy",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can now use your Deflect Attacks feature against attacks that deal any damage type, not just Bludgeoning, Piercing, or Slashing."
+    }
+  },
+  {
+    "id": "2024/feature/monk-disciplined-survivor",
+    "edition": "2024",
+    "name": "Disciplined Survivor",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your physical and mental discipline grant you proficiency in all saving throws.\n  Additionally, whenever you make a saving throw and fail, you can expend 1 Focus Point to reroll it, and you must use the new roll."
+    }
+  },
+  {
+    "id": "2024/feature/monk-empowered-strikes",
+    "edition": "2024",
+    "name": "Empowered Strikes",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Whenever you deal damage with your Unarmed Strike, it can deal your choice of Force damage or its normal damage type."
+    }
+  },
+  {
+    "id": "2024/feature/monk-epic-boon",
+    "edition": "2024",
+    "name": "Epic Boon",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain an Epic Boon feat (see \"Feats\") or another feat of your choice for which you qualify. Boon of Irresistible Offense is recommended."
+    }
+  },
+  {
+    "id": "2024/feature/monk-evasion",
+    "edition": "2024",
+    "name": "Evasion",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail.\n  You don't benefit from this feature if you have the Incapacitated condition."
+    }
+  },
+  {
+    "id": "2024/feature/monk-extra-attack",
+    "edition": "2024",
+    "name": "Extra Attack",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can attack twice instead of once whenever you take the Attack action on your turn."
+    }
+  },
+  {
+    "id": "2024/feature/monk-heightened-focus",
+    "edition": "2024",
+    "name": "Heightened Focus",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your Flurry of Blows, Patient Defense, and Step of the Wind gain the following benefits.\n  Flurry of Blows. You can expend 1 Focus Point to use Flurry of Blows and make three Unarmed Strikes with it instead of two.\n  Patient Defense. When you expend a Focus Point to use Patient Defense, you gain a number of Temporary Hit Points equal to two rolls of your Martial Arts die.\n  Step of the Wind. When you expend a Focus Point to use Step of the Wind, you can choose a willing creature within 5 feet of yourself that is Large or smaller. You move the creature with you until the end of your turn. The creature's movement doesn't provoke Opportunity Attacks."
+    }
+  },
+  {
+    "id": "2024/feature/monk-martial-arts",
+    "edition": "2024",
+    "name": "Martial Arts",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your practice of martial arts gives you mastery of combat styles that use your Unarmed Strike and Monk weapons, which are the following:\n• Simple Melee weapons\n• Martial Melee weapons that have the Light property\nYou gain the following benefits while you are unarmed or wielding only Monk weapons and you aren't wearing armor or wielding a Shield.\n  Bonus Unarmed Strike. You can make an Unarmed Strike as a Bonus Action.\n  Martial Arts Die. You can roll 1d6 in place of the normal damage of your Unarmed Strike or Monk weapons. This die changes as you gain Monk levels, as shown in the Martial Arts column of the Monk Features table.\n  Dexterous Attacks. You can use your Dexterity modifier instead of your Strength modifier for the attack and damage rolls of your Unarmed Strikes and Monk weapons. In addition, when you use the Grapple or Shove option of your Unarmed Strike, you can use your Dexterity modifier instead of your Strength modifier to determine the save DC.\n"
+    }
+  },
+  {
+    "id": "2024/feature/monk-monk-s-focus",
+    "edition": "2024",
+    "name": "Monk's Focus",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your focus and martial training allow you to harness a well of extraordinary energy within yourself. This energy is represented by Focus Points. Your Monk level determines the number of points you have, as shown in the Focus Points column of the Monk Features table.\n  You can expend these points to enhance or fuel certain Monk features. You start knowing three such features: Flurry of Blows, Patient Defense, and Step of the Wind, each of which is detailed below.\n  When you expend a Focus Point, it is unavailable until you finish a Short or Long Rest, at the end of which you regain all your expended points.\n Some features that use Focus Points require your target to make a saving throw. The save DC equals 8 plus your Wisdom modifier and Proficiency Bonus.\n  Flurry of Blows. You can expend 1 Focus Point to make two Unarmed Strikes as a Bonus Action.\n  Patient Defense. You can take the Disengage action as a Bonus Action. Alternatively, you can expend 1 Focus Point to take both the Disengage and the Dodge actions as a Bonus Action.\n  Step of the Wind. You can take the Dash action as a Bonus Action. Alternatively, you can expend 1 Focus Point to take both the Disengage and Dash\nactions as a Bonus Action, and your jump distance is doubled for the turn."
+    }
+  },
+  {
+    "id": "2024/feature/monk-perfect-focus",
+    "edition": "2024",
+    "name": "Perfect Focus",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you roll Initiative and don't use Uncanny Metabolism, you regain expended Focus Points until you have 4 if you have 3 or fewer."
+    }
+  },
+  {
+    "id": "2024/feature/monk-self-restoration",
+    "edition": "2024",
+    "name": "Self-Restoration",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Through sheer force of will, you can remove one of the following conditions from yourself at the\nend of each of your turns: Charmed, Frightened, or Poisoned.\n  In addition, forgoing food and drink doesn't give you levels of Exhaustion."
+    }
+  },
+  {
+    "id": "2024/feature/monk-slow-fall",
+    "edition": "2024",
+    "name": "Slow Fall",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can take a Reaction when you fall to reduce any damage you take from the fall by an amount equal to five times your Monk level."
+    }
+  },
+  {
+    "id": "2024/feature/monk-stunning-strike",
+    "edition": "2024",
+    "name": "Stunning Strike",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Once per turn when you hit a creature with a Monk weapon or an Unarmed Strike, you can expend 1 Focus Point to attempt a stunning strike. The target must make a Constitution saving throw. On a failed save, the target has the Stunned condition until the start of your next turn. On a successful save, the target's Speed is halved until the start of your next turn, and the next attack roll made against the target before then has Advantage."
+    }
+  },
+  {
+    "id": "2024/feature/monk-monk-subclass",
+    "edition": "2024",
+    "name": "Monk Subclass",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain a Monk subclass of your choice. A subclass is a specialization that grants you features at certain Monk levels. For the rest of your career, you gain each of your subclass's features that are of your Monk level or lower."
+    }
+  },
+  {
+    "id": "2024/feature/monk-superior-defense",
+    "edition": "2024",
+    "name": "Superior Defense",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At the start of your turn, you can expend 3 Focus Points to bolster yourself against harm for 1 minute or until you have the Incapacitated condition. During that time, you have Resistance to all damage except Force damage."
+    }
+  },
+  {
+    "id": "2024/feature/monk-unarmored-defense",
+    "edition": "2024",
+    "name": "Unarmored Defense",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "While you aren't wearing armor or wielding a Shield, your base Armor Class equals 10 plus your Dexterity and Wisdom modifiers."
+    }
+  },
+  {
+    "id": "2024/feature/monk-unarmored-movement",
+    "edition": "2024",
+    "name": "Unarmored Movement",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your speed increases by 10 feet while you aren't wearing armor or wielding a Shield. This bonus increases when you reach certain Monk levels, as shown on the Monk Features table."
+    }
+  },
+  {
+    "id": "2024/feature/monk-uncanny-metabolism",
+    "edition": "2024",
+    "name": "Uncanny Metabolism",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you roll Initiative, you can regain all expended Focus Points. When you do so, roll your Martial Arts die, and regain a number of Hit Points equal to your Monk level plus the number rolled.\n  Once you use this feature, you can't use it again until you finish a Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/monk-fleet-step",
+    "edition": "2024",
+    "name": "Fleet Step",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you take a Bonus Action other than Step of the Wind, you can also use Step of the Wind immediately after that Bonus Action."
+    }
+  },
+  {
+    "id": "2024/feature/monk-quivering-palm",
+    "edition": "2024",
+    "name": "Quivering Palm",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain the ability to set up lethal vibrations in someone's body. When you hit a creature with an Unarmed Strike, you can expend 4 Focus Points to start these imperceptible vibrations, which last for a number of days equal to your Monk level. The vibrations are harmless unless you take an action to end them. Alternatively, when you take the Attack action on your turn, you can forgo one of the attacks to end the vibrations. To end them, you and the target must be on the same plane of existence. When you end them, the target must make a Constitution saving throw, taking 10d12 Force damage on a failed save or half as much damage on a successful one.\n  You can have only one creature under the effect of this feature at a time. You can end the vibrations harmlessly (no action required)."
+    }
+  },
+  {
+    "id": "2024/feature/monk-open-hand-technique",
+    "edition": "2024",
+    "name": "Open Hand Technique",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Whenever you hit a creature with an attack granted by your Flurry of Blows, you can impose one of the following effects on that target.\n  Addle. The target can't make Opportunity Attacks until the start of its next turn.\n  Push. The target must succeed on a Strength saving throw or be pushed up to 15 feet away from you.\n  Topple. The target must succeed on a Dexterity saving throw or have the Prone condition."
+    }
+  },
+  {
+    "id": "2024/feature/monk-wholeness-of-body",
+    "edition": "2024",
+    "name": "Wholeness of Body",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain the ability to heal yourself. As a Bonus Action, you can roll your Martial Arts die. You regain a number of Hit Points equal to the number rolled plus your Wisdom modifier (minimum of 1 Hit Point regained).\n  You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest."
+    }
+  },
+  {
+    "id": "2024/subclass/warrior-of-the-open-hand",
+    "edition": "2024",
+    "name": "Warrior of the Open Hand",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "subclass",
+    "data": {
+      "parentClassRef": "2024/class/monk",
+      "description": "Warriors of the Open Hand are masters of unarmed combat. They learn techniques to push and trip their opponents and manipulate their own energy to protect themselves from harm.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/warrior-of-the-open-hand-open-hand-technique"
+        ],
+        "6": [
+          "2024/feature/warrior-of-the-open-hand-wholeness-of-body"
+        ],
+        "11": [
+          "2024/feature/warrior-of-the-open-hand-fleet-step"
+        ],
+        "17": [
+          "2024/feature/warrior-of-the-open-hand-quivering-palm"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/feature/warrior-of-the-open-hand-open-hand-technique",
+    "edition": "2024",
+    "name": "Open Hand Technique",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Whenever you hit a creature with an attack granted by your Flurry of Blows, you can impose one of the following effects on that target.\n  Addle. The target can't make Opportunity Attacks until the start of its next turn.\n Push. The target must succeed on a Strength saving throw or be pushed up to 15 feet away from you.\n  Topple. The target must succeed on a Dexterity saving throw or have the Prone condition."
+    }
+  },
+  {
+    "id": "2024/feature/warrior-of-the-open-hand-wholeness-of-body",
+    "edition": "2024",
+    "name": "Wholeness of Body",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain the ability to heal yourself. As a Bonus Action, you can roll your Martial Arts die. You regain a number of Hit Points equal to the number rolled\nplus your Wisdom modifier (minimum of 1 Hit Point regained).\n  You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/warrior-of-the-open-hand-fleet-step",
+    "edition": "2024",
+    "name": "Fleet Step",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you take a Bonus Action other than Step of the Wind, you can also use Step of the Wind immediately after that Bonus Action."
+    }
+  },
+  {
+    "id": "2024/feature/warrior-of-the-open-hand-quivering-palm",
+    "edition": "2024",
+    "name": "Quivering Palm",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain the ability to set up lethal vibrations in someone's body. When you hit a creature with an Unarmed Strike, you can expend 4 Focus Points to start these imperceptible vibrations, which last\nfor a number of days equal to your Monk level. The vibrations are harmless unless you take an action to end them. Alternatively, when you take the Attack action on your turn, you can forgo one of the attacks to end the vibrations. To end them, you and the target must be on the same plane of existence. When you end them, the target must make a Constitution saving throw, taking 10d12 Force damage on a failed save or half as much damage on a successful one.\n  You can have only one creature under the effect of this feature at a time. You can end the vibrations harmlessly (no action required)."
+    }
+  }
+]

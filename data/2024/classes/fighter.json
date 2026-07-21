@@ -1,0 +1,701 @@
+[
+  {
+    "id": "2024/class/fighter",
+    "edition": "2024",
+    "name": "Fighter",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "class",
+    "data": {
+      "hitDie": "d10",
+      "savingThrowProficiencies": [
+        "str",
+        "con"
+      ],
+      "armorProficiencies": [
+        "all-armor",
+        "shields"
+      ],
+      "weaponProficiencies": [
+        "simple-weapons",
+        "martial-weapons"
+      ],
+      "skillChoice": {
+        "count": 2,
+        "options": [
+          "acrobatics",
+          "animalHandling",
+          "athletics",
+          "history",
+          "insight",
+          "intimidation",
+          "perception",
+          "survival"
+        ]
+      },
+      "levels": [
+        {
+          "level": 1,
+          "featureRefs": [
+            "2024/feature/fighter-fighting-style",
+            "2024/feature/fighter-second-wind",
+            "2024/feature/fighter-weapon-mastery"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "action_surges": 0,
+            "indomitable_uses": 0,
+            "extra_attacks": 0
+          }
+        },
+        {
+          "level": 2,
+          "featureRefs": [
+            "2024/feature/fighter-action-surge",
+            "2024/feature/fighter-tactical-mind"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 0
+          }
+        },
+        {
+          "level": 3,
+          "featureRefs": [
+            "2024/feature/fighter-improved-critical",
+            "2024/feature/fighter-remarkable-athlete",
+            "2024/feature/fighter-fighter-subclass"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 0
+          }
+        },
+        {
+          "level": 4,
+          "featureRefs": [
+            "2024/feature/fighter-ability-score-improvement"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 0
+          }
+        },
+        {
+          "level": 5,
+          "featureRefs": [
+            "2024/feature/fighter-extra-attack",
+            "2024/feature/fighter-tactical-shift"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 1
+          }
+        },
+        {
+          "level": 6,
+          "featureRefs": [],
+          "proficiencyBonus": 3,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 1
+          }
+        },
+        {
+          "level": 7,
+          "featureRefs": [
+            "2024/feature/fighter-additional-fighting-style"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 1
+          }
+        },
+        {
+          "level": 8,
+          "featureRefs": [],
+          "proficiencyBonus": 3,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 0,
+            "extra_attacks": 1
+          }
+        },
+        {
+          "level": 9,
+          "featureRefs": [
+            "2024/feature/fighter-indomitable",
+            "2024/feature/fighter-tactical-master"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 1,
+            "extra_attacks": 1
+          }
+        },
+        {
+          "level": 10,
+          "featureRefs": [
+            "2024/feature/fighter-heroic-warrior"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 1,
+            "extra_attacks": 1
+          }
+        },
+        {
+          "level": 11,
+          "featureRefs": [
+            "2024/feature/fighter-two-extra-attacks"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 1,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 12,
+          "featureRefs": [],
+          "proficiencyBonus": 4,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 1,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 13,
+          "featureRefs": [
+            "2024/feature/fighter-studied-attacks"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 2,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 14,
+          "featureRefs": [],
+          "proficiencyBonus": 5,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 2,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 15,
+          "featureRefs": [
+            "2024/feature/fighter-superior-critical"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 2,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 16,
+          "featureRefs": [],
+          "proficiencyBonus": 5,
+          "columns": {
+            "action_surges": 1,
+            "indomitable_uses": 2,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 17,
+          "featureRefs": [],
+          "proficiencyBonus": 6,
+          "columns": {
+            "action_surges": 2,
+            "indomitable_uses": 3,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 18,
+          "featureRefs": [
+            "2024/feature/fighter-survivor"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "action_surges": 2,
+            "indomitable_uses": 3,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 19,
+          "featureRefs": [
+            "2024/feature/fighter-epic-boon"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "action_surges": 2,
+            "indomitable_uses": 3,
+            "extra_attacks": 2
+          }
+        },
+        {
+          "level": 20,
+          "featureRefs": [
+            "2024/feature/fighter-three-extra-attacks"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "action_surges": 2,
+            "indomitable_uses": 3,
+            "extra_attacks": 3
+          }
+        }
+      ],
+      "startingEquipment": {
+        "fixed": [
+          "chain-mail",
+          "longsword",
+          "shield",
+          "light-crossbow",
+          "bolts",
+          "dungeoneer-pack"
+        ],
+        "choices": [],
+        "goldAlternative": 100
+      }
+    }
+  },
+  {
+    "id": "2024/feature/fighter-additional-fighting-style",
+    "edition": "2024",
+    "name": "Additional Fighting Style",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain another Fighting Style feat of your choice."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-heroic-warrior",
+    "edition": "2024",
+    "name": "Heroic Warrior",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The thrill of battle drives you toward victory. During combat, you can give yourself Heroic Inspiration whenever you start your turn without it."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-improved-critical",
+    "edition": "2024",
+    "name": "Improved Critical",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your attack rolls with weapons and Unarmed Strikes can score a Critical Hit on a roll of 19 or 20 on the d20."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-remarkable-athlete",
+    "edition": "2024",
+    "name": "Remarkable Athlete",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Thanks to your athleticism, you have Advantage on Initiative rolls and Strength (Athletics) checks.\n  In addition, immediately after you score a Critical Hit, you can move up to half your Speed without provoking Opportunity Attacks."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-superior-critical",
+    "edition": "2024",
+    "name": "Superior Critical",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your attack rolls with weapons and Unarmed Strikes can now score a Critical Hit on a roll of 18-20 on the d20."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-survivor",
+    "edition": "2024",
+    "name": "Survivor",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You attain the pinnacle of resilience in battle, giving you these benefits.\n  Defy Death. You have Advantage on Death Saving Throws. Moreover, when you roll 18-20 on a Death Saving Throw, you gain the benefit of rolling a 20 on it.\n  Heroic Rally. At the start of each of your turns, you regain Hit Points equal to 5 plus your Constitution modifier if you are Bloodied and have at least 1 Hit Point."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-ability-score-improvement",
+    "edition": "2024",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain the Ability Score Improvement feat (see \"Feats\") or another feat of your choice for which you qualify. You gain this feature again at Fighter levels 6, 8, 12, 14, and 16."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-action-surge",
+    "edition": "2024",
+    "name": "Action Surge",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action, except the Magic action.\n  Once you use this feature, you can't do so again until you finish a Short or Long Rest. Starting at level 17, you can use it twice before a rest but only once on a turn."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-epic-boon",
+    "edition": "2024",
+    "name": "Epic Boon",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain an Epic Boon feat (see \"Feats\") or another feat of your choice for which you qualify. Boon of Combat Prowess is recommended."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-extra-attack",
+    "edition": "2024",
+    "name": "Extra Attack",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can attack twice instead of once whenever you take the Attack action on your turn."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-fighting-style",
+    "edition": "2024",
+    "name": "Fighting Style",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have honed your martial prowess and gain a Fighting Style feat of your choice (see \"Feats\"). Defense is recommended.\n  Whenever you gain a Fighter level, you can replace the feat you chose with a different Fighting Style feat."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-indomitable",
+    "edition": "2024",
+    "name": "Indomitable",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "If you fail a saving throw, you can reroll it with a bonus equal to your Fighter level. You must use the new roll, and you can't use this feature again until you finish a Long Rest.\n  You can use this feature twice before a Long Rest starting at level 13 and three times before a Long Rest starting at level 17."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-second-wind",
+    "edition": "2024",
+    "name": "Second Wind",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have a limited well of physical and mental stamina that you can draw on. As a Bonus Action, you can use it to regain Hit Points equal to 1d10 plus your Fighter level.\n  You can use this feature twice. You regain one expended use when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest.\n  When you reach certain Fighter levels, you gain more uses of this feature, as shown in the Second Wind column of the Fighter Features table."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-studied-attacks",
+    "edition": "2024",
+    "name": "Studied Attacks",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You study your opponents and learn from each attack you make. If you make an attack roll against a creature and miss, you have Advantage on your next attack roll against that creature before the end of your next turn."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-fighter-subclass",
+    "edition": "2024",
+    "name": "Fighter Subclass",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain a Fighter subclass of your choice. A subclass is a specialization that grants you features at certain Fighter levels. For the rest of your career, you gain each of your subclass's features that are of your Fighter level or lower."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-tactical-master",
+    "edition": "2024",
+    "name": "Tactical Master",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you attack with a weapon whose mastery property you can use, you can replace that property with the Push, Sap, or Slow property for that attack."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-tactical-mind",
+    "edition": "2024",
+    "name": "Tactical Mind",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have a mind for tactics on and off the battlefield. When you fail an ability check, you can expend a use of your Second Wind to push yourself toward success. Rather than regaining Hit Points, you roll 1d10 and add the number rolled to the ability check, potentially turning it into a success. If the check still fails, this use of Second Wind isn't expended."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-tactical-shift",
+    "edition": "2024",
+    "name": "Tactical Shift",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Whenever you activate your Second Wind with a Bonus Action, you can move up to half your Speed without provoking Opportunity Attacks."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-three-extra-attacks",
+    "edition": "2024",
+    "name": "Three Extra Attacks",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can attack four times instead of once whenever you take the Attack action on your turn."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-two-extra-attacks",
+    "edition": "2024",
+    "name": "Two Extra Attacks",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can attack three times instead of once whenever you take the Attack action on your turn."
+    }
+  },
+  {
+    "id": "2024/feature/fighter-weapon-mastery",
+    "edition": "2024",
+    "name": "Weapon Mastery",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your training with weapons allows you to use the mastery properties of three kinds of Simple or Martial weapons of your choice. Whenever you finish\na Long Rest, you can practice weapon drills and change one of those weapon choices.\n  When you reach certain Fighter levels, you gain the ability to use the mastery properties of more kinds of weapons, as shown in the Weapon Mastery column of the Fighter Features table."
+    }
+  },
+  {
+    "id": "2024/subclass/champion",
+    "edition": "2024",
+    "name": "Champion",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "subclass",
+    "data": {
+      "parentClassRef": "2024/class/fighter",
+      "description": "A Champion focuses on the development of martial prowess in a relentless pursuit of victory. Champions combine rigorous training with physical excellence to deal devastating blows, withstand peril, and garner glory. Whether in athletic contests or bloody battle, Champions strive for the crown of the victor.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/champion-improved-critical",
+          "2024/feature/champion-remarkable-athlete"
+        ],
+        "7": [
+          "2024/feature/champion-additional-fighting-style"
+        ],
+        "10": [
+          "2024/feature/champion-heroic-warrior"
+        ],
+        "15": [
+          "2024/feature/champion-superior-critical"
+        ],
+        "18": [
+          "2024/feature/champion-survivor"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/feature/champion-improved-critical",
+    "edition": "2024",
+    "name": "Improved Critical",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your attack rolls with weapons and Unarmed Strikes can score a Critical Hit on a roll of 19 or 20 on the d20."
+    }
+  },
+  {
+    "id": "2024/feature/champion-remarkable-athlete",
+    "edition": "2024",
+    "name": "Remarkable Athlete",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Thanks to your athleticism, you have Advantage on Initiative rolls and Strength (Athletics) checks.\n  In addition, immediately after you score a Critical Hit, you can move up to half your Speed without provoking Opportunity Attacks."
+    }
+  },
+  {
+    "id": "2024/feature/champion-additional-fighting-style",
+    "edition": "2024",
+    "name": "Additional Fighting Style",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain another Fighting Style feat of your choice."
+    }
+  },
+  {
+    "id": "2024/feature/champion-heroic-warrior",
+    "edition": "2024",
+    "name": "Heroic Warrior",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The thrill of battle drives you toward victory. During combat, you can give yourself Heroic Inspiration whenever you start your turn without it."
+    }
+  },
+  {
+    "id": "2024/feature/champion-superior-critical",
+    "edition": "2024",
+    "name": "Superior Critical",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your attack rolls with weapons and Unarmed Strikes can now score a Critical Hit on a roll of 18-20 on the d20."
+    }
+  },
+  {
+    "id": "2024/feature/champion-survivor",
+    "edition": "2024",
+    "name": "Survivor",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You attain the pinnacle of resilience in battle, giving you these benefits.\n  Defy Death. You have Advantage on Death Saving Throws. Moreover, when you roll 18-20 on a Death Saving Throw, you gain the benefit of rolling a 20 on it.\n  Heroic Rally. At the start of each of your turns, you regain Hit Points equal to 5 plus your Constitution modifier if you are Bloodied and have at least 1 Hit Point."
+    }
+  }
+]

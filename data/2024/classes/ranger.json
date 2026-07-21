@@ -1,0 +1,808 @@
+[
+  {
+    "id": "2024/class/ranger",
+    "edition": "2024",
+    "name": "Ranger",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "class",
+    "data": {
+      "hitDie": "d10",
+      "savingThrowProficiencies": [
+        "str",
+        "dex"
+      ],
+      "armorProficiencies": [
+        "light-armor",
+        "medium-armor",
+        "shields"
+      ],
+      "weaponProficiencies": [
+        "simple-weapons",
+        "martial-weapons"
+      ],
+      "skillChoice": {
+        "count": 3,
+        "options": [
+          "animalHandling",
+          "athletics",
+          "insight",
+          "investigation",
+          "nature",
+          "perception",
+          "stealth",
+          "survival"
+        ]
+      },
+      "spellcasting": {
+        "progression": "half",
+        "ability": "wis",
+        "knownOrPrepared": "known"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "featureRefs": [
+            "2024/feature/ranger-favored-enemy",
+            "2024/feature/ranger-spellcasting",
+            "2024/feature/ranger-weapon-mastery"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "favored_enemies": 1,
+            "favored_terrain": 1,
+            "spells_known": 0,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 2,
+          "featureRefs": [
+            "2024/feature/ranger-deft-explorer",
+            "2024/feature/ranger-fighting-style"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "favored_enemies": 1,
+            "favored_terrain": 1,
+            "spells_known": 2,
+            "spell_slots_level_1": 2,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 3,
+          "featureRefs": [
+            "2024/feature/ranger-hunter-s-lore",
+            "2024/feature/ranger-hunter-s-prey",
+            "2024/feature/ranger-ranger-subclass"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "favored_enemies": 1,
+            "favored_terrain": 1,
+            "spells_known": 3,
+            "spell_slots_level_1": 3,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 4,
+          "featureRefs": [
+            "2024/feature/ranger-ability-score-improvement"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "favored_enemies": 1,
+            "favored_terrain": 1,
+            "spells_known": 3,
+            "spell_slots_level_1": 3,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 5,
+          "featureRefs": [
+            "2024/feature/ranger-extra-attack"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "favored_enemies": 1,
+            "favored_terrain": 1,
+            "spells_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 2,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 6,
+          "featureRefs": [
+            "2024/feature/ranger-roving"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 2,
+            "spells_known": 4,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 2,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 7,
+          "featureRefs": [
+            "2024/feature/ranger-defensive-tactics"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 2,
+            "spells_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 8,
+          "featureRefs": [],
+          "proficiencyBonus": 3,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 2,
+            "spells_known": 5,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 9,
+          "featureRefs": [
+            "2024/feature/ranger-expertise"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 2,
+            "spells_known": 6,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 2,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 10,
+          "featureRefs": [
+            "2024/feature/ranger-tireless"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 3,
+            "spells_known": 6,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 2,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 11,
+          "featureRefs": [
+            "2024/feature/ranger-superior-hunter-s-prey"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 3,
+            "spells_known": 7,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 12,
+          "featureRefs": [],
+          "proficiencyBonus": 4,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 3,
+            "spells_known": 7,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 13,
+          "featureRefs": [
+            "2024/feature/ranger-relentless-hunter"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "favored_enemies": 2,
+            "favored_terrain": 3,
+            "spells_known": 8,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 1,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 14,
+          "featureRefs": [
+            "2024/feature/ranger-nature-s-veil"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 8,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 1,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 15,
+          "featureRefs": [
+            "2024/feature/ranger-superior-hunter-s-defense"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 9,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 2,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 16,
+          "featureRefs": [],
+          "proficiencyBonus": 5,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 9,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 2,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 17,
+          "featureRefs": [
+            "2024/feature/ranger-precise-hunter"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 1
+          }
+        },
+        {
+          "level": 18,
+          "featureRefs": [
+            "2024/feature/ranger-feral-senses"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 1
+          }
+        },
+        {
+          "level": 19,
+          "featureRefs": [
+            "2024/feature/ranger-epic-boon"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 11,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2
+          }
+        },
+        {
+          "level": 20,
+          "featureRefs": [
+            "2024/feature/ranger-foe-slayer"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "favored_enemies": 3,
+            "favored_terrain": 3,
+            "spells_known": 11,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2
+          }
+        }
+      ],
+      "startingEquipment": {
+        "fixed": [
+          "leather-armor",
+          "shortsword",
+          "shortsword",
+          "longbow",
+          "arrows",
+          "explorers-pack"
+        ],
+        "choices": [],
+        "goldAlternative": 100
+      }
+    }
+  },
+  {
+    "id": "2024/feature/ranger-defensive-tactics",
+    "edition": "2024",
+    "name": "Defensive Tactics",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain one of the following feature options of your choice. Whenever you finish a Short or Long Rest, you can replace the chosen option with the other one.\n  Escape the Horde. Opportunity Attacks have Disadvantage against you.\n  Multiattack Defense. When a creature hits you with an attack roll, that creature has Disadvantage on all other attack rolls against you this turn."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-hunter-s-lore",
+    "edition": "2024",
+    "name": "Hunter's Lore",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can call on the forces of nature to reveal certain strengths and weaknesses of your prey. While a creature is marked by your Hunter's Mark, you know whether that creature has any Immunities, Resistances, or Vulnerabilities, and if the creature has any, you know what they are."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-hunter-s-prey",
+    "edition": "2024",
+    "name": "Hunter's Prey",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain one of the following feature options of your choice. Whenever you finish a Short or Long Rest, you can replace the chosen option with the other one.\n  Colossus Slayer. Your tenacity can wear down even the most resilient foes. When you hit a creature with a weapon, the weapon deals an extra 1d8 damage to the target if it's missing any of its Hit Points. You can deal this extra damage only once per turn.\n  Horde Breaker. Once on each of your turns when you make an attack with a weapon, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target, that is within the weapon's range, and that you haven't attacked this turn."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-superior-hunter-s-defense",
+    "edition": "2024",
+    "name": "Superior Hunter's Defense",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you take damage, you can take a Reaction to give yourself Resistance to that damage and any other damage of the same type until the end of the current turn."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-superior-hunter-s-prey",
+    "edition": "2024",
+    "name": "Superior Hunter's Prey",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Once per turn when you deal damage to a creature marked by your Hunter's Mark, you can also deal that spell's extra damage to a different creature that you can see within 30 feet of the first creature."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-ability-score-improvement",
+    "edition": "2024",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain the Ability Score Improvement feat (see \"Feats\") or another feat of your choice for which you qualify. You gain this feature again at Ranger levels 8, 12, and 16."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-deft-explorer",
+    "edition": "2024",
+    "name": "Deft Explorer",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Thanks to your travels, you gain the following benefits.\n  Expertise. Choose one of your skill proficiencies with which you lack Expertise. You gain Expertise in that skill.\n  Languages. You know two languages of your choice from the language tables in \"Character Creation.\""
+    }
+  },
+  {
+    "id": "2024/feature/ranger-epic-boon",
+    "edition": "2024",
+    "name": "Epic Boon",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain an Epic Boon feat (see \"Feats\") or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-expertise",
+    "edition": "2024",
+    "name": "Expertise",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Choose two of your skill proficiencies with which you lack Expertise. You gain Expertise in those skills."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-extra-attack",
+    "edition": "2024",
+    "name": "Extra Attack",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can attack twice instead of once whenever you take the Attack action on your turn."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-favored-enemy",
+    "edition": "2024",
+    "name": "Favored Enemy",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have the Hunter's Mark spell prepared. You can cast it twice without expending a spell slot, and you regain all expended uses of this ability when you finish a Long Rest.\n  The number of times you can cast the spell without a spell slot increases when you reach certain Ranger levels, as shown in the Favored Enemy column of the Ranger Features table."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-feral-senses",
+    "edition": "2024",
+    "name": "Feral Senses",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your connection to the forces of nature grants you Blindsight with a range of 30 feet."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-fighting-style",
+    "edition": "2024",
+    "name": "Fighting Style",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain a Fighting Style feat of your choice (see \"Feats\"). Instead of choosing one of those feats, you can choose the option below.\n  Druidic Warrior. You learn two Druid cantrips of your choice (see the Druid class's section for a list of Druid spells). Guidance and Starry Wisp are recommended. The chosen cantrips count as Ranger spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a Ranger level, you can replace one of these cantrips with another Druid cantrip."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-foe-slayer",
+    "edition": "2024",
+    "name": "Foe Slayer",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The damage die of your Hunter's Mark is a d10 rather than a d6."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-nature-s-veil",
+    "edition": "2024",
+    "name": "Nature's Veil",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You invoke spirits of nature to magically hide yourself. As a Bonus Action, you can give yourself the Invisible condition until the end of your next turn.\n  You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-precise-hunter",
+    "edition": "2024",
+    "name": "Precise Hunter",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Advantage on attack rolls against the creature currently marked by your Hunter's Mark."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-relentless-hunter",
+    "edition": "2024",
+    "name": "Relentless Hunter",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Taking damage can't break your Concentration on Hunter's Mark."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-roving",
+    "edition": "2024",
+    "name": "Roving",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your Speed increases by 10 feet while you aren't wearing Heavy armor. You also have a Climb Speed and a Swim Speed equal to your Speed."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-spellcasting",
+    "edition": "2024",
+    "name": "Spellcasting",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have learned to channel the magical essence of nature to cast spells. See \"Spells\" for the rules on spellcasting. The information below details how you use those rules with Ranger spells, which appear in the Ranger spell list later in the class's description.\n  Spell Slots. The Ranger Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest.\n  Prepared Spells of Level 1+. You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose two level 1\nRanger spells. Cure Wounds and Ensnaring Strike are recommended.\n  The number of spells on your list increases as you gain Ranger levels, as shown in the Prepared Spells column of the Ranger Features table. Whenever that number increases, choose additional Ranger spells until the number of spells on your list matches the number in the Ranger Features table. The chosen spells must be of a level for which you have spell slots. For example, if you're a level 5 Ranger, your list of prepared spells can include six Ranger spells of level 1 or 2 in any combination.\n  If another Ranger feature gives you spells that you always have prepared, those spells don't count against the number of spells you can prepare with this feature, but those spells otherwise count as Ranger spells for you.\nChanging Your Prepared Spells. Whenever you finish a Long Rest, you can replace one spell on your list with another Ranger spell for which you have spell slots.\n  Spellcasting Ability. Wisdom is your spellcasting ability for your Ranger spells.\n  Spellcasting Focus. You can use a Druidic Focus as a Spellcasting Focus for your Ranger spells."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-ranger-subclass",
+    "edition": "2024",
+    "name": "Ranger Subclass",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain a Ranger subclass of your choice. A subclass is a specialization that grants you features at certain Ranger levels. For the rest of your career, you gain each of your subclass's features that are of your Ranger level or lower."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-tireless",
+    "edition": "2024",
+    "name": "Tireless",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Primal forces now help fuel you on your journeys, granting you the following benefits.\n  Temporary Hit Points. As a Magic action, you can give yourself a number of Temporary Hit Points equal to 1d8 plus your Wisdom modifier (minimum of 1). You can use this action a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.\n  Decrease Exhaustion. Whenever you finish a Short Rest, your Exhaustion level, if any, decreases by 1."
+    }
+  },
+  {
+    "id": "2024/feature/ranger-weapon-mastery",
+    "edition": "2024",
+    "name": "Weapon Mastery",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Longbows and Shortswords.\n  Whenever you finish a Long Rest, you can change the kinds of weapons you chose. For example, you could switch to using the mastery properties of Scimitars and Longswords."
+    }
+  },
+  {
+    "id": "2024/subclass/hunter",
+    "edition": "2024",
+    "name": "Hunter",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "subclass",
+    "data": {
+      "parentClassRef": "2024/class/ranger",
+      "description": "You stalk prey in the wilds and elsewhere, using your abilities as a Hunter to protect nature and people everywhere from forces that would destroy them.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/hunter-hunter-s-lore",
+          "2024/feature/hunter-hunter-s-prey"
+        ],
+        "7": [
+          "2024/feature/hunter-defensive-tactics"
+        ],
+        "11": [
+          "2024/feature/hunter-superior-hunter-s-prey"
+        ],
+        "15": [
+          "2024/feature/hunter-superior-hunter-s-defense"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/feature/hunter-hunter-s-lore",
+    "edition": "2024",
+    "name": "Hunter's Lore",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can call on the forces of nature to reveal certain strengths and weaknesses of your prey. While a creature is marked by your Hunter's Mark, you know whether that creature has any Immunities, Resistances, or Vulnerabilities, and if the creature has any, you know what they are."
+    }
+  },
+  {
+    "id": "2024/feature/hunter-hunter-s-prey",
+    "edition": "2024",
+    "name": "Hunter's Prey",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain one of the following feature options of your choice. Whenever you finish a Short or Long Rest, you can replace the chosen option with the other one.\n  Colossus Slayer. Your tenacity can wear down even the most resilient foes. When you hit a creature with a weapon, the weapon deals an extra 1d8 damage to the target if it's missing any of its Hit Points. You can deal this extra damage only once per turn.\n  Horde Breaker. Once on each of your turns when you make an attack with a weapon, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target, that is within the weapon's range, and that you haven't attacked this turn."
+    }
+  },
+  {
+    "id": "2024/feature/hunter-defensive-tactics",
+    "edition": "2024",
+    "name": "Defensive Tactics",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain one of the following feature options of your choice. Whenever you finish a Short or Long Rest, you can replace the chosen option with the other one.\n  Escape the Horde. Opportunity Attacks have Disadvantage against you.\n  Multiattack Defense. When a creature hits you with an attack roll, that creature has Disadvantage on all other attack rolls against you this turn."
+    }
+  },
+  {
+    "id": "2024/feature/hunter-superior-hunter-s-prey",
+    "edition": "2024",
+    "name": "Superior Hunter's Prey",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Once per turn when you deal damage to a creature marked by your Hunter's Mark, you can also deal that spell's extra damage to a different creature that you can see within 30 feet of the first creature."
+    }
+  },
+  {
+    "id": "2024/feature/hunter-superior-hunter-s-defense",
+    "edition": "2024",
+    "name": "Superior Hunter's Defense",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you take damage, you can take a Reaction to give yourself Resistance to that damage and any other damage of the same type until the end of the current turn."
+    }
+  }
+]

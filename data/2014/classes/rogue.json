@@ -1,0 +1,835 @@
+[
+  {
+    "id": "2014/class/rogue",
+    "edition": "2014",
+    "name": "Rogue",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "class",
+    "data": {
+      "hitDie": "d8",
+      "savingThrowProficiencies": [
+        "dex",
+        "int"
+      ],
+      "armorProficiencies": [
+        "light-armor"
+      ],
+      "weaponProficiencies": [
+        "simple-weapons",
+        "longswords",
+        "rapiers",
+        "shortswords",
+        "hand-crossbows"
+      ],
+      "toolProficiencies": [
+        "thieves-tools"
+      ],
+      "skillChoice": {
+        "count": 4,
+        "options": [
+          "acrobatics",
+          "athletics",
+          "deception",
+          "insight",
+          "intimidation",
+          "investigation",
+          "perception",
+          "performance",
+          "persuasion",
+          "sleightOfHand",
+          "stealth"
+        ]
+      },
+      "levels": [
+        {
+          "level": 1,
+          "featureRefs": [
+            "2014/feature/rogue-expertise-1",
+            "2014/feature/rogue-sneak-attack",
+            "2014/feature/rogue-thieves-cant"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "sneak_attack_dice_count": 1,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 2,
+          "featureRefs": [
+            "2014/feature/rogue-cunning-action"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "sneak_attack_dice_count": 1,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 3,
+          "featureRefs": [
+            "2014/feature/rogue-roguish-archetype"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "sneak_attack_dice_count": 2,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 4,
+          "featureRefs": [
+            "2014/feature/rogue-ability-score-improvement-1"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "sneak_attack_dice_count": 2,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 5,
+          "featureRefs": [
+            "2014/feature/rogue-uncanny-dodge"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "sneak_attack_dice_count": 3,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 6,
+          "featureRefs": [
+            "2014/feature/rogue-expertise-2"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "sneak_attack_dice_count": 3,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 7,
+          "featureRefs": [
+            "2014/feature/rogue-evasion"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "sneak_attack_dice_count": 4,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 8,
+          "featureRefs": [
+            "2014/feature/rogue-ability-score-improvement-2"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "sneak_attack_dice_count": 4,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 9,
+          "featureRefs": [
+            "2014/feature/rogue-roguish-archetype-improvement-1"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "sneak_attack_dice_count": 5,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 10,
+          "featureRefs": [
+            "2014/feature/rogue-ability-score-improvement-3"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "sneak_attack_dice_count": 5,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 11,
+          "featureRefs": [
+            "2014/feature/rogue-reliable-talent"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "sneak_attack_dice_count": 6,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 12,
+          "featureRefs": [
+            "2014/feature/rogue-ability-score-improvement-4"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "sneak_attack_dice_count": 6,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 13,
+          "featureRefs": [
+            "2014/feature/rogue-roguish-archetype-improvement-2"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "sneak_attack_dice_count": 7,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 14,
+          "featureRefs": [
+            "2014/feature/rogue-blindsense"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "sneak_attack_dice_count": 7,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 15,
+          "featureRefs": [
+            "2014/feature/rogue-slippery-mind"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "sneak_attack_dice_count": 8,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 16,
+          "featureRefs": [
+            "2014/feature/rogue-ability-score-improvement-5"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "sneak_attack_dice_count": 8,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 17,
+          "featureRefs": [
+            "2014/feature/rogue-roguish-archetype-improvement-3"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "sneak_attack_dice_count": 9,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 18,
+          "featureRefs": [
+            "2014/feature/rogue-elusive"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "sneak_attack_dice_count": 9,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 19,
+          "featureRefs": [
+            "2014/feature/rogue-ability-score-improvement-6"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "sneak_attack_dice_count": 10,
+            "sneak_attack_dice_value": 6
+          }
+        },
+        {
+          "level": 20,
+          "featureRefs": [
+            "2014/feature/rogue-stroke-of-luck"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "sneak_attack_dice_count": 10,
+            "sneak_attack_dice_value": 6
+          }
+        }
+      ],
+      "startingEquipment": {
+        "fixed": [
+          "leather-armor",
+          "dagger",
+          "dagger",
+          "thieves-tools"
+        ],
+        "choices": [
+          {
+            "prompt": "(a) a rapier or (b) a shortsword",
+            "options": [
+              [
+                "rapier"
+              ],
+              [
+                "shortsword"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) a shortbow and quiver of 20 arrows or (b) a shortsword",
+            "options": [
+              [
+                "shortbow",
+                "arrow"
+              ],
+              [
+                "shortsword"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) a burglar's pack, (b) a dungeoneer's pack, or (c) an explorer's pack",
+            "options": [
+              [
+                "burglars-pack"
+              ],
+              [
+                "dungeoneers-pack"
+              ],
+              [
+                "explorers-pack"
+              ]
+            ]
+          }
+        ],
+        "goldAlternative": 100
+      }
+    }
+  },
+  {
+    "id": "2014/feature/rogue-expertise-1",
+    "edition": "2014",
+    "name": "Expertise",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.\n\nAt 6th level, you can choose two more of your proficiencies (in skills or with thieves' tools) to gain this benefit"
+    }
+  },
+  {
+    "id": "2014/feature/rogue-sneak-attack",
+    "edition": "2014",
+    "name": "Sneak Attack",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 1st level, you know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon.\n\nYou don't need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn't incapacitated, and you don't have disadvantage on the attack roll.\n\nThe amount of the extra damage increases as you gain levels in this class, as shown in the Sneak Attack column of the Rogue table."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-thieves-cant",
+    "edition": "2014",
+    "name": "Thieves' Cant",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves' cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.\n\nIn addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves' guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-cunning-action",
+    "edition": "2014",
+    "name": "Cunning Action",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat. This action can be used only to take the Dash, Disengage, or Hide action."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-roguish-archetype",
+    "edition": "2014",
+    "name": "Roguish Archetype",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities, such as Thief. Additional archetypes are available in the original source material. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-ability-score-improvement-1",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 10th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-uncanny-dodge",
+    "edition": "2014",
+    "name": "Uncanny Dodge",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 5th level, when an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-expertise-2",
+    "edition": "2014",
+    "name": "Expertise",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.\n\nAt 6th level, you can choose two more of your proficiencies (in skills or with thieves' tools) to gain this benefit"
+    }
+  },
+  {
+    "id": "2014/feature/rogue-evasion",
+    "edition": "2014",
+    "name": "Evasion",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 7th level, you can nimbly dodge out of the way of certain area effects, such as a red dragon's fiery breath or an ice storm spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-ability-score-improvement-2",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 10th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-roguish-archetype-improvement-1",
+    "edition": "2014",
+    "name": "Roguish Archetype feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities, such as Thief. Additional archetypes are available in the original source material. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-ability-score-improvement-3",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 10th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-reliable-talent",
+    "edition": "2014",
+    "name": "Reliable Talent",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "By 11th level, you have refined your chosen skills until they approach perfection. Whenever you make an ability check that lets you add your proficiency bonus, you can treat a d20 roll of 9 or lower as a 10."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-ability-score-improvement-4",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 10th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-roguish-archetype-improvement-2",
+    "edition": "2014",
+    "name": "Roguish Archetype feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities, such as Thief. Additional archetypes are available in the original source material. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-blindsense",
+    "edition": "2014",
+    "name": "Blindsense",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or invisible creature within 10 feet of you."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-slippery-mind",
+    "edition": "2014",
+    "name": "Slippery Mind",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "By 15th level, you have acquired greater mental strength. You gain proficiency in Wisdom saving throws."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-ability-score-improvement-5",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 10th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-roguish-archetype-improvement-3",
+    "edition": "2014",
+    "name": "Roguish Archetype feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities, such as Thief. Additional archetypes are available in the original source material. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-elusive",
+    "edition": "2014",
+    "name": "Elusive",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 18th level, you are so evasive that attackers rarely gain the upper hand against you. No attack roll has advantage against you while you aren't incapacitated."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-ability-score-improvement-6",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 10th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/rogue-stroke-of-luck",
+    "edition": "2014",
+    "name": "Stroke of Luck",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 20th level, you have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the d20 roll as a 20.\n\nOnce you use this feature, you can't use it again until you finish a short or long rest."
+    }
+  },
+  {
+    "id": "2014/subclass/thief",
+    "edition": "2014",
+    "name": "Thief",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "subclass",
+    "data": {
+      "parentClassRef": "2014/class/rogue",
+      "description": "You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/thief-fast-hands",
+          "2014/feature/thief-second-story-work"
+        ],
+        "9": [
+          "2014/feature/thief-supreme-sneak"
+        ],
+        "13": [
+          "2014/feature/thief-use-magic-device"
+        ],
+        "17": [
+          "2014/feature/thief-thiefs-reflexes"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/thief-fast-hands",
+    "edition": "2014",
+    "name": "Fast Hands",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 3rd level, you can use the bonus action granted by your Cunning Action to make a Dexterity (Sleight of Hand) check, use your thieves' tools to disarm a trap or open a lock, or take the Use an Object action."
+    }
+  },
+  {
+    "id": "2014/feature/thief-second-story-work",
+    "edition": "2014",
+    "name": "Second-Story Work",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you choose this archetype at 3rd level, you gain the ability to climb faster than normal; climbing no longer costs you extra movement.\n\nIn addition, when you make a running jump, the distance you cover increases by a number of feet equal to your Dexterity modifier."
+    }
+  },
+  {
+    "id": "2014/feature/thief-supreme-sneak",
+    "edition": "2014",
+    "name": "Supreme Sneak",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 9th level, you have advantage on a Dexterity (Stealth) check if you move no more than half your speed on the same turn."
+    }
+  },
+  {
+    "id": "2014/feature/thief-use-magic-device",
+    "edition": "2014",
+    "name": "Use Magic Device",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "By 13th level, you have learned enough about the workings of magic that you can improvise the use of items even when they are not intended for you. You ignore all class, race, and level requirements on the use of magic items."
+    }
+  },
+  {
+    "id": "2014/feature/thief-thiefs-reflexes",
+    "edition": "2014",
+    "name": "Thief's Reflexes",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 17th level, you have become adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal initiative and your second turn at your initiative minus 10. You can't use this feature when you are surprised."
+    }
+  },
+  {
+    "id": "2014/subclass/soulknife",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Soulknife",
+    "source": {
+      "book": "TCE",
+      "page": 64
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/rogue",
+      "description": "Soulknives learn to manifest a blade of psychic energy.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/extracted-psionic-power",
+          "2014/feature/extracted-psychic-blades"
+        ],
+        "9": [
+          "2014/feature/extracted-soul-blades"
+        ],
+        "13": [
+          "2014/feature/extracted-psychic-veil"
+        ],
+        "17": [
+          "2014/feature/extracted-rend-mind"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/extracted-psionic-power",
+    "edition": "2014",
+    "name": "Psionic Power",
+    "source": {
+      "book": "TCE",
+      "page": 64
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You harbor a wellspring of psionic energy within yourself. This energy is represented by your Psionic Energy dice, which are each a d6. You have a number of these dice equal to twice your proficiency bonus, and they fuel various psionic powers you have, which are detailed below.\nSome of your powers expend the Psionic Energy die they use, as specified in a power's description, and you can't use a power if it requires you to use a die when your dice are all expended. You regain all your expended Psionic Energy dice when you finish a long rest. In addition, as a bonus action, you can regain one expended Psionic Energy die, but you can't do so again until you finish a short or long rest.\nWhen you reach certain levels in this class, the size of your Psionic Energy dice increases: at 5th level (d8), 11th level (d10), and 17th level (d12).\n\n- Psi-Bolstered Knack. When your nonpsionic training fails you, your psionic power can help: if you fail an ability check using a skill or tool with which you have proficiency, you can roll one Psionic Energy die and add the number rolled to the check, potentially turning failure into success. You expend the die only if the roll succeeds.\n- Psychic Whispers. You can establish telepathic communication between yourself and others—perfect for quiet infiltration. As an action, choose one or more creatures you can see, up to a number of creatures equal to your proficiency bonus, and then roll one Psionic Energy die. For a number of hours equal to the number rolled, the chosen creatures can speak telepathically with you, and you can speak telepathically with them. To send or receive a message (no action required), you and the other creature must be within 1 mile of each other. A creature can't use this telepathy if it can't speak any languages, and a creature can end the telepathic connection at any time (no action required). You and the creature don't need to speak a common language to understand each other. The first time you use this power after each long rest, you don't expend the Psionic Energy die. All other times you use the power, you expend the die."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-psychic-blades",
+    "edition": "2014",
+    "name": "Psychic Blades",
+    "source": {
+      "book": "TCE",
+      "page": 64
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can manifest your psionic power as shimmering blades of psychic energy. Whenever you take the Attack action, you can manifest a psychic blade from your free hand and make the attack with that blade. This magic blade is a simple melee weapon with the finesse and thrown properties. It has a normal range of 60 feet and no long range, and on a hit, it deals psychic damage equal to 1d6 plus the ability modifier you used for the attack roll. The blade vanishes immediately after it hits or misses its target, and it leaves no mark on its target if it deals damage.\nAfter you attack with the blade, you can make a melee or ranged weapon attack with a second psychic blade as a bonus action on the same turn, provided your other hand is free to create it. The damage die of this bonus attack is 1d4, instead of 1d6."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-soul-blades",
+    "edition": "2014",
+    "name": "Soul Blades",
+    "source": {
+      "book": "TCE",
+      "page": 65
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your Psychic Blades are now an expression of your psi-suffused soul, giving you these powers that use your Psionic Energy dice:\n- Homing Strikes. If you make an attack roll with your Psychic Blades and miss the target, you can roll one Psionic Energy die and add the number rolled to the attack roll. If this causes the attack to hit, you expend the Psionic Energy die.\n- Psychic Teleportation. As a bonus action, you manifest one of your Psychic Blades, expend one Psionic Energy die and roll it, and throw the blade at an unoccupied space you can see, up to a number of feet away equal to 10 times the number rolled. You then teleport to that space, and the blade vanishes."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-psychic-veil",
+    "edition": "2014",
+    "name": "Psychic Veil",
+    "source": {
+      "book": "TCE",
+      "page": 65
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can weave a veil of psychic static to mask yourself. As an action, you can magically become invisible, along with anything you are wearing or carrying, for 1 hour or until you dismiss this effect (no action required). This invisibility ends early immediately after you deal damage to a creature or you force a creature to make a saving throw.\nOnce you use this feature, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to use this feature again."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-rend-mind",
+    "edition": "2014",
+    "name": "Rend Mind",
+    "source": {
+      "book": "TCE",
+      "page": 65
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can sweep your Psychic Blades directly through a creature's mind. When you use your Psychic Blades to deal Sneak Attack damage to a creature, you can force that target to make a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Dexterity modifier). If the save fails, the target is stunned for 1 minute. The stunned target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\nOnce you use this feature, you can't do so again until you finish a long rest, unless you expend three Psionic Energy dice to use it again."
+    }
+  }
+]

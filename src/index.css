@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Special Elite', 'Courier New', monospace;
+  --font-body: 'Work Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Field journal: kraft paper, charcoal ink, rust ink-stamp, faded olive */
+  --color-kraft-50: #f6efdd;
+  --color-kraft-100: #ede0c3;
+  --color-kraft-200: #ddcba8;
+  --color-kraft-300: #c9b896;
+  --color-ink-900: #2b2620;
+  --color-ink-800: #35302a;
+  --color-ink-700: #4a4136;
+  --color-ink-500: #6e6252;
+  --color-rust-500: #a63d2f;
+  --color-rust-600: #8c3226;
+  --color-olive-500: #6b7353;
+  --color-olive-600: #565e42;
+
+  /* dark mode surfaces */
+  --color-charcoal-950: #17140f;
+  --color-charcoal-900: #1e1a15;
+  --color-charcoal-800: #29241c;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-kraft-100);
+  color: var(--color-ink-900);
+  background-image: var(--grain);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-charcoal-900);
+    color: var(--color-kraft-100);
+  }
+}
+
+::selection {
+  background-color: var(--color-rust-500);
+  color: var(--color-kraft-50);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-rust-500);
+  outline-offset: 2px;
+}
+
+/* A faint paper-grain texture, layered under the flat color everywhere. */
+:root {
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Hand-drawn-feeling horizontal divider, used between sections instead of a hairline rule. */
+.rule-sketch {
+  border: none;
+  height: 6px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--color-ink-700) 0,
+    var(--color-ink-700) 5px,
+    transparent 5px,
+    transparent 9px
+  );
+  background-position: 0 2px;
+  background-repeat: repeat-x;
+  background-size: 100% 2px;
+  opacity: 0.4;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rule-sketch {
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--color-kraft-200) 0,
+      var(--color-kraft-200) 5px,
+      transparent 5px,
+      transparent 9px
+    );
+  }
+}

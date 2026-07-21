@@ -1,0 +1,800 @@
+[
+  {
+    "id": "2014/class/barbarian",
+    "edition": "2014",
+    "name": "Barbarian",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "class",
+    "data": {
+      "hitDie": "d12",
+      "savingThrowProficiencies": [
+        "str",
+        "con"
+      ],
+      "armorProficiencies": [
+        "light-armor",
+        "medium-armor",
+        "shields"
+      ],
+      "weaponProficiencies": [
+        "simple-weapons",
+        "martial-weapons"
+      ],
+      "toolProficiencies": [],
+      "skillChoice": {
+        "count": 2,
+        "options": [
+          "animalHandling",
+          "athletics",
+          "intimidation",
+          "nature",
+          "perception",
+          "survival"
+        ]
+      },
+      "levels": [
+        {
+          "level": 1,
+          "featureRefs": [
+            "2014/feature/barbarian-rage",
+            "2014/feature/barbarian-unarmored-defense"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "rage_count": 2,
+            "rage_damage_bonus": 2,
+            "brutal_critical_dice": 0
+          }
+        },
+        {
+          "level": 2,
+          "featureRefs": [
+            "2014/feature/barbarian-reckless-attack",
+            "2014/feature/barbarian-danger-sense"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "rage_count": 2,
+            "rage_damage_bonus": 2,
+            "brutal_critical_dice": 0
+          }
+        },
+        {
+          "level": 3,
+          "featureRefs": [
+            "2014/feature/barbarian-primal-path"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "rage_count": 3,
+            "rage_damage_bonus": 2,
+            "brutal_critical_dice": 0
+          }
+        },
+        {
+          "level": 4,
+          "featureRefs": [
+            "2014/feature/barbarian-ability-score-improvement-1"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "rage_count": 3,
+            "rage_damage_bonus": 2,
+            "brutal_critical_dice": 0
+          }
+        },
+        {
+          "level": 5,
+          "featureRefs": [
+            "2014/feature/barbarian-extra-attack",
+            "2014/feature/barbarian-fast-movement"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "rage_count": 3,
+            "rage_damage_bonus": 2,
+            "brutal_critical_dice": 0
+          }
+        },
+        {
+          "level": 6,
+          "featureRefs": [
+            "2014/feature/barbarian-primal-path-improvement-1"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "rage_count": 4,
+            "rage_damage_bonus": 2,
+            "brutal_critical_dice": 0
+          }
+        },
+        {
+          "level": 7,
+          "featureRefs": [
+            "2014/feature/barbarian-feral-instinct"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "rage_count": 4,
+            "rage_damage_bonus": 2,
+            "brutal_critical_dice": 0
+          }
+        },
+        {
+          "level": 8,
+          "featureRefs": [
+            "2014/feature/barbarian-ability-score-improvement-2"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "rage_count": 4,
+            "rage_damage_bonus": 2,
+            "brutal_critical_dice": 0
+          }
+        },
+        {
+          "level": 9,
+          "featureRefs": [
+            "2014/feature/barbarian-brutal-critical-1-die"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "rage_count": 4,
+            "rage_damage_bonus": 3,
+            "brutal_critical_dice": 1
+          }
+        },
+        {
+          "level": 10,
+          "featureRefs": [
+            "2014/feature/barbarian-primal-path-improvement-2"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "rage_count": 4,
+            "rage_damage_bonus": 3,
+            "brutal_critical_dice": 1
+          }
+        },
+        {
+          "level": 11,
+          "featureRefs": [
+            "2014/feature/barbarian-relentless-rage"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "rage_count": 4,
+            "rage_damage_bonus": 3,
+            "brutal_critical_dice": 1
+          }
+        },
+        {
+          "level": 12,
+          "featureRefs": [
+            "2014/feature/barbarian-ability-score-improvement-3"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "rage_count": 5,
+            "rage_damage_bonus": 3,
+            "brutal_critical_dice": 1
+          }
+        },
+        {
+          "level": 13,
+          "featureRefs": [
+            "2014/feature/barbarian-brutal-critical-2-dice"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "rage_count": 5,
+            "rage_damage_bonus": 3,
+            "brutal_critical_dice": 2
+          }
+        },
+        {
+          "level": 14,
+          "featureRefs": [
+            "2014/feature/barbarian-primal-path-improvement-3"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "rage_count": 5,
+            "rage_damage_bonus": 3,
+            "brutal_critical_dice": 2
+          }
+        },
+        {
+          "level": 15,
+          "featureRefs": [
+            "2014/feature/barbarian-persistent-rage"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "rage_count": 5,
+            "rage_damage_bonus": 3,
+            "brutal_critical_dice": 2
+          }
+        },
+        {
+          "level": 16,
+          "featureRefs": [
+            "2014/feature/barbarian-ability-score-improvement-4"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "rage_count": 5,
+            "rage_damage_bonus": 4,
+            "brutal_critical_dice": 2
+          }
+        },
+        {
+          "level": 17,
+          "featureRefs": [
+            "2014/feature/barbarian-brutal-critical-3-dice"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "rage_count": 6,
+            "rage_damage_bonus": 4,
+            "brutal_critical_dice": 3
+          }
+        },
+        {
+          "level": 18,
+          "featureRefs": [
+            "2014/feature/barbarian-indomitable-might"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "rage_count": 6,
+            "rage_damage_bonus": 4,
+            "brutal_critical_dice": 3
+          }
+        },
+        {
+          "level": 19,
+          "featureRefs": [
+            "2014/feature/barbarian-ability-score-improvement-5"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "rage_count": 6,
+            "rage_damage_bonus": 4,
+            "brutal_critical_dice": 3
+          }
+        },
+        {
+          "level": 20,
+          "featureRefs": [
+            "2014/feature/barbarian-primal-champion"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "rage_count": 9999,
+            "rage_damage_bonus": 4,
+            "brutal_critical_dice": 3
+          }
+        }
+      ],
+      "startingEquipment": {
+        "fixed": [
+          "explorers-pack",
+          "javelin",
+          "javelin",
+          "javelin",
+          "javelin"
+        ],
+        "choices": [
+          {
+            "prompt": "(a) a greataxe or (b) any other martial melee weapon",
+            "options": [
+              [
+                "greataxe"
+              ],
+              [
+                "longsword"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) two handaxes or (b) any simple weapon",
+            "options": [
+              [
+                "handaxe",
+                "handaxe"
+              ],
+              [
+                "quarterstaff"
+              ]
+            ]
+          }
+        ],
+        "goldAlternative": 75
+      }
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-rage",
+    "edition": "2014",
+    "name": "Rage",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor:\n\n- You have advantage on Strength checks and Strength saving throws.\n\n- When you make a melee weapon Attack using Strength, you gain a +2 bonus to the damage roll. This bonus increases as you level.\n\n- You have Resistance to bludgeoning, piercing, and slashing damage.\n\nIf you are able to cast Spells, you can't cast them or concentrate on them while raging.\n\nYour rage lasts for 1 minute. It ends early if you are knocked Unconscious or if Your Turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on Your Turn as a Bonus Action.\n\nOnce you have raged the maximum number of times for your barbarian level, you must finish a Long Rest before you can rage again. You may rage 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-unarmored-defense",
+    "edition": "2014",
+    "name": "Unarmored Defense",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-reckless-attack",
+    "edition": "2014",
+    "name": "Reckless Attack",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-danger-sense",
+    "edition": "2014",
+    "name": "Danger Sense",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be blinded, deafened, or incapacitated."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-primal-path",
+    "edition": "2014",
+    "name": "Primal Path",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-ability-score-improvement-1",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-extra-attack",
+    "edition": "2014",
+    "name": "Extra Attack",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-fast-movement",
+    "edition": "2014",
+    "name": "Fast Movement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-primal-path-improvement-1",
+    "edition": "2014",
+    "name": "Path feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-feral-instinct",
+    "edition": "2014",
+    "name": "Feral Instinct",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "By 7th level, your instincts are so honed that you have advantage on initiative rolls.\n\nAdditionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-ability-score-improvement-2",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-brutal-critical-1-die",
+    "edition": "2014",
+    "name": "Brutal Critical (1 die)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-primal-path-improvement-2",
+    "edition": "2014",
+    "name": "Path feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-relentless-rage",
+    "edition": "2014",
+    "name": "Relentless Rage",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.\n\nEach time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-ability-score-improvement-3",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-brutal-critical-2-dice",
+    "edition": "2014",
+    "name": "Brutal Critical (2 dice)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-primal-path-improvement-3",
+    "edition": "2014",
+    "name": "Path feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-persistent-rage",
+    "edition": "2014",
+    "name": "Persistent Rage",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-ability-score-improvement-4",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-brutal-critical-3-dice",
+    "edition": "2014",
+    "name": "Brutal Critical (3 dice)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-indomitable-might",
+    "edition": "2014",
+    "name": "Indomitable Might",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-ability-score-improvement-5",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/barbarian-primal-champion",
+    "edition": "2014",
+    "name": "Primal Champion",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
+    }
+  },
+  {
+    "id": "2014/subclass/berserker",
+    "edition": "2014",
+    "name": "Berserker",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "subclass",
+    "data": {
+      "parentClassRef": "2014/class/barbarian",
+      "description": "For some barbarians, rage is a means to an end--that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker's rage, you thrill in the chaos of battle, heedless of your own health or well-being.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/berserker-frenzy"
+        ],
+        "6": [
+          "2014/feature/berserker-mindless-rage"
+        ],
+        "10": [
+          "2014/feature/berserker-intimidating-presence"
+        ],
+        "14": [
+          "2014/feature/berserker-retaliation"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/berserker-frenzy",
+    "edition": "2014",
+    "name": "Frenzy",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion (as described in appendix A)."
+    }
+  },
+  {
+    "id": "2014/feature/berserker-mindless-rage",
+    "edition": "2014",
+    "name": "Mindless Rage",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 6th level, you can't be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage."
+    }
+  },
+  {
+    "id": "2014/feature/berserker-intimidating-presence",
+    "edition": "2014",
+    "name": "Intimidating Presence",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.\n\n If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours."
+    }
+  },
+  {
+    "id": "2014/feature/berserker-retaliation",
+    "edition": "2014",
+    "name": "Retaliation",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon Attack against that creature."
+    }
+  },
+  {
+    "id": "2014/subclass/path-of-the-beast",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Path of the Beast",
+    "source": {
+      "book": "TCE",
+      "page": 28
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/barbarian",
+      "description": "Deep in your soul, there is a beast that gives you strength, endurance, and ferocity in combat.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/extracted-form-of-the-beast"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/path-of-wild-magic",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Path of Wild Magic",
+    "source": {
+      "book": "TCE",
+      "page": 29
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/barbarian",
+      "description": "You have a connection to the wild magic that suffuses the multiverse, and you become a conduit of that power when you rage.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/extracted-wild-surge"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/extracted-form-of-the-beast",
+    "edition": "2014",
+    "name": "Form of the Beast",
+    "source": {
+      "book": "TCE",
+      "page": 28
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you enter your rage, you can transform, revealing the bestial power within you. Until the rage ends, you manifest a natural weapon. It counts as a simple melee weapon for you, and you add your Strength modifier to the attack and damage rolls when you attack with it, as normal.\n\nYou choose the weapon's form each time you rage:\n\n• Bite. Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit.\n• Claws. Each of your hands transforms into a claw, which you can use as a weapon if it's empty. It deals 1d6 slashing damage on a hit. Once on each of your turns when you attack with a claw using the Attack action, you can make one additional claw attack as part of the same action.\n• Tail. You grow a lashing, spiny tail, which deals 1d8 piercing damage on a hit and has the reach property. If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a d8, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-wild-surge",
+    "edition": "2014",
+    "name": "Wild Surge",
+    "source": {
+      "book": "TCE",
+      "page": 29
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The magical energy roiling inside you sometimes erupts from you. When you enter your rage, roll on the Wild Magic table to determine the magical effect produced.\n\nIf the effect requires a saving throw, the DC equals 8 + your proficiency bonus + your Constitution modifier.\n\nWILD MAGIC table (d8):\n1 | Shadowy tendrils lash around you. Each creature of your choice that you can see within 30 feet of you must succeed on a Constitution saving throw or take 1d12 necrotic damage. You also gain 1d12 temporary hit points.\n2 | You teleport up to 30 feet to an unoccupied space you can see. Until your rage ends, you can use this effect again on each of your turns as a bonus action.\n3 | An intangible spirit, which looks like a flumph or a pixie (your choice), appears within 5 feet of one creature of your choice that you can see within 30 feet of you. At the end of the current turn, the spirit explodes, and each creature within 5 feet of it must succeed on a Dexterity saving throw or take 1d6 force damage. Until your rage ends, you can use this effect again, summoning another spirit, on each of your turns as a bonus action.\n4 | Magic infuses one weapon of your choice that you are holding. Until your rage ends, the weapon's damage type changes to force, and it gains the light and thrown properties, with a normal range of 20 feet and a long range of 60 feet. If the weapon leaves your hand, the weapon reappears in your hand at the end of the current turn.\n5 | Whenever a creature hits you with an attack roll before your rage ends, that creature takes 1d6 force damage, as magic lashes out in retribution.\n6 | Until your rage ends, you are surrounded by multicolored, protective lights; you gain a +1 bonus to AC, and while within 10 feet of you, your allies gain the same bonus.\n7 | Flowers and vines temporarily grow around you; until your rage ends, the ground within 15 feet of you is difficult terrain for your enemies.\n8 | A bolt of light shoots from your chest. Another creature of your choice that you can see within 30 feet of you must succeed on a Constitution saving throw or take 1d6 radiant damage and be blinded until the start of your next turn. Until your rage ends, you can use this effect again on each of your turns as a bonus action."
+    }
+  }
+]

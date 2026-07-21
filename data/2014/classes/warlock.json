@@ -1,0 +1,1211 @@
+[
+  {
+    "id": "2014/class/warlock",
+    "edition": "2014",
+    "name": "Warlock",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "class",
+    "data": {
+      "hitDie": "d8",
+      "savingThrowProficiencies": [
+        "wis",
+        "cha"
+      ],
+      "armorProficiencies": [
+        "light-armor"
+      ],
+      "weaponProficiencies": [
+        "simple-weapons"
+      ],
+      "toolProficiencies": [],
+      "skillChoice": {
+        "count": 2,
+        "options": [
+          "arcana",
+          "deception",
+          "history",
+          "intimidation",
+          "investigation",
+          "nature",
+          "religion"
+        ]
+      },
+      "spellcasting": {
+        "progression": "pact",
+        "ability": "cha",
+        "knownOrPrepared": "known"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "featureRefs": [
+            "2014/feature/warlock-otherworldly-patron",
+            "2014/feature/warlock-pact-magic"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "invocations_known": 0,
+            "mystic_arcanum_level_6": 0,
+            "mystic_arcanum_level_7": 0,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 2,
+            "spells_known": 2,
+            "spell_slots_level_1": 1,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 2,
+          "featureRefs": [
+            "2014/feature/warlock-eldritch-invocations"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "invocations_known": 2,
+            "mystic_arcanum_level_6": 0,
+            "mystic_arcanum_level_7": 0,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 2,
+            "spells_known": 3,
+            "spell_slots_level_1": 2,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 3,
+          "featureRefs": [
+            "2014/feature/warlock-pact-boon"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "invocations_known": 2,
+            "mystic_arcanum_level_6": 0,
+            "mystic_arcanum_level_7": 0,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 2,
+            "spells_known": 4,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 2,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 4,
+          "featureRefs": [
+            "2014/feature/warlock-ability-score-improvement-1"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "invocations_known": 3,
+            "mystic_arcanum_level_6": 0,
+            "mystic_arcanum_level_7": 0,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 3,
+            "spells_known": 5,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 2,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 5,
+          "featureRefs": [],
+          "proficiencyBonus": 3,
+          "columns": {
+            "invocations_known": 3,
+            "mystic_arcanum_level_6": 0,
+            "mystic_arcanum_level_7": 0,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 3,
+            "spells_known": 6,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 2,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 6,
+          "featureRefs": [
+            "2014/feature/warlock-otherworldly-patron-improvement-1"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "invocations_known": 4,
+            "mystic_arcanum_level_6": 0,
+            "mystic_arcanum_level_7": 0,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 3,
+            "spells_known": 7,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 2,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 7,
+          "featureRefs": [],
+          "proficiencyBonus": 3,
+          "columns": {
+            "invocations_known": 4,
+            "mystic_arcanum_level_6": 0,
+            "mystic_arcanum_level_7": 0,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 3,
+            "spells_known": 8,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 2,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 8,
+          "featureRefs": [
+            "2014/feature/warlock-ability-score-improvement-2"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "invocations_known": 4,
+            "mystic_arcanum_level_6": 0,
+            "mystic_arcanum_level_7": 0,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 3,
+            "spells_known": 9,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 2,
+            "spell_slots_level_5": 0,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 9,
+          "featureRefs": [],
+          "proficiencyBonus": 4,
+          "columns": {
+            "invocations_known": 5,
+            "mystic_arcanum_level_6": 0,
+            "mystic_arcanum_level_7": 0,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 3,
+            "spells_known": 10,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 10,
+          "featureRefs": [
+            "2014/feature/warlock-otherworldly-patron-improvement-2"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "invocations_known": 5,
+            "mystic_arcanum_level_6": 0,
+            "mystic_arcanum_level_7": 0,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 4,
+            "spells_known": 10,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 2,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 11,
+          "featureRefs": [
+            "2014/feature/warlock-mystic-arcanum-6th-level"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "invocations_known": 5,
+            "mystic_arcanum_level_6": 1,
+            "mystic_arcanum_level_7": 0,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 4,
+            "spells_known": 11,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 3,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 12,
+          "featureRefs": [
+            "2014/feature/warlock-ability-score-improvement-3"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "invocations_known": 6,
+            "mystic_arcanum_level_6": 1,
+            "mystic_arcanum_level_7": 0,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 4,
+            "spells_known": 11,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 3,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 13,
+          "featureRefs": [
+            "2014/feature/warlock-mystic-arcanum-7th-level"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "invocations_known": 6,
+            "mystic_arcanum_level_6": 1,
+            "mystic_arcanum_level_7": 1,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 4,
+            "spells_known": 12,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 3,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 14,
+          "featureRefs": [
+            "2014/feature/warlock-otherworldly-patron-improvement-3"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "invocations_known": 6,
+            "mystic_arcanum_level_6": 1,
+            "mystic_arcanum_level_7": 1,
+            "mystic_arcanum_level_8": 0,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 4,
+            "spells_known": 12,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 3,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 15,
+          "featureRefs": [
+            "2014/feature/warlock-mystic-arcanum-8th-level"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "invocations_known": 7,
+            "mystic_arcanum_level_6": 1,
+            "mystic_arcanum_level_7": 1,
+            "mystic_arcanum_level_8": 1,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 4,
+            "spells_known": 13,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 3,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 16,
+          "featureRefs": [
+            "2014/feature/warlock-ability-score-improvement-4"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "invocations_known": 7,
+            "mystic_arcanum_level_6": 1,
+            "mystic_arcanum_level_7": 1,
+            "mystic_arcanum_level_8": 1,
+            "mystic_arcanum_level_9": 0,
+            "cantrips_known": 4,
+            "spells_known": 13,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 3,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 17,
+          "featureRefs": [
+            "2014/feature/warlock-mystic-arcanum-9th-level"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "invocations_known": 7,
+            "mystic_arcanum_level_6": 1,
+            "mystic_arcanum_level_7": 1,
+            "mystic_arcanum_level_8": 1,
+            "mystic_arcanum_level_9": 1,
+            "cantrips_known": 4,
+            "spells_known": 14,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 4,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 18,
+          "featureRefs": [],
+          "proficiencyBonus": 6,
+          "columns": {
+            "invocations_known": 8,
+            "mystic_arcanum_level_6": 1,
+            "mystic_arcanum_level_7": 1,
+            "mystic_arcanum_level_8": 1,
+            "mystic_arcanum_level_9": 1,
+            "cantrips_known": 4,
+            "spells_known": 14,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 4,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 19,
+          "featureRefs": [
+            "2014/feature/warlock-ability-score-improvement-5"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "invocations_known": 8,
+            "mystic_arcanum_level_6": 1,
+            "mystic_arcanum_level_7": 1,
+            "mystic_arcanum_level_8": 1,
+            "mystic_arcanum_level_9": 1,
+            "cantrips_known": 4,
+            "spells_known": 15,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 4,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        },
+        {
+          "level": 20,
+          "featureRefs": [
+            "2014/feature/warlock-eldritch-master"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "invocations_known": 8,
+            "mystic_arcanum_level_6": 1,
+            "mystic_arcanum_level_7": 1,
+            "mystic_arcanum_level_8": 1,
+            "mystic_arcanum_level_9": 1,
+            "cantrips_known": 4,
+            "spells_known": 15,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 4,
+            "spell_slots_level_6": 0,
+            "spell_slots_level_7": 0,
+            "spell_slots_level_8": 0,
+            "spell_slots_level_9": 0
+          }
+        }
+      ],
+      "startingEquipment": {
+        "fixed": [
+          "leather-armor",
+          "dagger",
+          "dagger"
+        ],
+        "choices": [
+          {
+            "prompt": "(a) a light crossbow and 20 bolts or (b) any simple weapon",
+            "options": [
+              [
+                "crossbow-light",
+                "crossbow-bolt"
+              ],
+              [
+                "quarterstaff"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) a component pouch or (b) an arcane focus",
+            "options": [
+              [
+                "component-pouch"
+              ],
+              [
+                "orb"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) a scholar's pack or (b) a dungeoneer's pack",
+            "options": [
+              [
+                "scholars-pack"
+              ],
+              [
+                "dungeoneers-pack"
+              ]
+            ]
+          }
+        ],
+        "goldAlternative": 100
+      }
+    }
+  },
+  {
+    "id": "2014/feature/warlock-otherworldly-patron",
+    "edition": "2014",
+    "name": "Otherworldly Patron",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 1st level, you have struck a bargain with an otherworldly being of your choice, such as the Fiend. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-pact-magic",
+    "edition": "2014",
+    "name": "Pact Magic",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your arcane research and the magic bestowed on you by your patron have given you facility with spells."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-eldritch-invocations",
+    "edition": "2014",
+    "name": "Eldritch Invocations",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.\n\nAt 2nd level, you gain two eldritch invocations of your choice. Your invocation options are detailed at the end of the class description. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table.\n\nAdditionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-pact-boon",
+    "edition": "2014",
+    "name": "Pact Boon",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 3rd level, your otherworldly patron bestows a gift upon you for your loyal service. You gain one of the following features of your choice."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-ability-score-improvement-1",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-otherworldly-patron-improvement-1",
+    "edition": "2014",
+    "name": "Otherworldly Patron feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 1st level, you have struck a bargain with an otherworldly being of your choice, such as the Fiend. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-ability-score-improvement-2",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-otherworldly-patron-improvement-2",
+    "edition": "2014",
+    "name": "Otherworldly Patron feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 1st level, you have struck a bargain with an otherworldly being of your choice, such as the Fiend. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-mystic-arcanum-6th-level",
+    "edition": "2014",
+    "name": "Mystic Arcanum (6th level)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one 6th- level spell from the warlock spell list as this arcanum.\n\nYou can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.\n\nAt higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th- level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-ability-score-improvement-3",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-mystic-arcanum-7th-level",
+    "edition": "2014",
+    "name": "Mystic Arcanum (7th level)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one 6th- level spell from the warlock spell list as this arcanum.\n\nYou can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.\n\nAt higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th- level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-otherworldly-patron-improvement-3",
+    "edition": "2014",
+    "name": "Otherworldly Patron feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 1st level, you have struck a bargain with an otherworldly being of your choice, such as the Fiend. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-mystic-arcanum-8th-level",
+    "edition": "2014",
+    "name": "Mystic Arcanum (8th level)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one 6th- level spell from the warlock spell list as this arcanum.\n\nYou can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.\n\nAt higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th- level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-ability-score-improvement-4",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-mystic-arcanum-9th-level",
+    "edition": "2014",
+    "name": "Mystic Arcanum (9th level)",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one 6th- level spell from the warlock spell list as this arcanum.\n\nYou can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.\n\nAt higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th- level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-ability-score-improvement-5",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/warlock-eldritch-master",
+    "edition": "2014",
+    "name": "Eldritch Master",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 20th level, you can draw on your inner reserve of mystical power while entreating your patron to regain expended spell slots. You can spend 1 minute entreating your patron for aid to regain all your expended spell slots from your Pact Magic feature.\n\nOnce you regain spell slots with this feature, you must finish a long rest before you can do so again."
+    }
+  },
+  {
+    "id": "2014/subclass/fiend",
+    "edition": "2014",
+    "name": "Fiend",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "subclass",
+    "data": {
+      "parentClassRef": "2014/class/warlock",
+      "description": "You have made a pact with a fiend from the lower planes of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption or destruction of all things, ultimately including you. Fiends powerful enough to forge a pact include demon lords such as Demogorgon, Orcus, Fraz'Urb-luu, and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles, and Belial; pit fiends and balors that are especially mighty; and ultroloths and other lords of the yugoloths.",
+      "featuresByLevel": {
+        "1": [
+          "2014/feature/fiend-dark-ones-blessing"
+        ],
+        "6": [
+          "2014/feature/fiend-dark-ones-own-luck"
+        ],
+        "10": [
+          "2014/feature/fiend-fiendish-resilience"
+        ],
+        "14": [
+          "2014/feature/fiend-hurl-through-hell"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "1": [
+          "2014/spell/burning-hands",
+          "2014/spell/command"
+        ],
+        "3": [
+          "2014/spell/blindness-deafness",
+          "2014/spell/scorching-ray"
+        ],
+        "5": [
+          "2014/spell/fireball",
+          "2014/spell/stinking-cloud"
+        ],
+        "7": [
+          "2014/spell/fire-shield",
+          "2014/spell/wall-of-fire"
+        ],
+        "9": [
+          "2014/spell/geas",
+          "2014/spell/insect-plague"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/fiend-dark-ones-blessing",
+    "edition": "2014",
+    "name": "Dark One's Blessing",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 1st level, when you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level (minimum of 1)."
+    }
+  },
+  {
+    "id": "2014/feature/fiend-dark-ones-own-luck",
+    "edition": "2014",
+    "name": "Dark One's Own Luck",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 6th level, you can call on your patron to alter fate in your favor. When you make an ability check or a saving throw, you can use this feature to add a d10 to your roll. You can do so after seeing the initial roll but before any of the roll's effects occur.\n\nOnce you use this feature, you can't use it again until you finish a short or long rest."
+    }
+  },
+  {
+    "id": "2014/feature/fiend-fiendish-resilience",
+    "edition": "2014",
+    "name": "Fiendish Resilience",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 10th level, you can choose one damage type when you finish a short or long rest. You gain resistance to that damage type until you choose a different one with this feature. Damage from magical weapons or silver weapons ignores this resistance."
+    }
+  },
+  {
+    "id": "2014/feature/fiend-hurl-through-hell",
+    "edition": "2014",
+    "name": "Hurl Through Hell",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 14th level, when you hit a creature with an attack, you can use this feature to instantly transport the target through the lower planes. The creature disappears and hurtles through a nightmare landscape.\n\nAt the end of your next turn, the target returns to the space it previously occupied, or the nearest unoccupied space. If the target is not a fiend, it takes 10d10 psychic damage as it reels from its horrific experience.\n\nOnce you use this feature, you can't use it again until you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/subclass/the-fathomless",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "The Fathomless",
+    "source": {
+      "book": "TCE",
+      "page": 72
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/warlock",
+      "description": "You have made a pact with an entity from the darkest depths of the ocean.",
+      "featuresByLevel": {
+        "1": [
+          "2014/feature/extracted-expanded-spell-list-the-fathomless",
+          "2014/feature/extracted-tentacle-of-the-deeps"
+        ],
+        "6": [
+          "2014/feature/extracted-gift-of-the-sea",
+          "2014/feature/extracted-oceanic-soul"
+        ],
+        "10": [
+          "2014/feature/extracted-guardian-coil",
+          "2014/feature/extracted-grasping-tentacles"
+        ],
+        "14": [
+          "2014/feature/extracted-fathomless-plunge"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "1": [
+          "2014/spell/create-or-destroy-water"
+        ],
+        "3": [
+          "2014/spell/augury"
+        ],
+        "5": [
+          "2014/spell/sleet-storm",
+          "2014/spell/water-breathing"
+        ],
+        "7": [
+          "2014/spell/control-water"
+        ],
+        "9": [
+          "2014/spell/legend-lore",
+          "2014/spell/scrying"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/the-genie",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "The Genie",
+    "source": {
+      "book": "TCE",
+      "page": 73
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/warlock",
+      "description": "Your patron is a genie of noble birth with the ability to grant wishes.",
+      "featuresByLevel": {
+        "1": [
+          "2014/feature/extracted-expanded-spell-list-the-genie",
+          "2014/feature/extracted-genie-s-vessel"
+        ],
+        "6": [
+          "2014/feature/extracted-elemental-gift"
+        ],
+        "10": [
+          "2014/feature/extracted-sanctuary-vessel"
+        ],
+        "14": [
+          "2014/feature/extracted-limited-wish"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "1": [
+          "2014/spell/detect-magic",
+          "2014/spell/identify"
+        ],
+        "3": [
+          "2014/spell/detect-thoughts",
+          "2014/spell/invisibility"
+        ],
+        "5": [
+          "2014/spell/tongues",
+          "2014/spell/gaseous-form"
+        ],
+        "7": [
+          "2014/spell/wall-of-force"
+        ],
+        "9": [
+          "2014/spell/chain-lightning"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/extracted-expanded-spell-list-the-fathomless",
+    "edition": "2014",
+    "name": "Expanded Spell List (The Fathomless)",
+    "source": {
+      "book": "TCE",
+      "page": 72
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The Fathomless lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.\n\nFathomless Expanded Spells:\n1st: create or destroy water, thunderwave\n2nd: gust of wind, silence\n3rd: lightning bolt, sleet storm\n4th: control water, summon elemental (water only; a spell in chapter 3)\n5th: Bigby's hand (appears as a tentacle), cone of cold"
+    }
+  },
+  {
+    "id": "2014/feature/extracted-tentacle-of-the-deeps",
+    "edition": "2014",
+    "name": "Tentacle of the Deeps",
+    "source": {
+      "book": "TCE",
+      "page": 72
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can magically summon a spectral tentacle that strikes at your foes. As a bonus action, you create a 10-foot-long tentacle at a point you can see within 60 feet of you. The tentacle lasts for 1 minute or until you use this feature to create another tentacle.\nWhen you create the tentacle, you can make a melee spell attack against one creature within 10 feet of it. On a hit, the target takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn. When you reach 10th level in this class, the damage increases to 2d8.\nAs a bonus action on your turn, you can move the tentacle up to 30 feet and repeat the attack.\nYou can summon the tentacle a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-gift-of-the-sea",
+    "edition": "2014",
+    "name": "Gift of the Sea",
+    "source": {
+      "book": "TCE",
+      "page": 72
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain a swimming speed of 40 feet, and you can breathe underwater."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-oceanic-soul",
+    "edition": "2014",
+    "name": "Oceanic Soul",
+    "source": {
+      "book": "TCE",
+      "page": 73
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are now even more at home in the depths. You gain resistance to cold damage. In addition, when you are fully submerged, any creature that is also fully submerged can understand your speech, and you can understand theirs."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-guardian-coil",
+    "edition": "2014",
+    "name": "Guardian Coil",
+    "source": {
+      "book": "TCE",
+      "page": 73
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your Tentacle of the Deeps can defend you and others, interposing itself between them and harm. When you or a creature you can see takes damage while within 10 feet of the tentacle, you can use your reaction to choose one of those creatures and reduce the damage to that creature by 1d8. When you reach 10th level in this class, the damage reduced by the tentacle increases to 2d8."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-grasping-tentacles",
+    "edition": "2014",
+    "name": "Grasping Tentacles",
+    "source": {
+      "book": "TCE",
+      "page": 73
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn the spell Evard's black tentacles. It counts as a warlock spell for you, but it doesn't count against the number of spells you know. You can also cast it once without a spell slot, and you regain the ability to do so when you finish a long rest.\nWhenever you cast this spell, your patron's magic bolsters you, granting you a number of temporary hit points equal to your warlock level. Moreover, damage can't break your concentration on this spell."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-fathomless-plunge",
+    "edition": "2014",
+    "name": "Fathomless Plunge",
+    "source": {
+      "book": "TCE",
+      "page": 73
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can magically open temporary conduits to watery destinations. As an action, you can teleport yourself and up to five other willing creatures that you can see within 30 feet of you. Amid a whirl of tentacles, you all vanish and then reappear up to 1 mile away in a body of water you've seen (pond size or larger) or within 30 feet of it, each of you appearing in an unoccupied space within 30 feet of the others.\nOnce you use this feature, you can't use it again until you finish a short or long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-expanded-spell-list-the-genie",
+    "edition": "2014",
+    "name": "Expanded Spell List (The Genie)",
+    "source": {
+      "book": "TCE",
+      "page": 73
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The Genie lets you choose from an expanded list of spells when you learn a warlock spell. The Genie Expanded Spells table shows the genie spells that are added to the warlock spell list for you, along with the spells associated in the table with your patron's kind: dao, djinni, efreeti, or marid.\n\nGenie Expanded Spells (by level):\n1st: detect evil and good (Genie), sanctuary (Dao), thunderwave (Djinni), burning hands (Efreeti), fog cloud (Marid)\n2nd: phantasmal force (Genie), spike growth (Dao), gust of wind (Djinni), scorching ray (Efreeti), blur (Marid)\n3rd: create food and water (Genie), meld into stone (Dao), wind wall (Djinni), fireball (Efreeti), sleet storm (Marid)\n4th: phantasmal killer (Genie), stone shape (Dao), greater invisibility (Djinni), fire shield (Efreeti), control water (Marid)\n5th: creation (Genie), wall of stone (Dao), seeming (Djinni), flame strike (Efreeti), cone of cold (Marid)\n9th: wish (Genie)"
+    }
+  },
+  {
+    "id": "2014/feature/extracted-genie-s-vessel",
+    "edition": "2014",
+    "name": "Genie's Vessel",
+    "source": {
+      "book": "TCE",
+      "page": 73
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your patron gifts you a magical vessel that grants you a measure of the genie's power. The vessel is a Tiny object, and you can use it as a spellcasting focus for your warlock spells. You decide what the object is, or you can determine what it is randomly by rolling on the Genie's Vessel table.\n\nWhile you are touching the vessel, you can use it in the following ways:\n- Bottled Respite. As an action, you can magically vanish and enter your vessel, which remains in the space you left. The interior of the vessel is an extradimensional space in the shape of a 20-foot-radius cylinder, 20 feet high, and resembles your vessel. The interior is appointed with cushions and low tables and is a comfortable temperature. While inside, you can hear the area around your vessel as if you were in its space. You can remain inside the vessel up to a number of hours equal to twice your proficiency bonus. You exit the vessel early if you use a bonus action to leave, if you die, or if the vessel is destroyed. When you exit the vessel, you appear in the unoccupied space closest to it. Any objects left in the vessel remain there until carried out, and if the vessel is destroyed, every object stored there harmlessly appears in the unoccupied spaces closest to the vessel's former space. Once you enter the vessel, you can't enter again until you finish a long rest.\n- Genie's Wrath. Once during each of your turns when you hit with an attack roll, you can deal extra damage to the target equal to your proficiency bonus. The type of this damage is determined by your patron: bludgeoning (dao), thunder (djinni), fire (efreeti), or cold (marid).\n\nThe vessel's AC equals your spell save DC. Its hit points equal your warlock level plus your proficiency bonus, and it is immune to poison and psychic damage.\nIf the vessel is destroyed or you lose it, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and the previous vessel is destroyed if it still exists. The vessel vanishes in a flare of elemental power when you die."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-elemental-gift",
+    "edition": "2014",
+    "name": "Elemental Gift",
+    "source": {
+      "book": "TCE",
+      "page": 75
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You begin to take on characteristics of your patron's kind. You now have resistance to a damage type determined by your patron's kind: bludgeoning (dao), thunder (djinni), fire (efreeti), or cold (marid).\nIn addition, as a bonus action, you can give yourself a flying speed of 30 feet that lasts for 10 minutes, during which you can hover. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-sanctuary-vessel",
+    "edition": "2014",
+    "name": "Sanctuary Vessel",
+    "source": {
+      "book": "TCE",
+      "page": 75
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you enter your Genie's Vessel via the Bottled Respite feature, you can now choose up to five willing creatures that you can see within 30 feet of you, and the chosen creatures are drawn into the vessel with you.\nAs a bonus action, you can eject any number of creatures from the vessel, and everyone is ejected if you leave or die or if the vessel is destroyed.\nIn addition, anyone (including you) who remains within the vessel for at least 10 minutes gains the benefit of finishing a short rest, and anyone can add your proficiency bonus to the number of hit points they regain if they spend any Hit Dice as part of a short rest there."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-limited-wish",
+    "edition": "2014",
+    "name": "Limited Wish",
+    "source": {
+      "book": "TCE",
+      "page": 75
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You entreat your patron to grant you a small wish. As an action, you can speak your desire to your Genie's Vessel, requesting the effect of one spell that is 6th level or lower and has a casting time of 1 action. The spell can be from any class's spell list, and you don't need to meet the requirements in that spell, including costly components; the spell simply takes effect as part of this action.\nOnce you use this feature, you can't use it again until you finish 1d4 long rests."
+    }
+  }
+]

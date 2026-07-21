@@ -1,0 +1,584 @@
+[
+  {
+    "id": "2024/species/dragonborn",
+    "edition": "2024",
+    "name": "Dragonborn",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "size": "medium",
+      "speed": 30,
+      "traits": [
+        "2024/feature/trait-darkvision-60",
+        "2024/feature/trait-draconic-flight"
+      ]
+    }
+  },
+  {
+    "id": "2024/species/dwarf",
+    "edition": "2024",
+    "name": "Dwarf",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "size": "medium",
+      "speed": 30,
+      "traits": [
+        "2024/feature/trait-darkvision-120",
+        "2024/feature/trait-dwarven-resilience",
+        "2024/feature/trait-dwarven-toughness",
+        "2024/feature/trait-stonecunning"
+      ]
+    }
+  },
+  {
+    "id": "2024/species/elf",
+    "edition": "2024",
+    "name": "Elf",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "size": "medium",
+      "speed": 30,
+      "traits": [
+        "2024/feature/trait-darkvision-60",
+        "2024/feature/trait-elven-lineage",
+        "2024/feature/trait-fey-ancestry",
+        "2024/feature/trait-keen-senses",
+        "2024/feature/trait-trance"
+      ]
+    }
+  },
+  {
+    "id": "2024/species/gnome",
+    "edition": "2024",
+    "name": "Gnome",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "size": "small",
+      "speed": 30,
+      "traits": [
+        "2024/feature/trait-darkvision-60",
+        "2024/feature/trait-gnomish-cunning",
+        "2024/feature/trait-gnomish-lineage"
+      ]
+    }
+  },
+  {
+    "id": "2024/species/goliath",
+    "edition": "2024",
+    "name": "Goliath",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "size": "medium",
+      "speed": 35,
+      "traits": [
+        "2024/feature/trait-giant-ancestry",
+        "2024/feature/trait-large-form",
+        "2024/feature/trait-powerful-build"
+      ]
+    }
+  },
+  {
+    "id": "2024/species/halfling",
+    "edition": "2024",
+    "name": "Halfling",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "size": "small",
+      "speed": 30,
+      "traits": [
+        "2024/feature/trait-brave",
+        "2024/feature/trait-halfling-nimbleness",
+        "2024/feature/trait-luck",
+        "2024/feature/trait-naturally-stealthy"
+      ]
+    }
+  },
+  {
+    "id": "2024/species/human",
+    "edition": "2024",
+    "name": "Human",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "size": "medium",
+      "speed": 30,
+      "traits": [
+        "2024/feature/trait-resourceful",
+        "2024/feature/trait-skillful",
+        "2024/feature/trait-versatile"
+      ]
+    }
+  },
+  {
+    "id": "2024/species/orc",
+    "edition": "2024",
+    "name": "Orc",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "size": "medium",
+      "speed": 30,
+      "traits": [
+        "2024/feature/trait-adrenaline-rush",
+        "2024/feature/trait-darkvision-120",
+        "2024/feature/trait-relentless-endurance"
+      ]
+    }
+  },
+  {
+    "id": "2024/species/tiefling",
+    "edition": "2024",
+    "name": "Tiefling",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "size": "medium",
+      "speed": 30,
+      "traits": [
+        "2024/feature/trait-darkvision-60",
+        "2024/feature/trait-fiendish-legacy",
+        "2024/feature/trait-otherworldly-presence"
+      ]
+    }
+  },
+  {
+    "id": "2024/feature/trait-darkvision-60",
+    "edition": "2024",
+    "name": "Darkvision (60 ft.)",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Darkvision with a range of 60 feet."
+    }
+  },
+  {
+    "id": "2024/feature/trait-draconic-flight",
+    "edition": "2024",
+    "name": "Draconic Flight",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach character level 5, you can channel draconic magic to give yourself temporary flight. As a Bonus Action, you sprout spectral wings on your back that last for 10 minutes or until you retract the wings (no action required) or have the Incapacitated condition. During that time, you have a Fly Speed equal to your Speed. Your wings appear to be made of the same energy as your Breath Weapon. Once you use this trait, you can't use it again until you finish a Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/trait-darkvision-120",
+    "edition": "2024",
+    "name": "Darkvision (120 ft.)",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Darkvision with a range of 120 feet."
+    }
+  },
+  {
+    "id": "2024/feature/trait-dwarven-resilience",
+    "edition": "2024",
+    "name": "Dwarven Resilience",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition."
+    }
+  },
+  {
+    "id": "2024/feature/trait-dwarven-toughness",
+    "edition": "2024",
+    "name": "Dwarven Toughness",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level."
+    }
+  },
+  {
+    "id": "2024/feature/trait-stonecunning",
+    "edition": "2024",
+    "name": "Stonecunning",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.\nYou can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/trait-elven-lineage",
+    "edition": "2024",
+    "name": "Elven Lineage",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are part of a lineage that grants you supernatural abilities. Choose a lineage from the Elven Lineages table. You gain the level 1 benefit of that lineage.\nWhen you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table.\nYou always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.\nElven Lineages\nDrow\nLevel 1. The range of your Darkvision increases to 120 feet. You also know the Dancing Lights cantrip.\nLevel 3. Faerie Fire\nLevel 5. Darkness\nHigh Elf\nLevel 1. You know the Prestidigitation cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list.\nLevel 3. Detect Magic\nLevel 5. Misty Step\nWood Elf\nLevel 1. Your Speed increases to 35 feet. You also know the Druidcraft cantrip.\nLevel 3. Longstrider\nLevel 5. Pass without Trace\nIntelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage)."
+    }
+  },
+  {
+    "id": "2024/feature/trait-fey-ancestry",
+    "edition": "2024",
+    "name": "Fey Ancestry",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Advantage on saving throws you make to avoid or end the Charmed condition."
+    }
+  },
+  {
+    "id": "2024/feature/trait-keen-senses",
+    "edition": "2024",
+    "name": "Keen Senses",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have proficiency in the Insight, Perception, or Survival skill."
+    }
+  },
+  {
+    "id": "2024/feature/trait-trance",
+    "edition": "2024",
+    "name": "Trance",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness."
+    }
+  },
+  {
+    "id": "2024/feature/trait-gnomish-cunning",
+    "edition": "2024",
+    "name": "Gnomish Cunning",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Advantage on Intelligence, Wisdom, and Charisma saving throws."
+    }
+  },
+  {
+    "id": "2024/feature/trait-gnomish-lineage",
+    "edition": "2024",
+    "name": "Gnomish Lineage",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are part of a lineage that grants you supernatural abilities. Choose one of the following options; whichever one you choose, Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage):\nForest Gnome. You know the Minor Illusion cantrip. You also always have the Speak with Animals spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell.\nRock Gnome. You know the Mending and Prestidigitation cantrips. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from Prestidigitation; the device produces that effect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it.\nFor example, if you choose the spell's ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn't do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action."
+    }
+  },
+  {
+    "id": "2024/feature/trait-giant-ancestry",
+    "edition": "2024",
+    "name": "Giant Ancestry",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are descended from Giants. Choose one of the following benefits-a supernatural boon from your ancestry; you can use the chosen benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest:\nCloud's Jaunt (Cloud Giant). As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see.\nFire's Burn (Fire Giant). When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target.\nFrost's Chill (Frost Giant). When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn.\nHill's Tumble (Hill Giant). When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition.\nStone's Endurance (Stone Giant). When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total.\n- Storm's Thunder (Storm Giant). When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature."
+    }
+  },
+  {
+    "id": "2024/feature/trait-large-form",
+    "edition": "2024",
+    "name": "Large Form",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at character level 5, you can change your size to Large as a Bonus Action if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required). For that duration, you have Advantage on Strength checks, and your Speed increases by 10 feet. Once you use this trait, you can't use it again until you finish a Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/trait-powerful-build",
+    "edition": "2024",
+    "name": "Powerful Build",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity."
+    }
+  },
+  {
+    "id": "2024/feature/trait-brave",
+    "edition": "2024",
+    "name": "Brave",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Advantage on saving throws you make to avoid or end the Frightened condition."
+    }
+  },
+  {
+    "id": "2024/feature/trait-halfling-nimbleness",
+    "edition": "2024",
+    "name": "Halfling Nimbleness",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can move through the space of any creature that is a size larger than you, but you can't stop in the same space."
+    }
+  },
+  {
+    "id": "2024/feature/trait-luck",
+    "edition": "2024",
+    "name": "Luck",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll."
+    }
+  },
+  {
+    "id": "2024/feature/trait-naturally-stealthy",
+    "edition": "2024",
+    "name": "Naturally Stealthy",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you."
+    }
+  },
+  {
+    "id": "2024/feature/trait-resourceful",
+    "edition": "2024",
+    "name": "Resourceful",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain Heroic Inspiration whenever you finish a Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/trait-skillful",
+    "edition": "2024",
+    "name": "Skillful",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency in one skill of your choice."
+    }
+  },
+  {
+    "id": "2024/feature/trait-versatile",
+    "edition": "2024",
+    "name": "Versatile",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain an Origin feat of your choice (see \"Feats\"). Skilled is recommended."
+    }
+  },
+  {
+    "id": "2024/feature/trait-adrenaline-rush",
+    "edition": "2024",
+    "name": "Adrenaline Rush",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus.\nYou can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Short or Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/trait-relentless-endurance",
+    "edition": "2024",
+    "name": "Relentless Endurance",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can't do so again until you finish a Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/trait-fiendish-legacy",
+    "edition": "2024",
+    "name": "Fiendish Legacy",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the Fiendish Legacies table. You gain the level 1 benefit of the chosen legacy.\nWhen you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table.\nYou always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.\nIntelligence, Wisdom, or Charisma is your spell-casting ability for the spells you cast with this trait (choose the ability when you select the legacy).\nFiendish Legacies\nAbyssal.\nLevel 1. You have Resistance to Poison damage. You also know the Poison Spray cantrip.\nLevel 3. Ray of Sickness\nLevel 5. Hold Person\nChthonic.\nLevel 1. You have Resistance to Necrotic damage. You also know the Chill Touch cantrip.\nLevel 3. False Life\nLevel 5. Ray of Enfeeblement\nInfernal.\nLevel 1. You have Resistance to Fire damage. You also know the Fire Bolt cantrip.\nLevel 3. Hellish Rebuke\nLevel 5. Darkness"
+    }
+  },
+  {
+    "id": "2024/feature/trait-otherworldly-presence",
+    "edition": "2024",
+    "name": "Otherworldly Presence",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait."
+    }
+  },
+  {
+    "id": "2024/species/aasimar",
+    "edition": "2024",
+    "kind": "species",
+    "name": "Aasimar",
+    "source": {
+      "book": "PHB2024",
+      "page": 186
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "size": "medium",
+      "speed": 30,
+      "traits": [
+        "2024/feature/trait-aasimar-traits"
+      ]
+    },
+    "effects": []
+  },
+  {
+    "id": "2024/feature/trait-aasimar-traits",
+    "edition": "2024",
+    "kind": "feature",
+    "name": "Aasimar Traits",
+    "source": {
+      "book": "PHB2024",
+      "page": 186
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "description": "Creature Type: Humanoid\nSize: Medium (about 4-7 feet tall) or Small (about 2-4 feet tall), chosen when you select this species\nSpeed: 30 feet\n\nAs an Aasimar, you have these special traits.\nCelestial Resistance. You have Resistance to Necrotic damage and Radiant damage.\nDarkvision. You have Darkvision with a range of 60 feet.\nHealing Hands. As a Magic action, you touch a creature and roll a number of d4s equal to your Proficiency Bonus. The creature regains a number of Hit Points equal to the total rolled. Once you use this trait, you can't use it again until you finish a Long Rest.\nLight Bearer. You know the Light cantrip. Charisma is your spellcasting ability for it.\nCelestial Revelation. When you reach character level 3, you can transform as a Bonus Action using one of the options below (choose the option each time you transform). The transformation lasts for 1 minute or until you end it (no action required). Once you transform, you can't do so again until you finish a Long Rest.\nOnce on each of your turns before the transformation ends, you can deal extra damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your Proficiency Bonus, and the extra damage's type is either Necrotic for Necrotic Shroud or Radiant for Heavenly Wings and Inner Radiance.\n\nHere are the transformation options:\nHeavenly Wings. Two spectral wings sprout from your back temporarily. Until the transformation ends, you have a Fly Speed equal to your Speed.\nInner Radiance. Searing light temporarily radiates from your eyes and mouth. For the duration, you shed Bright Light in a 10-foot radius and Dim Light for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes Radiant damage equal to your Proficiency Bonus.\nNecrotic Shroud. Your eyes briefly become pools of darkness, and flightless wings sprout from your back temporarily. Creatures other than your allies within 10 feet of you must succeed on a Charisma saving throw (DC 8 plus your Charisma modifier and Proficiency Bonus) or have the Frightened condition until the end of your next turn."
+    }
+  }
+]

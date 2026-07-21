@@ -1,0 +1,1094 @@
+[
+  {
+    "id": "2014/class/paladin",
+    "edition": "2014",
+    "name": "Paladin",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "class",
+    "data": {
+      "hitDie": "d10",
+      "savingThrowProficiencies": [
+        "wis",
+        "cha"
+      ],
+      "armorProficiencies": [
+        "all-armor",
+        "shields"
+      ],
+      "weaponProficiencies": [
+        "simple-weapons",
+        "martial-weapons"
+      ],
+      "toolProficiencies": [],
+      "skillChoice": {
+        "count": 2,
+        "options": [
+          "athletics",
+          "insight",
+          "intimidation",
+          "medicine",
+          "persuasion",
+          "religion"
+        ]
+      },
+      "spellcasting": {
+        "progression": "half",
+        "ability": "cha",
+        "knownOrPrepared": "prepared"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "featureRefs": [
+            "2014/feature/paladin-divine-sense",
+            "2014/feature/paladin-lay-on-hands"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "aura_range": 0,
+            "spell_slots_level_1": 0,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 2,
+          "featureRefs": [
+            "2014/feature/paladin-fighting-style",
+            "2014/feature/paladin-spellcasting-paladin",
+            "2014/feature/paladin-divine-smite"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "aura_range": 0,
+            "spell_slots_level_1": 2,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 3,
+          "featureRefs": [
+            "2014/feature/paladin-divine-health",
+            "2014/feature/paladin-sacred-oath",
+            "2014/feature/paladin-oath-spells",
+            "2014/feature/paladin-channel-divinity"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "aura_range": 0,
+            "spell_slots_level_1": 3,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 4,
+          "featureRefs": [
+            "2014/feature/paladin-ability-score-improvement-1"
+          ],
+          "proficiencyBonus": 2,
+          "columns": {
+            "aura_range": 0,
+            "spell_slots_level_1": 3,
+            "spell_slots_level_2": 0,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 5,
+          "featureRefs": [
+            "2014/feature/paladin-extra-attack"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "aura_range": 0,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 2,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 6,
+          "featureRefs": [
+            "2014/feature/paladin-aura-of-protection"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "aura_range": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 2,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 7,
+          "featureRefs": [
+            "2014/feature/paladin-sacred-oath-improvement-1"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "aura_range": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 8,
+          "featureRefs": [
+            "2014/feature/paladin-ability-score-improvement-2"
+          ],
+          "proficiencyBonus": 3,
+          "columns": {
+            "aura_range": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 0,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 9,
+          "featureRefs": [],
+          "proficiencyBonus": 4,
+          "columns": {
+            "aura_range": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 2,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 10,
+          "featureRefs": [
+            "2014/feature/paladin-aura-of-courage"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "aura_range": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 2,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 11,
+          "featureRefs": [
+            "2014/feature/paladin-improved-divine-smite"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "aura_range": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 12,
+          "featureRefs": [
+            "2014/feature/paladin-ability-score-improvement-3"
+          ],
+          "proficiencyBonus": 4,
+          "columns": {
+            "aura_range": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 0,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 13,
+          "featureRefs": [],
+          "proficiencyBonus": 5,
+          "columns": {
+            "aura_range": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 1,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 14,
+          "featureRefs": [
+            "2014/feature/paladin-cleansing-touch"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "aura_range": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 1,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 15,
+          "featureRefs": [
+            "2014/feature/paladin-sacred-oath-improvement-2"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "aura_range": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 2,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 16,
+          "featureRefs": [
+            "2014/feature/paladin-ability-score-improvement-4"
+          ],
+          "proficiencyBonus": 5,
+          "columns": {
+            "aura_range": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 2,
+            "spell_slots_level_5": 0
+          }
+        },
+        {
+          "level": 17,
+          "featureRefs": [],
+          "proficiencyBonus": 6,
+          "columns": {
+            "aura_range": 10,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 1
+          }
+        },
+        {
+          "level": 18,
+          "featureRefs": [
+            "2014/feature/paladin-aura-improvements"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "aura_range": 30,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 1
+          }
+        },
+        {
+          "level": 19,
+          "featureRefs": [
+            "2014/feature/paladin-ability-score-improvement-5"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "aura_range": 30,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2
+          }
+        },
+        {
+          "level": 20,
+          "featureRefs": [
+            "2014/feature/paladin-sacred-oath-improvement-3"
+          ],
+          "proficiencyBonus": 6,
+          "columns": {
+            "aura_range": 30,
+            "spell_slots_level_1": 4,
+            "spell_slots_level_2": 3,
+            "spell_slots_level_3": 3,
+            "spell_slots_level_4": 3,
+            "spell_slots_level_5": 2
+          }
+        }
+      ],
+      "startingEquipment": {
+        "fixed": [
+          "chain-mail",
+          "amulet"
+        ],
+        "choices": [
+          {
+            "prompt": "(a) a martial weapon and a shield or (b) two martial weapons",
+            "options": [
+              [
+                "longsword",
+                "shield"
+              ],
+              [
+                "longsword",
+                "shortsword"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) five javelins or (b) any simple melee weapon",
+            "options": [
+              [
+                "javelin",
+                "javelin",
+                "javelin",
+                "javelin",
+                "javelin"
+              ],
+              [
+                "quarterstaff"
+              ]
+            ]
+          },
+          {
+            "prompt": "(a) a priest's pack or (b) an explorer's pack",
+            "options": [
+              [
+                "priests-pack"
+              ],
+              [
+                "explorers-pack"
+              ]
+            ]
+          }
+        ],
+        "goldAlternative": 150
+      }
+    }
+  },
+  {
+    "id": "2014/feature/paladin-divine-sense",
+    "edition": "2014",
+    "name": "Divine Sense",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity. Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the hallow spell.\n\nYou can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-lay-on-hands",
+    "edition": "2014",
+    "name": "Lay on Hands",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level x 5.\n\nAs an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.\n\nAlternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.\n\nThis feature has no effect on undead and constructs."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-fighting-style",
+    "edition": "2014",
+    "name": "Fighting Style",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 2nd level, you adopt a style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-spellcasting-paladin",
+    "edition": "2014",
+    "name": "Spellcasting: Paladin",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "By 2nd level, you have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-divine-smite",
+    "edition": "2014",
+    "name": "Divine Smite",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon's damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-divine-health",
+    "edition": "2014",
+    "name": "Divine Health",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "By 3rd level, the divine magic flowing through you makes you immune to disease."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-sacred-oath",
+    "edition": "2014",
+    "name": "Sacred Oath",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 3rd level, you swear the oath that binds you as a paladin forever. Up to this time you have been in a preparatory stage, committed to the path but not yet sworn to it. Now you choose an oath, such as the Oath of Devotion.\n\nYour choice grants you features at 3rd level and again at 7th, 15th, and 20th level. Those features include oath spells and the Channel Divinity feature."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-oath-spells",
+    "edition": "2014",
+    "name": "Oath Spells",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Each oath has a list of associated spells. You gain access to these spells at the levels specified in the oath description. Once you gain access to an oath spell, you always have it prepared. Oath spells don't count against the number of spells you can prepare each day.\n\nIf you gain an oath spell that doesn't appear on the paladin spell list, the spell is nonetheless a paladin spell for you."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-channel-divinity",
+    "edition": "2014",
+    "name": "Channel Divinity",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your oath allows you to channel divine energy to fuel magical effects. Each Channel Divinity option provided by your oath explains how to use it.\n\nWhen you use your Channel Divinity, you choose which option to use. You must then finish a short or long rest to use your Channel Divinity again.\n\nSome Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your paladin spell save DC."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-ability-score-improvement-1",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-extra-attack",
+    "edition": "2014",
+    "name": "Extra Attack",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-aura-of-protection",
+    "edition": "2014",
+    "name": "Aura of Protection",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 6th level, whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus.\n\nAt 18th level, the range of this aura increases to 30 feet."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-sacred-oath-improvement-1",
+    "edition": "2014",
+    "name": "Sacred Oath feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 3rd level, you swear the oath that binds you as a paladin forever. Up to this time you have been in a preparatory stage, committed to the path but not yet sworn to it. Now you choose an oath, such as the Oath of Devotion.\n\nYour choice grants you features at 3rd level and again at 7th, 15th, and 20th level. Those features include oath spells and the Channel Divinity feature."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-ability-score-improvement-2",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-aura-of-courage",
+    "edition": "2014",
+    "name": "Aura of Courage",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 10th level, you and friendly creatures within 10 feet of you can't be frightened while you are conscious.\n\nAt 18th level, the range of this aura increases to 30 feet."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-improved-divine-smite",
+    "edition": "2014",
+    "name": "Improved Divine Smite",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "By 11th level, you are so suffused with righteous might that all your melee weapon strikes carry divine power with them. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage. If you also use your Divine Smite with an attack, you add this damage to the extra damage of your Divine Smite."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-ability-score-improvement-3",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-cleansing-touch",
+    "edition": "2014",
+    "name": "Cleansing Touch",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch.\n\nYou can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-sacred-oath-improvement-2",
+    "edition": "2014",
+    "name": "Sacred Oath feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 3rd level, you swear the oath that binds you as a paladin forever. Up to this time you have been in a preparatory stage, committed to the path but not yet sworn to it. Now you choose an oath, such as the Oath of Devotion.\n\nYour choice grants you features at 3rd level and again at 7th, 15th, and 20th level. Those features include oath spells and the Channel Divinity feature."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-ability-score-improvement-4",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-aura-improvements",
+    "edition": "2014",
+    "name": "Aura improvements",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 18th level, the range of your auras increase to 30 feet."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-ability-score-improvement-5",
+    "edition": "2014",
+    "name": "Ability Score Improvement",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+    }
+  },
+  {
+    "id": "2014/feature/paladin-sacred-oath-improvement-3",
+    "edition": "2014",
+    "name": "Sacred Oath feature",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you reach 3rd level, you swear the oath that binds you as a paladin forever. Up to this time you have been in a preparatory stage, committed to the path but not yet sworn to it. Now you choose an oath, such as the Oath of Devotion.\n\nYour choice grants you features at 3rd level and again at 7th, 15th, and 20th level. Those features include oath spells and the Channel Divinity feature."
+    }
+  },
+  {
+    "id": "2014/subclass/devotion",
+    "edition": "2014",
+    "name": "Devotion",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "subclass",
+    "data": {
+      "parentClassRef": "2014/class/paladin",
+      "description": "The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order. Sometimes called cavaliers, white knights, or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good and use their gods' tenets as the measure of their devotion. They hold angels--the perfect servants of good--as their ideals, and incorporate images of angelic wings into their helmets or coats of arms.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/devotion-channel-divinity-sacred-weapon",
+          "2014/feature/devotion-channel-divinity-turn-the-unholy"
+        ],
+        "7": [
+          "2014/feature/devotion-aura-of-devotion"
+        ],
+        "15": [
+          "2014/feature/devotion-purity-of-spirit"
+        ],
+        "18": [],
+        "20": [
+          "2014/feature/devotion-holy-nimbus"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2014/spell/protection-from-evil-and-good",
+          "2014/spell/sanctuary"
+        ],
+        "5": [
+          "2014/spell/lesser-restoration",
+          "2014/spell/zone-of-truth"
+        ],
+        "9": [
+          "2014/spell/beacon-of-hope",
+          "2014/spell/dispel-magic"
+        ],
+        "13": [
+          "2014/spell/freedom-of-movement",
+          "2014/spell/guardian-of-faith"
+        ],
+        "17": [
+          "2014/spell/commune",
+          "2014/spell/flame-strike"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/devotion-channel-divinity-sacred-weapon",
+    "edition": "2014",
+    "name": "Channel Divinity: Sacred Weapon",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As an action, you can imbue one weapon that you are holding with positive energy, using your Channel Divinity. For 1 minute, you add your Charisma modifier to attack rolls made with that weapon (with a minimum bonus of +1). The weapon also emits bright light in a 20-foot radius and dim light 20 feet beyond that. If the weapon is not already magical, it becomes magical for the duration.\n\nYou can end this effect on your turn as part of any other action. If you are no longer holding or carrying this weapon, or if you fall unconscious, this effect ends."
+    }
+  },
+  {
+    "id": "2014/feature/devotion-channel-divinity-turn-the-unholy",
+    "edition": "2014",
+    "name": "Channel Divinity: Turn the Unholy",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As an action, you present your holy symbol and speak a prayer censuring fiends and undead, using your Channel Divinity. Each fiend or undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes damage.\n\nA turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action."
+    }
+  },
+  {
+    "id": "2014/feature/devotion-aura-of-devotion",
+    "edition": "2014",
+    "name": "Aura of Devotion",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Starting at 7th level, you and friendly creatures within 10 feet of you can't be charmed while you are conscious.\n\nAt 18th level, the range of this aura increases to 30 feet."
+    }
+  },
+  {
+    "id": "2014/feature/devotion-purity-of-spirit",
+    "edition": "2014",
+    "name": "Purity of Spirit",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Beginning at 15th level, you are always under the effects of a protection from evil and good spell."
+    }
+  },
+  {
+    "id": "2014/feature/devotion-holy-nimbus",
+    "edition": "2014",
+    "name": "Holy Nimbus",
+    "source": {
+      "book": "SRD5.1"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "At 20th level, as an action, you can emanate an aura of sunlight. For 1 minute, bright light shines from you in a 30-foot radius, and dim light shines 30 feet beyond that.\n\nWhenever an enemy creature starts its turn in the bright light, the creature takes 10 radiant damage.\n\nIn addition, for the duration, you have advantage on saving throws against spells cast by fiends or undead."
+    }
+  },
+  {
+    "id": "2014/subclass/oath-of-glory",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Oath of Glory",
+    "source": {
+      "book": "TCE",
+      "page": 53
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/paladin",
+      "description": "Paladins who swear the Oath of Glory believe that they are meant for legendary deeds.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/extracted-oath-of-glory-spells",
+          "2014/feature/extracted-channel-divinity-oath-of-glory"
+        ],
+        "7": [
+          "2014/feature/extracted-aura-of-alacrity"
+        ],
+        "15": [
+          "2014/feature/extracted-glorious-defense"
+        ],
+        "20": [
+          "2014/feature/extracted-living-legend"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2014/spell/guiding-bolt",
+          "2014/spell/heroism"
+        ],
+        "5": [
+          "2014/spell/enhance-ability",
+          "2014/spell/magic-weapon"
+        ],
+        "9": [
+          "2014/spell/haste",
+          "2014/spell/protection-from-energy"
+        ],
+        "13": [
+          "2014/spell/freedom-of-movement"
+        ],
+        "17": [
+          "2014/spell/legend-lore",
+          "2014/spell/teleport"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/oath-of-the-watchers",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Oath of the Watchers",
+    "source": {
+      "book": "TCE",
+      "page": 55
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/paladin",
+      "description": "Paladins who have sworn the Oath of the Watchers have dedicated themselves to guarding the world against extraplanar threats.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/extracted-oath-of-the-watchers-spells",
+          "2014/feature/extracted-channel-divinity-oath-of-the-watchers"
+        ],
+        "7": [
+          "2014/feature/extracted-aura-of-the-sentinel"
+        ],
+        "15": [
+          "2014/feature/extracted-vigilant-rebuke"
+        ],
+        "20": [
+          "2014/feature/extracted-mortal-bulwark"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2014/spell/alarm",
+          "2014/spell/detect-magic"
+        ],
+        "5": [
+          "2014/spell/moonbeam",
+          "2014/spell/see-invisibility"
+        ],
+        "9": [
+          "2014/spell/counterspell",
+          "2014/spell/nondetection"
+        ],
+        "13": [
+          "2014/spell/banishment"
+        ],
+        "17": [
+          "2014/spell/hold-monster",
+          "2014/spell/scrying"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/feature/extracted-oath-of-glory-spells",
+    "edition": "2014",
+    "name": "Oath of Glory Spells",
+    "source": {
+      "book": "TCE",
+      "page": 53
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain oath spells at the paladin levels listed in the Oath of Glory Spells table. See the Sacred Oath class feature for how oath spells work.\n\nOath of Glory Spells:\n3rd: guiding bolt, heroism\n5th: enhance ability, magic weapon\n9th: haste, protection from energy\n13th: compulsion, freedom of movement\n17th: commune, flame strike"
+    }
+  },
+  {
+    "id": "2014/feature/extracted-channel-divinity-oath-of-glory",
+    "edition": "2014",
+    "name": "Channel Divinity (Oath of Glory)",
+    "source": {
+      "book": "TCE",
+      "page": 54
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain the following two Channel Divinity options. See the Sacred Oath class feature for how Channel Divinity works.\n\n- Peerless Athlete. As a bonus action, you can use your Channel Divinity to augment your athleticism. For the next 10 minutes, you have advantage on Strength (Athletics) and Dexterity (Acrobatics) checks; you can carry, push, drag, and lift twice as much weight as normal; and the distance of your long and high jumps increases by 10 feet (this extra distance costs movement as normal).\n- Inspiring Smite. Immediately after you deal damage to a creature with your Divine Smite feature, you can use your Channel Divinity as a bonus action and distribute temporary hit points to creatures of your choice within 30 feet of you, which can include you. The total number of temporary hit points equals 2d8 + your level in this class, divided among the chosen creatures however you like."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-aura-of-alacrity",
+    "edition": "2014",
+    "name": "Aura of Alacrity",
+    "source": {
+      "book": "TCE",
+      "page": 54
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You emanate an aura that fills you and your companions with supernatural speed, allowing you to race across a battlefield in formation. Your walking speed increases by 10 feet. In addition, if you aren't incapacitated, the walking speed of any ally who starts their turn within 5 feet of you increases by 10 feet until the end of that turn.\nWhen you reach 18th level in this class, the range of the aura increases to 10 feet."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-glorious-defense",
+    "edition": "2014",
+    "name": "Glorious Defense",
+    "source": {
+      "book": "TCE",
+      "page": 54
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can turn defense into a sudden strike. When you or another creature you can see within 10 feet of you is hit by an attack roll, you can use your reaction to grant a bonus to the target's AC against that attack, potentially causing it to miss. The bonus equals your Charisma modifier (minimum of +1). If the attack misses, you can make one weapon attack against the attacker as part of this reaction, provided the attacker is within your weapon's range.\nYou can use this feature a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-living-legend",
+    "edition": "2014",
+    "name": "Living Legend",
+    "source": {
+      "book": "TCE",
+      "page": 54
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can empower yourself with the legends—whether true or exaggerated—of your great deeds. As a bonus action, you gain the following benefits for 1 minute:\n- You are blessed with an otherworldly presence, gaining advantage on all Charisma checks.\n- Once on each of your turns when you make a weapon attack and miss, you can cause that attack to hit instead.\n- If you fail a saving throw, you can use your reaction to reroll it. You must use this new roll.\nOnce you use this bonus action, you can't use it again until you finish a long rest, unless you expend a 5th-level spell slot to use it again."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-oath-of-the-watchers-spells",
+    "edition": "2014",
+    "name": "Oath of the Watchers Spells",
+    "source": {
+      "book": "TCE",
+      "page": 55
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain oath spells at the paladin levels listed in the Oath of the Watchers table. See the Sacred Oath class feature for how oath spells work.\n\nOath of the Watchers Spells:\n3rd: alarm, detect magic\n5th: moonbeam, see invisibility\n9th: counterspell, nondetection\n13th: aura of purity, banishment\n17th: hold monster, scrying"
+    }
+  },
+  {
+    "id": "2014/feature/extracted-channel-divinity-oath-of-the-watchers",
+    "edition": "2014",
+    "name": "Channel Divinity (Oath of the Watchers)",
+    "source": {
+      "book": "TCE",
+      "page": 55
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain the following Channel Divinity options. See the Sacred Oath class feature for how Channel Divinity works.\n\n- Watcher's Will. You can use your Channel Divinity to invest your presence with the warding power of your faith. As an action, you can choose a number of creatures you can see within 30 feet of you, up to a number equal to your Charisma modifier (minimum of one creature). For 1 minute, you and the chosen creatures have advantage on Intelligence, Wisdom, and Charisma saving throws.\n- Abjure the Extraplanar. You can use your Channel Divinity to castigate unworldly beings. As an action, you present your holy symbol and each aberration, celestial, elemental, fey, or fiend within 30 feet of you that can hear you must make a Wisdom saving throw. On a failed save, the creature is turned for 1 minute or until it takes damage.\nA turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly end its move in a space within 30 feet of you. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can take the Dodge action."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-aura-of-the-sentinel",
+    "edition": "2014",
+    "name": "Aura of the Sentinel",
+    "source": {
+      "book": "TCE",
+      "page": 55
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You emit an aura of alertness while you aren't incapacitated. When you and any creatures of your choice within 10 feet of you roll initiative, you all gain a bonus to initiative equal to your proficiency bonus.\nAt 18th level, the range of this aura increases to 30 feet."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-vigilant-rebuke",
+    "edition": "2014",
+    "name": "Vigilant Rebuke",
+    "source": {
+      "book": "TCE",
+      "page": 55
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You've learned how to chastise anyone who dares wield beguilements against you and your wards. Whenever you or a creature you can see within 30 feet of you succeeds on an Intelligence, a Wisdom, or a Charisma saving throw, you can use your reaction to deal 2d8 + your Charisma modifier force damage to the creature that forced the saving throw."
+    }
+  },
+  {
+    "id": "2014/feature/extracted-mortal-bulwark",
+    "edition": "2014",
+    "name": "Mortal Bulwark",
+    "source": {
+      "book": "TCE",
+      "page": 55
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You manifest a spark of divine power in defense of the mortal realms. As a bonus action, you gain the following benefits for 1 minute:\n- You gain truesight with a range of 120 feet.\n- You have advantage on attack rolls against aberrations, celestials, elementals, fey, and fiends.\n- When you hit a creature with an attack roll and deal damage to it, you can also force it to make a Charisma saving throw against your spell save DC. On a failed save, the creature is magically banished to its native plane of existence if it's currently not there. On a successful save, the creature can't be banished by this feature for 24 hours.\nOnce you use this bonus action, you can't use it again until you finish a long rest, unless you expend a 5th-level spell slot to use it again."
+    }
+  }
+]
