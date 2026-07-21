@@ -763,5 +763,369 @@
     "data": {
       "description": "As a Bonus Action, you can imbue your Aura of Protection with holy power, granting the benefits below for 10 minutes or until you end them (no action required). Once you use this feature, you can't use it again until you finish a Long Rest. You can also restore your use of it by expending a level 5 spell slot (no action required).\n  Holy Ward. You have Advantage on any saving throw you are forced to make by a Fiend or an Undead.\n  Radiant Damage. Whenever an enemy starts its turn in the aura, that creature takes Radiant damage equal to your Charisma modifier plus your Proficiency Bonus.\n  Sunlight. The aura is filled with Bright Light that is sunlight."
     }
+  },
+  {
+    "id": "2024/feature/oathoftheancients-natureswrath",
+    "edition": "2024",
+    "name": "Nature's Wrath",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can expend a use of Channel Divinity to restrain creatures near you with spectral vines."
+    }
+  },
+  {
+    "id": "2024/feature/oathoftheancients-oathoftheancientsspells",
+    "edition": "2024",
+    "name": "Oath of the Ancients Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have certain spells prepared, including Ensnaring Strike, Speak with Animals, Moonbeam, and Plant Growth."
+    }
+  },
+  {
+    "id": "2024/feature/oathoftheancients-auraofwarding",
+    "edition": "2024",
+    "name": "Aura of Warding",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You and allies in your aura have Resistance to Necrotic, Psychic, and Radiant damage."
+    }
+  },
+  {
+    "id": "2024/feature/oathoftheancients-undyingsentinel",
+    "edition": "2024",
+    "name": "Undying Sentinel",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When reduced to 0 hit points and not killed outright, you can drop to 1 hit point instead. You also stop aging."
+    }
+  },
+  {
+    "id": "2024/feature/oathoftheancients-elderchampion",
+    "edition": "2024",
+    "name": "Elder Champion",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You assume an ancient form, regaining hit points each turn, casting paladin spells as a Bonus Action, and imposing Disadvantage on saves against your spells and Channel Divinity."
+    }
+  },
+  {
+    "id": "2024/feature/oathofvengeance-vowofenmity",
+    "edition": "2024",
+    "name": "Vow of Enmity",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a Bonus Action, you can expend a use of Channel Divinity to gain Advantage on attack rolls against one creature for one minute."
+    }
+  },
+  {
+    "id": "2024/feature/oathofvengeance-oathofvengeancespells",
+    "edition": "2024",
+    "name": "Oath of Vengeance Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have certain spells prepared, including Bane, Hunter's Mark, Hold Person, and Haste."
+    }
+  },
+  {
+    "id": "2024/feature/oathofvengeance-relentlessavenger",
+    "edition": "2024",
+    "name": "Relentless Avenger",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you hit a creature with an Opportunity Attack, you can move up to half your Speed immediately after without provoking Opportunity Attacks."
+    }
+  },
+  {
+    "id": "2024/feature/oathofvengeance-soulofvengeance",
+    "edition": "2024",
+    "name": "Soul of Vengeance",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature affected by your Vow of Enmity makes an attack, you can use your Reaction to make a melee attack against it."
+    }
+  },
+  {
+    "id": "2024/feature/oathofvengeance-avengingangel",
+    "edition": "2024",
+    "name": "Avenging Angel",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain a Fly Speed, and creatures that start their turn near you must succeed on a save or be Frightened of you."
+    }
+  },
+  {
+    "id": "2024/feature/oathofglory-peerlessathlete",
+    "edition": "2024",
+    "name": "Peerless Athlete",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can expend a use of Channel Divinity to gain Advantage on Athletics and Acrobatics checks, increase your carrying capacity, and extend your jump distance."
+    }
+  },
+  {
+    "id": "2024/feature/oathofglory-oathofgloryspells",
+    "edition": "2024",
+    "name": "Oath of Glory Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have certain spells prepared, including Guiding Bolt, Heroism, Enhance Ability, and Haste."
+    }
+  },
+  {
+    "id": "2024/feature/oathofglory-auraofalacrity",
+    "edition": "2024",
+    "name": "Aura of Alacrity",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your Speed increases, and allies who start their turn in your aura gain increased Speed until the end of that turn."
+    }
+  },
+  {
+    "id": "2024/feature/oathofglory-gloriousdefense",
+    "edition": "2024",
+    "name": "Glorious Defense",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you or an ally you can see is hit by an attack, you can use your Reaction to add your Charisma modifier to their AC, potentially causing the attack to miss — and retaliate if it does."
+    }
+  },
+  {
+    "id": "2024/feature/oathofglory-livinglegend",
+    "edition": "2024",
+    "name": "Living Legend",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You become the stuff of legend: you gain Advantage on Charisma checks, can turn a missed attack into a hit once per turn, and can succeed on a failed saving throw once per Long Rest."
+    }
+  },
+  {
+    "id": "2024/subclass/oathoftheancients",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Oath of the Ancients",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/paladin",
+      "description": "This oath binds a paladin to the light of life and joy, defending what is good and beautiful against encroaching darkness.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/oathoftheancients-natureswrath",
+          "2024/feature/oathoftheancients-oathoftheancientsspells"
+        ],
+        "7": [
+          "2024/feature/oathoftheancients-auraofwarding"
+        ],
+        "15": [
+          "2024/feature/oathoftheancients-undyingsentinel"
+        ],
+        "20": [
+          "2024/feature/oathoftheancients-elderchampion"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2024/spell/speak-with-animals"
+        ],
+        "5": [
+          "2024/spell/moonbeam",
+          "2024/spell/misty-step"
+        ],
+        "9": [
+          "2024/spell/plant-growth",
+          "2024/spell/protection-from-energy"
+        ],
+        "13": [
+          "2024/spell/ice-storm",
+          "2024/spell/stoneskin"
+        ],
+        "17": [
+          "2024/spell/commune-with-nature",
+          "2024/spell/tree-stride"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/oathofvengeance",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Oath of Vengeance",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/paladin",
+      "description": "Sworn to punish those who have committed grievous sin, these paladins pursue their quarry without mercy or distraction.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/oathofvengeance-vowofenmity",
+          "2024/feature/oathofvengeance-oathofvengeancespells"
+        ],
+        "7": [
+          "2024/feature/oathofvengeance-relentlessavenger"
+        ],
+        "15": [
+          "2024/feature/oathofvengeance-soulofvengeance"
+        ],
+        "20": [
+          "2024/feature/oathofvengeance-avengingangel"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2024/spell/bane",
+          "2024/spell/hunters-mark"
+        ],
+        "5": [
+          "2024/spell/hold-person",
+          "2024/spell/misty-step"
+        ],
+        "9": [
+          "2024/spell/haste",
+          "2024/spell/protection-from-energy"
+        ],
+        "13": [
+          "2024/spell/banishment",
+          "2024/spell/dimension-door"
+        ],
+        "17": [
+          "2024/spell/hold-monster",
+          "2024/spell/scrying"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/oathofglory",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Oath of Glory",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/paladin",
+      "description": "These paladins believe they are destined for legend, and train relentlessly so that they and their allies may seize it.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/oathofglory-peerlessathlete",
+          "2024/feature/oathofglory-oathofgloryspells"
+        ],
+        "7": [
+          "2024/feature/oathofglory-auraofalacrity"
+        ],
+        "15": [
+          "2024/feature/oathofglory-gloriousdefense"
+        ],
+        "20": [
+          "2024/feature/oathofglory-livinglegend"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2024/spell/guiding-bolt",
+          "2024/spell/heroism"
+        ],
+        "5": [
+          "2024/spell/enhance-ability",
+          "2024/spell/magic-weapon"
+        ],
+        "9": [
+          "2024/spell/haste",
+          "2024/spell/protection-from-energy"
+        ],
+        "13": [
+          "2024/spell/compulsion",
+          "2024/spell/freedom-of-movement"
+        ],
+        "17": [
+          "2024/spell/legend-lore"
+        ]
+      }
+    }
   }
 ]

@@ -836,5 +836,381 @@
     "data": {
       "description": "Once per turn when you hit a creature with an attack roll, you can try to instantly transport the target through the Lower Planes. The target must succeed on a Charisma saving throw against your spell save DC, or the target disappears and hurtles through a nightmare landscape. The target takes 8d10 Psychic damage if it isn't a Fiend, and it has the Incapacitated condition until the end of your next turn, when it returns to the space it previously occupied or the nearest unoccupied space.\n  Once you use this feature, you can't use it again until you finish a Long Rest unless you expend a Pact Magic spell slot (no action required) to restore your use of it."
     }
+  },
+  {
+    "id": "2024/feature/archfeypatron-stepsofthefey",
+    "edition": "2024",
+    "name": "Steps of the Fey",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can cast Misty Step without expending a spell slot a number of times per Long Rest, and each casting can also heal an ally or impose Disadvantage on a creature."
+    }
+  },
+  {
+    "id": "2024/feature/archfeypatron-archfeyspells",
+    "edition": "2024",
+    "name": "Archfey Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have certain spells prepared, including Calm Emotions, Faerie Fire, Sleep, and Blink."
+    }
+  },
+  {
+    "id": "2024/feature/archfeypatron-mistyescape",
+    "edition": "2024",
+    "name": "Misty Escape",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you take damage, you can use your Reaction to turn Invisible and teleport with Steps of the Fey."
+    }
+  },
+  {
+    "id": "2024/feature/archfeypatron-beguilingdefenses",
+    "edition": "2024",
+    "name": "Beguiling Defenses",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are immune to the Charmed condition, and can use your Reaction to turn a Charm attempt back on its caster as Psychic damage."
+    }
+  },
+  {
+    "id": "2024/feature/archfeypatron-bewitchingmagic",
+    "edition": "2024",
+    "name": "Bewitching Magic",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you cast an Enchantment or Illusion spell, you can immediately cast Misty Step as part of that action without expending a spell slot."
+    }
+  },
+  {
+    "id": "2024/feature/celestialpatron-healinglight",
+    "edition": "2024",
+    "name": "Healing Light",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have a pool of d6s you can spend as a Bonus Action to restore hit points to yourself or a creature within 60 feet."
+    }
+  },
+  {
+    "id": "2024/feature/celestialpatron-celestialspells",
+    "edition": "2024",
+    "name": "Celestial Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have certain spells prepared, including Cure Wounds, Guiding Bolt, Lesser Restoration, and Daylight."
+    }
+  },
+  {
+    "id": "2024/feature/celestialpatron-bonuscantrips",
+    "edition": "2024",
+    "name": "Bonus Cantrips",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You know the Light and Sacred Flame cantrips."
+    }
+  },
+  {
+    "id": "2024/feature/celestialpatron-radiantsoul",
+    "edition": "2024",
+    "name": "Radiant Soul",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Resistance to Radiant damage, and you add your Charisma modifier to one Radiant or Fire damage roll of a spell you cast."
+    }
+  },
+  {
+    "id": "2024/feature/celestialpatron-celestialresilience",
+    "edition": "2024",
+    "name": "Celestial Resilience",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You and allies gain Temporary Hit Points whenever you finish a Short or Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/celestialpatron-searingvengeance",
+    "edition": "2024",
+    "name": "Searing Vengeance",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you would make a death saving throw, you can instead regain hit points, stand up, and blast nearby creatures with Radiant damage that blinds them."
+    }
+  },
+  {
+    "id": "2024/feature/greatoldonepatron-awakenedmind",
+    "edition": "2024",
+    "name": "Awakened Mind",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can speak telepathically to any creature you can see within 30 feet."
+    }
+  },
+  {
+    "id": "2024/feature/greatoldonepatron-psychicspells",
+    "edition": "2024",
+    "name": "Psychic Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you cast a Warlock spell that deals damage, you can change its damage type to Psychic, and Enchantment and Illusion spells you cast require no verbal or somatic components."
+    }
+  },
+  {
+    "id": "2024/feature/greatoldonepatron-greatoldonespells",
+    "edition": "2024",
+    "name": "Great Old One Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have certain spells prepared, including Detect Thoughts, Dissonant Whispers, and Phantasmal Killer."
+    }
+  },
+  {
+    "id": "2024/feature/greatoldonepatron-clairvoyantcombatant",
+    "edition": "2024",
+    "name": "Clairvoyant Combatant",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you speak telepathically to a creature, you can force it to make a Wisdom save, gaining Advantage on attacks against it while it has Disadvantage against you."
+    }
+  },
+  {
+    "id": "2024/feature/greatoldonepatron-eldritchhex",
+    "edition": "2024",
+    "name": "Eldritch Hex",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "While a creature is cursed by your Hex spell, it has Disadvantage on saving throws against your spells."
+    }
+  },
+  {
+    "id": "2024/feature/greatoldonepatron-createthrall",
+    "edition": "2024",
+    "name": "Create Thrall",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can use a Magic action to force a creature to make a Wisdom save or be Charmed by you indefinitely, and you can communicate with it telepathically at any distance."
+    }
+  },
+  {
+    "id": "2024/subclass/archfeypatron",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Archfey Patron",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/warlock",
+      "description": "Your patron is a lord or lady of the fey, whose magic is a matter of glamour, misdirection, and sudden, capricious cruelty.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/archfeypatron-stepsofthefey",
+          "2024/feature/archfeypatron-archfeyspells"
+        ],
+        "6": [
+          "2024/feature/archfeypatron-mistyescape"
+        ],
+        "10": [
+          "2024/feature/archfeypatron-beguilingdefenses"
+        ],
+        "14": [
+          "2024/feature/archfeypatron-bewitchingmagic"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2024/spell/faerie-fire",
+          "2024/spell/sleep"
+        ],
+        "5": [
+          "2024/spell/misty-step"
+        ],
+        "7": [
+          "2024/spell/blink",
+          "2024/spell/plant-growth"
+        ],
+        "9": [
+          "2024/spell/dominate-beast",
+          "2024/spell/greater-invisibility"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/celestialpatron",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Celestial Patron",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/warlock",
+      "description": "Your patron is a being of the Upper Planes, and its light burns in you — a healer's gift carried by a warlock's bargain.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/celestialpatron-healinglight",
+          "2024/feature/celestialpatron-celestialspells",
+          "2024/feature/celestialpatron-bonuscantrips"
+        ],
+        "6": [
+          "2024/feature/celestialpatron-radiantsoul"
+        ],
+        "10": [
+          "2024/feature/celestialpatron-celestialresilience"
+        ],
+        "14": [
+          "2024/feature/celestialpatron-searingvengeance"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2024/spell/cure-wounds",
+          "2024/spell/guiding-bolt"
+        ],
+        "5": [
+          "2024/spell/aid",
+          "2024/spell/lesser-restoration"
+        ],
+        "7": [
+          "2024/spell/daylight",
+          "2024/spell/revivify"
+        ],
+        "9": [
+          "2024/spell/guardian-of-faith",
+          "2024/spell/wall-of-fire"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/greatoldonepatron",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Great Old One Patron",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/warlock",
+      "description": "Your patron is an alien intelligence whose nature is incomprehensible, and whose attention may not even be deliberate.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/greatoldonepatron-awakenedmind",
+          "2024/feature/greatoldonepatron-psychicspells",
+          "2024/feature/greatoldonepatron-greatoldonespells"
+        ],
+        "6": [
+          "2024/feature/greatoldonepatron-clairvoyantcombatant"
+        ],
+        "10": [
+          "2024/feature/greatoldonepatron-eldritchhex"
+        ],
+        "14": [
+          "2024/feature/greatoldonepatron-createthrall"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2024/spell/detect-thoughts"
+        ],
+        "7": [
+          "2024/spell/clairvoyance"
+        ],
+        "9": [
+          "2024/spell/phantasmal-killer"
+        ]
+      }
+    }
   }
 ]

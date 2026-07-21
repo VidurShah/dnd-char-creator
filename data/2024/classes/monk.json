@@ -768,5 +768,290 @@
     "data": {
       "description": "You gain the ability to set up lethal vibrations in someone's body. When you hit a creature with an Unarmed Strike, you can expend 4 Focus Points to start these imperceptible vibrations, which last\nfor a number of days equal to your Monk level. The vibrations are harmless unless you take an action to end them. Alternatively, when you take the Attack action on your turn, you can forgo one of the attacks to end the vibrations. To end them, you and the target must be on the same plane of existence. When you end them, the target must make a Constitution saving throw, taking 10d12 Force damage on a failed save or half as much damage on a successful one.\n  You can have only one creature under the effect of this feature at a time. You can end the vibrations harmlessly (no action required)."
     }
+  },
+  {
+    "id": "2024/feature/warriorofmercy-implementsofmercy",
+    "edition": "2024",
+    "name": "Implements of Mercy",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency in the Insight and Medicine skills and with a Herbalism Kit."
+    }
+  },
+  {
+    "id": "2024/feature/warriorofmercy-handofharm",
+    "edition": "2024",
+    "name": "Hand of Harm",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Once per turn when you hit a creature with an Unarmed Strike, you can spend 1 Focus Point to deal extra Necrotic damage."
+    }
+  },
+  {
+    "id": "2024/feature/warriorofmercy-handofhealing",
+    "edition": "2024",
+    "name": "Hand of Healing",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a Magic action, you can spend 1 Focus Point to restore hit points to a creature within 5 feet."
+    }
+  },
+  {
+    "id": "2024/feature/warriorofmercy-physicianstouch",
+    "edition": "2024",
+    "name": "Physician's Touch",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Hand of Healing can also end one condition affecting the target, and Hand of Harm can inflict the Poisoned condition."
+    }
+  },
+  {
+    "id": "2024/feature/warriorofmercy-flurryofhealingandharm",
+    "edition": "2024",
+    "name": "Flurry of Healing and Harm",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can replace Flurry of Blows strikes with uses of Hand of Healing, and use Hand of Harm without spending a Focus Point a limited number of times."
+    }
+  },
+  {
+    "id": "2024/feature/warriorofmercy-handofultimatemercy",
+    "edition": "2024",
+    "name": "Hand of Ultimate Mercy",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a Magic action, you can touch a creature that died within the past 24 hours and spend 5 Focus Points to return it to life with hit points restored."
+    }
+  },
+  {
+    "id": "2024/feature/warriorofshadow-shadowarts",
+    "edition": "2024",
+    "name": "Shadow Arts",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can spend Focus Points to cast Darkness without material components, see through your own Darkness, and you know the Minor Illusion cantrip."
+    }
+  },
+  {
+    "id": "2024/feature/warriorofshadow-shadowstep",
+    "edition": "2024",
+    "name": "Shadow Step",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "While in Dim Light or Darkness, you can teleport up to 60 feet as a Bonus Action to another space in Dim Light or Darkness, gaining Advantage on your next melee attack."
+    }
+  },
+  {
+    "id": "2024/feature/warriorofshadow-improvedshadowstep",
+    "edition": "2024",
+    "name": "Improved Shadow Step",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can use Shadow Step regardless of the light around you, and you can make an Unarmed Strike immediately after teleporting."
+    }
+  },
+  {
+    "id": "2024/feature/warriorofshadow-cloakofshadows",
+    "edition": "2024",
+    "name": "Cloak of Shadows",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "While entirely within Dim Light or Darkness, you can become Invisible as a Magic action for one minute."
+    }
+  },
+  {
+    "id": "2024/feature/warrioroftheelements-elementalattunement",
+    "edition": "2024",
+    "name": "Elemental Attunement",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can spend a Focus Point to become infused with elemental energy for 10 minutes, increasing your reach and letting you push or pull creatures you hit."
+    }
+  },
+  {
+    "id": "2024/feature/warrioroftheelements-manipulateelements",
+    "edition": "2024",
+    "name": "Manipulate Elements",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You know the Elementalism cantrip, and you can alter the damage type of your Elemental Strike."
+    }
+  },
+  {
+    "id": "2024/feature/warrioroftheelements-elementalburst",
+    "edition": "2024",
+    "name": "Elemental Burst",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can spend Focus Points to unleash a 20-foot sphere of elemental energy at a point you can see, dealing damage of your chosen element."
+    }
+  },
+  {
+    "id": "2024/feature/warrioroftheelements-perfectelements",
+    "edition": "2024",
+    "name": "Perfect Elements",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "While Elemental Attunement is active, you can spend a Focus Point when you take damage to gain Resistance to that damage type."
+    }
+  },
+  {
+    "id": "2024/subclass/warriorofmercy",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Warrior of Mercy",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/monk",
+      "description": "These monks manipulate the life force of others to heal wounds or inflict them, walking the line between healer and reaper.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/warriorofmercy-implementsofmercy",
+          "2024/feature/warriorofmercy-handofharm",
+          "2024/feature/warriorofmercy-handofhealing"
+        ],
+        "6": [
+          "2024/feature/warriorofmercy-physicianstouch"
+        ],
+        "11": [
+          "2024/feature/warriorofmercy-flurryofhealingandharm"
+        ],
+        "17": [
+          "2024/feature/warriorofmercy-handofultimatemercy"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/warriorofshadow",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Warrior of Shadow",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/monk",
+      "description": "Shadow monks draw on the Shadowfell, sliding between darkness and silence to strike unseen.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/warriorofshadow-shadowarts"
+        ],
+        "6": [
+          "2024/feature/warriorofshadow-shadowstep"
+        ],
+        "11": [
+          "2024/feature/warriorofshadow-improvedshadowstep"
+        ],
+        "17": [
+          "2024/feature/warriorofshadow-cloakofshadows"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/warrioroftheelements",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Warrior of the Elements",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/monk",
+      "description": "These monks channel elemental forces through their strikes, reshaping air, earth, fire, and water around them.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/warrioroftheelements-elementalattunement"
+        ],
+        "6": [
+          "2024/feature/warrioroftheelements-manipulateelements"
+        ],
+        "11": [
+          "2024/feature/warrioroftheelements-elementalburst"
+        ],
+        "17": [
+          "2024/feature/warrioroftheelements-perfectelements"
+        ]
+      }
+    }
   }
 ]

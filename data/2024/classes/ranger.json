@@ -805,5 +805,354 @@
     "data": {
       "description": "When you take damage, you can take a Reaction to give yourself Resistance to that damage and any other damage of the same type until the end of the current turn."
     }
+  },
+  {
+    "id": "2024/feature/beastmaster-primalcompanion",
+    "edition": "2024",
+    "name": "Primal Companion",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You magically summon a Primal Beast — Land, Sea, or Sky — that acts as your ally. It takes its turn during yours and obeys your commands, and you can revive it by expending a spell slot."
+    }
+  },
+  {
+    "id": "2024/feature/beastmaster-exceptionaltraining",
+    "edition": "2024",
+    "name": "Exceptional Training",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can command your beast to take the Dash, Disengage, Dodge, or Help action as a Bonus Action, and its attacks count as magical."
+    }
+  },
+  {
+    "id": "2024/feature/beastmaster-bestialfury",
+    "edition": "2024",
+    "name": "Bestial Fury",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your Primal Companion can make two attacks when you command it to Attack, and it deals extra Force damage once per turn."
+    }
+  },
+  {
+    "id": "2024/feature/beastmaster-sharespells",
+    "edition": "2024",
+    "name": "Share Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you cast a spell targeting yourself, it can also affect your Primal Companion if it is within 30 feet."
+    }
+  },
+  {
+    "id": "2024/feature/feywanderer-dreadfulstrikes",
+    "edition": "2024",
+    "name": "Dreadful Strikes",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Once per turn when you hit a creature with a weapon, you can deal extra Psychic damage."
+    }
+  },
+  {
+    "id": "2024/feature/feywanderer-feywandererspells",
+    "edition": "2024",
+    "name": "Fey Wanderer Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have certain spells prepared, including Charm Person, Misty Step, and Dimension Door."
+    }
+  },
+  {
+    "id": "2024/feature/feywanderer-otherworldlyglamour",
+    "edition": "2024",
+    "name": "Otherworldly Glamour",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You add your Wisdom modifier to Charisma checks, and gain proficiency in one Charisma skill."
+    }
+  },
+  {
+    "id": "2024/feature/feywanderer-beguilingtwist",
+    "edition": "2024",
+    "name": "Beguiling Twist",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Advantage on saves against being Charmed or Frightened, and can redirect such an effect to another creature with your Reaction."
+    }
+  },
+  {
+    "id": "2024/feature/feywanderer-feyreinforcements",
+    "edition": "2024",
+    "name": "Fey Reinforcements",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have Summon Fey prepared and can cast it once without a spell slot per Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/feywanderer-mistywanderer",
+    "edition": "2024",
+    "name": "Misty Wanderer",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can cast Misty Step without expending a spell slot a number of times equal to your Wisdom modifier, and can bring a willing creature with you."
+    }
+  },
+  {
+    "id": "2024/feature/gloomstalker-dreadambusher",
+    "edition": "2024",
+    "name": "Dread Ambusher",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain a bonus to Initiative, extra Speed on your first turn, and an extra attack that deals additional Psychic damage in the first round of combat."
+    }
+  },
+  {
+    "id": "2024/feature/gloomstalker-umbralsight",
+    "edition": "2024",
+    "name": "Umbral Sight",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain Darkvision, and while in Darkness you are Invisible to any creature relying on Darkvision to see you."
+    }
+  },
+  {
+    "id": "2024/feature/gloomstalker-gloomstalkerspells",
+    "edition": "2024",
+    "name": "Gloom Stalker Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have certain spells prepared, including Disguise Self, Rope Trick, and Fear."
+    }
+  },
+  {
+    "id": "2024/feature/gloomstalker-ironmind",
+    "edition": "2024",
+    "name": "Iron Mind",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency in Wisdom saving throws, or in Intelligence or Charisma saves if you already have it."
+    }
+  },
+  {
+    "id": "2024/feature/gloomstalker-stalkersflurry",
+    "edition": "2024",
+    "name": "Stalker's Flurry",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Once per turn when you miss with an attack, you can make another attack, or force a target you hit to make a save against being Frightened."
+    }
+  },
+  {
+    "id": "2024/feature/gloomstalker-shadowydodge",
+    "edition": "2024",
+    "name": "Shadowy Dodge",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature attacks you, you can use your Reaction to impose Disadvantage on the roll and teleport a short distance."
+    }
+  },
+  {
+    "id": "2024/subclass/beastmaster",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Beast Master",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/ranger",
+      "description": "A Beast Master forms an unbreakable bond with a primal companion that fights at their side.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/beastmaster-primalcompanion"
+        ],
+        "7": [
+          "2024/feature/beastmaster-exceptionaltraining"
+        ],
+        "11": [
+          "2024/feature/beastmaster-bestialfury"
+        ],
+        "15": [
+          "2024/feature/beastmaster-sharespells"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/feywanderer",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Fey Wanderer",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/ranger",
+      "description": "Touched by the Feywild, these rangers carry a mirthful — and sometimes unnerving — otherworldly charm.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/feywanderer-dreadfulstrikes",
+          "2024/feature/feywanderer-feywandererspells",
+          "2024/feature/feywanderer-otherworldlyglamour"
+        ],
+        "7": [
+          "2024/feature/feywanderer-beguilingtwist"
+        ],
+        "11": [
+          "2024/feature/feywanderer-feyreinforcements"
+        ],
+        "15": [
+          "2024/feature/feywanderer-mistywanderer"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2024/spell/charm-person"
+        ],
+        "5": [
+          "2024/spell/misty-step"
+        ],
+        "9": [
+          "2024/spell/dispel-magic"
+        ],
+        "13": [
+          "2024/spell/dimension-door"
+        ],
+        "17": [
+          "2024/spell/mislead"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/gloomstalker",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Gloom Stalker",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/ranger",
+      "description": "Gloom Stalkers hunt in the lightless places at the edge of the world, striking from darkness before their quarry knows they are there.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/gloomstalker-dreadambusher",
+          "2024/feature/gloomstalker-umbralsight",
+          "2024/feature/gloomstalker-gloomstalkerspells"
+        ],
+        "7": [
+          "2024/feature/gloomstalker-ironmind"
+        ],
+        "11": [
+          "2024/feature/gloomstalker-stalkersflurry"
+        ],
+        "15": [
+          "2024/feature/gloomstalker-shadowydodge"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2024/spell/disguise-self"
+        ],
+        "5": [
+          "2024/spell/rope-trick"
+        ],
+        "9": [
+          "2024/spell/fear"
+        ],
+        "13": [
+          "2024/spell/greater-invisibility"
+        ],
+        "17": [
+          "2024/spell/seeming"
+        ]
+      }
+    }
   }
 ]
