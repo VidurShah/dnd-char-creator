@@ -347,5 +347,740 @@
       "prerequisite": "None",
       "description": "Enhanced Unarmed Strike. When you hit with your Unarmed Strike and deal damage, you can deal Bludgeoning damage equal to 1d4 plus your Strength modifier instead of the normal damage of an Unarmed Strike.\nDamage Rerolls. Whenever you roll a damage die for your Unarmed Strike, you can reroll the die if it rolls a 1, and you must use the new roll.\nImprovised Weaponry. You have proficiency with improvised weapons.\nPush. When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can deal damage to the target and also push it 5 feet away from you. You can use this benefit only once per turn."
     }
+  },
+  {
+    "id": "2024/feat/blind-fighting",
+    "edition": "2024",
+    "name": "Blind Fighting",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Fighting Style feature",
+      "description": "You have Blindsight with a range of 10 feet. Within that range, you can see anything that isn't behind Total Cover even if you have the Blinded condition or are in Darkness. Moreover, in Darkness you can see any creature that has the Invisible condition within that range."
+    }
+  },
+  {
+    "id": "2024/feat/dueling",
+    "edition": "2024",
+    "name": "Dueling",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Fighting Style feature",
+      "description": "When you are wielding a Melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
+    }
+  },
+  {
+    "id": "2024/feat/interception",
+    "edition": "2024",
+    "name": "Interception",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Fighting Style feature",
+      "description": "When a creature you can see hits another creature within 5 feet of you with an attack roll, you can take a Reaction to reduce the damage by 1d10 plus your Proficiency Bonus. You must be wielding a Shield or a Simple or Martial weapon to use this."
+    }
+  },
+  {
+    "id": "2024/feat/protection",
+    "edition": "2024",
+    "name": "Protection",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Fighting Style feature",
+      "description": "When a creature you can see attacks a target other than you that is within 5 feet of you, you can take a Reaction to impose Disadvantage on the attack roll. You must be wielding a Shield."
+    }
+  },
+  {
+    "id": "2024/feat/thrown-weapon-fighting",
+    "edition": "2024",
+    "name": "Thrown Weapon Fighting",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Fighting Style feature",
+      "description": "When you hit with a ranged attack roll using a weapon that has the Thrown property, you gain a +2 bonus to the damage roll."
+    }
+  },
+  {
+    "id": "2024/feat/unarmed-fighting",
+    "edition": "2024",
+    "name": "Unarmed Fighting",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Fighting Style feature",
+      "description": "Your Unarmed Strikes can deal Bludgeoning damage equal to 1d6 plus your Strength modifier on a hit. If you strike with both hands free, the d6 becomes a d8. At the start of each of your turns, you can deal 1d4 Bludgeoning damage to one creature Grappled by you."
+    }
+  },
+  {
+    "id": "2024/feat/magic-initiate-cleric",
+    "edition": "2024",
+    "name": "Magic Initiate (Cleric)",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Origin feat",
+      "description": "You learn two cantrips of your choice from the Cleric spell list, and one level 1 spell from that list. You can cast that spell once without a spell slot, and regain the ability after a Long Rest. Wisdom is your spellcasting ability for these spells."
+    }
+  },
+  {
+    "id": "2024/feat/magic-initiate-druid",
+    "edition": "2024",
+    "name": "Magic Initiate (Druid)",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Origin feat",
+      "description": "You learn two cantrips of your choice from the Druid spell list, and one level 1 spell from that list. You can cast that spell once without a spell slot, and regain the ability after a Long Rest. Wisdom is your spellcasting ability for these spells."
+    }
+  },
+  {
+    "id": "2024/feat/magic-initiate-wizard",
+    "edition": "2024",
+    "name": "Magic Initiate (Wizard)",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Origin feat",
+      "description": "You learn two cantrips of your choice from the Wizard spell list, and one level 1 spell from that list. You can cast that spell once without a spell slot, and regain the ability after a Long Rest. Intelligence is your spellcasting ability for these spells."
+    }
+  },
+  {
+    "id": "2024/feat/actor",
+    "edition": "2024",
+    "name": "Actor",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Charisma by 1, to a maximum of 20. You have Advantage on Deception and Performance checks when trying to pass yourself off as a different person, and you can mimic the speech of a person or the sounds of a creature you have heard for at least 1 minute."
+    }
+  },
+  {
+    "id": "2024/feat/athlete",
+    "edition": "2024",
+    "name": "Athlete",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Dexterity by 1, to a maximum of 20. When you have the Prone condition, standing up uses only 5 feet of movement; climbing doesn't halve your Speed; and you can make a running Long or High Jump after moving only 5 feet."
+    }
+  },
+  {
+    "id": "2024/feat/charger",
+    "edition": "2024",
+    "name": "Charger",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Dexterity by 1, to a maximum of 20. When you take the Dash action, you can make one melee attack or shove as a Bonus Action if you moved at least 10 feet in a straight line, adding extra damage or pushing the target further."
+    }
+  },
+  {
+    "id": "2024/feat/chef",
+    "edition": "2024",
+    "name": "Chef",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Constitution or Wisdom by 1, to a maximum of 20. You gain proficiency with Cook's Utensils. During a Short Rest you can cook food that restores extra Hit Points, and during a Long Rest you can bake treats that grant Temporary Hit Points."
+    }
+  },
+  {
+    "id": "2024/feat/crossbow-expert",
+    "edition": "2024",
+    "name": "Crossbow Expert",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Dexterity by 1, to a maximum of 20. You ignore the Loading property of Crossbows, and being within 5 feet of an enemy doesn't impose Disadvantage on your attack rolls with them. You can also make an attack with a Hand Crossbow as a Bonus Action after the Attack action."
+    }
+  },
+  {
+    "id": "2024/feat/crusher",
+    "edition": "2024",
+    "name": "Crusher",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Constitution by 1, to a maximum of 20. Once per turn when you deal Bludgeoning damage, you can move the target 5 feet. When you score a Critical Hit with Bludgeoning damage, attack rolls against that creature have Advantage until the start of your next turn."
+    }
+  },
+  {
+    "id": "2024/feat/defensive-duelist",
+    "edition": "2024",
+    "name": "Defensive Duelist",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Dexterity by 1, to a maximum of 20. When you are holding a Finesse weapon and another creature hits you with a melee attack, you can take a Reaction to add your Proficiency Bonus to your Armor Class against that attack."
+    }
+  },
+  {
+    "id": "2024/feat/dual-wielder",
+    "edition": "2024",
+    "name": "Dual Wielder",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Dexterity by 1, to a maximum of 20. You can use two-weapon fighting even when the weapons aren't Light, you can draw or stow two weapons at once, and you gain the Nick mastery property with one weapon you are proficient with."
+    }
+  },
+  {
+    "id": "2024/feat/durable",
+    "edition": "2024",
+    "name": "Durable",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Constitution by 1, to a maximum of 20. When you roll a Hit Die to regain Hit Points, the minimum you regain equals twice your Constitution modifier. You also regain all spent Hit Dice on a Long Rest at certain levels."
+    }
+  },
+  {
+    "id": "2024/feat/elemental-adept",
+    "edition": "2024",
+    "name": "Elemental Adept",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20. Choose a damage type: Acid, Cold, Fire, Lightning, or Thunder. Your spells ignore Resistance to that type, and you treat any 1 rolled on a damage die of that type as a 2."
+    }
+  },
+  {
+    "id": "2024/feat/fey-touched",
+    "edition": "2024",
+    "name": "Fey-Touched",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20. You learn Misty Step and one level 1 Divination or Enchantment spell, and can cast each once per Long Rest without a spell slot."
+    }
+  },
+  {
+    "id": "2024/feat/great-weapon-master",
+    "edition": "2024",
+    "name": "Great Weapon Master",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength by 1, to a maximum of 20. When you score a Critical Hit or reduce a creature to 0 Hit Points with a Heavy melee weapon, you can make one attack as a Bonus Action. You can also take a penalty to the attack roll for bonus damage equal to your Proficiency Bonus."
+    }
+  },
+  {
+    "id": "2024/feat/heavily-armored",
+    "edition": "2024",
+    "name": "Heavily Armored",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Constitution by 1, to a maximum of 20, and you gain training with Heavy armor. Requires training with Medium armor."
+    }
+  },
+  {
+    "id": "2024/feat/heavy-armor-master",
+    "edition": "2024",
+    "name": "Heavy Armor Master",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Constitution by 1, to a maximum of 20. While wearing Heavy armor, Bludgeoning, Piercing, and Slashing damage you take from attacks is reduced by an amount equal to your Proficiency Bonus."
+    }
+  },
+  {
+    "id": "2024/feat/inspiring-leader",
+    "edition": "2024",
+    "name": "Inspiring Leader",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Wisdom or Charisma by 1, to a maximum of 20. As a Magic action you can inspire creatures within 30 feet, granting each Temporary Hit Points equal to your character level plus that ability modifier."
+    }
+  },
+  {
+    "id": "2024/feat/keen-mind",
+    "edition": "2024",
+    "name": "Keen Mind",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Intelligence by 1, to a maximum of 20. You always know which way is north and the number of hours until the next sunrise or sunset, and you can accurately recall anything you have seen or heard within the past month."
+    }
+  },
+  {
+    "id": "2024/feat/lightly-armored",
+    "edition": "2024",
+    "name": "Lightly Armored",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Dexterity by 1, to a maximum of 20, and you gain training with Light armor."
+    }
+  },
+  {
+    "id": "2024/feat/mage-slayer",
+    "edition": "2024",
+    "name": "Mage Slayer",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Dexterity by 1, to a maximum of 20. You can take a Reaction to attack a spellcaster within 5 feet that casts a spell, and you have Advantage on saving throws against spells cast by creatures within 5 feet of you."
+    }
+  },
+  {
+    "id": "2024/feat/martial-weapon-training",
+    "edition": "2024",
+    "name": "Martial Weapon Training",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Dexterity by 1, to a maximum of 20, and you gain training with Martial weapons."
+    }
+  },
+  {
+    "id": "2024/feat/medium-armor-master",
+    "edition": "2024",
+    "name": "Medium Armor Master",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Dexterity by 1, to a maximum of 20. Wearing Medium armor doesn't impose Disadvantage on your Stealth checks, and you can add 3 rather than 2 to your AC if you have a Dexterity of 16 or higher."
+    }
+  },
+  {
+    "id": "2024/feat/moderately-armored",
+    "edition": "2024",
+    "name": "Moderately Armored",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Dexterity by 1, to a maximum of 20, and you gain training with Medium armor and Shields. Requires training with Light armor."
+    }
+  },
+  {
+    "id": "2024/feat/mounted-combatant",
+    "edition": "2024",
+    "name": "Mounted Combatant",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength, Dexterity, or Wisdom by 1, to a maximum of 20. While mounted you have Advantage on melee attacks against unmounted creatures smaller than your mount, can redirect attacks aimed at your mount to yourself, and your mount takes no damage on successful Dexterity saves."
+    }
+  },
+  {
+    "id": "2024/feat/observant",
+    "edition": "2024",
+    "name": "Observant",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Intelligence or Wisdom by 1, to a maximum of 20. You gain proficiency in Insight, Investigation, or Perception, and you can take the Search action as a Bonus Action."
+    }
+  },
+  {
+    "id": "2024/feat/piercer",
+    "edition": "2024",
+    "name": "Piercer",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Dexterity by 1, to a maximum of 20. Once per turn when you hit with an attack dealing Piercing damage, you can reroll one damage die. On a Critical Hit you can roll an additional damage die."
+    }
+  },
+  {
+    "id": "2024/feat/poisoner",
+    "edition": "2024",
+    "name": "Poisoner",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Dexterity or Intelligence by 1, to a maximum of 20. You gain proficiency with the Poisoner's Kit, ignore Resistance to Poison damage, and can coat a weapon with potent poison as a Bonus Action."
+    }
+  },
+  {
+    "id": "2024/feat/polearm-master",
+    "edition": "2024",
+    "name": "Polearm Master",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Dexterity by 1, to a maximum of 20. You can make a Bonus Action attack with the butt end of a Glaive, Halberd, Quarterstaff, or Spear, and creatures provoke an Opportunity Attack when they enter your reach while you wield one."
+    }
+  },
+  {
+    "id": "2024/feat/resilient",
+    "edition": "2024",
+    "name": "Resilient",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase one ability score of your choice by 1, to a maximum of 20, and you gain proficiency in saving throws using that ability."
+    }
+  },
+  {
+    "id": "2024/feat/ritual-caster",
+    "edition": "2024",
+    "name": "Ritual Caster",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20. You learn two level 1 spells with the Ritual tag, and can add further Ritual spells you find to your repertoire."
+    }
+  },
+  {
+    "id": "2024/feat/sentinel",
+    "edition": "2024",
+    "name": "Sentinel",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Dexterity by 1, to a maximum of 20. Creatures you hit with an Opportunity Attack have their Speed reduced to 0 for the rest of the turn, and you can take a Reaction to attack a creature that attacks someone other than you."
+    }
+  },
+  {
+    "id": "2024/feat/shadow-touched",
+    "edition": "2024",
+    "name": "Shadow-Touched",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20. You learn Invisibility and one level 1 Illusion or Necromancy spell, and can cast each once per Long Rest without a spell slot."
+    }
+  },
+  {
+    "id": "2024/feat/sharpshooter",
+    "edition": "2024",
+    "name": "Sharpshooter",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Dexterity by 1, to a maximum of 20. Attacking at long range doesn't impose Disadvantage, your ranged attacks ignore Half and Three-Quarters Cover, and you can take a penalty to the attack roll for bonus damage equal to your Proficiency Bonus."
+    }
+  },
+  {
+    "id": "2024/feat/shield-master",
+    "edition": "2024",
+    "name": "Shield Master",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength by 1, to a maximum of 20. You can shove with your Shield as a Bonus Action after the Attack action, add your Shield's AC bonus to Dexterity saves against effects targeting only you, and take no damage on a success."
+    }
+  },
+  {
+    "id": "2024/feat/skill-expert",
+    "edition": "2024",
+    "name": "Skill Expert",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase one ability score of your choice by 1, to a maximum of 20. You gain proficiency in one skill, and Expertise in one skill you are already proficient with."
+    }
+  },
+  {
+    "id": "2024/feat/skulker",
+    "edition": "2024",
+    "name": "Skulker",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Dexterity by 1, to a maximum of 20. You have Advantage on Initiative if you are Hidden, missing with a ranged attack while Hidden doesn't reveal your position, and Dim Light doesn't impose Disadvantage on your Perception checks."
+    }
+  },
+  {
+    "id": "2024/feat/slasher",
+    "edition": "2024",
+    "name": "Slasher",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Strength or Dexterity by 1, to a maximum of 20. Once per turn when you deal Slashing damage you can reduce the target's Speed by 10 feet, and on a Critical Hit the target has Disadvantage on attack rolls until the start of your next turn."
+    }
+  },
+  {
+    "id": "2024/feat/speedy",
+    "edition": "2024",
+    "name": "Speedy",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Dexterity or Constitution by 1, to a maximum of 20. When you take the Dash action, Difficult Terrain doesn't cost you extra movement, and your Speed increases by 10 feet."
+    }
+  },
+  {
+    "id": "2024/feat/spell-sniper",
+    "edition": "2024",
+    "name": "Spell Sniper",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20. The range of your attack-roll spells is doubled, and they ignore Half and Three-Quarters Cover. You also learn one cantrip that requires an attack roll."
+    }
+  },
+  {
+    "id": "2024/feat/telekinetic",
+    "edition": "2024",
+    "name": "Telekinetic",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20. You learn Mage Hand and can cast it without components, and as a Bonus Action you can telekinetically shove a creature 5 feet."
+    }
+  },
+  {
+    "id": "2024/feat/telepathic",
+    "edition": "2024",
+    "name": "Telepathic",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20. You can speak telepathically to any creature within 60 feet, and you can cast Detect Thoughts once per Long Rest without a spell slot."
+    }
+  },
+  {
+    "id": "2024/feat/war-caster",
+    "edition": "2024",
+    "name": "War Caster",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feat",
+    "data": {
+      "prerequisite": "Level 4+",
+      "description": "Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20. You have Advantage on Constitution saves to maintain Concentration, can perform somatic components with occupied hands, and can cast a spell as an Opportunity Attack."
+    }
   }
 ]
