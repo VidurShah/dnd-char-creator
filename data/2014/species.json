@@ -854,5 +854,454 @@
       "traits": []
     },
     "effects": []
+  },
+  {
+    "id": "2014/feature/trait-dwarven-armor-training",
+    "edition": "2014",
+    "name": "Dwarven Armor Training",
+    "source": {
+      "book": "PHB2014",
+      "page": 20
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have proficiency with light and medium armor."
+    }
+  },
+  {
+    "id": "2014/feature/trait-fleet-of-foot",
+    "edition": "2014",
+    "name": "Fleet of Foot",
+    "source": {
+      "book": "PHB2014",
+      "page": 24
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your base walking speed increases to 35 feet."
+    }
+  },
+  {
+    "id": "2014/feature/trait-mask-of-the-wild",
+    "edition": "2014",
+    "name": "Mask of the Wild",
+    "source": {
+      "book": "PHB2014",
+      "page": 24
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+    }
+  },
+  {
+    "id": "2014/feature/trait-superior-darkvision",
+    "edition": "2014",
+    "name": "Superior Darkvision",
+    "source": {
+      "book": "PHB2014",
+      "page": 24
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your darkvision has a radius of 120 feet."
+    }
+  },
+  {
+    "id": "2014/feature/trait-sunlight-sensitivity",
+    "edition": "2014",
+    "name": "Sunlight Sensitivity",
+    "source": {
+      "book": "PHB2014",
+      "page": 24
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
+    }
+  },
+  {
+    "id": "2014/feature/trait-drow-magic",
+    "edition": "2014",
+    "name": "Drow Magic",
+    "source": {
+      "book": "PHB2014",
+      "page": 24
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once per day. When you reach 5th level, you can also cast the darkness spell once per day. Charisma is your spellcasting ability for these spells."
+    }
+  },
+  {
+    "id": "2014/feature/trait-drow-weapon-training",
+    "edition": "2014",
+    "name": "Drow Weapon Training",
+    "source": {
+      "book": "PHB2014",
+      "page": 24
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have proficiency with rapiers, shortswords, and hand crossbows."
+    }
+  },
+  {
+    "id": "2014/feature/trait-stout-resilience",
+    "edition": "2014",
+    "name": "Stout Resilience",
+    "source": {
+      "book": "PHB2014",
+      "page": 28
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have advantage on saving throws against poison, and you have resistance against poison damage."
+    }
+  },
+  {
+    "id": "2014/feature/trait-natural-illusionist",
+    "edition": "2014",
+    "name": "Natural Illusionist",
+    "source": {
+      "book": "PHB2014",
+      "page": 37
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You know the minor illusion cantrip. Intelligence is your spellcasting ability for it."
+    }
+  },
+  {
+    "id": "2014/feature/trait-speak-with-small-beasts",
+    "edition": "2014",
+    "name": "Speak with Small Beasts",
+    "source": {
+      "book": "PHB2014",
+      "page": 37
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts."
+    }
+  },
+  {
+    "id": "2014/feature/trait-variant-human-skill",
+    "edition": "2014",
+    "name": "Skills (Variant Human)",
+    "source": {
+      "book": "PHB2014",
+      "page": 31
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency in one skill of your choice."
+    }
+  },
+  {
+    "id": "2014/feature/trait-variant-human-feat",
+    "edition": "2014",
+    "name": "Feat (Variant Human)",
+    "source": {
+      "book": "PHB2014",
+      "page": 31
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain one feat of your choice. Choose it in the Feats step of the builder."
+    }
+  },
+  {
+    "id": "2014/species/mountain-dwarf",
+    "edition": "2014",
+    "name": "Mountain Dwarf",
+    "source": {
+      "book": "PHB2014",
+      "page": 20
+    },
+    "origin": "seed",
+    "effects": [
+      {
+        "op": "abilityBonus",
+        "ability": "con",
+        "amount": "2"
+      },
+      {
+        "op": "abilityBonus",
+        "ability": "str",
+        "amount": "2"
+      }
+    ],
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "description": "As a mountain dwarf, you're strong and hardy, accustomed to a difficult life in rugged terrain. You're probably on the tall side (for a dwarf), and tend toward lighter coloration. The mountain dwarves of Faerûn are the shield dwarves of the North.",
+      "size": "medium",
+      "speed": 25,
+      "traits": [
+        "2014/feature/trait-darkvision",
+        "2014/feature/trait-dwarven-resilience",
+        "2014/feature/trait-stonecunning",
+        "2014/feature/trait-dwarven-combat-training",
+        "2014/feature/trait-tool-proficiency",
+        "2014/feature/trait-dwarven-armor-training"
+      ],
+      "parentSpeciesRef": "2014/species/dwarf"
+    }
+  },
+  {
+    "id": "2014/species/wood-elf",
+    "edition": "2014",
+    "name": "Wood Elf",
+    "source": {
+      "book": "PHB2014",
+      "page": 24
+    },
+    "origin": "seed",
+    "effects": [
+      {
+        "op": "abilityBonus",
+        "ability": "dex",
+        "amount": "2"
+      },
+      {
+        "op": "abilityBonus",
+        "ability": "wis",
+        "amount": "1"
+      }
+    ],
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "description": "As a wood elf, you have keen senses and intuition, and your fleet feet carry you quickly and stealthily through your native forests. Wood elves are reclusive and distrusting of non-elves, and tend toward copper, brown, and black hair with green, brown, or hazel eyes.",
+      "size": "medium",
+      "speed": 35,
+      "traits": [
+        "2014/feature/trait-darkvision",
+        "2014/feature/trait-fey-ancestry",
+        "2014/feature/trait-trance",
+        "2014/feature/trait-keen-senses",
+        "2014/feature/trait-elf-weapon-training",
+        "2014/feature/trait-fleet-of-foot",
+        "2014/feature/trait-mask-of-the-wild"
+      ],
+      "parentSpeciesRef": "2014/species/elf"
+    }
+  },
+  {
+    "id": "2014/species/dark-elf",
+    "edition": "2014",
+    "name": "Dark Elf (Drow)",
+    "source": {
+      "book": "PHB2014",
+      "page": 24
+    },
+    "origin": "seed",
+    "effects": [
+      {
+        "op": "abilityBonus",
+        "ability": "dex",
+        "amount": "2"
+      },
+      {
+        "op": "abilityBonus",
+        "ability": "cha",
+        "amount": "1"
+      },
+      {
+        "op": "sense",
+        "sense": "darkvision",
+        "range": 120
+      }
+    ],
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "description": "Descended from an earlier subrace of dark-skinned elves, the drow were banished from the surface world for following the goddess Lolth down the path to evil and corruption. Now they have built their own civilization in the depths of the Underdark, patterned after the Way of Lolth.\n\nDrow have black skin that resembles polished obsidian and stark white or pale yellow hair. They commonly have very pale eyes in shades of lilac, silver, pink, red, and blue.",
+      "size": "medium",
+      "speed": 30,
+      "traits": [
+        "2014/feature/trait-darkvision",
+        "2014/feature/trait-fey-ancestry",
+        "2014/feature/trait-trance",
+        "2014/feature/trait-keen-senses",
+        "2014/feature/trait-superior-darkvision",
+        "2014/feature/trait-sunlight-sensitivity",
+        "2014/feature/trait-drow-magic",
+        "2014/feature/trait-drow-weapon-training"
+      ],
+      "parentSpeciesRef": "2014/species/elf"
+    }
+  },
+  {
+    "id": "2014/species/stout-halfling",
+    "edition": "2014",
+    "name": "Stout Halfling",
+    "source": {
+      "book": "PHB2014",
+      "page": 28
+    },
+    "origin": "seed",
+    "effects": [
+      {
+        "op": "abilityBonus",
+        "ability": "dex",
+        "amount": "2"
+      },
+      {
+        "op": "abilityBonus",
+        "ability": "con",
+        "amount": "1"
+      }
+    ],
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "description": "As a stout halfling, you're hardier than average and have some resistance to poison. Some say that stouts have dwarven blood. In the Forgotten Realms, these halflings are called stronghearts, and they're most common in the south.",
+      "size": "small",
+      "speed": 25,
+      "traits": [
+        "2014/feature/trait-brave",
+        "2014/feature/trait-halfling-nimbleness",
+        "2014/feature/trait-lucky",
+        "2014/feature/trait-stout-resilience"
+      ],
+      "parentSpeciesRef": "2014/species/halfling"
+    }
+  },
+  {
+    "id": "2014/species/forest-gnome",
+    "edition": "2014",
+    "name": "Forest Gnome",
+    "source": {
+      "book": "PHB2014",
+      "page": 37
+    },
+    "origin": "seed",
+    "effects": [
+      {
+        "op": "abilityBonus",
+        "ability": "int",
+        "amount": "2"
+      },
+      {
+        "op": "abilityBonus",
+        "ability": "dex",
+        "amount": "1"
+      }
+    ],
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "description": "As a forest gnome, you have a natural knack for illusion and inherent quickness and stealth. In the worlds of D&D, forest gnomes are rare and secretive. They gather in hidden communities in sylvan forests, using illusions and trickery to conceal themselves from threats or to mask their escape should they be detected.",
+      "size": "small",
+      "speed": 25,
+      "traits": [
+        "2014/feature/trait-darkvision",
+        "2014/feature/trait-gnome-cunning",
+        "2014/feature/trait-natural-illusionist",
+        "2014/feature/trait-speak-with-small-beasts"
+      ],
+      "parentSpeciesRef": "2014/species/gnome"
+    }
+  },
+  {
+    "id": "2014/species/variant-human",
+    "edition": "2014",
+    "name": "Human (Variant)",
+    "source": {
+      "book": "PHB2014",
+      "page": 31
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "species",
+    "data": {
+      "description": "If your campaign uses the optional feat rules, your DM might allow these variant traits, all of which replace the standard human's +1 to every ability score.\n\nInstead you increase two different ability scores of your choice by 1, gain proficiency in one skill of your choice, and gain one feat of your choice.",
+      "size": "medium",
+      "speed": 30,
+      "traits": [
+        "2014/feature/trait-variant-human-skill",
+        "2014/feature/trait-variant-human-feat"
+      ],
+      "parentSpeciesRef": "2014/species/human",
+      "decisionPoints": [
+        {
+          "decisionId": "variant-human/ability-1",
+          "prompt": "Variant Human: choose an ability score to increase by 1",
+          "count": 1,
+          "options": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ]
+        },
+        {
+          "decisionId": "variant-human/ability-2",
+          "prompt": "Variant Human: choose a different ability score to increase by 1",
+          "count": 1,
+          "options": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ]
+        },
+        {
+          "decisionId": "variant-human/skill",
+          "prompt": "Variant Human: choose a skill proficiency",
+          "count": 1,
+          "options": [
+            "acrobatics",
+            "animalHandling",
+            "arcana",
+            "athletics",
+            "deception",
+            "history",
+            "insight",
+            "intimidation",
+            "investigation",
+            "medicine",
+            "nature",
+            "perception",
+            "performance",
+            "persuasion",
+            "religion",
+            "sleightOfHand",
+            "stealth",
+            "survival"
+          ]
+        }
+      ]
+    }
   }
 ]

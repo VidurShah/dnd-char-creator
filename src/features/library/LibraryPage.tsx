@@ -168,7 +168,7 @@ export function LibraryPage() {
           </aside>
 
           <div className="max-h-[70vh] overflow-y-auto">
-            <EntryList entries={filtered} selectedId={selectedId} onSelect={setSelectedId} />
+            <EntryList entries={filtered} selectedId={selectedId} onSelect={setSelectedId} byId={byId} />
           </div>
 
           <div>
