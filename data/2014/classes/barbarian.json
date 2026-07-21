@@ -797,5 +797,105 @@
     "data": {
       "description": "The magical energy roiling inside you sometimes erupts from you. When you enter your rage, roll on the Wild Magic table to determine the magical effect produced.\n\nIf the effect requires a saving throw, the DC equals 8 + your proficiency bonus + your Constitution modifier.\n\nWILD MAGIC table (d8):\n1 | Shadowy tendrils lash around you. Each creature of your choice that you can see within 30 feet of you must succeed on a Constitution saving throw or take 1d12 necrotic damage. You also gain 1d12 temporary hit points.\n2 | You teleport up to 30 feet to an unoccupied space you can see. Until your rage ends, you can use this effect again on each of your turns as a bonus action.\n3 | An intangible spirit, which looks like a flumph or a pixie (your choice), appears within 5 feet of one creature of your choice that you can see within 30 feet of you. At the end of the current turn, the spirit explodes, and each creature within 5 feet of it must succeed on a Dexterity saving throw or take 1d6 force damage. Until your rage ends, you can use this effect again, summoning another spirit, on each of your turns as a bonus action.\n4 | Magic infuses one weapon of your choice that you are holding. Until your rage ends, the weapon's damage type changes to force, and it gains the light and thrown properties, with a normal range of 20 feet and a long range of 60 feet. If the weapon leaves your hand, the weapon reappears in your hand at the end of the current turn.\n5 | Whenever a creature hits you with an attack roll before your rage ends, that creature takes 1d6 force damage, as magic lashes out in retribution.\n6 | Until your rage ends, you are surrounded by multicolored, protective lights; you gain a +1 bonus to AC, and while within 10 feet of you, your allies gain the same bonus.\n7 | Flowers and vines temporarily grow around you; until your rage ends, the ground within 15 feet of you is difficult terrain for your enemies.\n8 | A bolt of light shoots from your chest. Another creature of your choice that you can see within 30 feet of you must succeed on a Constitution saving throw or take 1d6 radiant damage and be blinded until the start of your next turn. Until your rage ends, you can use this effect again on each of your turns as a bonus action."
     }
+  },
+  {
+    "id": "2014/feature/pathofthetotemwarrior-spiritseeker",
+    "edition": "2014",
+    "name": "Spirit Seeker",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can cast Beast Sense and Speak with Animals as rituals."
+    }
+  },
+  {
+    "id": "2014/feature/pathofthetotemwarrior-totemspirit",
+    "edition": "2014",
+    "name": "Totem Spirit",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Choose Bear, Eagle, or Wolf. Bear grants resistance to all damage but psychic while raging; Eagle grants a Dash bonus action; Wolf gives allies advantage on melee attacks against creatures near you."
+    }
+  },
+  {
+    "id": "2014/feature/pathofthetotemwarrior-aspectofthebeast",
+    "edition": "2014",
+    "name": "Aspect of the Beast",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain a further benefit from your totem: Bear doubles carrying capacity, Eagle grants keen sight, Wolf lets you track and move stealthily at a fast pace."
+    }
+  },
+  {
+    "id": "2014/feature/pathofthetotemwarrior-spiritwalker",
+    "edition": "2014",
+    "name": "Spirit Walker",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can cast Commune with Nature as a ritual, and receive a vision of a totem spirit when you do."
+    }
+  },
+  {
+    "id": "2014/feature/pathofthetotemwarrior-totemicattunement",
+    "edition": "2014",
+    "name": "Totemic Attunement",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Bear forces creatures near you to attack you or suffer disadvantage; Eagle grants flight while raging; Wolf lets you knock a Large or smaller creature prone when you hit it."
+    }
+  },
+  {
+    "id": "2014/subclass/pathofthetotemwarrior",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Path of the Totem Warrior",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/barbarian",
+      "description": "A totem warrior accepts a spirit animal as guide, protector, and inspiration, taking on its qualities in battle.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/pathofthetotemwarrior-spiritseeker",
+          "2014/feature/pathofthetotemwarrior-totemspirit"
+        ],
+        "6": [
+          "2014/feature/pathofthetotemwarrior-aspectofthebeast"
+        ],
+        "10": [
+          "2014/feature/pathofthetotemwarrior-spiritwalker"
+        ],
+        "14": [
+          "2014/feature/pathofthetotemwarrior-totemicattunement"
+        ]
+      }
+    }
   }
 ]

@@ -1084,5 +1084,105 @@
     "data": {
       "description": "You summon spirits of order to expunge disorder around you. As an action, you summon the spirits in a 30-foot cube originating from you. The spirits look like modrons or other constructs of your choice. The spirits are intangible and invulnerable, and they create the following effects within the cube before vanishing:\n- The spirits restore up to 100 hit points, divided as you choose among any number of creatures of your choice in the cube.\n- Any damaged objects entirely in the cube are repaired instantly.\n- Every spell of 6th level or lower ends on creatures and objects of your choice in the cube.\nOnce you use this action, you can't use it again until you finish a long rest, unless you spend 7 sorcery points to use it again."
     }
+  },
+  {
+    "id": "2014/feature/wildmagic-wildmagicsurge",
+    "edition": "2014",
+    "name": "Wild Magic Surge",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "After casting a sorcerer spell of 1st level or higher, the DM can have you roll on the Wild Magic Surge table for a random effect."
+    }
+  },
+  {
+    "id": "2014/feature/wildmagic-tidesofchaos",
+    "edition": "2014",
+    "name": "Tides of Chaos",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain advantage on one attack roll, ability check, or saving throw, regaining the use after a long rest or a surge."
+    }
+  },
+  {
+    "id": "2014/feature/wildmagic-bendluck",
+    "edition": "2014",
+    "name": "Bend Luck",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You spend 2 sorcery points to roll a d4 and add or subtract it from another creature's attack roll, ability check, or saving throw."
+    }
+  },
+  {
+    "id": "2014/feature/wildmagic-controlledchaos",
+    "edition": "2014",
+    "name": "Controlled Chaos",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you roll on the Wild Magic Surge table, you can roll twice and use either result."
+    }
+  },
+  {
+    "id": "2014/feature/wildmagic-spellbombardment",
+    "edition": "2014",
+    "name": "Spell Bombardment",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you roll the highest number on a damage die for a spell, you can roll that die again and add it to the damage."
+    }
+  },
+  {
+    "id": "2014/subclass/wildmagic",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Wild Magic",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/sorcerer",
+      "description": "Your magic springs from raw chaos, unpredictable and occasionally spectacular in ways you did not intend.",
+      "featuresByLevel": {
+        "1": [
+          "2014/feature/wildmagic-wildmagicsurge",
+          "2014/feature/wildmagic-tidesofchaos"
+        ],
+        "6": [
+          "2014/feature/wildmagic-bendluck"
+        ],
+        "14": [
+          "2014/feature/wildmagic-controlledchaos"
+        ],
+        "18": [
+          "2014/feature/wildmagic-spellbombardment"
+        ]
+      }
+    }
   }
 ]

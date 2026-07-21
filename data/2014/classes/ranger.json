@@ -1073,5 +1073,90 @@
     "data": {
       "description": "You can discorporate into your swarm, avoiding danger. When you take damage, you can use your reaction to give yourself resistance to that damage. You vanish into your swarm and then teleport to an unoccupied space that you can see within 30 feet of you, where you reappear with the swarm.\nYou can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
     }
+  },
+  {
+    "id": "2014/feature/beastmaster-rangerscompanion",
+    "edition": "2014",
+    "name": "Ranger's Companion",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain a beast companion of CR 1/4 or lower that accompanies you and obeys your commands, adding your proficiency bonus to its rolls."
+    }
+  },
+  {
+    "id": "2014/feature/beastmaster-exceptionaltraining",
+    "edition": "2014",
+    "name": "Exceptional Training",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can command your companion to Dash, Disengage, Dodge, or Help as a bonus action, and its attacks count as magical."
+    }
+  },
+  {
+    "id": "2014/feature/beastmaster-bestialfury",
+    "edition": "2014",
+    "name": "Bestial Fury",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your companion can make two attacks when you command it to take the Attack action."
+    }
+  },
+  {
+    "id": "2014/feature/beastmaster-sharespells",
+    "edition": "2014",
+    "name": "Share Spells",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you cast a spell targeting yourself, it can also affect your companion if it is within 30 feet."
+    }
+  },
+  {
+    "id": "2014/subclass/beastmaster",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Beast Master",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/ranger",
+      "description": "A Beast Master ranger forms a bond with a beast companion that fights beside them as a single unit.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/beastmaster-rangerscompanion"
+        ],
+        "7": [
+          "2014/feature/beastmaster-exceptionaltraining"
+        ],
+        "11": [
+          "2014/feature/beastmaster-bestialfury"
+        ],
+        "15": [
+          "2014/feature/beastmaster-sharespells"
+        ]
+      }
+    }
   }
 ]

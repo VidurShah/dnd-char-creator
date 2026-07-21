@@ -1090,5 +1090,88 @@
     "data": {
       "description": "As an action, you can channel the magic of the Song of Creation to create one nonmagical item of your choice in an unoccupied space within 10 feet of you. The item must appear on a surface or in a liquid that can support it. The gp value of the item can't be more than 20 times your bard level, and the item must be Medium or smaller. The item glimmers softly, and a creature can faintly hear music when touching it. The created item disappears after a number of hours equal to your proficiency bonus.\n\nOnce you create an item with this feature, you can't do so again until you finish a long rest, unless you expend a spell slot of 2nd level or higher to use this feature again. You can have only one item created by this feature at a time; if you use this action and already have an item from this feature, the first one immediately vanishes.\n\nThe size of the item you can create with this feature increases by one size category when you reach 6th level (Large) and 14th level (Huge)."
     }
+  },
+  {
+    "id": "2014/feature/collegeofvalor-bonusproficiencies",
+    "edition": "2014",
+    "name": "Bonus Proficiencies",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency with medium armor, shields, and martial weapons."
+    }
+  },
+  {
+    "id": "2014/feature/collegeofvalor-combatinspiration",
+    "edition": "2014",
+    "name": "Combat Inspiration",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "A creature with your Bardic Inspiration die can add it to a weapon damage roll, or to its AC against one attack."
+    }
+  },
+  {
+    "id": "2014/feature/collegeofvalor-extraattack",
+    "edition": "2014",
+    "name": "Extra Attack",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can attack twice, instead of once, whenever you take the Attack action on your turn."
+    }
+  },
+  {
+    "id": "2014/feature/collegeofvalor-battlemagic",
+    "edition": "2014",
+    "name": "Battle Magic",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you take the Attack action, you can use a bonus action to cast one bard spell."
+    }
+  },
+  {
+    "id": "2014/subclass/collegeofvalor",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "College of Valor",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/bard",
+      "description": "Bards of Valor are daring skalds whose tales keep alive the memory of heroes, and who fight alongside those they sing of.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/collegeofvalor-bonusproficiencies",
+          "2014/feature/collegeofvalor-combatinspiration"
+        ],
+        "6": [
+          "2014/feature/collegeofvalor-extraattack"
+        ],
+        "14": [
+          "2014/feature/collegeofvalor-battlemagic"
+        ]
+      }
+    }
   }
 ]

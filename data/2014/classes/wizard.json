@@ -964,5 +964,705 @@
     "data": {
       "description": "Your connection to your Awakened Spellbook has become so profound that your soul has become entwined with it. While the book is on your person, you have advantage on all Intelligence (Arcana) checks, as the spellbook helps you remember magical lore.\nMoreover, if you take damage while your spellbook's mind is manifested, you can prevent all of that damage to you by using your reaction to dismiss the spectral mind, using its magic to save yourself. Then roll 3d6. The spellbook temporarily loses spells of your choice that have a combined spell level equal to that roll or higher. For example, if the roll's total is 9, spells vanish from the book that have a combined level of at least 9, which could mean one 9th-level spell, three 3rd-level spells, or some other combination. If there aren't enough spells in the book to cover this cost, you drop to 0 hit points.\nUntil you finish 1d6 long rests, you are incapable of casting the lost spells, even if you find them on a scroll or in another spellbook. After you finish the required number of rests, the spells reappear in the spellbook.\nOnce you use this reaction, you can't do so again until you finish a long rest."
     }
+  },
+  {
+    "id": "2014/feature/abjuration-abjurationsavant",
+    "edition": "2014",
+    "name": "Abjuration Savant",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The gold and time you must spend to copy an abjuration spell into your spellbook is halved."
+    }
+  },
+  {
+    "id": "2014/feature/abjuration-arcaneward",
+    "edition": "2014",
+    "name": "Arcane Ward",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you cast an abjuration spell, you create a ward that absorbs damage you would take, recharged by casting further abjuration spells."
+    }
+  },
+  {
+    "id": "2014/feature/abjuration-projectedward",
+    "edition": "2014",
+    "name": "Projected Ward",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature within 30 feet takes damage, you can use your reaction to have your Arcane Ward absorb it instead."
+    }
+  },
+  {
+    "id": "2014/feature/abjuration-improvedabjuration",
+    "edition": "2014",
+    "name": "Improved Abjuration",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You add your proficiency bonus to ability checks made as part of abjuration spells such as Counterspell and Dispel Magic."
+    }
+  },
+  {
+    "id": "2014/feature/abjuration-spellresistance",
+    "edition": "2014",
+    "name": "Spell Resistance",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have advantage on saving throws against spells, and resistance against the damage of spells."
+    }
+  },
+  {
+    "id": "2014/feature/conjuration-conjurationsavant",
+    "edition": "2014",
+    "name": "Conjuration Savant",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The gold and time you must spend to copy a conjuration spell into your spellbook is halved."
+    }
+  },
+  {
+    "id": "2014/feature/conjuration-minorconjuration",
+    "edition": "2014",
+    "name": "Minor Conjuration",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can conjure an inanimate object of up to 3 feet on a side and 10 pounds into your hand, lasting one hour."
+    }
+  },
+  {
+    "id": "2014/feature/conjuration-benigntransposition",
+    "edition": "2014",
+    "name": "Benign Transposition",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can teleport up to 30 feet, or swap places with a willing creature of your size or smaller."
+    }
+  },
+  {
+    "id": "2014/feature/conjuration-focusedconjuration",
+    "edition": "2014",
+    "name": "Focused Conjuration",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your concentration on a conjuration spell cannot be broken as a result of taking damage."
+    }
+  },
+  {
+    "id": "2014/feature/conjuration-durablesummons",
+    "edition": "2014",
+    "name": "Durable Summons",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Any creature you summon with a conjuration spell gains 30 temporary hit points."
+    }
+  },
+  {
+    "id": "2014/feature/divination-divinationsavant",
+    "edition": "2014",
+    "name": "Divination Savant",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The gold and time you must spend to copy a divination spell into your spellbook is halved."
+    }
+  },
+  {
+    "id": "2014/feature/divination-portent",
+    "edition": "2014",
+    "name": "Portent",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "After each long rest, you roll two d20s and record them, later replacing any attack roll, saving throw, or ability check with one of those rolls."
+    }
+  },
+  {
+    "id": "2014/feature/divination-expertdivination",
+    "edition": "2014",
+    "name": "Expert Divination",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Casting a divination spell of 2nd level or higher lets you regain an expended spell slot of a lower level."
+    }
+  },
+  {
+    "id": "2014/feature/divination-thethirdeye",
+    "edition": "2014",
+    "name": "The Third Eye",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain one of several benefits after a rest: darkvision, ethereal sight, greater comprehension, or see invisibility."
+    }
+  },
+  {
+    "id": "2014/feature/divination-greaterportent",
+    "edition": "2014",
+    "name": "Greater Portent",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You roll three d20s for your Portent feature rather than two."
+    }
+  },
+  {
+    "id": "2014/feature/enchantment-enchantmentsavant",
+    "edition": "2014",
+    "name": "Enchantment Savant",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The gold and time you must spend to copy an enchantment spell into your spellbook is halved."
+    }
+  },
+  {
+    "id": "2014/feature/enchantment-hypnoticgaze",
+    "edition": "2014",
+    "name": "Hypnotic Gaze",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As an action, you can charm a creature within 5 feet, leaving it incapacitated and moving at your direction."
+    }
+  },
+  {
+    "id": "2014/feature/enchantment-instinctivecharm",
+    "edition": "2014",
+    "name": "Instinctive Charm",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature attacks you, you can use your reaction to redirect the attack to another creature."
+    }
+  },
+  {
+    "id": "2014/feature/enchantment-splitenchantment",
+    "edition": "2014",
+    "name": "Split Enchantment",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you cast an enchantment spell that targets only one creature, you can have it target a second."
+    }
+  },
+  {
+    "id": "2014/feature/enchantment-altermemories",
+    "edition": "2014",
+    "name": "Alter Memories",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can make a creature unaware it was charmed, and can remove hours from its memory of the time it was charmed."
+    }
+  },
+  {
+    "id": "2014/feature/illusion-illusionsavant",
+    "edition": "2014",
+    "name": "Illusion Savant",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The gold and time you must spend to copy an illusion spell into your spellbook is halved."
+    }
+  },
+  {
+    "id": "2014/feature/illusion-improvedminorillusion",
+    "edition": "2014",
+    "name": "Improved Minor Illusion",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn Minor Illusion, and can create both a sound and an image with a single casting."
+    }
+  },
+  {
+    "id": "2014/feature/illusion-malleableillusion",
+    "edition": "2014",
+    "name": "Malleable Illusion",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can use an action to change the nature of an illusion you cast that has a duration."
+    }
+  },
+  {
+    "id": "2014/feature/illusion-illusoryself",
+    "edition": "2014",
+    "name": "Illusory Self",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature hits you with an attack, you can use your reaction to interpose an illusory duplicate and cause the attack to miss."
+    }
+  },
+  {
+    "id": "2014/feature/illusion-illusoryreality",
+    "edition": "2014",
+    "name": "Illusory Reality",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can make one inanimate, nonmagical object within an illusion real for one minute."
+    }
+  },
+  {
+    "id": "2014/feature/necromancy-necromancysavant",
+    "edition": "2014",
+    "name": "Necromancy Savant",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The gold and time you must spend to copy a necromancy spell into your spellbook is halved."
+    }
+  },
+  {
+    "id": "2014/feature/necromancy-grimharvest",
+    "edition": "2014",
+    "name": "Grim Harvest",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Once per turn when you kill a creature with a spell, you regain hit points equal to twice the spell's level."
+    }
+  },
+  {
+    "id": "2014/feature/necromancy-undeadthralls",
+    "edition": "2014",
+    "name": "Undead Thralls",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn Animate Dead, can raise an additional undead with it, and your undead gain bonus hit points and damage."
+    }
+  },
+  {
+    "id": "2014/feature/necromancy-inuredtoundeath",
+    "edition": "2014",
+    "name": "Inured to Undeath",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have resistance to necrotic damage, and your hit point maximum cannot be reduced."
+    }
+  },
+  {
+    "id": "2014/feature/necromancy-commandundead",
+    "edition": "2014",
+    "name": "Command Undead",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can use an action to bring an undead creature under your control if it fails a Charisma save."
+    }
+  },
+  {
+    "id": "2014/feature/transmutation-transmutationsavant",
+    "edition": "2014",
+    "name": "Transmutation Savant",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The gold and time you must spend to copy a transmutation spell into your spellbook is halved."
+    }
+  },
+  {
+    "id": "2014/feature/transmutation-minoralchemy",
+    "edition": "2014",
+    "name": "Minor Alchemy",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can temporarily transform one material into another — wood into stone, iron into silver, and so on."
+    }
+  },
+  {
+    "id": "2014/feature/transmutation-transmutersstone",
+    "edition": "2014",
+    "name": "Transmuter's Stone",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You create a stone that grants a benefit such as darkvision, increased speed, proficiency in Constitution saves, or damage resistance."
+    }
+  },
+  {
+    "id": "2014/feature/transmutation-shapechanger",
+    "edition": "2014",
+    "name": "Shapechanger",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn Polymorph and can cast it once without expending a spell slot, targeting only yourself."
+    }
+  },
+  {
+    "id": "2014/feature/transmutation-mastertransmuter",
+    "edition": "2014",
+    "name": "Master Transmuter",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can consume your Transmuter's Stone to transmute an object, remove curses and disease, restore youth, or create a magic item."
+    }
+  },
+  {
+    "id": "2014/subclass/abjuration",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Abjuration",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/wizard",
+      "description": "Abjurers specialize in protective magic, banishing and warding rather than destroying.",
+      "featuresByLevel": {
+        "2": [
+          "2014/feature/abjuration-abjurationsavant",
+          "2014/feature/abjuration-arcaneward"
+        ],
+        "6": [
+          "2014/feature/abjuration-projectedward"
+        ],
+        "10": [
+          "2014/feature/abjuration-improvedabjuration"
+        ],
+        "14": [
+          "2014/feature/abjuration-spellresistance"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/conjuration",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Conjuration",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/wizard",
+      "description": "Conjurers summon creatures and objects, calling them across the vast distances of the multiverse.",
+      "featuresByLevel": {
+        "2": [
+          "2014/feature/conjuration-conjurationsavant",
+          "2014/feature/conjuration-minorconjuration"
+        ],
+        "6": [
+          "2014/feature/conjuration-benigntransposition"
+        ],
+        "10": [
+          "2014/feature/conjuration-focusedconjuration"
+        ],
+        "14": [
+          "2014/feature/conjuration-durablesummons"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/divination",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Divination",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/wizard",
+      "description": "Diviners glimpse the future, uncover the hidden, and pierce every kind of deception.",
+      "featuresByLevel": {
+        "2": [
+          "2014/feature/divination-divinationsavant",
+          "2014/feature/divination-portent"
+        ],
+        "6": [
+          "2014/feature/divination-expertdivination"
+        ],
+        "10": [
+          "2014/feature/divination-thethirdeye"
+        ],
+        "14": [
+          "2014/feature/divination-greaterportent"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/enchantment",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Enchantment",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/wizard",
+      "description": "Enchanters bend minds, charming the hostile and turning enemies against one another.",
+      "featuresByLevel": {
+        "2": [
+          "2014/feature/enchantment-enchantmentsavant",
+          "2014/feature/enchantment-hypnoticgaze"
+        ],
+        "6": [
+          "2014/feature/enchantment-instinctivecharm"
+        ],
+        "10": [
+          "2014/feature/enchantment-splitenchantment"
+        ],
+        "14": [
+          "2014/feature/enchantment-altermemories"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/illusion",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Illusion",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/wizard",
+      "description": "Illusionists spin images and phantasms that blur the line between what is real and what is merely believed.",
+      "featuresByLevel": {
+        "2": [
+          "2014/feature/illusion-illusionsavant",
+          "2014/feature/illusion-improvedminorillusion"
+        ],
+        "6": [
+          "2014/feature/illusion-malleableillusion"
+        ],
+        "10": [
+          "2014/feature/illusion-illusoryself"
+        ],
+        "14": [
+          "2014/feature/illusion-illusoryreality"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/necromancy",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Necromancy",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/wizard",
+      "description": "Necromancers explore the boundary between life and death, and the power that flows across it.",
+      "featuresByLevel": {
+        "2": [
+          "2014/feature/necromancy-necromancysavant",
+          "2014/feature/necromancy-grimharvest"
+        ],
+        "6": [
+          "2014/feature/necromancy-undeadthralls"
+        ],
+        "10": [
+          "2014/feature/necromancy-inuredtoundeath"
+        ],
+        "14": [
+          "2014/feature/necromancy-commandundead"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/transmutation",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Transmutation",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/wizard",
+      "description": "Transmuters reshape matter and energy, turning one thing into another with a word.",
+      "featuresByLevel": {
+        "2": [
+          "2014/feature/transmutation-transmutationsavant",
+          "2014/feature/transmutation-minoralchemy"
+        ],
+        "6": [
+          "2014/feature/transmutation-transmutersstone"
+        ],
+        "10": [
+          "2014/feature/transmutation-shapechanger"
+        ],
+        "14": [
+          "2014/feature/transmutation-mastertransmuter"
+        ]
+      }
+    }
   }
 ]

@@ -821,5 +821,239 @@
     "data": {
       "description": "You have learned how to imbue yourself with the might of giants. As a bonus action, you magically gain the following benefits, which last for 1 minute:\n\n• If you are smaller than Large, you become Large, along with anything you are wearing. If you lack the room to become Large, your size doesn't change.\n• You have advantage on Strength checks and Strength saving throws.\n• Once on each of your turns, one of your attacks with a weapon or an unarmed strike can deal an extra 1d6 damage to a target on a hit.\n\nYou can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest."
     }
+  },
+  {
+    "id": "2014/feature/battlemaster-combatsuperiority",
+    "edition": "2014",
+    "name": "Combat Superiority",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn three maneuvers fueled by four superiority dice (d8), regained on a short or long rest. You learn more maneuvers and dice as you level."
+    }
+  },
+  {
+    "id": "2014/feature/battlemaster-studentofwar",
+    "edition": "2014",
+    "name": "Student of War",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency with one type of artisan's tools of your choice."
+    }
+  },
+  {
+    "id": "2014/feature/battlemaster-knowyourenemy",
+    "edition": "2014",
+    "name": "Know Your Enemy",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "After observing a creature for one minute outside combat, you learn how its capabilities compare to your own."
+    }
+  },
+  {
+    "id": "2014/feature/battlemaster-improvedcombatsuperiority",
+    "edition": "2014",
+    "name": "Improved Combat Superiority",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your superiority dice become d10s, and d12s at 18th level."
+    }
+  },
+  {
+    "id": "2014/feature/battlemaster-relentless",
+    "edition": "2014",
+    "name": "Relentless",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you roll initiative with no superiority dice remaining, you regain one."
+    }
+  },
+  {
+    "id": "2014/feature/battlemaster-improvedcombatsuperiorityd12",
+    "edition": "2014",
+    "name": "Improved Combat Superiority (d12)",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your superiority dice turn into d12s."
+    }
+  },
+  {
+    "id": "2014/feature/eldritchknight-spellcasting",
+    "edition": "2014",
+    "name": "Spellcasting",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn wizard spells, primarily from the abjuration and evocation schools. Intelligence is your spellcasting ability."
+    }
+  },
+  {
+    "id": "2014/feature/eldritchknight-weaponbond",
+    "edition": "2014",
+    "name": "Weapon Bond",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can bond with up to two weapons, summoning a bonded weapon to your hand as a bonus action and never being disarmed of it."
+    }
+  },
+  {
+    "id": "2014/feature/eldritchknight-warmagic",
+    "edition": "2014",
+    "name": "War Magic",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you use your action to cast a cantrip, you can make one weapon attack as a bonus action."
+    }
+  },
+  {
+    "id": "2014/feature/eldritchknight-eldritchstrike",
+    "edition": "2014",
+    "name": "Eldritch Strike",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you hit a creature with a weapon, it has disadvantage on the next saving throw against a spell you cast before the end of your next turn."
+    }
+  },
+  {
+    "id": "2014/feature/eldritchknight-arcanecharge",
+    "edition": "2014",
+    "name": "Arcane Charge",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you use Action Surge, you can teleport up to 30 feet to an unoccupied space you can see."
+    }
+  },
+  {
+    "id": "2014/feature/eldritchknight-improvedwarmagic",
+    "edition": "2014",
+    "name": "Improved War Magic",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you use your action to cast a spell, you can make one weapon attack as a bonus action."
+    }
+  },
+  {
+    "id": "2014/subclass/battlemaster",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Battle Master",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/fighter",
+      "description": "Battle Masters study combat as an art and a science, employing maneuvers that others cannot match.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/battlemaster-combatsuperiority",
+          "2014/feature/battlemaster-studentofwar"
+        ],
+        "7": [
+          "2014/feature/battlemaster-knowyourenemy"
+        ],
+        "10": [
+          "2014/feature/battlemaster-improvedcombatsuperiority"
+        ],
+        "15": [
+          "2014/feature/battlemaster-relentless"
+        ],
+        "18": [
+          "2014/feature/battlemaster-improvedcombatsuperiorityd12"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/eldritchknight",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Eldritch Knight",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/fighter",
+      "description": "Eldritch Knights supplement martial mastery with the study of abjuration and evocation magic.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/eldritchknight-spellcasting",
+          "2014/feature/eldritchknight-weaponbond"
+        ],
+        "7": [
+          "2014/feature/eldritchknight-warmagic"
+        ],
+        "10": [
+          "2014/feature/eldritchknight-eldritchstrike"
+        ],
+        "15": [
+          "2014/feature/eldritchknight-arcanecharge"
+        ],
+        "18": [
+          "2014/feature/eldritchknight-improvedwarmagic"
+        ]
+      }
+    }
   }
 ]

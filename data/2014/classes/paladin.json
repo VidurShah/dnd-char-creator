@@ -1091,5 +1091,248 @@
     "data": {
       "description": "You manifest a spark of divine power in defense of the mortal realms. As a bonus action, you gain the following benefits for 1 minute:\n- You gain truesight with a range of 120 feet.\n- You have advantage on attack rolls against aberrations, celestials, elementals, fey, and fiends.\n- When you hit a creature with an attack roll and deal damage to it, you can also force it to make a Charisma saving throw against your spell save DC. On a failed save, the creature is magically banished to its native plane of existence if it's currently not there. On a successful save, the creature can't be banished by this feature for 24 hours.\nOnce you use this bonus action, you can't use it again until you finish a long rest, unless you expend a 5th-level spell slot to use it again."
     }
+  },
+  {
+    "id": "2014/feature/oathoftheancients-channeldivinitynatureswrath",
+    "edition": "2014",
+    "name": "Channel Divinity: Nature's Wrath",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You cause spectral vines to restrain a creature that fails a Strength or Dexterity save."
+    }
+  },
+  {
+    "id": "2014/feature/oathoftheancients-channeldivinityturnthefaithless",
+    "edition": "2014",
+    "name": "Channel Divinity: Turn the Faithless",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You force fey and fiends within 30 feet to make a Wisdom save or be turned for one minute."
+    }
+  },
+  {
+    "id": "2014/feature/oathoftheancients-auraofwarding",
+    "edition": "2014",
+    "name": "Aura of Warding",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You and friendly creatures within 10 feet have resistance to damage from spells, extending to 30 feet at 18th level."
+    }
+  },
+  {
+    "id": "2014/feature/oathoftheancients-undyingsentinel",
+    "edition": "2014",
+    "name": "Undying Sentinel",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When reduced to 0 hit points and not killed outright, you can drop to 1 hit point instead. You also cease to age."
+    }
+  },
+  {
+    "id": "2014/feature/oathoftheancients-elderchampion",
+    "edition": "2014",
+    "name": "Elder Champion",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You assume an ancient form, regaining hit points each turn, casting paladin spells as a bonus action, and imposing disadvantage on saves against your spells."
+    }
+  },
+  {
+    "id": "2014/feature/oathofvengeance-channeldivinityabjureenemy",
+    "edition": "2014",
+    "name": "Channel Divinity: Abjure Enemy",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You force one creature to make a Wisdom save or be frightened and have its speed reduced to 0."
+    }
+  },
+  {
+    "id": "2014/feature/oathofvengeance-channeldivinityvowofenmity",
+    "edition": "2014",
+    "name": "Channel Divinity: Vow of Enmity",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a bonus action, you gain advantage on attack rolls against one creature for one minute."
+    }
+  },
+  {
+    "id": "2014/feature/oathofvengeance-relentlessavenger",
+    "edition": "2014",
+    "name": "Relentless Avenger",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you hit a creature with an opportunity attack, you can move up to half your speed without provoking opportunity attacks."
+    }
+  },
+  {
+    "id": "2014/feature/oathofvengeance-soulofvengeance",
+    "edition": "2014",
+    "name": "Soul of Vengeance",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature under your Vow of Enmity makes an attack, you can use your reaction to make a melee attack against it."
+    }
+  },
+  {
+    "id": "2014/feature/oathofvengeance-avengingangel",
+    "edition": "2014",
+    "name": "Avenging Angel",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You sprout wings and gain a flying speed, and creatures that start their turn within 30 feet must save or be frightened."
+    }
+  },
+  {
+    "id": "2014/subclass/oathoftheancients",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Oath of the Ancients",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/paladin",
+      "description": "This oath binds a paladin to the ancient light of life and joy, standing against the encroaching darkness.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/oathoftheancients-channeldivinitynatureswrath",
+          "2014/feature/oathoftheancients-channeldivinityturnthefaithless"
+        ],
+        "7": [
+          "2014/feature/oathoftheancients-auraofwarding"
+        ],
+        "15": [
+          "2014/feature/oathoftheancients-undyingsentinel"
+        ],
+        "20": [
+          "2014/feature/oathoftheancients-elderchampion"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2014/spell/speak-with-animals"
+        ],
+        "5": [
+          "2014/spell/moonbeam",
+          "2014/spell/misty-step"
+        ],
+        "9": [
+          "2014/spell/plant-growth",
+          "2014/spell/protection-from-energy"
+        ],
+        "13": [
+          "2014/spell/ice-storm",
+          "2014/spell/stoneskin"
+        ],
+        "17": [
+          "2014/spell/commune-with-nature",
+          "2014/spell/tree-stride"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/oathofvengeance",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Oath of Vengeance",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/paladin",
+      "description": "A paladin of vengeance is a solemn instrument of punishment, sworn to destroy those who have done great evil.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/oathofvengeance-channeldivinityabjureenemy",
+          "2014/feature/oathofvengeance-channeldivinityvowofenmity"
+        ],
+        "7": [
+          "2014/feature/oathofvengeance-relentlessavenger"
+        ],
+        "15": [
+          "2014/feature/oathofvengeance-soulofvengeance"
+        ],
+        "20": [
+          "2014/feature/oathofvengeance-avengingangel"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2014/spell/bane",
+          "2014/spell/hunters-mark"
+        ],
+        "5": [
+          "2014/spell/hold-person",
+          "2014/spell/misty-step"
+        ],
+        "9": [
+          "2014/spell/haste",
+          "2014/spell/protection-from-energy"
+        ],
+        "13": [
+          "2014/spell/banishment",
+          "2014/spell/dimension-door"
+        ],
+        "17": [
+          "2014/spell/hold-monster",
+          "2014/spell/scrying"
+        ]
+      }
+    }
   }
 ]

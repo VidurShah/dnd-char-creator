@@ -1144,5 +1144,806 @@
     "data": {
       "description": "You can see through the deepest gloom. You have darkvision out to a range of 300 feet. In that radius, you can see in dim light as if it were bright light and in darkness as if it were dim light.\n\nAs an action, you can magically share the darkvision of this feature with willing creatures you can see within 10 feet of you, up to a number of creatures equal to your Wisdom modifier (minimum of one creature). The shared darkvision lasts for 1 hour. Once you share it, you can't do so again until you finish a long rest, unless you expend a spell slot of any level to share it again."
     }
+  },
+  {
+    "id": "2014/feature/knowledgedomain-blessingsofknowledge",
+    "edition": "2014",
+    "name": "Blessings of Knowledge",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn two languages and gain proficiency (and expertise) in two of Arcana, History, Nature, or Religion."
+    }
+  },
+  {
+    "id": "2014/feature/knowledgedomain-channeldivinityknowledgeoftheages",
+    "edition": "2014",
+    "name": "Channel Divinity: Knowledge of the Ages",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency with one skill or tool of your choice for 10 minutes."
+    }
+  },
+  {
+    "id": "2014/feature/knowledgedomain-channeldivinityreadthoughts",
+    "edition": "2014",
+    "name": "Channel Divinity: Read Thoughts",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can read the surface thoughts of a creature, and can cast Suggestion on it without expending a slot."
+    }
+  },
+  {
+    "id": "2014/feature/knowledgedomain-potentspellcasting",
+    "edition": "2014",
+    "name": "Potent Spellcasting",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You add your Wisdom modifier to the damage of your cleric cantrips."
+    }
+  },
+  {
+    "id": "2014/feature/knowledgedomain-visionsofthepast",
+    "edition": "2014",
+    "name": "Visions of the Past",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Through concentration and meditation, you can read the recent history of an object or an area."
+    }
+  },
+  {
+    "id": "2014/feature/lightdomain-bonuscantrip",
+    "edition": "2014",
+    "name": "Bonus Cantrip",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn the Light cantrip if you do not already know it."
+    }
+  },
+  {
+    "id": "2014/feature/lightdomain-wardingflare",
+    "edition": "2014",
+    "name": "Warding Flare",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When attacked by a creature within 30 feet, you can use your reaction to impose disadvantage on the attack roll."
+    }
+  },
+  {
+    "id": "2014/feature/lightdomain-channeldivinityradianceofthedawn",
+    "edition": "2014",
+    "name": "Channel Divinity: Radiance of the Dawn",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You dispel magical darkness and deal radiant damage to hostile creatures within 30 feet."
+    }
+  },
+  {
+    "id": "2014/feature/lightdomain-improvedflare",
+    "edition": "2014",
+    "name": "Improved Flare",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can use Warding Flare to protect another creature, not just yourself."
+    }
+  },
+  {
+    "id": "2014/feature/lightdomain-potentspellcasting",
+    "edition": "2014",
+    "name": "Potent Spellcasting",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You add your Wisdom modifier to the damage of your cleric cantrips."
+    }
+  },
+  {
+    "id": "2014/feature/lightdomain-coronaoflight",
+    "edition": "2014",
+    "name": "Corona of Light",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You emit bright sunlight, and enemies in it have disadvantage on saves against spells that deal fire or radiant damage."
+    }
+  },
+  {
+    "id": "2014/feature/naturedomain-acolyteofnature",
+    "edition": "2014",
+    "name": "Acolyte of Nature",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn one druid cantrip and gain proficiency in one of Animal Handling, Nature, or Survival."
+    }
+  },
+  {
+    "id": "2014/feature/naturedomain-bonusproficiency",
+    "edition": "2014",
+    "name": "Bonus Proficiency",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency with heavy armor."
+    }
+  },
+  {
+    "id": "2014/feature/naturedomain-channeldivinitycharmanimalsandplants",
+    "edition": "2014",
+    "name": "Channel Divinity: Charm Animals and Plants",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can charm beasts and plants within 30 feet that fail a Wisdom save."
+    }
+  },
+  {
+    "id": "2014/feature/naturedomain-dampenelements",
+    "edition": "2014",
+    "name": "Dampen Elements",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can use your reaction to grant resistance to acid, cold, fire, lightning, or thunder damage."
+    }
+  },
+  {
+    "id": "2014/feature/naturedomain-divinestrike",
+    "edition": "2014",
+    "name": "Divine Strike",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Once per turn, your weapon attacks deal an extra 1d8 cold, fire, or lightning damage, rising to 2d8 at 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/naturedomain-masterofnature",
+    "edition": "2014",
+    "name": "Master of Nature",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can use a bonus action to command creatures charmed by your Channel Divinity."
+    }
+  },
+  {
+    "id": "2014/feature/tempestdomain-bonusproficiencies",
+    "edition": "2014",
+    "name": "Bonus Proficiencies",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency with martial weapons and heavy armor."
+    }
+  },
+  {
+    "id": "2014/feature/tempestdomain-wrathofthestorm",
+    "edition": "2014",
+    "name": "Wrath of the Storm",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature within 5 feet hits you, you can use your reaction to deal lightning or thunder damage to it."
+    }
+  },
+  {
+    "id": "2014/feature/tempestdomain-channeldivinitydestructivewrath",
+    "edition": "2014",
+    "name": "Channel Divinity: Destructive Wrath",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can deal maximum damage instead of rolling for lightning or thunder damage."
+    }
+  },
+  {
+    "id": "2014/feature/tempestdomain-thunderboltstrike",
+    "edition": "2014",
+    "name": "Thunderbolt Strike",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you deal lightning damage to a Large or smaller creature, you can push it 10 feet away."
+    }
+  },
+  {
+    "id": "2014/feature/tempestdomain-divinestrike",
+    "edition": "2014",
+    "name": "Divine Strike",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Once per turn, your weapon attacks deal an extra 1d8 thunder damage, rising to 2d8 at 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/tempestdomain-stormborn",
+    "edition": "2014",
+    "name": "Stormborn",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have a flying speed equal to your walking speed while not underground or indoors."
+    }
+  },
+  {
+    "id": "2014/feature/trickerydomain-blessingofthetrickster",
+    "edition": "2014",
+    "name": "Blessing of the Trickster",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can touch a willing creature to give it advantage on Stealth checks for one hour."
+    }
+  },
+  {
+    "id": "2014/feature/trickerydomain-channeldivinityinvokeduplicity",
+    "edition": "2014",
+    "name": "Channel Divinity: Invoke Duplicity",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You create a perfect illusory duplicate of yourself that you can move and cast spells through."
+    }
+  },
+  {
+    "id": "2014/feature/trickerydomain-channeldivinitycloakofshadows",
+    "edition": "2014",
+    "name": "Channel Divinity: Cloak of Shadows",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You become invisible until the end of your next turn."
+    }
+  },
+  {
+    "id": "2014/feature/trickerydomain-divinestrike",
+    "edition": "2014",
+    "name": "Divine Strike",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Once per turn, your weapon attacks deal an extra 1d8 poison damage, rising to 2d8 at 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/trickerydomain-improvedduplicity",
+    "edition": "2014",
+    "name": "Improved Duplicity",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can create up to four duplicates with Invoke Duplicity, and gain advantage on attacks against creatures near any of them."
+    }
+  },
+  {
+    "id": "2014/feature/wardomain-bonusproficiencies",
+    "edition": "2014",
+    "name": "Bonus Proficiencies",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency with martial weapons and heavy armor."
+    }
+  },
+  {
+    "id": "2014/feature/wardomain-warpriest",
+    "edition": "2014",
+    "name": "War Priest",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you use the Attack action, you can make one weapon attack as a bonus action, a number of times equal to your Wisdom modifier per rest."
+    }
+  },
+  {
+    "id": "2014/feature/wardomain-channeldivinityguidedstrike",
+    "edition": "2014",
+    "name": "Channel Divinity: Guided Strike",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain a +10 bonus to an attack roll after seeing the roll but before knowing the outcome."
+    }
+  },
+  {
+    "id": "2014/feature/wardomain-channeldivinitywargodsblessing",
+    "edition": "2014",
+    "name": "Channel Divinity: War God's Blessing",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can use your reaction to grant an ally a +10 bonus to an attack roll."
+    }
+  },
+  {
+    "id": "2014/feature/wardomain-divinestrike",
+    "edition": "2014",
+    "name": "Divine Strike",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Once per turn, your weapon attacks deal an extra 1d8 damage of your weapon's type, rising to 2d8 at 14th level."
+    }
+  },
+  {
+    "id": "2014/feature/wardomain-avatarofbattle",
+    "edition": "2014",
+    "name": "Avatar of Battle",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons."
+    }
+  },
+  {
+    "id": "2014/subclass/knowledgedomain",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Knowledge Domain",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/cleric",
+      "description": "The gods of knowledge value learning above all, and their clerics seek to uncover truths lost to time.",
+      "featuresByLevel": {
+        "1": [
+          "2014/feature/knowledgedomain-blessingsofknowledge"
+        ],
+        "2": [
+          "2014/feature/knowledgedomain-channeldivinityknowledgeoftheages"
+        ],
+        "6": [
+          "2014/feature/knowledgedomain-channeldivinityreadthoughts"
+        ],
+        "8": [
+          "2014/feature/knowledgedomain-potentspellcasting"
+        ],
+        "17": [
+          "2014/feature/knowledgedomain-visionsofthepast"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "1": [
+          "2014/spell/command",
+          "2014/spell/identify"
+        ],
+        "3": [
+          "2014/spell/augury",
+          "2014/spell/suggestion"
+        ],
+        "5": [
+          "2014/spell/nondetection",
+          "2014/spell/speak-with-dead"
+        ],
+        "7": [
+          "2014/spell/arcane-eye",
+          "2014/spell/confusion"
+        ],
+        "9": [
+          "2014/spell/legend-lore",
+          "2014/spell/scrying"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/lightdomain",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Light Domain",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/cleric",
+      "description": "Gods of light promote the ideals of rebirth and renewal, truth, vigilance, and beauty, and their clerics burn away deception.",
+      "featuresByLevel": {
+        "1": [
+          "2014/feature/lightdomain-bonuscantrip",
+          "2014/feature/lightdomain-wardingflare"
+        ],
+        "2": [
+          "2014/feature/lightdomain-channeldivinityradianceofthedawn"
+        ],
+        "6": [
+          "2014/feature/lightdomain-improvedflare"
+        ],
+        "8": [
+          "2014/feature/lightdomain-potentspellcasting"
+        ],
+        "17": [
+          "2014/feature/lightdomain-coronaoflight"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "1": [
+          "2014/spell/burning-hands",
+          "2014/spell/faerie-fire"
+        ],
+        "3": [
+          "2014/spell/flaming-sphere",
+          "2014/spell/scorching-ray"
+        ],
+        "5": [
+          "2014/spell/daylight",
+          "2014/spell/fireball"
+        ],
+        "7": [
+          "2014/spell/guardian-of-faith",
+          "2014/spell/wall-of-fire"
+        ],
+        "9": [
+          "2014/spell/flame-strike",
+          "2014/spell/scrying"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/naturedomain",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Nature Domain",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/cleric",
+      "description": "Gods of nature are as varied as the natural world, and their clerics stand as stewards of the wild places.",
+      "featuresByLevel": {
+        "1": [
+          "2014/feature/naturedomain-acolyteofnature",
+          "2014/feature/naturedomain-bonusproficiency"
+        ],
+        "2": [
+          "2014/feature/naturedomain-channeldivinitycharmanimalsandplants"
+        ],
+        "6": [
+          "2014/feature/naturedomain-dampenelements"
+        ],
+        "8": [
+          "2014/feature/naturedomain-divinestrike"
+        ],
+        "17": [
+          "2014/feature/naturedomain-masterofnature"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "1": [
+          "2014/spell/animal-friendship",
+          "2014/spell/speak-with-animals"
+        ],
+        "3": [
+          "2014/spell/barkskin",
+          "2014/spell/spike-growth"
+        ],
+        "5": [
+          "2014/spell/plant-growth",
+          "2014/spell/wind-wall"
+        ],
+        "7": [
+          "2014/spell/dominate-beast"
+        ],
+        "9": [
+          "2014/spell/insect-plague",
+          "2014/spell/tree-stride"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/tempestdomain",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Tempest Domain",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/cleric",
+      "description": "Gods of storms and sea demand sacrifice from sailors and farmers alike, and their clerics answer with thunder.",
+      "featuresByLevel": {
+        "1": [
+          "2014/feature/tempestdomain-bonusproficiencies",
+          "2014/feature/tempestdomain-wrathofthestorm"
+        ],
+        "2": [
+          "2014/feature/tempestdomain-channeldivinitydestructivewrath"
+        ],
+        "6": [
+          "2014/feature/tempestdomain-thunderboltstrike"
+        ],
+        "8": [
+          "2014/feature/tempestdomain-divinestrike"
+        ],
+        "17": [
+          "2014/feature/tempestdomain-stormborn"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "1": [
+          "2014/spell/fog-cloud",
+          "2014/spell/thunderwave"
+        ],
+        "3": [
+          "2014/spell/gust-of-wind",
+          "2014/spell/shatter"
+        ],
+        "5": [
+          "2014/spell/call-lightning",
+          "2014/spell/sleet-storm"
+        ],
+        "7": [
+          "2014/spell/control-water",
+          "2014/spell/ice-storm"
+        ],
+        "9": [
+          "2014/spell/insect-plague"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/trickerydomain",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Trickery Domain",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/cleric",
+      "description": "Gods of trickery are mischief-makers and instigators, and their clerics are a disruptive force in the world.",
+      "featuresByLevel": {
+        "1": [
+          "2014/feature/trickerydomain-blessingofthetrickster"
+        ],
+        "2": [
+          "2014/feature/trickerydomain-channeldivinityinvokeduplicity"
+        ],
+        "6": [
+          "2014/feature/trickerydomain-channeldivinitycloakofshadows"
+        ],
+        "8": [
+          "2014/feature/trickerydomain-divinestrike"
+        ],
+        "17": [
+          "2014/feature/trickerydomain-improvedduplicity"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "1": [
+          "2014/spell/charm-person",
+          "2014/spell/disguise-self"
+        ],
+        "3": [
+          "2014/spell/mirror-image",
+          "2014/spell/pass-without-trace"
+        ],
+        "5": [
+          "2014/spell/blink",
+          "2014/spell/dispel-magic"
+        ],
+        "7": [
+          "2014/spell/dimension-door",
+          "2014/spell/polymorph"
+        ],
+        "9": [
+          "2014/spell/dominate-person",
+          "2014/spell/modify-memory"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/wardomain",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "War Domain",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/cleric",
+      "description": "War gods watch over warriors and reward them for their great deeds, and their clerics fight in the front rank.",
+      "featuresByLevel": {
+        "1": [
+          "2014/feature/wardomain-bonusproficiencies",
+          "2014/feature/wardomain-warpriest"
+        ],
+        "2": [
+          "2014/feature/wardomain-channeldivinityguidedstrike"
+        ],
+        "6": [
+          "2014/feature/wardomain-channeldivinitywargodsblessing"
+        ],
+        "8": [
+          "2014/feature/wardomain-divinestrike"
+        ],
+        "17": [
+          "2014/feature/wardomain-avatarofbattle"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "1": [
+          "2014/spell/divine-favor",
+          "2014/spell/shield-of-faith"
+        ],
+        "3": [
+          "2014/spell/magic-weapon",
+          "2014/spell/spiritual-weapon"
+        ],
+        "5": [
+          "2014/spell/spirit-guardians"
+        ],
+        "7": [
+          "2014/spell/freedom-of-movement",
+          "2014/spell/stoneskin"
+        ],
+        "9": [
+          "2014/spell/flame-strike",
+          "2014/spell/hold-monster"
+        ]
+      }
+    }
   }
 ]
