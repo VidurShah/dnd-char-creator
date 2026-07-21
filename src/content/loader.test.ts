@@ -39,7 +39,7 @@ describe('content loader', () => {
     expect(grouped.class?.length).toBeGreaterThanOrEqual(12);
     expect(grouped.subclass?.length).toBeGreaterThanOrEqual(12);
     expect(grouped.species?.length).toBeGreaterThanOrEqual(9); // no subraces in 2024
-    expect(grouped.background?.length).toBe(4); // SRD5.2 licenses 4, vs 1 for SRD5.1
+    expect(grouped.background?.length).toBeGreaterThanOrEqual(16); // all 16 PHB2024 backgrounds, not just the 4 SRD5.2 licenses
     expect(grouped.feat?.length).toBeGreaterThanOrEqual(17); // SRD5.2 licenses 17, vs 1 for SRD5.1
   });
 });
