@@ -1060,5 +1060,190 @@
     "data": {
       "description": "Your connection to your astral self is complete, allowing you to unleash its full potential. As a bonus action, you can spend 5 ki points to summon the arms, visage, and body of your astral self and awaken it for 10 minutes. This awakening ends early if you are incapacitated or die.\nWhile your astral self is awakened, you gain the following benefits:\n- Armor of the Spirit. You gain a +2 bonus to Armor Class.\n- Astral Barrage. Whenever you use the Extra Attack feature to attack twice, you can instead attack three times if all the attacks are made with your astral arms."
     }
+  },
+  {
+    "id": "2014/feature/wayofshadow-shadowarts",
+    "edition": "2014",
+    "name": "Shadow Arts",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can spend 2 ki points to cast Darkness, Darkvision, Pass without Trace, or Silence, and you know the Minor Illusion cantrip."
+    }
+  },
+  {
+    "id": "2014/feature/wayofshadow-shadowstep",
+    "edition": "2014",
+    "name": "Shadow Step",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When in dim light or darkness, you can teleport up to 60 feet as a bonus action to another space in dim light or darkness, gaining advantage on your next melee attack."
+    }
+  },
+  {
+    "id": "2014/feature/wayofshadow-cloakofshadows",
+    "edition": "2014",
+    "name": "Cloak of Shadows",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can become invisible while in dim light or darkness, until you attack, cast a spell, or enter bright light."
+    }
+  },
+  {
+    "id": "2014/feature/wayofshadow-opportunist",
+    "edition": "2014",
+    "name": "Opportunist",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature within 5 feet is hit by an attack from someone other than you, you can use your reaction to attack it."
+    }
+  },
+  {
+    "id": "2014/feature/wayofthefourelements-discipleoftheelements",
+    "edition": "2014",
+    "name": "Disciple of the Elements",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn elemental disciplines, which let you spend ki to produce magical effects such as Fangs of the Fire Snake and Water Whip."
+    }
+  },
+  {
+    "id": "2014/feature/wayofthefourelements-elementalattunement",
+    "edition": "2014",
+    "name": "Elemental Attunement",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can use your action to briefly control elemental forces — snuffing a flame, chilling an object, or shaping earth."
+    }
+  },
+  {
+    "id": "2014/feature/wayofthefourelements-additionaldiscipline6th",
+    "edition": "2014",
+    "name": "Additional Discipline (6th)",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn one additional elemental discipline of your choice."
+    }
+  },
+  {
+    "id": "2014/feature/wayofthefourelements-additionaldiscipline11th",
+    "edition": "2014",
+    "name": "Additional Discipline (11th)",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn one additional elemental discipline of your choice."
+    }
+  },
+  {
+    "id": "2014/feature/wayofthefourelements-additionaldiscipline17th",
+    "edition": "2014",
+    "name": "Additional Discipline (17th)",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn one additional elemental discipline of your choice."
+    }
+  },
+  {
+    "id": "2014/subclass/wayofshadow",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Way of Shadow",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/monk",
+      "description": "Monks of this tradition follow a path of stealth and subterfuge, practicing the arts of ninjutsu.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/wayofshadow-shadowarts"
+        ],
+        "6": [
+          "2014/feature/wayofshadow-shadowstep"
+        ],
+        "11": [
+          "2014/feature/wayofshadow-cloakofshadows"
+        ],
+        "17": [
+          "2014/feature/wayofshadow-opportunist"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/wayofthefourelements",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Way of the Four Elements",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/monk",
+      "description": "These monks channel the elements through their ki, shaping fire, wind, stone, and water.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/wayofthefourelements-discipleoftheelements",
+          "2014/feature/wayofthefourelements-elementalattunement"
+        ],
+        "6": [
+          "2014/feature/wayofthefourelements-additionaldiscipline6th"
+        ],
+        "11": [
+          "2014/feature/wayofthefourelements-additionaldiscipline11th"
+        ],
+        "17": [
+          "2014/feature/wayofthefourelements-additionaldiscipline17th"
+        ]
+      }
+    }
   }
 ]

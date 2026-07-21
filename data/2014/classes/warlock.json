@@ -1208,5 +1208,212 @@
     "data": {
       "description": "You entreat your patron to grant you a small wish. As an action, you can speak your desire to your Genie's Vessel, requesting the effect of one spell that is 6th level or lower and has a casting time of 1 action. The spell can be from any class's spell list, and you don't need to meet the requirements in that spell, including costly components; the spell simply takes effect as part of this action.\nOnce you use this feature, you can't use it again until you finish 1d4 long rests."
     }
+  },
+  {
+    "id": "2014/feature/thearchfey-feypresence",
+    "edition": "2014",
+    "name": "Fey Presence",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As an action, you can force creatures in a 10-foot cube to make a Wisdom save or be charmed or frightened until the end of your next turn."
+    }
+  },
+  {
+    "id": "2014/feature/thearchfey-mistyescape",
+    "edition": "2014",
+    "name": "Misty Escape",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you take damage, you can use your reaction to turn invisible and teleport up to 60 feet."
+    }
+  },
+  {
+    "id": "2014/feature/thearchfey-beguilingdefenses",
+    "edition": "2014",
+    "name": "Beguiling Defenses",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You are immune to being charmed, and can turn a charm attempt back on its caster as psychic damage."
+    }
+  },
+  {
+    "id": "2014/feature/thearchfey-darkdelirium",
+    "edition": "2014",
+    "name": "Dark Delirium",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can plunge a creature into an illusory realm, leaving it charmed or frightened for up to one minute."
+    }
+  },
+  {
+    "id": "2014/feature/thegreatoldone-awakenedmind",
+    "edition": "2014",
+    "name": "Awakened Mind",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can speak telepathically to any creature you can see within 30 feet."
+    }
+  },
+  {
+    "id": "2014/feature/thegreatoldone-entropicward",
+    "edition": "2014",
+    "name": "Entropic Ward",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature attacks you, you can use your reaction to impose disadvantage; if it misses, you gain advantage on your next attack against it."
+    }
+  },
+  {
+    "id": "2014/feature/thegreatoldone-thoughtshield",
+    "edition": "2014",
+    "name": "Thought Shield",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your thoughts cannot be read, you have resistance to psychic damage, and creatures dealing psychic damage to you take the same amount."
+    }
+  },
+  {
+    "id": "2014/feature/thegreatoldone-createthrall",
+    "edition": "2014",
+    "name": "Create Thrall",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can touch an incapacitated creature to charm it until a remove curse is cast on it, and can communicate with it telepathically at any distance."
+    }
+  },
+  {
+    "id": "2014/subclass/thearchfey",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "The Archfey",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/warlock",
+      "description": "Your patron is a lord or lady of the fey, a creature of legend whose motives are inscrutable and whose favor is fickle.",
+      "featuresByLevel": {
+        "1": [
+          "2014/feature/thearchfey-feypresence"
+        ],
+        "6": [
+          "2014/feature/thearchfey-mistyescape"
+        ],
+        "10": [
+          "2014/feature/thearchfey-beguilingdefenses"
+        ],
+        "14": [
+          "2014/feature/thearchfey-darkdelirium"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "1": [
+          "2014/spell/faerie-fire",
+          "2014/spell/sleep"
+        ],
+        "3": [
+          "2014/spell/calm-emotions"
+        ],
+        "5": [
+          "2014/spell/blink",
+          "2014/spell/plant-growth"
+        ],
+        "7": [
+          "2014/spell/dominate-beast",
+          "2014/spell/greater-invisibility"
+        ],
+        "9": [
+          "2014/spell/dominate-person",
+          "2014/spell/seeming"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/thegreatoldone",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "The Great Old One",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/warlock",
+      "description": "Your patron is an alien entity of the Far Realm whose true nature is beyond mortal comprehension — and which may not know you exist.",
+      "featuresByLevel": {
+        "1": [
+          "2014/feature/thegreatoldone-awakenedmind"
+        ],
+        "6": [
+          "2014/feature/thegreatoldone-entropicward"
+        ],
+        "10": [
+          "2014/feature/thegreatoldone-thoughtshield"
+        ],
+        "14": [
+          "2014/feature/thegreatoldone-createthrall"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2014/spell/detect-thoughts"
+        ],
+        "5": [
+          "2014/spell/clairvoyance",
+          "2014/spell/sending"
+        ],
+        "7": [
+          "2014/spell/dominate-beast"
+        ],
+        "9": [
+          "2014/spell/dominate-person",
+          "2014/spell/telekinesis"
+        ]
+      }
+    }
   }
 ]

@@ -832,5 +832,205 @@
     "data": {
       "description": "You can sweep your Psychic Blades directly through a creature's mind. When you use your Psychic Blades to deal Sneak Attack damage to a creature, you can force that target to make a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Dexterity modifier). If the save fails, the target is stunned for 1 minute. The stunned target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\nOnce you use this feature, you can't do so again until you finish a long rest, unless you expend three Psionic Energy dice to use it again."
     }
+  },
+  {
+    "id": "2014/feature/assassin-bonusproficiencies",
+    "edition": "2014",
+    "name": "Bonus Proficiencies",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency with the disguise kit and the poisoner's kit."
+    }
+  },
+  {
+    "id": "2014/feature/assassin-assassinate",
+    "edition": "2014",
+    "name": "Assassinate",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have advantage on attacks against creatures that have not yet taken a turn, and any hit against a surprised creature is a critical hit."
+    }
+  },
+  {
+    "id": "2014/feature/assassin-infiltrationexpertise",
+    "edition": "2014",
+    "name": "Infiltration Expertise",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can spend time and money to create a false identity that withstands scrutiny."
+    }
+  },
+  {
+    "id": "2014/feature/assassin-impostor",
+    "edition": "2014",
+    "name": "Impostor",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can unerringly mimic another person's speech, handwriting, and mannerisms after studying them."
+    }
+  },
+  {
+    "id": "2014/feature/assassin-deathstrike",
+    "edition": "2014",
+    "name": "Death Strike",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you attack a surprised creature, it must make a Constitution save or take double damage from the attack."
+    }
+  },
+  {
+    "id": "2014/feature/arcanetrickster-spellcasting",
+    "edition": "2014",
+    "name": "Spellcasting",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn wizard spells, primarily from the enchantment and illusion schools. Intelligence is your spellcasting ability."
+    }
+  },
+  {
+    "id": "2014/feature/arcanetrickster-magehandlegerdemain",
+    "edition": "2014",
+    "name": "Mage Hand Legerdemain",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your Mage Hand is invisible and can pick locks, disarm traps, pick pockets, and stow objects, all as a bonus action."
+    }
+  },
+  {
+    "id": "2014/feature/arcanetrickster-magicalambush",
+    "edition": "2014",
+    "name": "Magical Ambush",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "If you are hidden from a creature when you cast a spell on it, it has disadvantage on any saving throw against the spell."
+    }
+  },
+  {
+    "id": "2014/feature/arcanetrickster-versatiletrickster",
+    "edition": "2014",
+    "name": "Versatile Trickster",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can use your Mage Hand to distract a creature, gaining advantage on attack rolls against it."
+    }
+  },
+  {
+    "id": "2014/feature/arcanetrickster-spellthief",
+    "edition": "2014",
+    "name": "Spell Thief",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature casts a spell targeting you, you can use your reaction to steal knowledge of that spell for 8 hours if it fails a save."
+    }
+  },
+  {
+    "id": "2014/subclass/assassin",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Assassin",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/rogue",
+      "description": "You focus your training on the grim art of death, mastering disguise, poison, and the sudden lethal strike.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/assassin-bonusproficiencies",
+          "2014/feature/assassin-assassinate"
+        ],
+        "9": [
+          "2014/feature/assassin-infiltrationexpertise"
+        ],
+        "13": [
+          "2014/feature/assassin-impostor"
+        ],
+        "17": [
+          "2014/feature/assassin-deathstrike"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2014/subclass/arcanetrickster",
+    "edition": "2014",
+    "kind": "subclass",
+    "name": "Arcane Trickster",
+    "source": {
+      "book": "PHB2014"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2014/class/rogue",
+      "description": "Arcane Tricksters enhance stealth and agility with enchantment and illusion magic.",
+      "featuresByLevel": {
+        "3": [
+          "2014/feature/arcanetrickster-spellcasting",
+          "2014/feature/arcanetrickster-magehandlegerdemain"
+        ],
+        "9": [
+          "2014/feature/arcanetrickster-magicalambush"
+        ],
+        "13": [
+          "2014/feature/arcanetrickster-versatiletrickster"
+        ],
+        "17": [
+          "2014/feature/arcanetrickster-spellthief"
+        ]
+      }
+    }
   }
 ]
