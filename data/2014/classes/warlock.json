@@ -10,6 +10,7 @@
     "schemaVersion": 1,
     "kind": "class",
     "data": {
+      "description": "Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse. Through pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both subtle and spectacular — and they pay for that power in ways not always visible.",
       "hitDie": "d8",
       "savingThrowProficiencies": [
         "wis",

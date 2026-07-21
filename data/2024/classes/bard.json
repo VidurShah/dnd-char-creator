@@ -10,6 +10,7 @@
     "schemaVersion": 1,
     "kind": "class",
     "data": {
+      "description": "Whether singing folk ballads in taverns or elaborate compositions in royal courts, bards use their gifts to hold audiences spellbound. Their music is an echo of the Words of Creation, and a bard who learns to weave it can inspire allies, manipulate minds, and bend reality itself.",
       "hitDie": "d8",
       "savingThrowProficiencies": [
         "dex",

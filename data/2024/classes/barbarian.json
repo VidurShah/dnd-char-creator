@@ -10,6 +10,7 @@
     "schemaVersion": 1,
     "kind": "class",
     "data": {
+      "description": "For some, their rage springs from a communion with fierce animal spirits. Others draw from a roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that fuels not just a battle frenzy but uncanny reflexes, resilience, and feats of strength.",
       "hitDie": "d12",
       "savingThrowProficiencies": [
         "str",

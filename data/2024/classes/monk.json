@@ -10,6 +10,7 @@
     "schemaVersion": 1,
     "kind": "class",
     "data": {
+      "description": "Monks make a careful study of a magical energy that suffuses the multiverse — an element of the mystical power that flows through all living bodies. Harnessing this energy, monks channel it into extraordinary feats of speed, strength, and martial prowess.",
       "hitDie": "d8",
       "savingThrowProficiencies": [
         "str",

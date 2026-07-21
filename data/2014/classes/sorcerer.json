@@ -10,6 +10,7 @@
     "schemaVersion": 1,
     "kind": "class",
     "data": {
+      "description": "Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence, or exposure to unknown cosmic forces. No one chooses sorcery; the power chooses the sorcerer. Their magic is intuitive rather than studied, and it burns closer to the surface.",
       "hitDie": "d6",
       "savingThrowProficiencies": [
         "con",

@@ -10,6 +10,7 @@
     "schemaVersion": 1,
     "kind": "class",
     "data": {
+      "description": "Whatever their origin and their mission, paladins are united by their oaths to stand against the forces of annihilation and corruption. Bound by a sacred promise, a paladin draws power from that conviction — to smite the wicked, to shield the innocent, and to heal the wounded.",
       "hitDie": "d10",
       "savingThrowProficiencies": [
         "wis",
