@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { Link } from 'react-router';
 import { db } from '@/db/dexie';
+import { characterRepo } from '@/db/repos';
 import { exportVault, importVault } from '@/db/exportImport';
 import { downloadJson, readJsonFile } from '@/lib/download';
 
@@ -9,6 +10,13 @@ export function CharactersPage() {
   const characters = useLiveQuery(() => db.characters.orderBy('updatedAt').reverse().toArray(), []);
   const fileInput = useRef<HTMLInputElement>(null);
   const [importError, setImportError] = useState<string | null>(null);
+  /** Id of the character whose delete button is awaiting confirmation, if any. */
+  const [pendingDelete, setPendingDelete] = useState<string | null>(null);
+
+  async function handleDelete(id: string) {
+    await characterRepo.remove(id);
+    setPendingDelete(null);
+  }
 
   async function handleExportVault() {
     const vault = await exportVault();
@@ -91,13 +99,42 @@ export function CharactersPage() {
       ) : (
         <ul className="divide-y-2 divide-dashed divide-ink-900/15 dark:divide-kraft-100/15">
           {characters.map((c) => (
-            <li key={c.id}>
-              <Link to={`/characters/${c.id}`} className="flex items-center justify-between px-2 py-3 hover:bg-ink-900/5 dark:hover:bg-kraft-100/5">
+            <li key={c.id} className="flex items-center gap-2 pr-2">
+              <Link to={`/characters/${c.id}`} className="flex flex-1 items-center justify-between px-2 py-3 hover:bg-ink-900/5 dark:hover:bg-kraft-100/5">
                 <span className="font-medium">{c.name}</span>
                 <span className="font-mono text-xs text-ink-700 dark:text-kraft-200">
                   Level {c.build.classes.reduce((sum, cl) => sum + cl.levels, 0)}
                 </span>
               </Link>
+              {/* Deleting a character is irreversible and local-only — there's no
+                  server copy to restore from — so it takes an explicit second click. */}
+              {pendingDelete === c.id ? (
+                <span className="flex shrink-0 items-center gap-1">
+                  <button
+                    type="button"
+                    onClick={() => handleDelete(c.id)}
+                    className="border-2 border-rust-500 bg-rust-500 px-2 py-1 font-mono text-[10px] uppercase tracking-wide text-kraft-50"
+                  >
+                    Delete
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setPendingDelete(null)}
+                    className="border-2 border-ink-900/30 px-2 py-1 font-mono text-[10px] uppercase tracking-wide text-ink-700 hover:border-ink-900/60 dark:border-kraft-100/30 dark:text-kraft-200"
+                  >
+                    Cancel
+                  </button>
+                </span>
+              ) : (
+                <button
+                  type="button"
+                  aria-label={`Delete ${c.name}`}
+                  onClick={() => setPendingDelete(c.id)}
+                  className="shrink-0 border-2 border-ink-900/30 px-2 py-1 font-mono text-[10px] uppercase tracking-wide text-ink-700 hover:border-rust-500 hover:text-rust-500 dark:border-kraft-100/30 dark:text-kraft-200"
+                >
+                  Delete
+                </button>
+              )}
             </li>
           ))}
         </ul>
