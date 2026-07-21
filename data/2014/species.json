@@ -22,6 +22,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Born of dragons, as their name proclaims, the dragonborn walk proudly through a world that greets them with fearful incomprehension. Shaped by draconic gods or the dragons themselves, they originally hatched from dragon eggs as a unique race, combining the best attributes of dragons and humanoids.",
       "size": "medium",
       "speed": 30,
       "traits": [
@@ -49,6 +50,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal. Though they stand well under 5 feet tall, dwarves are so broad and compact that they can weigh as much as a human standing nearly two feet taller. Their courage and endurance are easily a match for any of the larger folk.",
       "size": "medium",
       "speed": 25,
       "traits": [
@@ -78,6 +80,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. They love nature and magic, art and artistry, music and poetry, and the good things of the world. Elves can live well over 700 years, giving them a broad perspective on events that might trouble the shorter-lived races more deeply.",
       "size": "medium",
       "speed": 30,
       "traits": [
@@ -106,6 +109,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "A gnome's energy and enthusiasm for living shines through every inch of his or her tiny body. Gnomes average slightly over 3 feet tall and weigh 40 to 45 pounds. Their tan or brown faces are usually adorned with broad smiles, and their bright eyes shine with excitement.",
       "size": "small",
       "speed": 25,
       "traits": [
@@ -132,6 +136,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Walking in two worlds but truly belonging to neither, half-elves combine what some say are the best qualities of their elf and human parents: human curiosity, inventiveness, and ambition tempered by the refined senses, love of nature, and artistic tastes of the elves.",
       "size": "medium",
       "speed": 30,
       "traits": [
@@ -164,6 +169,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "Whether united under the leadership of a mighty warlock or having fought to a standstill after years of conflict, orc and human tribes sometimes form alliances. Half-orcs born of these alliances stand as testaments to both the strength and the struggle of their heritage.",
       "size": "medium",
       "speed": 30,
       "traits": [
@@ -192,6 +198,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "The comforts of home are the goals of most halflings' lives: a place to settle in peace and quiet, far from marauding monsters and clashing armies. Halflings are an affable and cheerful people, and they cherish the bonds of family and friendship as well as the comforts of hearth and home.",
       "size": "small",
       "speed": 25,
       "traits": [
@@ -244,6 +251,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "In the reckonings of most worlds, humans are the youngest of the common races, late to arrive on the world scene and short-lived in comparison to dwarves, elves, and dragons. Perhaps it is because of their shorter lives that they strive to achieve as much as they can in the years they are given.",
       "size": "medium",
       "speed": 30,
       "traits": []
@@ -295,6 +303,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the lot of the tiefling. And to twist the knife, tieflings know that this is because a pact struck generations ago infused the essence of Asmodeus into their bloodline.",
       "size": "medium",
       "speed": 30,
       "traits": [
@@ -327,6 +336,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience. The gold dwarves of Faerûn in their mighty southern kingdom are hill dwarves, as are the exiled Neidar and the debased Klar of Krynn in the Dragonlance setting.",
       "size": "medium",
       "speed": 25,
       "traits": [
@@ -363,6 +373,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves superior to non-elves and even other elves. The other type is more common and more friendly, and often encountered among humans and other races.",
       "size": "medium",
       "speed": 30,
       "traits": [
@@ -400,6 +411,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes. Most gnomes in the worlds of D&D are rock gnomes, including the tinker gnomes of the Dragonlance setting.",
       "size": "small",
       "speed": 25,
       "traits": [
@@ -434,6 +446,7 @@
     "schemaVersion": 1,
     "kind": "species",
     "data": {
+      "description": "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You're inclined to be affable and get along well with others. Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.",
       "size": "small",
       "speed": 25,
       "traits": [
@@ -849,6 +862,7 @@
     "origin": "seed",
     "schemaVersion": 1,
     "data": {
+      "description": "An option for players who want to build a character whose heritage doesn't fit any of the standard races. You determine your own size, speed, and ability score increase, and you gain a feat and one language of your choice at 1st level.",
       "size": "medium",
       "speed": 30,
       "traits": []
