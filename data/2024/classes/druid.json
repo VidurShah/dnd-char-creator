@@ -841,5 +841,338 @@
     "data": {
       "description": "As a Magic action, you can expend a use of your Wild Shape and cause spectral trees and vines to appear in a 15-foot Cube on the ground within 120 feet of yourself. They last there for 1 minute or until you have the Incapacitated condition or die. You and your allies have Half Cover while in that area, and your allies gain the current Resistance of your Nature's Ward while there.\n  As a Bonus Action, you can move the Cube up to 60 feet to ground within 120 feet of yourself."
     }
+  },
+  {
+    "id": "2024/feature/circleofthemoon-circleforms",
+    "edition": "2024",
+    "name": "Circle Forms",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can channel lunar magic when you assume a Wild Shape form, granting you an Armor Class of 13 + your Wisdom modifier if that total is higher than the form's AC. In addition, you can use Wild Shape as a Bonus Action rather than as a Magic action."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthemoon-circleofthemoonspells",
+    "edition": "2024",
+    "name": "Circle of the Moon Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have certain spells prepared once you reach the specified Druid levels: Cure Wounds, Moonbeam, Starry Wisp, and later Conjure Animals and Fount of Moonlight."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthemoon-improvedcircleforms",
+    "edition": "2024",
+    "name": "Improved Circle Forms",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "While in a Wild Shape form, you can use your Wisdom modifier in place of the form's Strength and Dexterity modifiers, and your attacks in that form count as magical."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthemoon-moonlightstep",
+    "edition": "2024",
+    "name": "Moonlight Step",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can expend a spell slot to teleport up to 30 feet to an unoccupied space you can see, and gain Advantage on the next attack roll you make before the end of the turn."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthemoon-lunarform",
+    "edition": "2024",
+    "name": "Lunar Form",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Once per turn while in a Wild Shape form, you can deal an extra 2d10 Radiant damage on a hit, and you can bring a willing creature with you when you use Moonlight Step."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthesea-wrathofthesea",
+    "edition": "2024",
+    "name": "Wrath of the Sea",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a Bonus Action, you can manifest an aura of ocean spray around yourself. Creatures that end their turn near you take Cold damage and can be pushed away."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthesea-circleoftheseaspells",
+    "edition": "2024",
+    "name": "Circle of the Sea Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have certain spells prepared once you reach the specified Druid levels, including Fog Cloud, Gust of Wind, and Water Breathing."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthesea-aquaticaffinity",
+    "edition": "2024",
+    "name": "Aquatic Affinity",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The size of your Wrath of the Sea emanation increases, and you gain a Swim Speed equal to your Speed."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthesea-stormborn",
+    "edition": "2024",
+    "name": "Stormborn",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "While your Wrath of the Sea aura is active, you gain a Fly Speed, and you have Resistance to Cold, Lightning, and Thunder damage."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthesea-oceanicgift",
+    "edition": "2024",
+    "name": "Oceanic Gift",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can manifest Wrath of the Sea around a willing creature within 60 feet instead of yourself, using your own statistics for the effect."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthestars-starmap",
+    "edition": "2024",
+    "name": "Star Map",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You craft a celestial map that serves as a Druidic Focus. You always have Guidance and Guiding Bolt prepared, and can cast Guiding Bolt a number of times without a spell slot."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthestars-starryform",
+    "edition": "2024",
+    "name": "Starry Form",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can expend a Wild Shape use to take on a starry form — Archer, Chalice, or Dragon — each granting a distinct benefit while it lasts."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthestars-cosmicomen",
+    "edition": "2024",
+    "name": "Cosmic Omen",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "After a Long Rest, roll a die to determine an omen of Weal or Woe, letting you add or subtract a d6 on rolls made by creatures near you."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthestars-twinklingconstellations",
+    "edition": "2024",
+    "name": "Twinkling Constellations",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The Archer, Chalice, and Dragon improve, and you can change which constellation is active at the start of each of your turns."
+    }
+  },
+  {
+    "id": "2024/feature/circleofthestars-fullofstars",
+    "edition": "2024",
+    "name": "Full of Stars",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "While in your Starry Form, you become partially incorporeal, giving you Resistance to Bludgeoning, Piercing, and Slashing damage."
+    }
+  },
+  {
+    "id": "2024/subclass/circleofthemoon",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Circle of the Moon",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/druid",
+      "description": "Druids of this circle become mighty shapechangers, guarding the wilds in the shape of its fiercest beasts.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/circleofthemoon-circleforms",
+          "2024/feature/circleofthemoon-circleofthemoonspells"
+        ],
+        "6": [
+          "2024/feature/circleofthemoon-improvedcircleforms"
+        ],
+        "10": [
+          "2024/feature/circleofthemoon-moonlightstep"
+        ],
+        "14": [
+          "2024/feature/circleofthemoon-lunarform"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2024/spell/cure-wounds",
+          "2024/spell/moonbeam"
+        ],
+        "5": [
+          "2024/spell/conjure-animals"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/circleofthesea",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Circle of the Sea",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/druid",
+      "description": "Druids of this circle draw on the endless power of the ocean, wreathing themselves in wind and spray.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/circleofthesea-wrathofthesea",
+          "2024/feature/circleofthesea-circleoftheseaspells"
+        ],
+        "6": [
+          "2024/feature/circleofthesea-aquaticaffinity"
+        ],
+        "10": [
+          "2024/feature/circleofthesea-stormborn"
+        ],
+        "14": [
+          "2024/feature/circleofthesea-oceanicgift"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2024/spell/fog-cloud",
+          "2024/spell/gust-of-wind",
+          "2024/spell/thunderwave"
+        ],
+        "5": [
+          "2024/spell/lightning-bolt",
+          "2024/spell/water-breathing"
+        ],
+        "7": [
+          "2024/spell/control-water",
+          "2024/spell/ice-storm"
+        ],
+        "9": [
+          "2024/spell/conjure-elemental"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/circleofthestars",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Circle of the Stars",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/druid",
+      "description": "These druids chart the constellations, drawing on starlight to heal, to strike, and to divine what is to come.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/circleofthestars-starmap",
+          "2024/feature/circleofthestars-starryform"
+        ],
+        "6": [
+          "2024/feature/circleofthestars-cosmicomen"
+        ],
+        "10": [
+          "2024/feature/circleofthestars-twinklingconstellations"
+        ],
+        "14": [
+          "2024/feature/circleofthestars-fullofstars"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2024/spell/guiding-bolt",
+          "2024/spell/guidance"
+        ]
+      }
+    }
   }
 ]

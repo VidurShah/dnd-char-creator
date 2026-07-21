@@ -787,5 +787,350 @@
     "data": {
       "description": "You can cast Summon Dragon without a Material component. You can also cast it once without a spell slot, and you regain the ability to cast it in this way when you finish a Long Rest.\n  Whenever you start casting the spell, you can modify it so that it doesn't require Concentration. If you do so, the spell's duration becomes 1 minute for that casting."
     }
+  },
+  {
+    "id": "2024/feature/aberrantsorcery-psionicspells",
+    "edition": "2024",
+    "name": "Psionic Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have certain spells prepared, including Arms of Hadar, Detect Thoughts, and Sending."
+    }
+  },
+  {
+    "id": "2024/feature/aberrantsorcery-telepathicspeech",
+    "edition": "2024",
+    "name": "Telepathic Speech",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can form a telepathic link with a creature you can see, allowing you to communicate over a distance for a duration based on your level."
+    }
+  },
+  {
+    "id": "2024/feature/aberrantsorcery-psionicsorcery",
+    "edition": "2024",
+    "name": "Psionic Sorcery",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can cast your Psionic Spells by expending Sorcery Points instead of a spell slot, and doing so requires no verbal or somatic components."
+    }
+  },
+  {
+    "id": "2024/feature/aberrantsorcery-psychicdefenses",
+    "edition": "2024",
+    "name": "Psychic Defenses",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Resistance to Psychic damage and Advantage on saves against being Charmed or Frightened."
+    }
+  },
+  {
+    "id": "2024/feature/aberrantsorcery-revelationinflesh",
+    "edition": "2024",
+    "name": "Revelation in Flesh",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can spend Sorcery Points to gain aberrant physical features — a Swim Speed and water breathing, a Fly Speed, Darkvision, or the ability to squeeze through tight spaces."
+    }
+  },
+  {
+    "id": "2024/feature/aberrantsorcery-warpingimplosion",
+    "edition": "2024",
+    "name": "Warping Implosion",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can teleport up to 120 feet and pull creatures toward the space you left, dealing Force damage to them."
+    }
+  },
+  {
+    "id": "2024/feature/clockworksorcery-clockworkspells",
+    "edition": "2024",
+    "name": "Clockwork Spells",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have certain spells prepared, including Aid, Alarm, Protection from Evil and Good, and Lesser Restoration."
+    }
+  },
+  {
+    "id": "2024/feature/clockworksorcery-restorebalance",
+    "edition": "2024",
+    "name": "Restore Balance",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a Reaction, you can cancel Advantage or Disadvantage on a roll made by a creature you can see."
+    }
+  },
+  {
+    "id": "2024/feature/clockworksorcery-bastionoflaw",
+    "edition": "2024",
+    "name": "Bastion of Law",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can expend Sorcery Points to create a ward of order around a creature, absorbing damage with a pool of d8s."
+    }
+  },
+  {
+    "id": "2024/feature/clockworksorcery-tranceoforder",
+    "edition": "2024",
+    "name": "Trance of Order",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain the ability to enter a heightened state in which attack rolls against you cannot benefit from Advantage, and you can treat any d20 Test roll of 9 or lower as a 10."
+    }
+  },
+  {
+    "id": "2024/feature/clockworksorcery-clockworkcavalcade",
+    "edition": "2024",
+    "name": "Clockwork Cavalcade",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You summon spirits of order that repair objects, restore hit points to creatures, and end spells of a certain level in a 30-foot cube."
+    }
+  },
+  {
+    "id": "2024/feature/wildmagicsorcery-wildmagicsurge",
+    "edition": "2024",
+    "name": "Wild Magic Surge",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Immediately after you cast a Sorcerer spell with a spell slot, the DM can have you roll on the Wild Magic Surge table to create a random magical effect."
+    }
+  },
+  {
+    "id": "2024/feature/wildmagicsorcery-tidesofchaos",
+    "edition": "2024",
+    "name": "Tides of Chaos",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can gain Advantage on one d20 Test, after which you must finish a Long Rest or trigger a Wild Magic Surge before using it again."
+    }
+  },
+  {
+    "id": "2024/feature/wildmagicsorcery-bendluck",
+    "edition": "2024",
+    "name": "Bend Luck",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When another creature you can see makes a d20 Test, you can spend Sorcery Points to roll a d4 and add or subtract it from the roll."
+    }
+  },
+  {
+    "id": "2024/feature/wildmagicsorcery-controlledchaos",
+    "edition": "2024",
+    "name": "Controlled Chaos",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Whenever you roll on the Wild Magic Surge table, you can roll twice and use either result."
+    }
+  },
+  {
+    "id": "2024/feature/wildmagicsorcery-tamedsurge",
+    "edition": "2024",
+    "name": "Tamed Surge",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Immediately after you use Tides of Chaos, you can choose an effect from the Wild Magic Surge table rather than rolling for it."
+    }
+  },
+  {
+    "id": "2024/subclass/aberrantsorcery",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Aberrant Sorcery",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/sorcerer",
+      "description": "An alien influence has wrapped its tendrils around your mind, granting psionic power at a cost you may not yet understand.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/aberrantsorcery-psionicspells",
+          "2024/feature/aberrantsorcery-telepathicspeech"
+        ],
+        "6": [
+          "2024/feature/aberrantsorcery-psionicsorcery",
+          "2024/feature/aberrantsorcery-psychicdefenses"
+        ],
+        "14": [
+          "2024/feature/aberrantsorcery-revelationinflesh"
+        ],
+        "18": [
+          "2024/feature/aberrantsorcery-warpingimplosion"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2024/spell/extracted-arms-of-hadar",
+          "2024/spell/detect-thoughts"
+        ],
+        "5": [
+          "2024/spell/sending"
+        ],
+        "9": [
+          "2024/spell/telekinesis"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/clockworksorcery",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Clockwork Sorcery",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/sorcerer",
+      "description": "Your magic is touched by the cosmic force of order itself, drawn from the plane of absolute law.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/clockworksorcery-clockworkspells",
+          "2024/feature/clockworksorcery-restorebalance"
+        ],
+        "6": [
+          "2024/feature/clockworksorcery-bastionoflaw"
+        ],
+        "14": [
+          "2024/feature/clockworksorcery-tranceoforder"
+        ],
+        "18": [
+          "2024/feature/clockworksorcery-clockworkcavalcade"
+        ]
+      },
+      "grantedSpellsByLevel": {
+        "3": [
+          "2024/spell/alarm",
+          "2024/spell/protection-from-evil-and-good"
+        ],
+        "5": [
+          "2024/spell/aid",
+          "2024/spell/lesser-restoration"
+        ],
+        "7": [
+          "2024/spell/dispel-magic",
+          "2024/spell/protection-from-energy"
+        ],
+        "9": [
+          "2024/spell/freedom-of-movement",
+          "2024/spell/extracted-summon-construct"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/wildmagicsorcery",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Wild Magic Sorcery",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/sorcerer",
+      "description": "Your magic springs from raw chaos, and it does not always do exactly what you intend.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/wildmagicsorcery-wildmagicsurge",
+          "2024/feature/wildmagicsorcery-tidesofchaos"
+        ],
+        "6": [
+          "2024/feature/wildmagicsorcery-bendluck"
+        ],
+        "14": [
+          "2024/feature/wildmagicsorcery-controlledchaos"
+        ],
+        "18": [
+          "2024/feature/wildmagicsorcery-tamedsurge"
+        ]
+      }
+    }
   }
 ]

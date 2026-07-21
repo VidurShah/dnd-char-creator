@@ -704,5 +704,305 @@
     "data": {
       "description": "You are adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal Initiative and your second turn at your Initiative minus 10."
     }
+  },
+  {
+    "id": "2024/feature/arcanetrickster-spellcasting",
+    "edition": "2024",
+    "name": "Spellcasting",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn to cast Wizard spells, drawn mostly from the Enchantment and Illusion schools. Intelligence is your spellcasting ability."
+    }
+  },
+  {
+    "id": "2024/feature/arcanetrickster-magehandlegerdemain",
+    "edition": "2024",
+    "name": "Mage Hand Legerdemain",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can cast Mage Hand invisibly and use it to pick locks, disarm traps, pick pockets, and stow objects, all as a Bonus Action."
+    }
+  },
+  {
+    "id": "2024/feature/arcanetrickster-magicalambush",
+    "edition": "2024",
+    "name": "Magical Ambush",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "If you are Invisible to a creature when you cast a spell on it, that creature has Disadvantage on any saving throw against the spell."
+    }
+  },
+  {
+    "id": "2024/feature/arcanetrickster-versatiletrickster",
+    "edition": "2024",
+    "name": "Versatile Trickster",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can use a Bonus Action through your Mage Hand to distract a creature, gaining Advantage on attack rolls against it."
+    }
+  },
+  {
+    "id": "2024/feature/arcanetrickster-spellthief",
+    "edition": "2024",
+    "name": "Spell Thief",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature casts a spell that targets you, you can use your Reaction to force a save; on a failure you steal knowledge of the spell for 8 hours and the caster cannot cast it."
+    }
+  },
+  {
+    "id": "2024/feature/assassin-assassinate",
+    "edition": "2024",
+    "name": "Assassinate",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Advantage on attack rolls against any creature that has not yet taken a turn, and a hit against a Surprised creature deals extra damage."
+    }
+  },
+  {
+    "id": "2024/feature/assassin-assassinstools",
+    "edition": "2024",
+    "name": "Assassin's Tools",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency with a Disguise Kit and a Poisoner's Kit."
+    }
+  },
+  {
+    "id": "2024/feature/assassin-infiltrationexpertise",
+    "edition": "2024",
+    "name": "Infiltration Expertise",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can spend time and money to establish a false identity, and can unerringly mimic the speech, writing, and behavior of another person."
+    }
+  },
+  {
+    "id": "2024/feature/assassin-envenomweapons",
+    "edition": "2024",
+    "name": "Envenom Weapons",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "The poison you apply with a Poisoner's Kit deals extra damage and ignores Poison Resistance."
+    }
+  },
+  {
+    "id": "2024/feature/assassin-deathstrike",
+    "edition": "2024",
+    "name": "Death Strike",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you hit a Surprised creature, it must make a Constitution save or take double damage from the attack."
+    }
+  },
+  {
+    "id": "2024/feature/soulknife-psionicpower",
+    "edition": "2024",
+    "name": "Psionic Power",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Psionic Energy Dice that fuel Psi-Bolstered Knack and Psychic Whispers, letting you shore up failed ability checks and speak mind to mind."
+    }
+  },
+  {
+    "id": "2024/feature/soulknife-psychicblades",
+    "edition": "2024",
+    "name": "Psychic Blades",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can manifest a shimmering blade of psychic energy as part of an attack, and manifest a second as a Bonus Action."
+    }
+  },
+  {
+    "id": "2024/feature/soulknife-soulblades",
+    "edition": "2024",
+    "name": "Soul Blades",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain Homing Strikes, letting you turn a miss into a hit, and Psychic Teleportation, letting you throw a blade and teleport to where it lands."
+    }
+  },
+  {
+    "id": "2024/feature/soulknife-psychicveil",
+    "edition": "2024",
+    "name": "Psychic Veil",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can become Invisible for one hour, ending early if you deal damage or force a saving throw."
+    }
+  },
+  {
+    "id": "2024/feature/soulknife-rendmind",
+    "edition": "2024",
+    "name": "Rend Mind",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you hit a creature with a Psychic Blade, you can force it to make a Wisdom save or be Stunned for one minute."
+    }
+  },
+  {
+    "id": "2024/subclass/arcanetrickster",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Arcane Trickster",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/rogue",
+      "description": "Arcane Tricksters enhance their sleight of hand with enchantment and illusion, stealing with magic as readily as with fingers.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/arcanetrickster-spellcasting",
+          "2024/feature/arcanetrickster-magehandlegerdemain"
+        ],
+        "9": [
+          "2024/feature/arcanetrickster-magicalambush"
+        ],
+        "13": [
+          "2024/feature/arcanetrickster-versatiletrickster"
+        ],
+        "17": [
+          "2024/feature/arcanetrickster-spellthief"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/assassin",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Assassin",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/rogue",
+      "description": "Assassins train in the tools of a killer: disguise, poison, and the lethal certainty of a strike delivered before the target can react.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/assassin-assassinate",
+          "2024/feature/assassin-assassinstools"
+        ],
+        "9": [
+          "2024/feature/assassin-infiltrationexpertise"
+        ],
+        "13": [
+          "2024/feature/assassin-envenomweapons"
+        ],
+        "17": [
+          "2024/feature/assassin-deathstrike"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/soulknife",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Soulknife",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/rogue",
+      "description": "Soulknives strike with blades of psychic energy conjured from their own minds, and pierce thoughts as readily as flesh.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/soulknife-psionicpower",
+          "2024/feature/soulknife-psychicblades"
+        ],
+        "9": [
+          "2024/feature/soulknife-soulblades"
+        ],
+        "13": [
+          "2024/feature/soulknife-psychicveil"
+        ],
+        "17": [
+          "2024/feature/soulknife-rendmind"
+        ]
+      }
+    }
   }
 ]

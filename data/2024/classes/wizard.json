@@ -746,5 +746,305 @@
     "data": {
       "description": "You can increase the power of your spells. When you cast a Wizard spell with a spell slot of levels 1-5 that deals damage, you can deal maximum damage with that spell on the turn you cast it.\n  The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a Long Rest, you take 2d12 Necrotic damage for each level of the spell slot immediately after you cast it. This damage ignores Resistance and Immunity.\n  Each time you use this feature again before finishing a Long Rest, the Necrotic damage per spell level increases by 1d12."
     }
+  },
+  {
+    "id": "2024/feature/abjurer-abjurationsavant",
+    "edition": "2024",
+    "name": "Abjuration Savant",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you copy an Abjuration spell into your spellbook, the process costs you half the usual time and gold."
+    }
+  },
+  {
+    "id": "2024/feature/abjurer-arcaneward",
+    "edition": "2024",
+    "name": "Arcane Ward",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you cast an Abjuration spell, you create a magical ward that absorbs damage you take, and which you can recharge by casting further Abjuration spells."
+    }
+  },
+  {
+    "id": "2024/feature/abjurer-projectedward",
+    "edition": "2024",
+    "name": "Projected Ward",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature you can see within 30 feet takes damage, you can use your Reaction to have your Arcane Ward absorb that damage instead."
+    }
+  },
+  {
+    "id": "2024/feature/abjurer-spellbreaker",
+    "edition": "2024",
+    "name": "Spell Breaker",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You always have Counterspell and Dispel Magic prepared, and you can cast them without expending a spell slot a limited number of times."
+    }
+  },
+  {
+    "id": "2024/feature/abjurer-spellresistance",
+    "edition": "2024",
+    "name": "Spell Resistance",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Advantage on saving throws against spells, and you have Resistance to the damage of spells."
+    }
+  },
+  {
+    "id": "2024/feature/diviner-divinationsavant",
+    "edition": "2024",
+    "name": "Divination Savant",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you copy a Divination spell into your spellbook, the process costs you half the usual time and gold."
+    }
+  },
+  {
+    "id": "2024/feature/diviner-portent",
+    "edition": "2024",
+    "name": "Portent",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "After each Long Rest, you roll two d20s and record the results. You can replace any attack roll, saving throw, or ability check made by you or a creature you can see with one of these rolls."
+    }
+  },
+  {
+    "id": "2024/feature/diviner-expertdivination",
+    "edition": "2024",
+    "name": "Expert Divination",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you cast a Divination spell of level 2 or higher, you regain an expended spell slot of a lower level."
+    }
+  },
+  {
+    "id": "2024/feature/diviner-thethirdeye",
+    "edition": "2024",
+    "name": "The Third Eye",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can gain one of several benefits until your next rest: Darkvision, Ethereal Sight, Greater Comprehension, or See Invisibility."
+    }
+  },
+  {
+    "id": "2024/feature/diviner-greaterportent",
+    "edition": "2024",
+    "name": "Greater Portent",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You roll three d20s for your Portent feature rather than two."
+    }
+  },
+  {
+    "id": "2024/feature/illusionist-illusionsavant",
+    "edition": "2024",
+    "name": "Illusion Savant",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you copy an Illusion spell into your spellbook, the process costs you half the usual time and gold."
+    }
+  },
+  {
+    "id": "2024/feature/illusionist-improvedillusions",
+    "edition": "2024",
+    "name": "Improved Illusions",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your illusion spells no longer require verbal components, and the range of your Minor Illusion increases. You also know the Minor Illusion cantrip."
+    }
+  },
+  {
+    "id": "2024/feature/illusionist-phantasmalcreatures",
+    "edition": "2024",
+    "name": "Phantasmal Creatures",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can replace a summoning spell's creature with a beast or fey illusion, which appears real until it takes damage."
+    }
+  },
+  {
+    "id": "2024/feature/illusionist-illusoryself",
+    "edition": "2024",
+    "name": "Illusory Self",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When a creature hits you with an attack, you can use your Reaction to interpose an illusory duplicate and cause the attack to miss."
+    }
+  },
+  {
+    "id": "2024/feature/illusionist-illusoryreality",
+    "edition": "2024",
+    "name": "Illusory Reality",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can make one inanimate, nonmagical object within an illusion you cast real for one minute."
+    }
+  },
+  {
+    "id": "2024/subclass/abjurer",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Abjurer",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/wizard",
+      "description": "Abjurers specialize in protective magic, weaving wards that turn aside harm meant for themselves and those they shield.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/abjurer-abjurationsavant",
+          "2024/feature/abjurer-arcaneward"
+        ],
+        "6": [
+          "2024/feature/abjurer-projectedward"
+        ],
+        "10": [
+          "2024/feature/abjurer-spellbreaker"
+        ],
+        "14": [
+          "2024/feature/abjurer-spellresistance"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/diviner",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Diviner",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/wizard",
+      "description": "Diviners peer through time and distance, and learn to nudge fate by knowing in advance exactly how it will fall.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/diviner-divinationsavant",
+          "2024/feature/diviner-portent"
+        ],
+        "6": [
+          "2024/feature/diviner-expertdivination"
+        ],
+        "10": [
+          "2024/feature/diviner-thethirdeye"
+        ],
+        "14": [
+          "2024/feature/diviner-greaterportent"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/illusionist",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Illusionist",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/wizard",
+      "description": "Illusionists craft images and phantasms so convincing that the difference between seeming and being stops mattering.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/illusionist-illusionsavant",
+          "2024/feature/illusionist-improvedillusions"
+        ],
+        "6": [
+          "2024/feature/illusionist-phantasmalcreatures"
+        ],
+        "10": [
+          "2024/feature/illusionist-illusoryself"
+        ],
+        "14": [
+          "2024/feature/illusionist-illusoryreality"
+        ]
+      }
+    }
   }
 ]

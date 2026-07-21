@@ -698,5 +698,290 @@
     "data": {
       "description": "You attain the pinnacle of resilience in battle, giving you these benefits.\n  Defy Death. You have Advantage on Death Saving Throws. Moreover, when you roll 18-20 on a Death Saving Throw, you gain the benefit of rolling a 20 on it.\n  Heroic Rally. At the start of each of your turns, you regain Hit Points equal to 5 plus your Constitution modifier if you are Bloodied and have at least 1 Hit Point."
     }
+  },
+  {
+    "id": "2024/feature/battlemaster-combatsuperiority",
+    "edition": "2024",
+    "name": "Combat Superiority",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You learn maneuvers fueled by Superiority Dice (d8s). You have a number of these dice that you regain on a Short or Long Rest, and you learn additional maneuvers as you gain levels."
+    }
+  },
+  {
+    "id": "2024/feature/battlemaster-studentofwar",
+    "edition": "2024",
+    "name": "Student of War",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain proficiency with one type of Artisan's Tools of your choice, and proficiency in one skill of your choice from the Fighter skill list."
+    }
+  },
+  {
+    "id": "2024/feature/battlemaster-knowyourenemy",
+    "edition": "2024",
+    "name": "Know Your Enemy",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a Bonus Action, you can discern whether a creature you can see is your superior, inferior, or equal in Strength, Dexterity, Constitution, and Armor Class."
+    }
+  },
+  {
+    "id": "2024/feature/battlemaster-improvedcombatsuperiority",
+    "edition": "2024",
+    "name": "Improved Combat Superiority",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "Your Superiority Dice become d10s. They become d12s at level 18."
+    }
+  },
+  {
+    "id": "2024/feature/battlemaster-relentless",
+    "edition": "2024",
+    "name": "Relentless",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you roll Initiative and have no Superiority Dice remaining, you regain one."
+    }
+  },
+  {
+    "id": "2024/feature/eldritchknight-spellcasting",
+    "edition": "2024",
+    "name": "Spellcasting",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You augment your martial prowess with the ability to cast Wizard spells, drawn mostly from the Abjuration and Evocation schools. Intelligence is your spellcasting ability."
+    }
+  },
+  {
+    "id": "2024/feature/eldritchknight-warbond",
+    "edition": "2024",
+    "name": "War Bond",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You can bond with up to two weapons. You cannot be disarmed of a bonded weapon, and you can summon one to your hand as a Bonus Action if it is on the same plane."
+    }
+  },
+  {
+    "id": "2024/feature/eldritchknight-warmagic",
+    "edition": "2024",
+    "name": "War Magic",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you take the Attack action, you can replace one attack with a casting of one of your cantrips that has a casting time of an action."
+    }
+  },
+  {
+    "id": "2024/feature/eldritchknight-eldritchstrike",
+    "edition": "2024",
+    "name": "Eldritch Strike",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you hit a creature with a weapon, that creature has Disadvantage on the next saving throw it makes against a spell you cast before the end of your next turn."
+    }
+  },
+  {
+    "id": "2024/feature/eldritchknight-arcanecharge",
+    "edition": "2024",
+    "name": "Arcane Charge",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "When you use Action Surge, you can teleport up to 30 feet to an unoccupied space you can see, before or after the additional action."
+    }
+  },
+  {
+    "id": "2024/feature/psiwarrior-psionicpower",
+    "edition": "2024",
+    "name": "Psionic Power",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You harbor a wellspring of psionic energy represented by Psionic Energy Dice, which fuel Protective Field, Psionic Strike, and Telekinetic Movement. You regain them on a Short or Long Rest."
+    }
+  },
+  {
+    "id": "2024/feature/psiwarrior-telekineticadept",
+    "edition": "2024",
+    "name": "Telekinetic Adept",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You gain Psi-Powered Leap and Telekinetic Thrust, letting you launch yourself through the air and knock targets of your Psionic Strike prone or push them away."
+    }
+  },
+  {
+    "id": "2024/feature/psiwarrior-guardedmind",
+    "edition": "2024",
+    "name": "Guarded Mind",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "You have Resistance to Psychic damage, and you can spend a Psionic Energy Die to end the Frightened or Charmed condition on yourself."
+    }
+  },
+  {
+    "id": "2024/feature/psiwarrior-bulwarkofforce",
+    "edition": "2024",
+    "name": "Bulwark of Force",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "kind": "feature",
+    "data": {
+      "description": "As a Bonus Action, you can grant yourself and allies you can see Half Cover for one minute."
+    }
+  },
+  {
+    "id": "2024/subclass/battlemaster",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Battle Master",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/fighter",
+      "description": "Battle Masters treat combat as an academic discipline, mastering maneuvers that turn a fight with precision rather than force.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/battlemaster-combatsuperiority",
+          "2024/feature/battlemaster-studentofwar"
+        ],
+        "7": [
+          "2024/feature/battlemaster-knowyourenemy"
+        ],
+        "10": [
+          "2024/feature/battlemaster-improvedcombatsuperiority"
+        ],
+        "15": [
+          "2024/feature/battlemaster-relentless"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/eldritchknight",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Eldritch Knight",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/fighter",
+      "description": "Eldritch Knights weave abjuration and evocation magic into a foundation of martial skill, fighting with spell and steel together.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/eldritchknight-spellcasting",
+          "2024/feature/eldritchknight-warbond"
+        ],
+        "7": [
+          "2024/feature/eldritchknight-warmagic"
+        ],
+        "10": [
+          "2024/feature/eldritchknight-eldritchstrike"
+        ],
+        "15": [
+          "2024/feature/eldritchknight-arcanecharge"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2024/subclass/psiwarrior",
+    "edition": "2024",
+    "kind": "subclass",
+    "name": "Psi Warrior",
+    "source": {
+      "book": "PHB2024"
+    },
+    "origin": "seed",
+    "schemaVersion": 1,
+    "data": {
+      "parentClassRef": "2024/class/fighter",
+      "description": "Psi Warriors awaken a wellspring of psionic power, wielding telekinetic force alongside their weapons.",
+      "featuresByLevel": {
+        "3": [
+          "2024/feature/psiwarrior-psionicpower"
+        ],
+        "7": [
+          "2024/feature/psiwarrior-telekineticadept"
+        ],
+        "10": [
+          "2024/feature/psiwarrior-guardedmind"
+        ],
+        "15": [
+          "2024/feature/psiwarrior-bulwarkofforce"
+        ]
+      }
+    }
   }
 ]
