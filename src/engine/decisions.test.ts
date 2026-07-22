@@ -77,4 +77,46 @@ describe('decisions engine', () => {
     const all = enumerateDecisions(character, index);
     expect(all.find((d) => d.decisionId === 'fighter/skills')).toBeDefined();
   });
+
+  it("surfaces a species' own decision points, scoped to the species", () => {
+    const character = fighterCharacter({});
+    character.build.species = { ref: '2014/species/variant-human', decisions: [] };
+    const unresolved = unresolvedDecisions(character, index);
+    const speciesScoped = unresolved.filter((d) => d.scope === 'species');
+    expect(speciesScoped.map((d) => d.decisionId)).toEqual([
+      'variant-human/ability-1',
+      'variant-human/ability-2',
+      'variant-human/skill',
+    ]);
+  });
+
+  it('treats a species decision as resolved once recorded on the species', () => {
+    const character = fighterCharacter({});
+    character.build.species = {
+      ref: '2014/species/variant-human',
+      decisions: [{ decisionId: 'variant-human/skill', choice: ['athletics'] }],
+    };
+    const unresolved = unresolvedDecisions(character, index);
+    expect(unresolved.find((d) => d.decisionId === 'variant-human/skill')).toBeUndefined();
+  });
+
+  it('enumerates decision points declared by a subclass', () => {
+    const character = fighterCharacter({});
+    character.build.classes[0].subclassRef = '2014/subclass/champion';
+    const patched = new Map(index);
+    const champion = patched.get('2014/subclass/champion');
+    if (champion?.kind !== 'subclass') throw new Error('fixture assumption broken: champion missing');
+    patched.set(champion.id, {
+      ...champion,
+      data: {
+        ...champion.data,
+        decisionPoints: [{ decisionId: 'champion/test-choice', prompt: 'Pick one', count: 1, options: ['a', 'b'] }],
+      },
+    });
+
+    const all = enumerateDecisions(character, patched);
+    expect(all).toContainEqual(
+      expect.objectContaining({ decisionId: 'champion/test-choice', scope: 'subclass' }),
+    );
+  });
 });
