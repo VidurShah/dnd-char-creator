@@ -18,6 +18,10 @@ export interface BuilderState {
   /** 2024-only: how a background's ability-score allocation (+2/+1 or +1/+1/+1) is split. */
   backgroundAbilityAllocation: Partial<Record<Ability, number>>;
   featRefs: string[];
+  /** Answers to decision points the species declares (2024 lineages, Variant
+   * Human's skill/ability picks). Kept separate from classDecisions so that
+   * changing class — which resets class choices — doesn't wipe them. */
+  speciesDecisions: Decision[];
   classDecisions: Decision[];
   knownSpells: string[];
   inventory: BuilderInventoryDraft[];
@@ -41,6 +45,7 @@ export function emptyBuilderState(): BuilderState {
     baseAbilities: { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 },
     backgroundAbilityAllocation: {},
     featRefs: [],
+    speciesDecisions: [],
     classDecisions: [],
     knownSpells: [],
     inventory: [],

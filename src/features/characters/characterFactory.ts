@@ -65,7 +65,7 @@ export function buildCharacter(state: BuilderState, items: ContentEntry[], byId:
     build: {
       abilityMethod: 'manual',
       baseAbilities: state.baseAbilities,
-      species: { ref: state.speciesRef ?? '', decisions: [] },
+      species: { ref: state.speciesRef ?? '', decisions: state.speciesDecisions },
       background: {
         ref: state.backgroundRef ?? '',
         decisions: backgroundDecisions.length > 0 ? [{ decisionId: 'background/ability-scores', choice: backgroundDecisions }] : [],
