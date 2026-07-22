@@ -7,7 +7,7 @@ export interface UnresolvedDecision {
   prompt: string;
   count: number;
   options?: string[];
-  scope: 'species' | 'background' | 'class' | 'feat';
+  scope: 'species' | 'background' | 'class' | 'subclass' | 'feat';
 }
 
 function classShortId(ref: string): string {
@@ -57,6 +57,14 @@ export function enumerateDecisions(character: Character, index: Map<string, Cont
       });
     }
     for (const dp of classEntry.data.decisionPoints ?? []) decisions.push({ ...dp, scope: 'class' });
+
+    // A subclass can declare its own choices. None in the seeded data do yet,
+    // but omitting this meant any that were added would be silently ignored —
+    // the decision would never render and the character would ship without it.
+    const subclassEntry = c.subclassRef ? index.get(c.subclassRef) : undefined;
+    if (subclassEntry?.kind === 'subclass') {
+      for (const dp of subclassEntry.data.decisionPoints ?? []) decisions.push({ ...dp, scope: 'subclass' });
+    }
 
     const fightingStyleLevel = FIGHTING_STYLE_LEVELS[shortId];
     if (fightingStyleLevel != null && c.levels >= fightingStyleLevel) {
