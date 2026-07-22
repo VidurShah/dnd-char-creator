@@ -3,8 +3,10 @@ import { useLocation, useNavigate } from 'react-router';
 import { useContentIndex } from '@/content/useContentIndex';
 import { enumerateDecisions } from '@/engine/decisions';
 import { computeSheet } from '@/engine/compute';
+import { subclassLevelFor } from '@/engine/levelRules';
 import { characterRepo } from '@/db/repos';
 import type { Edition } from '@/schema/common';
+import type { ContentEntry } from '@/schema/content';
 import { emptyBuilderState, ABILITY_LABEL, type BuilderState } from './builderState';
 import { getClassGuidance } from '@/content/guidance';
 import { AbilitiesStep } from './steps/AbilitiesStep';
@@ -87,12 +89,28 @@ export function BuilderPage() {
 
   const draft = useMemo(() => buildCharacter(state, items, byId), [state, items, byId]);
   const sheet = useMemo(() => computeSheet(draft, byId), [draft, byId]);
-  const decisions = useMemo(() => (state.classRef ? enumerateDecisions(draft, byId) : []), [state.classRef, draft, byId]);
+  const allDecisions = useMemo(() => enumerateDecisions(draft, byId), [draft, byId]);
+  // Species choices are surfaced on the species step itself rather than deferred
+  // to the generic Decisions step, so a cascading choice is made where it arises.
+  const speciesDecisions = useMemo(() => allDecisions.filter((d) => d.scope === 'species'), [allDecisions]);
+  const decisions = useMemo(
+    () => (state.classRef ? allDecisions.filter((d) => d.scope !== 'species') : []),
+    [state.classRef, allDecisions],
+  );
 
-  const decisionsComplete = decisions.every((d) => {
-    const answer = state.classDecisions.find((a) => a.decisionId === d.decisionId);
+  const isAnswered = (d: (typeof allDecisions)[number], answers: typeof state.classDecisions) => {
+    const answer = answers.find((a) => a.decisionId === d.decisionId);
     return Array.isArray(answer?.choice) && answer.choice.length === d.count;
-  });
+  };
+  const decisionsComplete = decisions.every((d) => isAnswered(d, state.classDecisions));
+  const speciesDecisionsComplete = speciesDecisions.every((d) => isAnswered(d, state.speciesDecisions));
+
+  const speciesEntry = state.speciesRef ? byId.get(state.speciesRef) : undefined;
+  const subclassUnlockLevel = useMemo(
+    () => subclassLevelFor(subclasses.filter((s): s is Extract<ContentEntry, { kind: 'subclass' }> => s.kind === 'subclass')),
+    [subclasses],
+  );
+  const selectedSubclass = state.subclassRef ? byId.get(state.subclassRef) : undefined;
 
   const classEntry = state.classRef ? byId.get(state.classRef) : undefined;
   const classShort = state.classRef ? classShortId(state.classRef) : undefined;
@@ -124,8 +142,11 @@ export function BuilderPage() {
 
   const canAdvance: Record<number, boolean> = {
     0: true,
-    1: state.speciesRef != null,
-    2: state.classRef != null,
+    1: state.speciesRef != null && speciesDecisionsComplete,
+    // A class whose subclass unlocks at level 1 (2014 Cleric/Sorcerer/Warlock)
+    // must have one chosen before moving on — otherwise the character ships
+    // missing a feature it is entitled to at creation.
+    2: state.classRef != null && (subclassUnlockLevel > 1 || state.subclassRef != null),
     3: true,
     4: state.backgroundRef != null && (!abilityScoreOptions || allocationTotal === 3),
     5: true,
@@ -216,12 +237,29 @@ export function BuilderPage() {
           <AbilitiesStep value={state.baseAbilities} onChange={(baseAbilities) => setState((s) => ({ ...s, baseAbilities }))} />
         )}
         {step === 1 && (
-          <PickOneStep
-            entries={species}
-            value={state.speciesRef}
-            onChange={(speciesRef) => setState((s) => ({ ...s, speciesRef }))}
-            describe={(e) => (e.kind === 'species' ? `Speed ${e.data.speed} ft · ${e.data.size}` : '')}
-          />
+          <div className="flex flex-col gap-6">
+            <PickOneStep
+              entries={species}
+              value={state.speciesRef}
+              // Changing species invalidates any lineage/variant answers tied to the old one.
+              onChange={(speciesRef) => setState((s) => ({ ...s, speciesRef, speciesDecisions: [] }))}
+              describe={(e) => (e.kind === 'species' ? `Speed ${e.data.speed} ft · ${e.data.size}` : '')}
+              parentRefOf={(e) => (e.kind === 'species' ? e.data.parentSpeciesRef : undefined)}
+              baseOptionLabel={() => 'Standard'}
+            />
+            {speciesDecisions.length > 0 && (
+              <div className="border-2 border-dashed border-ink-900/25 p-4 dark:border-kraft-100/25">
+                <h3 className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-wider text-olive-500">
+                  {speciesEntry?.name} — choices
+                </h3>
+                <DecisionsStep
+                  decisions={speciesDecisions}
+                  answers={state.speciesDecisions}
+                  onChange={(speciesDecisions) => setState((s) => ({ ...s, speciesDecisions }))}
+                />
+              </div>
+            )}
+          </div>
         )}
         {step === 2 && (
           <PickOneStep
@@ -247,6 +285,41 @@ export function BuilderPage() {
               return `${base} · Recommended: ${abilities}`;
             }}
           />
+        )}
+        {step === 2 && state.classRef && (
+          <div className="mt-6 border-2 border-dashed border-ink-900/25 p-4 dark:border-kraft-100/25">
+            <h3 className="mb-2 font-mono text-[11px] font-semibold uppercase tracking-wider text-olive-500">
+              {classEntry?.name} — subclass
+            </h3>
+            {subclassUnlockLevel > 1 ? (
+              // Don't offer a choice the character can't legally make yet, but
+              // don't leave it silently blank either — say when it unlocks.
+              <p className="text-sm text-ink-700 dark:text-kraft-200">
+                Chosen at level {subclassUnlockLevel}. You'll pick it when you level up.
+              </p>
+            ) : (
+              <>
+                <select
+                  aria-label="Subclass"
+                  value={state.subclassRef ?? ''}
+                  onChange={(e) => setState((s) => ({ ...s, subclassRef: e.target.value || undefined }))}
+                  className="w-full border-2 border-ink-900/30 bg-transparent px-2 py-1.5 text-sm dark:border-kraft-100/30"
+                >
+                  <option value="">Choose a subclass…</option>
+                  {subclasses.map((s) => (
+                    <option key={s.id} value={s.id}>
+                      {s.name}
+                    </option>
+                  ))}
+                </select>
+                {selectedSubclass?.kind === 'subclass' && selectedSubclass.data.description && (
+                  <p className="mt-3 text-sm leading-relaxed text-ink-700 dark:text-kraft-200">
+                    {selectedSubclass.data.description}
+                  </p>
+                )}
+              </>
+            )}
+          </div>
         )}
         {step === 3 && (
           <SubclassStep
