@@ -34,14 +34,20 @@ function makeHandler(env: Record<string, string>): Connect.NextHandleFunction {
       // "expected OAuth2 access token" errors despite a valid key.
       const { GoogleGenAI } = await import('@google/genai/node');
       const ai = new GoogleGenAI({ apiKey, vertexai: false });
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const response = await ai.models.generateContent({ model: body.model, contents: body.contents as any, config: body.config as any });
+      // These models occasionally stall indefinitely under load; bound the wait
+      // so a hung upstream call returns a clear 504 to the browser rather than
+      // holding the socket open until the client's own timeout fires.
+      const generate = ai.models.generateContent({ model: body.model, contents: body.contents as any, config: body.config as any }); // eslint-disable-line @typescript-eslint/no-explicit-any
+      const timeout = new Promise<never>((_, reject) => setTimeout(() => reject(new Error('TIMEOUT')), 90_000));
+      const response = await Promise.race([generate, timeout]);
       res.setHeader('content-type', 'application/json');
       res.end(JSON.stringify({ functionCalls: response.functionCalls ?? [] }));
     } catch (err) {
-      res.statusCode = 500;
+      const message = err instanceof Error ? err.message : 'Gemini proxy failed.';
+      const timedOut = message === 'TIMEOUT';
+      res.statusCode = timedOut ? 504 : 500;
       res.setHeader('content-type', 'application/json');
-      res.end(JSON.stringify({ error: err instanceof Error ? err.message : 'Gemini proxy failed.' }));
+      res.end(JSON.stringify({ error: timedOut ? "The AI model didn't respond in time — it's likely overloaded. Try again shortly." : message }));
     }
   };
 }

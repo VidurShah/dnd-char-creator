@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import { settingsRepo } from '@/db/repos';
 import { useContentIndex } from '@/content/useContentIndex';
 import { buildCharacterFromConcept } from '@/ai/buildFromConcept';
-import { DEFAULT_AI_MODEL } from '@/ai/models';
+import { AI_MODELS, DEFAULT_AI_MODEL } from '@/ai/models';
 import type { Edition } from '@/schema/common';
 
 const EDITIONS: { id: Edition; label: string }[] = [
@@ -26,7 +26,9 @@ export function AIBuilderPage() {
   useEffect(() => {
     Promise.all([settingsRepo.get<string>('geminiApiKey'), settingsRepo.get<string>('aiModel')]).then(([key, savedModel]) => {
       setApiKeyOverride(key || undefined);
-      if (savedModel) setModel(savedModel);
+      // Only honor a saved model that's still an available choice — a stale setting
+      // pointing at a now-unusable model (e.g. the old gemini-3.5-flash) falls back to the default.
+      if (savedModel && AI_MODELS.some((m) => m.id === savedModel)) setModel(savedModel);
       setLoadingSettings(false);
     });
   }, []);
