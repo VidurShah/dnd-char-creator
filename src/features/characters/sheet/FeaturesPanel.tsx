@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { DerivedFeature, FeatureSource } from '@/engine/compute';
 
 const SECTION_ORDER: FeatureSource[] = ['class', 'subclass', 'species', 'background', 'feat'];
@@ -8,6 +9,42 @@ const SECTION_LABEL: Record<FeatureSource, string> = {
   background: 'Background',
   feat: 'Feats',
 };
+
+/** Collapses a multi-line description to a single teaser line for the closed state. */
+function teaser(description: string): string {
+  const firstLine = description.trim().split('\n')[0] ?? '';
+  return firstLine.length > 90 ? `${firstLine.slice(0, 90).trimEnd()}…` : firstLine;
+}
+
+function FeatureRow({ feature }: { feature: DerivedFeature }) {
+  const [open, setOpen] = useState(false);
+  const hasBody = feature.description.trim().length > 0;
+  return (
+    <li className="border-b border-dashed border-ink-900/15 last:border-b-0 dark:border-kraft-100/15">
+      <button
+        type="button"
+        onClick={() => hasBody && setOpen((v) => !v)}
+        className={`flex w-full items-baseline gap-2 py-2 text-left ${hasBody ? 'hover:text-rust-500' : 'cursor-default'}`}
+        aria-expanded={hasBody ? open : undefined}
+      >
+        {hasBody && (
+          <span className="mt-0.5 shrink-0 font-mono text-xs text-ink-500 dark:text-kraft-300" aria-hidden>
+            {open ? '▾' : '▸'}
+          </span>
+        )}
+        <span className="min-w-0 flex-1">
+          <span className="font-medium">{feature.name}</span>
+          {!open && hasBody && (
+            <span className="ml-2 text-sm text-ink-500 dark:text-kraft-300">{teaser(feature.description)}</span>
+          )}
+        </span>
+      </button>
+      {open && hasBody && (
+        <p className="whitespace-pre-line pb-3 pl-5 text-sm text-ink-700 dark:text-kraft-200">{feature.description}</p>
+      )}
+    </li>
+  );
+}
 
 export function FeaturesPanel({ features }: { features: DerivedFeature[] }) {
   if (features.length === 0) {
@@ -21,15 +58,12 @@ export function FeaturesPanel({ features }: { features: DerivedFeature[] }) {
         if (group.length === 0) return null;
         return (
           <div key={source}>
-            <p className="mb-2 font-mono text-xs uppercase tracking-wider text-ink-500 dark:text-kraft-300">
-              {SECTION_LABEL[source]}
+            <p className="mb-1 font-mono text-xs uppercase tracking-wider text-ink-500 dark:text-kraft-300">
+              {SECTION_LABEL[source]} <span className="text-ink-900/30 dark:text-kraft-100/30">· {group.length}</span>
             </p>
-            <ul className="flex flex-col gap-4">
+            <ul>
               {group.map((f) => (
-                <li key={f.ref}>
-                  <h3 className="font-medium">{f.name}</h3>
-                  <p className="mt-1 whitespace-pre-line text-sm text-ink-700 dark:text-kraft-200">{f.description}</p>
-                </li>
+                <FeatureRow key={f.ref} feature={f} />
               ))}
             </ul>
           </div>
