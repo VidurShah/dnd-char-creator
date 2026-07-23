@@ -5,6 +5,22 @@ import { db } from '@/db/dexie';
 import { characterRepo } from '@/db/repos';
 import { exportVault, importVault } from '@/db/exportImport';
 import { downloadJson, readJsonFile } from '@/lib/download';
+import { humanizeSlug } from '@/lib/text';
+import type { CharacterBuild } from '@/schema/character';
+
+/** "Life Domain Cleric 1" / "Fighter 3 / Wizard 2" — derived from the class refs
+ * so the list can label each character without loading the whole content index. */
+function classSummary(build: CharacterBuild): string {
+  if (build.classes.length === 0) return 'No class yet';
+  return build.classes
+    .map((c) => {
+      const className = humanizeSlug(c.classRef.split('/').pop() ?? '');
+      const subclass = c.subclassRef ? humanizeSlug(c.subclassRef.split('/').pop() ?? '') : undefined;
+      const label = subclass ? `${subclass} ${className}` : className;
+      return `${label} ${c.levels}`;
+    })
+    .join(' / ');
+}
 
 export function CharactersPage() {
   const characters = useLiveQuery(() => db.characters.orderBy('updatedAt').reverse().toArray(), []);
@@ -100,9 +116,12 @@ export function CharactersPage() {
         <ul className="divide-y-2 divide-dashed divide-ink-900/15 dark:divide-kraft-100/15">
           {characters.map((c) => (
             <li key={c.id} className="flex items-center gap-2 pr-2">
-              <Link to={`/characters/${c.id}`} className="flex flex-1 items-center justify-between px-2 py-3 hover:bg-ink-900/5 dark:hover:bg-kraft-100/5">
-                <span className="font-medium">{c.name}</span>
-                <span className="font-mono text-xs text-ink-700 dark:text-kraft-200">
+              <Link to={`/characters/${c.id}`} className="flex flex-1 items-center justify-between gap-3 px-2 py-3 hover:bg-ink-900/5 dark:hover:bg-kraft-100/5">
+                <span className="min-w-0">
+                  <span className="block truncate font-medium">{c.name}</span>
+                  <span className="block truncate font-mono text-xs text-ink-700 dark:text-kraft-200">{classSummary(c.build)}</span>
+                </span>
+                <span className="shrink-0 font-mono text-xs text-ink-700 dark:text-kraft-200">
                   Level {c.build.classes.reduce((sum, cl) => sum + cl.levels, 0)}
                 </span>
               </Link>

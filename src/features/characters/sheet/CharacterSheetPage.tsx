@@ -4,7 +4,8 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '@/db/dexie';
 import { useContentIndex } from '@/content/useContentIndex';
 import { computeSheet } from '@/engine/compute';
-import { adjustHp, setTempHp } from './sheetActions';
+import { adjustHp, setTempHp, logRoll } from './sheetActions';
+import { DiceTray } from './DiceTray';
 import { LevelUpPanel } from './LevelUpPanel';
 import { exportCharacter } from '@/db/exportImport';
 import { downloadJson } from '@/lib/download';
@@ -156,6 +157,8 @@ export function CharacterSheetPage() {
       {tab === 'Features' && <FeaturesPanel features={sheet.features} />}
       {tab === 'Lore' && <LorePanel character={character} sheet={sheet} />}
       {tab === 'Rolls' && <RollLogPanel character={character} />}
+
+      <DiceTray onRoll={(label, formula, rolls, total) => void logRoll(character, label, formula, rolls, total)} />
     </div>
   );
 }
