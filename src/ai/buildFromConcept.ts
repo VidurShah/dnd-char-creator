@@ -70,6 +70,9 @@ export async function buildCharacterFromConcept(params: {
     'Pick a species, class, subclass (if the class has one, otherwise omit it), background, and ability priority order that best fits their idea, using ONLY ids from this catalog:',
     '',
     catalog,
+    '',
+    'Also flesh out the character as a roleplaying persona: choose an alignment, and write personalityTraits, ideals, bonds, flaws, and a short backstory (notes) — a few vivid sentences each, in the character\'s own flavor, not blank.',
+    'And in `rationale`, give one or two plain sentences for each of: abilities, species, class, subclass (if chosen), background, and personality — explaining WHY you made that choice for THIS character, addressed to the player (e.g. "Half-Orc gives you the Strength and toughness a frontline barbarian wants").',
   ].join('\n');
 
   const conceptResult = await callToolWithValidation(apiKey, model, conceptPrompt, PROPOSE_CONCEPT_TOOL, (input) => validateConcept(input, entries));
@@ -92,6 +95,7 @@ export async function buildCharacterFromConcept(params: {
     bonds: concept.bonds ?? '',
     flaws: concept.flaws ?? '',
     notes: concept.notes ?? '',
+    aiRationale: concept.rationale ? { ...concept.rationale } : {},
   };
   if (concept.level !== 1) {
     warnings.push(`You asked for level ${concept.level} — every new character starts at level 1 here; use "Level Up" on the sheet afterward to reach it.`);
@@ -147,6 +151,8 @@ export async function buildCharacterFromConcept(params: {
     '', '## Spells', ...(spellLines.length > 0 ? spellLines : ['(not a spellcaster)']),
     '', '## Equipment', ...(equipmentLines.length > 0 ? equipmentLines : ['(no choices — nothing to pick)']),
     '', '## Feats', ...(featLines.length > 0 ? featLines : ['(none available)']),
+    '',
+    'Also fill `rationale` with one short sentence each (only for the sections that had something to choose) for: choices (skills/decisions), spells, equipment, and feats — explaining why, addressed to the player.',
   ].join('\n');
 
   const decisionsResult = await callToolWithValidation(apiKey, model, decisionsPrompt, RESOLVE_DECISIONS_TOOL, (input) => {
@@ -162,15 +168,20 @@ export async function buildCharacterFromConcept(params: {
   const resolved = decisionsResult.data;
 
   // --- Sanitize: drop anything that doesn't match a real option rather than trusting the model's picks blindly ---
-  const classDecisions = decisions
+  const answeredDecisions = decisions
     .map((d) => {
       const answer = resolved.decisions.find((a) => a.decisionId === d.decisionId);
       if (!answer) return undefined;
       const validChoices = answer.choice.filter((c) => (d.options ?? []).includes(c));
       if (validChoices.length !== answer.choice.length) warnings.push(`Some picks for "${d.prompt}" weren't valid options and were dropped.`);
-      return validChoices.length > 0 ? { decisionId: d.decisionId, choice: validChoices.slice(0, d.count) } : undefined;
+      return validChoices.length > 0 ? { scope: d.scope, decision: { decisionId: d.decisionId, choice: validChoices.slice(0, d.count) } } : undefined;
     })
     .filter((d): d is NonNullable<typeof d> => d != null);
+  // Species-scoped answers must land in speciesDecisions (not classDecisions) — the
+  // builder reads them from there, so misrouting one leaves that species choice showing
+  // as unanswered and blocks the species step.
+  const speciesDecisions = answeredDecisions.filter((a) => a.scope === 'species').map((a) => a.decision);
+  const classDecisions = answeredDecisions.filter((a) => a.scope !== 'species').map((a) => a.decision);
 
   const validSpellIds = new Set([...cantrips, ...leveledSpells].map((s) => s.id));
   const knownSpells = resolved.knownSpells.filter((ref) => {
@@ -191,11 +202,13 @@ export async function buildCharacterFromConcept(params: {
 
   state = {
     ...state,
+    speciesDecisions,
     classDecisions,
     knownSpells,
     featRefs,
     equipmentChoicePicks,
     takeStartingGold: resolved.takeStartingGold,
+    aiRationale: { ...state.aiRationale, ...(resolved.rationale ?? {}) },
   };
 
   return { state, warnings };

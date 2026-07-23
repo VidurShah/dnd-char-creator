@@ -8,7 +8,7 @@ import { spellSelectionPlan } from '@/engine/spellcasting';
 import { characterRepo } from '@/db/repos';
 import type { Edition } from '@/schema/common';
 import type { ContentEntry } from '@/schema/content';
-import { emptyBuilderState, ABILITY_LABEL, type BuilderState } from './builderState';
+import { emptyBuilderState, ABILITY_LABEL, type BuilderState, type StepRationaleKey } from './builderState';
 import { getClassGuidance } from '@/content/guidance';
 import { AbilitiesStep } from './steps/AbilitiesStep';
 import { PickOneStep } from './steps/PickOneStep';
@@ -61,6 +61,20 @@ const STEP_HINTS: Record<number, string> = {
 function classShortId(ref: string): string {
   return ref.split('/').pop() ?? ref;
 }
+
+/** Which AI "why this pick" blurb belongs on each builder step (Review has none). */
+const STEP_RATIONALE_KEY: Record<number, StepRationaleKey> = {
+  0: 'abilities',
+  1: 'species',
+  2: 'class',
+  3: 'subclass',
+  4: 'background',
+  5: 'feats',
+  6: 'choices',
+  7: 'spells',
+  8: 'equipment',
+  9: 'personality',
+};
 
 interface BuilderLocationState {
   prefill?: BuilderState;
@@ -221,6 +235,16 @@ export function BuilderPage() {
       <hr className="rule-sketch mb-5" />
 
       {STEP_HINTS[step] && <p className="text-sm italic text-ink-700 dark:text-kraft-200">{STEP_HINTS[step]}</p>}
+      {(() => {
+        const blurb = state.aiRationale?.[STEP_RATIONALE_KEY[step]];
+        if (!blurb) return null;
+        return (
+          <div className="mt-2 flex gap-2 border-l-2 border-rust-500 bg-rust-500/5 px-3 py-2">
+            <span aria-hidden className="font-mono text-xs uppercase tracking-wide text-rust-500">AI</span>
+            <p className="text-sm text-ink-700 dark:text-kraft-200">{blurb}</p>
+          </div>
+        );
+      })()}
       {step === 2 && classEntry && getClassGuidance(state.edition, classEntry.id) && (
         <p className="text-sm text-ink-700 dark:text-kraft-200">
           <span className="font-medium text-ink-900 dark:text-kraft-100">Why these abilities: </span>
