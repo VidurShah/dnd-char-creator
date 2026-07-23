@@ -1,9 +1,10 @@
-import type { Ability, Skill } from '@/schema/common';
+import type { Ability, Skill, Decision, DecisionPoint } from '@/schema/common';
 import type { Character } from '@/schema/character';
 import type { ContentEntry } from '@/schema/content';
 import type { Effect } from '@/schema/effects';
 import { evalExpr, type ExprContext } from './expr';
 import { lookupSpecialRule, type SpecialRuleContext } from './special';
+import { isSpellQuery } from './optionQuery';
 import { exhaustionEffects2014 } from './editions/2014';
 import { exhaustionEffects2024 } from './editions/2024';
 
@@ -250,6 +251,18 @@ export function computeSheet(character: Character, index: Map<string, ContentEnt
     }
   }
 
+  // Species choice decisions that raise abilities (Variant Human's two +1s, Half-Elf's
+  // two non-Cha +1s, etc.): any recorded species-decision choice value that is an ability
+  // key grants +1 to that ability. (Spell/skill/tool picks fall through — handled elsewhere.)
+  for (const d of character.build.species.decisions) {
+    if (!Array.isArray(d.choice)) continue;
+    for (const value of d.choice) {
+      if ((ABILITIES as readonly string[]).includes(value)) {
+        abilitySources[value as Ability].push({ label: `${speciesEntry?.name ?? 'Species'} (choice)`, amount: 1 });
+      }
+    }
+  }
+
   if (backgroundEntry?.data.abilityScoreOptions) {
     const allocation = character.build.background.decisions.find((d) => d.decisionId === 'background/ability-scores');
     if (Array.isArray(allocation?.choice)) {
@@ -334,6 +347,12 @@ export function computeSheet(character: Character, index: Map<string, ContentEnt
     for (const skill of backgroundEntry.data.skillProficiencies) proficientSkills.add(skill as Skill);
   }
   for (const p of proficiencyEffects) if (p.effect.domain === 'skill') for (const key of p.effect.keys) proficientSkills.add(key as Skill);
+  // Species skill-choice decisions (Half-Elf Skill Versatility, Variant Human skill, etc.):
+  // any chosen value that names a real skill becomes a proficiency.
+  for (const d of character.build.species.decisions) {
+    if (!Array.isArray(d.choice)) continue;
+    for (const value of d.choice) if (value in SKILL_ABILITY) proficientSkills.add(value as Skill);
+  }
 
   // Expertise doubles proficiency bonus on the listed skills — either a static `expertise`
   // effect, or (Rogue/Bard) the character's own choice of which already-proficient skills to
@@ -370,6 +389,11 @@ export function computeSheet(character: Character, index: Map<string, ContentEnt
     if (p.effect.domain === 'tool') for (const key of p.effect.keys) toolProficiencies.add(key);
     if (p.effect.domain === 'weapon') for (const key of p.effect.keys) weaponProficiencies.add(key);
     if (p.effect.domain === 'armor') for (const key of p.effect.keys) armorProficiencies.add(key);
+  }
+  // Species tool-choice decisions (Dwarf's artisan's tool pick): a decision id mentioning
+  // "tool" contributes its chosen values as tool proficiencies.
+  for (const d of character.build.species.decisions) {
+    if (d.decisionId.includes('tool') && Array.isArray(d.choice)) for (const value of d.choice) toolProficiencies.add(value);
   }
 
   // --- Senses: darkvision heuristic (until every species carries a proper `sense` effect) + generic consumption ---
@@ -577,6 +601,25 @@ export function computeSheet(character: Character, index: Map<string, ContentEnt
   }
   for (const p of grantSpellEffects) {
     if (totalLevel >= (p.effect.minLevel ?? 1)) grantedSpellRefs.push(p.effect.spellRef);
+  }
+  // Spells picked via a spell-query decision (e.g. High Elf's bonus wizard cantrip)
+  // count as always-available granted spells, not against the class known-spell cap.
+  const pushChosenSpells = (decisionPoints: DecisionPoint[] | undefined, recorded: Decision[]) => {
+    for (const dp of decisionPoints ?? []) {
+      if (!isSpellQuery(dp.optionQuery)) continue;
+      const answer = recorded.find((d) => d.decisionId === dp.decisionId);
+      if (answer && Array.isArray(answer.choice)) grantedSpellRefs.push(...answer.choice);
+    }
+  };
+  pushChosenSpells(speciesEntry?.data.decisionPoints, character.build.species.decisions);
+  for (const c of classBlocks) {
+    if (!c.subclassEntry) continue;
+    const recorded = Object.values(character.build.classes.find((cl) => cl.classRef === c.ref)?.decisionsByLevel ?? {}).flat();
+    pushChosenSpells(c.subclassEntry.data.decisionPoints, recorded);
+  }
+  for (const f of character.build.feats) {
+    const featEntry = asFeatEntry(index.get(f.ref));
+    if (featEntry) pushChosenSpells(featEntry.data.decisionPoints, f.decisions);
   }
 
   // --- Resources: numeric class-specific level-table columns, plus any `resource` effect with a fixed/expression max ---

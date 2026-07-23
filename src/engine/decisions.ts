@@ -1,6 +1,7 @@
 import type { Character } from '@/schema/character';
 import type { ContentEntry } from '@/schema/content';
-import type { Decision } from '@/schema/common';
+import type { Decision, DecisionPoint } from '@/schema/common';
+import { resolveOptionQuery } from './optionQuery';
 
 export interface UnresolvedDecision {
   decisionId: string;
@@ -12,6 +13,13 @@ export interface UnresolvedDecision {
 
 function classShortId(ref: string): string {
   return ref.split('/').pop() ?? ref;
+}
+
+/** Normalizes a content-declared decision point into a renderable one, resolving
+ * its `optionQuery` (e.g. "spell:0:wizard") into concrete option ids when present. */
+function toUnresolved(dp: DecisionPoint, scope: UnresolvedDecision['scope'], index: Map<string, ContentEntry>): UnresolvedDecision {
+  const options = dp.options ?? (dp.optionQuery ? resolveOptionQuery(dp.optionQuery, index) : undefined);
+  return { decisionId: dp.decisionId, prompt: dp.prompt, count: dp.count, options, scope };
 }
 
 /** Levels at which Rogue/Bard pick 2 already-proficient skills to double (Expertise) — a real 5e rule with no other natural home in the data model, so it's hardcoded here alongside the equally-hardcoded skillChoice logic below. */
@@ -34,12 +42,12 @@ export function enumerateDecisions(character: Character, index: Map<string, Cont
 
   const speciesEntry = index.get(character.build.species.ref);
   if (speciesEntry?.kind === 'species') {
-    for (const dp of speciesEntry.data.decisionPoints ?? []) decisions.push({ ...dp, scope: 'species' });
+    for (const dp of speciesEntry.data.decisionPoints ?? []) decisions.push(toUnresolved(dp, 'species', index));
   }
 
   const backgroundEntry = index.get(character.build.background.ref);
   if (backgroundEntry?.kind === 'background') {
-    for (const dp of backgroundEntry.data.decisionPoints ?? []) decisions.push({ ...dp, scope: 'background' });
+    for (const dp of backgroundEntry.data.decisionPoints ?? []) decisions.push(toUnresolved(dp, 'background', index));
   }
 
   for (const c of character.build.classes) {
@@ -56,14 +64,14 @@ export function enumerateDecisions(character: Character, index: Map<string, Cont
         scope: 'class',
       });
     }
-    for (const dp of classEntry.data.decisionPoints ?? []) decisions.push({ ...dp, scope: 'class' });
+    for (const dp of classEntry.data.decisionPoints ?? []) decisions.push(toUnresolved(dp, 'class', index));
 
     // A subclass can declare its own choices. None in the seeded data do yet,
     // but omitting this meant any that were added would be silently ignored —
     // the decision would never render and the character would ship without it.
     const subclassEntry = c.subclassRef ? index.get(c.subclassRef) : undefined;
     if (subclassEntry?.kind === 'subclass') {
-      for (const dp of subclassEntry.data.decisionPoints ?? []) decisions.push({ ...dp, scope: 'subclass' });
+      for (const dp of subclassEntry.data.decisionPoints ?? []) decisions.push(toUnresolved(dp, 'subclass', index));
     }
 
     const fightingStyleLevel = FIGHTING_STYLE_LEVELS[shortId];
@@ -96,7 +104,7 @@ export function enumerateDecisions(character: Character, index: Map<string, Cont
   for (const f of character.build.feats) {
     const featEntry = index.get(f.ref);
     if (featEntry?.kind !== 'feat') continue;
-    for (const dp of featEntry.data.decisionPoints ?? []) decisions.push({ ...dp, scope: 'feat' });
+    for (const dp of featEntry.data.decisionPoints ?? []) decisions.push(toUnresolved(dp, 'feat', index));
   }
 
   return decisions;

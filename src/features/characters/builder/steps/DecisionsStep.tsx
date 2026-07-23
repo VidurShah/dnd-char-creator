@@ -1,14 +1,21 @@
 import type { Decision } from '@/schema/common';
+import type { ContentEntry } from '@/schema/content';
 import type { UnresolvedDecision } from '@/engine/decisions';
-import { humanizeCamel } from '@/lib/text';
+import { humanizeCamel, humanizeSlug } from '@/lib/text';
 
 interface DecisionsStepProps {
   decisions: UnresolvedDecision[];
   answers: Decision[];
   onChange: (answers: Decision[]) => void;
+  /** Optional — lets option ids that are content refs (e.g. a spell pick) show their real name instead of the raw id. */
+  byId?: Map<string, ContentEntry>;
 }
 
-export function DecisionsStep({ decisions, answers, onChange }: DecisionsStepProps) {
+export function DecisionsStep({ decisions, answers, onChange, byId }: DecisionsStepProps) {
+  // Option ids come in three shapes: a content ref (resolve to its name), a kebab/
+  // underscore slug (tool proficiencies), or a camelCase token (skills, abilities).
+  const label = (option: string): string =>
+    byId?.get(option)?.name ?? (/[-_]/.test(option) ? humanizeSlug(option) : humanizeCamel(option));
   if (decisions.length === 0) {
     return <p className="text-sm text-ink-700 dark:text-kraft-200">Nothing to choose here yet — carry on.</p>;
   }
@@ -52,7 +59,7 @@ export function DecisionsStep({ decisions, answers, onChange }: DecisionsStepPro
                         : 'border-ink-900/25 text-ink-700 hover:border-ink-900/50 dark:border-kraft-100/25 dark:text-kraft-200'
                     }`}
                   >
-                    {humanizeCamel(option)}
+                    {label(option)}
                   </button>
                 );
               })}
