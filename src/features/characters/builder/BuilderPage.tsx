@@ -4,6 +4,7 @@ import { useContentIndex } from '@/content/useContentIndex';
 import { enumerateDecisions } from '@/engine/decisions';
 import { computeSheet } from '@/engine/compute';
 import { subclassLevelFor } from '@/engine/levelRules';
+import { spellSelectionPlan } from '@/engine/spellcasting';
 import { characterRepo } from '@/db/repos';
 import type { Edition } from '@/schema/common';
 import type { ContentEntry } from '@/schema/content';
@@ -14,6 +15,7 @@ import { PickOneStep } from './steps/PickOneStep';
 import { SubclassStep } from './steps/SubclassStep';
 import { FeatsStep } from './steps/FeatsStep';
 import { DecisionsStep } from './steps/DecisionsStep';
+import { SelectionPreview } from './steps/SelectionPreview';
 import { SpellsStep } from './steps/SpellsStep';
 import { EquipmentStep } from './steps/EquipmentStep';
 import { BackgroundAbilityAllocation } from './steps/BackgroundAbilityAllocation';
@@ -129,16 +131,11 @@ export function BuilderPage() {
   );
   const cantrips = spellPool.filter((e) => e.kind === 'spell' && e.data.level === 0);
   const leveledSpells = spellPool.filter((e) => e.kind === 'spell' && e.data.level === 1);
-  const cantripCap = sheet.spellcasting?.cantripsKnown ?? 0;
-  const leveledCap = (() => {
-    if (!spellMeta || classEntry?.kind !== 'class') return 0;
-    const level1 = classEntry.data.levels.find((l) => l.level === 1);
-    if (spellMeta.knownOrPrepared === 'known') {
-      const known = level1?.columns?.spells_known;
-      return typeof known === 'number' ? known : 0;
-    }
-    return Math.max(1, sheet.abilities[spellMeta.ability].mod + 1);
-  })();
+  // One data-driven plan per caster type — the right count *and* label (Spells Known /
+  // Spellbook / Prepared Spells) for whichever class this is. New characters are level 1.
+  const spellPlan = spellSelectionPlan(classEntry, 1, spellMeta ? sheet.abilities[spellMeta.ability].mod : 0);
+  const cantripCap = spellPlan.cantripsKnown;
+  const leveledCap = spellPlan.leveledCount;
 
   const canAdvance: Record<number, boolean> = {
     0: true,
@@ -247,6 +244,12 @@ export function BuilderPage() {
               parentRefOf={(e) => (e.kind === 'species' ? e.data.parentSpeciesRef : undefined)}
               baseOptionLabel={() => 'Standard'}
             />
+            {speciesEntry?.kind === 'species' && (
+              <SelectionPreview
+                description={speciesEntry.data.description}
+                features={sheet.features.filter((f) => f.source === 'species')}
+              />
+            )}
             {speciesDecisions.length > 0 && (
               <div className="border-2 border-dashed border-ink-900/25 p-4 dark:border-kraft-100/25">
                 <h3 className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-wider text-olive-500">
@@ -256,6 +259,7 @@ export function BuilderPage() {
                   decisions={speciesDecisions}
                   answers={state.speciesDecisions}
                   onChange={(speciesDecisions) => setState((s) => ({ ...s, speciesDecisions }))}
+                  byId={byId}
                 />
               </div>
             )}
@@ -284,6 +288,12 @@ export function BuilderPage() {
               const abilities = guidance.recommendedAbilities.map((a) => ABILITY_LABEL[a]).join(', ');
               return `${base} · Recommended: ${abilities}`;
             }}
+          />
+        )}
+        {step === 2 && classEntry?.kind === 'class' && (
+          <SelectionPreview
+            description={classEntry.data.description}
+            features={sheet.features.filter((f) => f.source === 'class')}
           />
         )}
         {step === 2 && state.classRef && (
@@ -346,24 +356,39 @@ export function BuilderPage() {
             )}
           </div>
         )}
-        {step === 5 && <FeatsStep feats={feats} value={state.featRefs} onChange={(featRefs) => setState((s) => ({ ...s, featRefs }))} />}
+        {step === 5 && (
+          <FeatsStep
+            feats={feats}
+            value={state.featRefs}
+            onChange={(featRefs) => setState((s) => ({ ...s, featRefs }))}
+            onNext={() => setStep((s) => s + 1)}
+          />
+        )}
         {step === 6 && (
           <DecisionsStep
             decisions={decisions}
             answers={state.classDecisions}
             onChange={(classDecisions) => setState((s) => ({ ...s, classDecisions }))}
+            byId={byId}
           />
         )}
         {step === 7 &&
           (spellMeta ? (
-            <SpellsStep
-              cantrips={cantrips}
-              leveledSpells={leveledSpells}
-              cantripCap={cantripCap}
-              leveledCap={leveledCap}
-              value={state.knownSpells}
-              onChange={(knownSpells) => setState((s) => ({ ...s, knownSpells }))}
-            />
+            <div className="flex flex-col gap-3">
+              <p className="text-xs text-ink-700 dark:text-kraft-200">
+                {spellPlan.hint} Once your character is created, you can add more anytime from the
+                <span className="font-medium"> Spellbook</span> on their sheet.
+              </p>
+              <SpellsStep
+                cantrips={cantrips}
+                leveledSpells={leveledSpells}
+                cantripCap={cantripCap}
+                leveledCap={leveledCap}
+                leveledLabel={spellPlan.leveledLabel}
+                value={state.knownSpells}
+                onChange={(knownSpells) => setState((s) => ({ ...s, knownSpells }))}
+              />
+            </div>
           ) : (
             <p className="text-sm text-ink-700 dark:text-kraft-200">Not a spellcaster — nothing to pick here.</p>
           ))}
@@ -400,6 +425,7 @@ export function BuilderPage() {
           <PersonalityStep
             value={{
               alignment: state.alignment,
+              languages: state.languages,
               personalityTraits: state.personalityTraits,
               ideals: state.ideals,
               bonds: state.bonds,

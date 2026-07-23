@@ -31,6 +31,8 @@ export interface BuilderState {
   /** If true, skip the class's fixed/choice equipment and take goldAlternative gp instead. */
   takeStartingGold: boolean;
   alignment: string;
+  /** Comma-joined language names — languages aren't modeled as content, so this mirrors CharacterState.languages. */
+  languages: string;
   personalityTraits: string;
   ideals: string;
   bonds: string;
@@ -53,6 +55,7 @@ export function emptyBuilderState(): BuilderState {
     equipmentChoicePicks: [],
     takeStartingGold: false,
     alignment: '',
+    languages: '',
     personalityTraits: '',
     ideals: '',
     bonds: '',
