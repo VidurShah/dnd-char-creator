@@ -3,6 +3,7 @@ import type { ContentEntry } from '@/schema/content';
 import { ProposedConceptSchema, ResolvedDecisionsSchema, type ProposedConcept } from '@/schema/ai';
 import { enumerateDecisions } from '@/engine/decisions';
 import { computeSheet } from '@/engine/compute';
+import { spellSelectionPlan } from '@/engine/spellcasting';
 import { buildCharacter } from '@/features/characters/characterFactory';
 import { emptyBuilderState, STANDARD_ARRAY, type BuilderState } from '@/features/characters/builder/builderState';
 import { resolveItemRef } from '@/features/characters/builder/resolveItemRef';
@@ -109,16 +110,9 @@ export async function buildCharacterFromConcept(params: {
   const spellPool = spellMeta ? entries.filter((e) => e.kind === 'spell' && e.data.classLists.includes(classShort) && e.data.level <= 1) : [];
   const cantrips = spellPool.filter((e) => e.kind === 'spell' && e.data.level === 0);
   const leveledSpells = spellPool.filter((e) => e.kind === 'spell' && e.data.level === 1);
-  const cantripCap = sheet.spellcasting?.cantripsKnown ?? 0;
-  const leveledCap = (() => {
-    if (!spellMeta || classEntry?.kind !== 'class') return 0;
-    const level1 = classEntry.data.levels.find((l) => l.level === 1);
-    if (spellMeta.knownOrPrepared === 'known') {
-      const known = level1?.columns?.spells_known;
-      return typeof known === 'number' ? known : 0;
-    }
-    return Math.max(1, sheet.abilities[spellMeta.ability].mod + 1);
-  })();
+  const spellPlan = spellSelectionPlan(classEntry, 1, spellMeta ? sheet.abilities[spellMeta.ability].mod : 0);
+  const cantripCap = spellPlan.cantripsKnown;
+  const leveledCap = spellPlan.leveledCount;
 
   const startingEquipment = classEntry?.kind === 'class' ? classEntry.data.startingEquipment : undefined;
   const feats = entries.filter((e): e is Extract<ContentEntry, { kind: 'feat' }> => e.kind === 'feat');

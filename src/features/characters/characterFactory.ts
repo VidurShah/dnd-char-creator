@@ -93,7 +93,7 @@ export function buildCharacter(state: BuilderState, items: ContentEntry[], byId:
       inspiration: false,
       raging: false,
       notes: state.notes,
-      languages: '',
+      languages: state.languages,
       alignment: state.alignment,
       personalityTraits: state.personalityTraits,
       ideals: state.ideals,
