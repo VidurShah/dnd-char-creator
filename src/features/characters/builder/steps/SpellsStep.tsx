@@ -5,11 +5,13 @@ interface SpellsStepProps {
   leveledSpells: ContentEntry[];
   cantripCap: number;
   leveledCap: number;
+  /** Heading for the leveled-spell section — "Spells Known", "Spellbook", or "Prepared Spells". */
+  leveledLabel?: string;
   value: string[];
   onChange: (value: string[]) => void;
 }
 
-export function SpellsStep({ cantrips, leveledSpells, cantripCap, leveledCap, value, onChange }: SpellsStepProps) {
+export function SpellsStep({ cantrips, leveledSpells, cantripCap, leveledCap, leveledLabel = '1st-Level Spells', value, onChange }: SpellsStepProps) {
   const chosenCantrips = value.filter((id) => cantrips.some((s) => s.id === id));
   const chosenLeveled = value.filter((id) => leveledSpells.some((s) => s.id === id));
 
@@ -32,7 +34,7 @@ export function SpellsStep({ cantrips, leveledSpells, cantripCap, leveledCap, va
       {leveledCap > 0 && (
         <div>
           <p className="mb-2 font-mono text-xs uppercase tracking-wider text-ink-500 dark:text-kraft-300">
-            1st-Level Spells ({chosenLeveled.length}/{leveledCap})
+            {leveledLabel} ({chosenLeveled.length}/{leveledCap})
           </p>
           <SpellList entries={leveledSpells} selected={value} onToggle={(id) => toggle(id, leveledCap, chosenLeveled)} />
         </div>
