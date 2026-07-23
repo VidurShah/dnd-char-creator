@@ -21,15 +21,52 @@ interface FunctionCall {
   args: unknown;
 }
 
-async function callProxy(apiKeyOverride: string | undefined, model: string, contents: unknown, config: unknown): Promise<FunctionCall[]> {
-  const res = await fetch(PROXY_PATH, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ apiKey: apiKeyOverride || undefined, model, contents, config }),
-  });
+/**
+ * How long to wait on a single generate call before giving up. The models this
+ * app has quota for are preview/thinking models that intermittently stall or
+ * return 503 under load — without a ceiling the browser "Generate" button would
+ * spin forever on a hung request instead of surfacing a retryable error.
+ */
+const REQUEST_TIMEOUT_MS = 60_000;
+
+/** True for transient server-side errors (overloaded model) that are worth one retry. */
+function isRetryable(message: string): boolean {
+  return /\b(503|429|500|unavailable|overloaded|high demand|try again)\b/i.test(message);
+}
+
+async function callProxyOnce(apiKeyOverride: string | undefined, model: string, contents: unknown, config: unknown): Promise<FunctionCall[]> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  let res: Response;
+  try {
+    res = await fetch(PROXY_PATH, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ apiKey: apiKeyOverride || undefined, model, contents, config }),
+      signal: controller.signal,
+    });
+  } catch (err) {
+    if (err instanceof DOMException && err.name === 'AbortError') {
+      throw new Error(`The AI service didn't respond within ${REQUEST_TIMEOUT_MS / 1000}s — it's likely overloaded. Try again in a moment.`);
+    }
+    throw err;
+  } finally {
+    clearTimeout(timer);
+  }
   const body = await res.json().catch(() => ({}));
   if (!res.ok) throw new Error(body.error ?? `Gemini proxy error ${res.status}`);
   return body.functionCalls ?? [];
+}
+
+/** Wraps a single generate call with one automatic retry on a transient overload error. */
+async function callProxy(apiKeyOverride: string | undefined, model: string, contents: unknown, config: unknown): Promise<FunctionCall[]> {
+  try {
+    return await callProxyOnce(apiKeyOverride, model, contents, config);
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    if (!isRetryable(message)) throw err;
+    return callProxyOnce(apiKeyOverride, model, contents, config);
+  }
 }
 
 /**
