@@ -6,6 +6,20 @@ export interface BuilderInventoryDraft {
   equipped: boolean;
 }
 
+/** Per-step "why this pick" blurbs from the AI builder, keyed by the builder concern. */
+export type StepRationaleKey =
+  | 'abilities'
+  | 'species'
+  | 'class'
+  | 'subclass'
+  | 'background'
+  | 'feats'
+  | 'choices'
+  | 'spells'
+  | 'equipment'
+  | 'personality';
+export type StepRationale = Partial<Record<StepRationaleKey, string>>;
+
 /** Accumulates choices across builder steps before being turned into a saved Character. */
 export interface BuilderState {
   edition: Edition;
@@ -38,6 +52,8 @@ export interface BuilderState {
   bonds: string;
   flaws: string;
   notes: string;
+  /** Set only for an AI-suggested build — per-step explanations of why each choice was made. */
+  aiRationale?: StepRationale;
 }
 
 export function emptyBuilderState(): BuilderState {
