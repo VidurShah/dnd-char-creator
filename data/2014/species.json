@@ -1,1321 +1,1404 @@
 [
-  {
-    "id": "2014/species/dragonborn",
-    "edition": "2014",
-    "name": "Dragonborn",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "str",
-        "amount": "2"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "cha",
-        "amount": "1"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "Born of dragons, as their name proclaims, the dragonborn walk proudly through a world that greets them with fearful incomprehension. Shaped by draconic gods or the dragons themselves, they originally hatched from dragon eggs as a unique race, combining the best attributes of dragons and humanoids.",
-      "size": "medium",
-      "speed": 30,
-      "traits": [
-        "2014/feature/trait-draconic-ancestry",
-        "2014/feature/trait-breath-weapon",
-        "2014/feature/trait-damage-resistance"
-      ]
-    }
+ {
+  "id": "2014/species/dragonborn",
+  "edition": "2014",
+  "name": "Dragonborn",
+  "source": {
+   "book": "SRD5.1"
   },
-  {
-    "id": "2014/species/dwarf",
-    "edition": "2014",
-    "name": "Dwarf",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "con",
-        "amount": "2"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal. Though they stand well under 5 feet tall, dwarves are so broad and compact that they can weigh as much as a human standing nearly two feet taller. Their courage and endurance are easily a match for any of the larger folk.",
-      "size": "medium",
-      "speed": 25,
-      "traits": [
-        "2014/feature/trait-darkvision",
-        "2014/feature/trait-dwarven-resilience",
-        "2014/feature/trait-stonecunning",
-        "2014/feature/trait-dwarven-combat-training",
-        "2014/feature/trait-tool-proficiency"
-      ]
-    }
-  },
-  {
-    "id": "2014/species/elf",
-    "edition": "2014",
-    "name": "Elf",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "dex",
-        "amount": "2"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. They love nature and magic, art and artistry, music and poetry, and the good things of the world. Elves can live well over 700 years, giving them a broad perspective on events that might trouble the shorter-lived races more deeply.",
-      "size": "medium",
-      "speed": 30,
-      "traits": [
-        "2014/feature/trait-darkvision",
-        "2014/feature/trait-fey-ancestry",
-        "2014/feature/trait-trance",
-        "2014/feature/trait-keen-senses"
-      ]
-    }
-  },
-  {
-    "id": "2014/species/gnome",
-    "edition": "2014",
-    "name": "Gnome",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "int",
-        "amount": "2"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "A gnome's energy and enthusiasm for living shines through every inch of his or her tiny body. Gnomes average slightly over 3 feet tall and weigh 40 to 45 pounds. Their tan or brown faces are usually adorned with broad smiles, and their bright eyes shine with excitement.",
-      "size": "small",
-      "speed": 25,
-      "traits": [
-        "2014/feature/trait-darkvision",
-        "2014/feature/trait-gnome-cunning"
-      ]
-    }
-  },
-  {
-    "id": "2014/species/half-elf",
-    "edition": "2014",
-    "name": "Half-Elf",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "cha",
-        "amount": "2"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "Walking in two worlds but truly belonging to neither, half-elves combine what some say are the best qualities of their elf and human parents: human curiosity, inventiveness, and ambition tempered by the refined senses, love of nature, and artistic tastes of the elves.",
-      "size": "medium",
-      "speed": 30,
-      "traits": [
-        "2014/feature/trait-darkvision",
-        "2014/feature/trait-fey-ancestry",
-        "2014/feature/trait-skill-versatility"
-      ]
-    }
-  },
-  {
-    "id": "2014/species/half-orc",
-    "edition": "2014",
-    "name": "Half-Orc",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "str",
-        "amount": "2"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "con",
-        "amount": "1"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "Whether united under the leadership of a mighty warlock or having fought to a standstill after years of conflict, orc and human tribes sometimes form alliances. Half-orcs born of these alliances stand as testaments to both the strength and the struggle of their heritage.",
-      "size": "medium",
-      "speed": 30,
-      "traits": [
-        "2014/feature/trait-darkvision",
-        "2014/feature/trait-savage-attacks",
-        "2014/feature/trait-relentless-endurance",
-        "2014/feature/trait-menacing"
-      ]
-    }
-  },
-  {
-    "id": "2014/species/halfling",
-    "edition": "2014",
-    "name": "Halfling",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "dex",
-        "amount": "2"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "The comforts of home are the goals of most halflings' lives: a place to settle in peace and quiet, far from marauding monsters and clashing armies. Halflings are an affable and cheerful people, and they cherish the bonds of family and friendship as well as the comforts of hearth and home.",
-      "size": "small",
-      "speed": 25,
-      "traits": [
-        "2014/feature/trait-brave",
-        "2014/feature/trait-halfling-nimbleness",
-        "2014/feature/trait-lucky"
-      ]
-    }
-  },
-  {
-    "id": "2014/species/human",
-    "edition": "2014",
-    "name": "Human",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "str",
-        "amount": "1"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "dex",
-        "amount": "1"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "con",
-        "amount": "1"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "int",
-        "amount": "1"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "wis",
-        "amount": "1"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "cha",
-        "amount": "1"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "In the reckonings of most worlds, humans are the youngest of the common races, late to arrive on the world scene and short-lived in comparison to dwarves, elves, and dragons. Perhaps it is because of their shorter lives that they strive to achieve as much as they can in the years they are given.",
-      "size": "medium",
-      "speed": 30,
-      "traits": []
-    }
-  },
-  {
-    "id": "2014/species/tiefling",
-    "edition": "2014",
-    "name": "Tiefling",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "int",
-        "amount": "1"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "cha",
-        "amount": "2"
-      },
-      {
-        "op": "spellcasting",
-        "progression": "full",
-        "ability": "cha"
-      },
-      {
-        "op": "grantSpell",
-        "spellRef": "2014/spell/thaumaturgy",
-        "uses": "atWill",
-        "minLevel": 1
-      },
-      {
-        "op": "grantSpell",
-        "spellRef": "2014/spell/hellish-rebuke",
-        "uses": "perLong",
-        "minLevel": 3
-      },
-      {
-        "op": "grantSpell",
-        "spellRef": "2014/spell/darkness",
-        "uses": "perLong",
-        "minLevel": 5
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the lot of the tiefling. And to twist the knife, tieflings know that this is because a pact struck generations ago infused the essence of Asmodeus into their bloodline.",
-      "size": "medium",
-      "speed": 30,
-      "traits": [
-        "2014/feature/trait-darkvision",
-        "2014/feature/trait-hellish-resistance",
-        "2014/feature/trait-infernal-legacy"
-      ]
-    }
-  },
-  {
-    "id": "2014/species/hill-dwarf",
-    "edition": "2014",
-    "name": "Hill Dwarf",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "con",
-        "amount": "2"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "wis",
-        "amount": "1"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience. The gold dwarves of Faerûn in their mighty southern kingdom are hill dwarves, as are the exiled Neidar and the debased Klar of Krynn in the Dragonlance setting.",
-      "size": "medium",
-      "speed": 25,
-      "traits": [
-        "2014/feature/trait-darkvision",
-        "2014/feature/trait-dwarven-resilience",
-        "2014/feature/trait-stonecunning",
-        "2014/feature/trait-dwarven-combat-training",
-        "2014/feature/trait-tool-proficiency",
-        "2014/feature/trait-dwarven-toughness"
-      ],
-      "parentSpeciesRef": "2014/species/dwarf"
-    }
-  },
-  {
-    "id": "2014/species/high-elf",
-    "edition": "2014",
-    "name": "High Elf",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "dex",
-        "amount": "2"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "int",
-        "amount": "1"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves superior to non-elves and even other elves. The other type is more common and more friendly, and often encountered among humans and other races.",
-      "size": "medium",
-      "speed": 30,
-      "traits": [
-        "2014/feature/trait-darkvision",
-        "2014/feature/trait-fey-ancestry",
-        "2014/feature/trait-trance",
-        "2014/feature/trait-keen-senses",
-        "2014/feature/trait-elf-weapon-training",
-        "2014/feature/trait-high-elf-cantrip",
-        "2014/feature/trait-extra-language"
-      ],
-      "parentSpeciesRef": "2014/species/elf"
-    }
-  },
-  {
-    "id": "2014/species/rock-gnome",
-    "edition": "2014",
-    "name": "Rock Gnome",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "int",
-        "amount": "2"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "con",
-        "amount": "1"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes. Most gnomes in the worlds of D&D are rock gnomes, including the tinker gnomes of the Dragonlance setting.",
-      "size": "small",
-      "speed": 25,
-      "traits": [
-        "2014/feature/trait-darkvision",
-        "2014/feature/trait-gnome-cunning",
-        "2014/feature/trait-artificers-lore",
-        "2014/feature/trait-tinker"
-      ],
-      "parentSpeciesRef": "2014/species/gnome"
-    }
-  },
-  {
-    "id": "2014/species/lightfoot-halfling",
-    "edition": "2014",
-    "name": "Lightfoot Halfling",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "dex",
-        "amount": "2"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "cha",
-        "amount": "1"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You're inclined to be affable and get along well with others. Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.",
-      "size": "small",
-      "speed": 25,
-      "traits": [
-        "2014/feature/trait-brave",
-        "2014/feature/trait-halfling-nimbleness",
-        "2014/feature/trait-lucky",
-        "2014/feature/trait-naturally-stealthy"
-      ],
-      "parentSpeciesRef": "2014/species/halfling"
-    }
-  },
-  {
-    "id": "2014/feature/trait-draconic-ancestry",
-    "edition": "2014",
-    "name": "Draconic Ancestry",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table."
-    }
-  },
-  {
-    "id": "2014/feature/trait-breath-weapon",
-    "edition": "2014",
-    "name": "Breath Weapon",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.\n\nWhen you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.\n\nAfter you use your breath weapon, you cannot use it again until you complete a short or long rest."
-    }
-  },
-  {
-    "id": "2014/feature/trait-damage-resistance",
-    "edition": "2014",
-    "name": "Damage Resistance",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have resistance to the damage type associated with your draconic ancestry."
-    }
-  },
-  {
-    "id": "2014/feature/trait-darkvision",
-    "edition": "2014",
-    "name": "Darkvision",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray."
-    }
-  },
-  {
-    "id": "2014/feature/trait-dwarven-resilience",
-    "edition": "2014",
-    "name": "Dwarven Resilience",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have advantage on saving throws against poison, and you have resistance against poison damage."
-    }
-  },
-  {
-    "id": "2014/feature/trait-stonecunning",
-    "edition": "2014",
-    "name": "Stonecunning",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
-    }
-  },
-  {
-    "id": "2014/feature/trait-dwarven-combat-training",
-    "edition": "2014",
-    "name": "Dwarven Combat Training",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer."
-    }
-  },
-  {
-    "id": "2014/feature/trait-tool-proficiency",
-    "edition": "2014",
-    "name": "Tool Proficiency",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools."
-    }
-  },
-  {
-    "id": "2014/feature/trait-fey-ancestry",
-    "edition": "2014",
-    "name": "Fey Ancestry",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep."
-    }
-  },
-  {
-    "id": "2014/feature/trait-trance",
-    "edition": "2014",
-    "name": "Trance",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep."
-    }
-  },
-  {
-    "id": "2014/feature/trait-keen-senses",
-    "edition": "2014",
-    "name": "Keen Senses",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have proficiency in the Perception skill."
-    }
-  },
-  {
-    "id": "2014/feature/trait-gnome-cunning",
-    "edition": "2014",
-    "name": "Gnome Cunning",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
-    }
-  },
-  {
-    "id": "2014/feature/trait-skill-versatility",
-    "edition": "2014",
-    "name": "Skill Versatility",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You gain proficiency in two skills of your choice."
-    }
-  },
-  {
-    "id": "2014/feature/trait-savage-attacks",
-    "edition": "2014",
-    "name": "Savage Attacks",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
-    }
-  },
-  {
-    "id": "2014/feature/trait-relentless-endurance",
-    "edition": "2014",
-    "name": "Relentless Endurance",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest."
-    }
-  },
-  {
-    "id": "2014/feature/trait-menacing",
-    "edition": "2014",
-    "name": "Menacing",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You gain proficiency in the Intimidation skill."
-    }
-  },
-  {
-    "id": "2014/feature/trait-brave",
-    "edition": "2014",
-    "name": "Brave",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have advantage on saving throw against being frightened."
-    }
-  },
-  {
-    "id": "2014/feature/trait-halfling-nimbleness",
-    "edition": "2014",
-    "name": "Halfling Nimbleness",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You can move through the space of any creature that is of a size larger than yours."
-    }
-  },
-  {
-    "id": "2014/feature/trait-lucky",
-    "edition": "2014",
-    "name": "Lucky",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
-    }
-  },
-  {
-    "id": "2014/feature/trait-hellish-resistance",
-    "edition": "2014",
-    "name": "Hellish Resistance",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have resistance to fire damage."
-    }
-  },
-  {
-    "id": "2014/feature/trait-infernal-legacy",
-    "edition": "2014",
-    "name": "Infernal Legacy",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
-    }
-  },
-  {
-    "id": "2014/feature/trait-dwarven-toughness",
-    "edition": "2014",
-    "name": "Dwarven Toughness",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
-    }
-  },
-  {
-    "id": "2014/feature/trait-elf-weapon-training",
-    "edition": "2014",
-    "name": "Elf Weapon Training",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
-    }
-  },
-  {
-    "id": "2014/feature/trait-high-elf-cantrip",
-    "edition": "2014",
-    "name": "High Elf Cantrip",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You know one cantrip of your choice form the wizard spell list. Intelligence is your spellcasting ability for it."
-    }
-  },
-  {
-    "id": "2014/feature/trait-extra-language",
-    "edition": "2014",
-    "name": "Extra Language",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You can speak, read, and write one extra language of your choice."
-    }
-  },
-  {
-    "id": "2014/feature/trait-artificers-lore",
-    "edition": "2014",
-    "name": "Artificer's Lore",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply."
-    }
-  },
-  {
-    "id": "2014/feature/trait-tinker",
-    "edition": "2014",
-    "name": "Tinker",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time.\n\nWhen you create a device, choose one of the following options:\n\nClockwork Toy: This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.\n\nFire Starter: The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.\n\nMusic Box: When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed."
-    }
-  },
-  {
-    "id": "2014/feature/trait-naturally-stealthy",
-    "edition": "2014",
-    "name": "Naturally Stealthy",
-    "source": {
-      "book": "SRD5.1"
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
-    }
-  },
-  {
-    "id": "2014/species/custom-lineage",
-    "edition": "2014",
-    "kind": "species",
-    "name": "Custom Lineage",
-    "source": {
-      "book": "TCE",
-      "page": 12
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "data": {
-      "description": "An option for players who want to build a character whose heritage doesn't fit any of the standard races. You determine your own size, speed, and ability score increase, and you gain a feat and one language of your choice at 1st level.",
-      "size": "medium",
-      "speed": 30,
-      "traits": []
-    },
-    "effects": []
-  },
-  {
-    "id": "2014/feature/trait-dwarven-armor-training",
-    "edition": "2014",
-    "name": "Dwarven Armor Training",
-    "source": {
-      "book": "PHB2014",
-      "page": 20
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have proficiency with light and medium armor."
-    }
-  },
-  {
-    "id": "2014/feature/trait-fleet-of-foot",
-    "edition": "2014",
-    "name": "Fleet of Foot",
-    "source": {
-      "book": "PHB2014",
-      "page": 24
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "Your base walking speed increases to 35 feet."
-    }
-  },
-  {
-    "id": "2014/feature/trait-mask-of-the-wild",
-    "edition": "2014",
-    "name": "Mask of the Wild",
-    "source": {
-      "book": "PHB2014",
-      "page": 24
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
-    }
-  },
-  {
-    "id": "2014/feature/trait-superior-darkvision",
-    "edition": "2014",
-    "name": "Superior Darkvision",
-    "source": {
-      "book": "PHB2014",
-      "page": 24
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "Your darkvision has a radius of 120 feet."
-    }
-  },
-  {
-    "id": "2014/feature/trait-sunlight-sensitivity",
-    "edition": "2014",
-    "name": "Sunlight Sensitivity",
-    "source": {
-      "book": "PHB2014",
-      "page": 24
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
-    }
-  },
-  {
-    "id": "2014/feature/trait-drow-magic",
-    "edition": "2014",
-    "name": "Drow Magic",
-    "source": {
-      "book": "PHB2014",
-      "page": 24
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once per day. When you reach 5th level, you can also cast the darkness spell once per day. Charisma is your spellcasting ability for these spells."
-    }
-  },
-  {
-    "id": "2014/feature/trait-drow-weapon-training",
-    "edition": "2014",
-    "name": "Drow Weapon Training",
-    "source": {
-      "book": "PHB2014",
-      "page": 24
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have proficiency with rapiers, shortswords, and hand crossbows."
-    }
-  },
-  {
-    "id": "2014/feature/trait-stout-resilience",
-    "edition": "2014",
-    "name": "Stout Resilience",
-    "source": {
-      "book": "PHB2014",
-      "page": 28
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You have advantage on saving throws against poison, and you have resistance against poison damage."
-    }
-  },
-  {
-    "id": "2014/feature/trait-natural-illusionist",
-    "edition": "2014",
-    "name": "Natural Illusionist",
-    "source": {
-      "book": "PHB2014",
-      "page": 37
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You know the minor illusion cantrip. Intelligence is your spellcasting ability for it."
-    }
-  },
-  {
-    "id": "2014/feature/trait-speak-with-small-beasts",
-    "edition": "2014",
-    "name": "Speak with Small Beasts",
-    "source": {
-      "book": "PHB2014",
-      "page": 37
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts."
-    }
-  },
-  {
-    "id": "2014/feature/trait-variant-human-skill",
-    "edition": "2014",
-    "name": "Skills (Variant Human)",
-    "source": {
-      "book": "PHB2014",
-      "page": 31
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You gain proficiency in one skill of your choice."
-    }
-  },
-  {
-    "id": "2014/feature/trait-variant-human-feat",
-    "edition": "2014",
-    "name": "Feat (Variant Human)",
-    "source": {
-      "book": "PHB2014",
-      "page": 31
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "feature",
-    "data": {
-      "description": "You gain one feat of your choice. Choose it in the Feats step of the builder."
-    }
-  },
-  {
-    "id": "2014/species/mountain-dwarf",
-    "edition": "2014",
-    "name": "Mountain Dwarf",
-    "source": {
-      "book": "PHB2014",
-      "page": 20
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "con",
-        "amount": "2"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "str",
-        "amount": "2"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "As a mountain dwarf, you're strong and hardy, accustomed to a difficult life in rugged terrain. You're probably on the tall side (for a dwarf), and tend toward lighter coloration. The mountain dwarves of Faerûn are the shield dwarves of the North.",
-      "size": "medium",
-      "speed": 25,
-      "traits": [
-        "2014/feature/trait-darkvision",
-        "2014/feature/trait-dwarven-resilience",
-        "2014/feature/trait-stonecunning",
-        "2014/feature/trait-dwarven-combat-training",
-        "2014/feature/trait-tool-proficiency",
-        "2014/feature/trait-dwarven-armor-training"
-      ],
-      "parentSpeciesRef": "2014/species/dwarf"
-    }
-  },
-  {
-    "id": "2014/species/wood-elf",
-    "edition": "2014",
-    "name": "Wood Elf",
-    "source": {
-      "book": "PHB2014",
-      "page": 24
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "dex",
-        "amount": "2"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "wis",
-        "amount": "1"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "As a wood elf, you have keen senses and intuition, and your fleet feet carry you quickly and stealthily through your native forests. Wood elves are reclusive and distrusting of non-elves, and tend toward copper, brown, and black hair with green, brown, or hazel eyes.",
-      "size": "medium",
-      "speed": 35,
-      "traits": [
-        "2014/feature/trait-darkvision",
-        "2014/feature/trait-fey-ancestry",
-        "2014/feature/trait-trance",
-        "2014/feature/trait-keen-senses",
-        "2014/feature/trait-elf-weapon-training",
-        "2014/feature/trait-fleet-of-foot",
-        "2014/feature/trait-mask-of-the-wild"
-      ],
-      "parentSpeciesRef": "2014/species/elf"
-    }
-  },
-  {
-    "id": "2014/species/dark-elf",
-    "edition": "2014",
-    "name": "Dark Elf (Drow)",
-    "source": {
-      "book": "PHB2014",
-      "page": 24
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "dex",
-        "amount": "2"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "cha",
-        "amount": "1"
-      },
-      {
-        "op": "sense",
-        "sense": "darkvision",
-        "range": 120
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "Descended from an earlier subrace of dark-skinned elves, the drow were banished from the surface world for following the goddess Lolth down the path to evil and corruption. Now they have built their own civilization in the depths of the Underdark, patterned after the Way of Lolth.\n\nDrow have black skin that resembles polished obsidian and stark white or pale yellow hair. They commonly have very pale eyes in shades of lilac, silver, pink, red, and blue.",
-      "size": "medium",
-      "speed": 30,
-      "traits": [
-        "2014/feature/trait-darkvision",
-        "2014/feature/trait-fey-ancestry",
-        "2014/feature/trait-trance",
-        "2014/feature/trait-keen-senses",
-        "2014/feature/trait-superior-darkvision",
-        "2014/feature/trait-sunlight-sensitivity",
-        "2014/feature/trait-drow-magic",
-        "2014/feature/trait-drow-weapon-training"
-      ],
-      "parentSpeciesRef": "2014/species/elf"
-    }
-  },
-  {
-    "id": "2014/species/stout-halfling",
-    "edition": "2014",
-    "name": "Stout Halfling",
-    "source": {
-      "book": "PHB2014",
-      "page": 28
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "dex",
-        "amount": "2"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "con",
-        "amount": "1"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "As a stout halfling, you're hardier than average and have some resistance to poison. Some say that stouts have dwarven blood. In the Forgotten Realms, these halflings are called stronghearts, and they're most common in the south.",
-      "size": "small",
-      "speed": 25,
-      "traits": [
-        "2014/feature/trait-brave",
-        "2014/feature/trait-halfling-nimbleness",
-        "2014/feature/trait-lucky",
-        "2014/feature/trait-stout-resilience"
-      ],
-      "parentSpeciesRef": "2014/species/halfling"
-    }
-  },
-  {
-    "id": "2014/species/forest-gnome",
-    "edition": "2014",
-    "name": "Forest Gnome",
-    "source": {
-      "book": "PHB2014",
-      "page": 37
-    },
-    "origin": "seed",
-    "effects": [
-      {
-        "op": "abilityBonus",
-        "ability": "int",
-        "amount": "2"
-      },
-      {
-        "op": "abilityBonus",
-        "ability": "dex",
-        "amount": "1"
-      }
-    ],
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "As a forest gnome, you have a natural knack for illusion and inherent quickness and stealth. In the worlds of D&D, forest gnomes are rare and secretive. They gather in hidden communities in sylvan forests, using illusions and trickery to conceal themselves from threats or to mask their escape should they be detected.",
-      "size": "small",
-      "speed": 25,
-      "traits": [
-        "2014/feature/trait-darkvision",
-        "2014/feature/trait-gnome-cunning",
-        "2014/feature/trait-natural-illusionist",
-        "2014/feature/trait-speak-with-small-beasts"
-      ],
-      "parentSpeciesRef": "2014/species/gnome"
-    }
-  },
-  {
-    "id": "2014/species/variant-human",
-    "edition": "2014",
-    "name": "Human (Variant)",
-    "source": {
-      "book": "PHB2014",
-      "page": 31
-    },
-    "origin": "seed",
-    "schemaVersion": 1,
-    "kind": "species",
-    "data": {
-      "description": "If your campaign uses the optional feat rules, your DM might allow these variant traits, all of which replace the standard human's +1 to every ability score.\n\nInstead you increase two different ability scores of your choice by 1, gain proficiency in one skill of your choice, and gain one feat of your choice.",
-      "size": "medium",
-      "speed": 30,
-      "traits": [
-        "2014/feature/trait-variant-human-skill",
-        "2014/feature/trait-variant-human-feat"
-      ],
-      "parentSpeciesRef": "2014/species/human",
-      "decisionPoints": [
-        {
-          "decisionId": "variant-human/ability-1",
-          "prompt": "Variant Human: choose an ability score to increase by 1",
-          "count": 1,
-          "options": [
-            "str",
-            "dex",
-            "con",
-            "int",
-            "wis",
-            "cha"
-          ]
-        },
-        {
-          "decisionId": "variant-human/ability-2",
-          "prompt": "Variant Human: choose a different ability score to increase by 1",
-          "count": 1,
-          "options": [
-            "str",
-            "dex",
-            "con",
-            "int",
-            "wis",
-            "cha"
-          ]
-        },
-        {
-          "decisionId": "variant-human/skill",
-          "prompt": "Variant Human: choose a skill proficiency",
-          "count": 1,
-          "options": [
-            "acrobatics",
-            "animalHandling",
-            "arcana",
-            "athletics",
-            "deception",
-            "history",
-            "insight",
-            "intimidation",
-            "investigation",
-            "medicine",
-            "nature",
-            "perception",
-            "performance",
-            "persuasion",
-            "religion",
-            "sleightOfHand",
-            "stealth",
-            "survival"
-          ]
-        }
-      ]
-    }
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "str",
+    "amount": "2"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "cha",
+    "amount": "1"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "Born of dragons, as their name proclaims, the dragonborn walk proudly through a world that greets them with fearful incomprehension. Shaped by draconic gods or the dragons themselves, they originally hatched from dragon eggs as a unique race, combining the best attributes of dragons and humanoids.",
+   "size": "medium",
+   "speed": 30,
+   "traits": [
+    "2014/feature/trait-draconic-ancestry",
+    "2014/feature/trait-breath-weapon",
+    "2014/feature/trait-damage-resistance"
+   ]
   }
+ },
+ {
+  "id": "2014/species/dwarf",
+  "edition": "2014",
+  "name": "Dwarf",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "con",
+    "amount": "2"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal. Though they stand well under 5 feet tall, dwarves are so broad and compact that they can weigh as much as a human standing nearly two feet taller. Their courage and endurance are easily a match for any of the larger folk.",
+   "size": "medium",
+   "speed": 25,
+   "traits": [
+    "2014/feature/trait-darkvision",
+    "2014/feature/trait-dwarven-resilience",
+    "2014/feature/trait-stonecunning",
+    "2014/feature/trait-dwarven-combat-training",
+    "2014/feature/trait-tool-proficiency"
+   ],
+   "decisionPoints": [
+    {
+     "decisionId": "dwarf/tool",
+     "prompt": "Dwarven Tool Proficiency: choose one type of artisan's tools",
+     "count": 1,
+     "options": [
+      "smiths-tools",
+      "brewers-supplies",
+      "masons-tools"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "2014/species/elf",
+  "edition": "2014",
+  "name": "Elf",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "dex",
+    "amount": "2"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. They love nature and magic, art and artistry, music and poetry, and the good things of the world. Elves can live well over 700 years, giving them a broad perspective on events that might trouble the shorter-lived races more deeply.",
+   "size": "medium",
+   "speed": 30,
+   "traits": [
+    "2014/feature/trait-darkvision",
+    "2014/feature/trait-fey-ancestry",
+    "2014/feature/trait-trance",
+    "2014/feature/trait-keen-senses"
+   ]
+  }
+ },
+ {
+  "id": "2014/species/gnome",
+  "edition": "2014",
+  "name": "Gnome",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "int",
+    "amount": "2"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "A gnome's energy and enthusiasm for living shines through every inch of his or her tiny body. Gnomes average slightly over 3 feet tall and weigh 40 to 45 pounds. Their tan or brown faces are usually adorned with broad smiles, and their bright eyes shine with excitement.",
+   "size": "small",
+   "speed": 25,
+   "traits": [
+    "2014/feature/trait-darkvision",
+    "2014/feature/trait-gnome-cunning"
+   ]
+  }
+ },
+ {
+  "id": "2014/species/half-elf",
+  "edition": "2014",
+  "name": "Half-Elf",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "cha",
+    "amount": "2"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "Walking in two worlds but truly belonging to neither, half-elves combine what some say are the best qualities of their elf and human parents: human curiosity, inventiveness, and ambition tempered by the refined senses, love of nature, and artistic tastes of the elves.",
+   "size": "medium",
+   "speed": 30,
+   "traits": [
+    "2014/feature/trait-darkvision",
+    "2014/feature/trait-fey-ancestry",
+    "2014/feature/trait-skill-versatility"
+   ],
+   "decisionPoints": [
+    {
+     "decisionId": "half-elf/ability",
+     "prompt": "Half-Elf: choose two other ability scores to increase by 1",
+     "count": 2,
+     "options": [
+      "str",
+      "dex",
+      "con",
+      "int",
+      "wis"
+     ]
+    },
+    {
+     "decisionId": "half-elf/skill",
+     "prompt": "Skill Versatility: choose two skills to gain proficiency in",
+     "count": 2,
+     "options": [
+      "acrobatics",
+      "animalHandling",
+      "arcana",
+      "athletics",
+      "deception",
+      "history",
+      "insight",
+      "intimidation",
+      "investigation",
+      "medicine",
+      "nature",
+      "perception",
+      "performance",
+      "persuasion",
+      "religion",
+      "sleightOfHand",
+      "stealth",
+      "survival"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "2014/species/half-orc",
+  "edition": "2014",
+  "name": "Half-Orc",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "str",
+    "amount": "2"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "con",
+    "amount": "1"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "Whether united under the leadership of a mighty warlock or having fought to a standstill after years of conflict, orc and human tribes sometimes form alliances. Half-orcs born of these alliances stand as testaments to both the strength and the struggle of their heritage.",
+   "size": "medium",
+   "speed": 30,
+   "traits": [
+    "2014/feature/trait-darkvision",
+    "2014/feature/trait-savage-attacks",
+    "2014/feature/trait-relentless-endurance",
+    "2014/feature/trait-menacing"
+   ]
+  }
+ },
+ {
+  "id": "2014/species/halfling",
+  "edition": "2014",
+  "name": "Halfling",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "dex",
+    "amount": "2"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "The comforts of home are the goals of most halflings' lives: a place to settle in peace and quiet, far from marauding monsters and clashing armies. Halflings are an affable and cheerful people, and they cherish the bonds of family and friendship as well as the comforts of hearth and home.",
+   "size": "small",
+   "speed": 25,
+   "traits": [
+    "2014/feature/trait-brave",
+    "2014/feature/trait-halfling-nimbleness",
+    "2014/feature/trait-lucky"
+   ]
+  }
+ },
+ {
+  "id": "2014/species/human",
+  "edition": "2014",
+  "name": "Human",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "str",
+    "amount": "1"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "dex",
+    "amount": "1"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "con",
+    "amount": "1"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "int",
+    "amount": "1"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "wis",
+    "amount": "1"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "cha",
+    "amount": "1"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "In the reckonings of most worlds, humans are the youngest of the common races, late to arrive on the world scene and short-lived in comparison to dwarves, elves, and dragons. Perhaps it is because of their shorter lives that they strive to achieve as much as they can in the years they are given.",
+   "size": "medium",
+   "speed": 30,
+   "traits": []
+  }
+ },
+ {
+  "id": "2014/species/tiefling",
+  "edition": "2014",
+  "name": "Tiefling",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "int",
+    "amount": "1"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "cha",
+    "amount": "2"
+   },
+   {
+    "op": "spellcasting",
+    "progression": "full",
+    "ability": "cha"
+   },
+   {
+    "op": "grantSpell",
+    "spellRef": "2014/spell/thaumaturgy",
+    "uses": "atWill",
+    "minLevel": 1
+   },
+   {
+    "op": "grantSpell",
+    "spellRef": "2014/spell/hellish-rebuke",
+    "uses": "perLong",
+    "minLevel": 3
+   },
+   {
+    "op": "grantSpell",
+    "spellRef": "2014/spell/darkness",
+    "uses": "perLong",
+    "minLevel": 5
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the lot of the tiefling. And to twist the knife, tieflings know that this is because a pact struck generations ago infused the essence of Asmodeus into their bloodline.",
+   "size": "medium",
+   "speed": 30,
+   "traits": [
+    "2014/feature/trait-darkvision",
+    "2014/feature/trait-hellish-resistance",
+    "2014/feature/trait-infernal-legacy"
+   ]
+  }
+ },
+ {
+  "id": "2014/species/hill-dwarf",
+  "edition": "2014",
+  "name": "Hill Dwarf",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "con",
+    "amount": "2"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "wis",
+    "amount": "1"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience. The gold dwarves of Faerûn in their mighty southern kingdom are hill dwarves, as are the exiled Neidar and the debased Klar of Krynn in the Dragonlance setting.",
+   "size": "medium",
+   "speed": 25,
+   "traits": [
+    "2014/feature/trait-darkvision",
+    "2014/feature/trait-dwarven-resilience",
+    "2014/feature/trait-stonecunning",
+    "2014/feature/trait-dwarven-combat-training",
+    "2014/feature/trait-tool-proficiency",
+    "2014/feature/trait-dwarven-toughness"
+   ],
+   "parentSpeciesRef": "2014/species/dwarf",
+   "decisionPoints": [
+    {
+     "decisionId": "dwarf/tool",
+     "prompt": "Dwarven Tool Proficiency: choose one type of artisan's tools",
+     "count": 1,
+     "options": [
+      "smiths-tools",
+      "brewers-supplies",
+      "masons-tools"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "2014/species/high-elf",
+  "edition": "2014",
+  "name": "High Elf",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "dex",
+    "amount": "2"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "int",
+    "amount": "1"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves superior to non-elves and even other elves. The other type is more common and more friendly, and often encountered among humans and other races.",
+   "size": "medium",
+   "speed": 30,
+   "traits": [
+    "2014/feature/trait-darkvision",
+    "2014/feature/trait-fey-ancestry",
+    "2014/feature/trait-trance",
+    "2014/feature/trait-keen-senses",
+    "2014/feature/trait-elf-weapon-training",
+    "2014/feature/trait-high-elf-cantrip",
+    "2014/feature/trait-extra-language"
+   ],
+   "parentSpeciesRef": "2014/species/elf",
+   "decisionPoints": [
+    {
+     "decisionId": "2014/species/high-elf/cantrip",
+     "prompt": "Choose a wizard cantrip (High Elf Cantrip)",
+     "count": 1,
+     "optionQuery": "spell:0:wizard"
+    }
+   ]
+  }
+ },
+ {
+  "id": "2014/species/rock-gnome",
+  "edition": "2014",
+  "name": "Rock Gnome",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "int",
+    "amount": "2"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "con",
+    "amount": "1"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes. Most gnomes in the worlds of D&D are rock gnomes, including the tinker gnomes of the Dragonlance setting.",
+   "size": "small",
+   "speed": 25,
+   "traits": [
+    "2014/feature/trait-darkvision",
+    "2014/feature/trait-gnome-cunning",
+    "2014/feature/trait-artificers-lore",
+    "2014/feature/trait-tinker"
+   ],
+   "parentSpeciesRef": "2014/species/gnome"
+  }
+ },
+ {
+  "id": "2014/species/lightfoot-halfling",
+  "edition": "2014",
+  "name": "Lightfoot Halfling",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "dex",
+    "amount": "2"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "cha",
+    "amount": "1"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You're inclined to be affable and get along well with others. Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.",
+   "size": "small",
+   "speed": 25,
+   "traits": [
+    "2014/feature/trait-brave",
+    "2014/feature/trait-halfling-nimbleness",
+    "2014/feature/trait-lucky",
+    "2014/feature/trait-naturally-stealthy"
+   ],
+   "parentSpeciesRef": "2014/species/halfling"
+  }
+ },
+ {
+  "id": "2014/feature/trait-draconic-ancestry",
+  "edition": "2014",
+  "name": "Draconic Ancestry",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table."
+  }
+ },
+ {
+  "id": "2014/feature/trait-breath-weapon",
+  "edition": "2014",
+  "name": "Breath Weapon",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.\n\nWhen you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.\n\nAfter you use your breath weapon, you cannot use it again until you complete a short or long rest."
+  }
+ },
+ {
+  "id": "2014/feature/trait-damage-resistance",
+  "edition": "2014",
+  "name": "Damage Resistance",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have resistance to the damage type associated with your draconic ancestry."
+  }
+ },
+ {
+  "id": "2014/feature/trait-darkvision",
+  "edition": "2014",
+  "name": "Darkvision",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray."
+  }
+ },
+ {
+  "id": "2014/feature/trait-dwarven-resilience",
+  "edition": "2014",
+  "name": "Dwarven Resilience",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have advantage on saving throws against poison, and you have resistance against poison damage."
+  }
+ },
+ {
+  "id": "2014/feature/trait-stonecunning",
+  "edition": "2014",
+  "name": "Stonecunning",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+  }
+ },
+ {
+  "id": "2014/feature/trait-dwarven-combat-training",
+  "edition": "2014",
+  "name": "Dwarven Combat Training",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer."
+  }
+ },
+ {
+  "id": "2014/feature/trait-tool-proficiency",
+  "edition": "2014",
+  "name": "Tool Proficiency",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools."
+  }
+ },
+ {
+  "id": "2014/feature/trait-fey-ancestry",
+  "edition": "2014",
+  "name": "Fey Ancestry",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep."
+  }
+ },
+ {
+  "id": "2014/feature/trait-trance",
+  "edition": "2014",
+  "name": "Trance",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep."
+  }
+ },
+ {
+  "id": "2014/feature/trait-keen-senses",
+  "edition": "2014",
+  "name": "Keen Senses",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have proficiency in the Perception skill."
+  }
+ },
+ {
+  "id": "2014/feature/trait-gnome-cunning",
+  "edition": "2014",
+  "name": "Gnome Cunning",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
+  }
+ },
+ {
+  "id": "2014/feature/trait-skill-versatility",
+  "edition": "2014",
+  "name": "Skill Versatility",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You gain proficiency in two skills of your choice."
+  }
+ },
+ {
+  "id": "2014/feature/trait-savage-attacks",
+  "edition": "2014",
+  "name": "Savage Attacks",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
+  }
+ },
+ {
+  "id": "2014/feature/trait-relentless-endurance",
+  "edition": "2014",
+  "name": "Relentless Endurance",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest."
+  }
+ },
+ {
+  "id": "2014/feature/trait-menacing",
+  "edition": "2014",
+  "name": "Menacing",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You gain proficiency in the Intimidation skill."
+  }
+ },
+ {
+  "id": "2014/feature/trait-brave",
+  "edition": "2014",
+  "name": "Brave",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have advantage on saving throw against being frightened."
+  }
+ },
+ {
+  "id": "2014/feature/trait-halfling-nimbleness",
+  "edition": "2014",
+  "name": "Halfling Nimbleness",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You can move through the space of any creature that is of a size larger than yours."
+  }
+ },
+ {
+  "id": "2014/feature/trait-lucky",
+  "edition": "2014",
+  "name": "Lucky",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
+  }
+ },
+ {
+  "id": "2014/feature/trait-hellish-resistance",
+  "edition": "2014",
+  "name": "Hellish Resistance",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have resistance to fire damage."
+  }
+ },
+ {
+  "id": "2014/feature/trait-infernal-legacy",
+  "edition": "2014",
+  "name": "Infernal Legacy",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+  }
+ },
+ {
+  "id": "2014/feature/trait-dwarven-toughness",
+  "edition": "2014",
+  "name": "Dwarven Toughness",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
+  }
+ },
+ {
+  "id": "2014/feature/trait-elf-weapon-training",
+  "edition": "2014",
+  "name": "Elf Weapon Training",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+  }
+ },
+ {
+  "id": "2014/feature/trait-high-elf-cantrip",
+  "edition": "2014",
+  "name": "High Elf Cantrip",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You know one cantrip of your choice form the wizard spell list. Intelligence is your spellcasting ability for it."
+  }
+ },
+ {
+  "id": "2014/feature/trait-extra-language",
+  "edition": "2014",
+  "name": "Extra Language",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You can speak, read, and write one extra language of your choice."
+  }
+ },
+ {
+  "id": "2014/feature/trait-artificers-lore",
+  "edition": "2014",
+  "name": "Artificer's Lore",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply."
+  }
+ },
+ {
+  "id": "2014/feature/trait-tinker",
+  "edition": "2014",
+  "name": "Tinker",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time.\n\nWhen you create a device, choose one of the following options:\n\nClockwork Toy: This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.\n\nFire Starter: The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.\n\nMusic Box: When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed."
+  }
+ },
+ {
+  "id": "2014/feature/trait-naturally-stealthy",
+  "edition": "2014",
+  "name": "Naturally Stealthy",
+  "source": {
+   "book": "SRD5.1"
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
+  }
+ },
+ {
+  "id": "2014/species/custom-lineage",
+  "edition": "2014",
+  "kind": "species",
+  "name": "Custom Lineage",
+  "source": {
+   "book": "TCE",
+   "page": 12
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "data": {
+   "description": "An option for players who want to build a character whose heritage doesn't fit any of the standard races. You determine your own size, speed, and ability score increase, and you gain a feat and one language of your choice at 1st level.",
+   "size": "medium",
+   "speed": 30,
+   "traits": []
+  },
+  "effects": []
+ },
+ {
+  "id": "2014/feature/trait-dwarven-armor-training",
+  "edition": "2014",
+  "name": "Dwarven Armor Training",
+  "source": {
+   "book": "PHB2014",
+   "page": 20
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have proficiency with light and medium armor."
+  }
+ },
+ {
+  "id": "2014/feature/trait-fleet-of-foot",
+  "edition": "2014",
+  "name": "Fleet of Foot",
+  "source": {
+   "book": "PHB2014",
+   "page": 24
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "Your base walking speed increases to 35 feet."
+  }
+ },
+ {
+  "id": "2014/feature/trait-mask-of-the-wild",
+  "edition": "2014",
+  "name": "Mask of the Wild",
+  "source": {
+   "book": "PHB2014",
+   "page": 24
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+  }
+ },
+ {
+  "id": "2014/feature/trait-superior-darkvision",
+  "edition": "2014",
+  "name": "Superior Darkvision",
+  "source": {
+   "book": "PHB2014",
+   "page": 24
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "Your darkvision has a radius of 120 feet."
+  }
+ },
+ {
+  "id": "2014/feature/trait-sunlight-sensitivity",
+  "edition": "2014",
+  "name": "Sunlight Sensitivity",
+  "source": {
+   "book": "PHB2014",
+   "page": 24
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
+  }
+ },
+ {
+  "id": "2014/feature/trait-drow-magic",
+  "edition": "2014",
+  "name": "Drow Magic",
+  "source": {
+   "book": "PHB2014",
+   "page": 24
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once per day. When you reach 5th level, you can also cast the darkness spell once per day. Charisma is your spellcasting ability for these spells."
+  }
+ },
+ {
+  "id": "2014/feature/trait-drow-weapon-training",
+  "edition": "2014",
+  "name": "Drow Weapon Training",
+  "source": {
+   "book": "PHB2014",
+   "page": 24
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have proficiency with rapiers, shortswords, and hand crossbows."
+  }
+ },
+ {
+  "id": "2014/feature/trait-stout-resilience",
+  "edition": "2014",
+  "name": "Stout Resilience",
+  "source": {
+   "book": "PHB2014",
+   "page": 28
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You have advantage on saving throws against poison, and you have resistance against poison damage."
+  }
+ },
+ {
+  "id": "2014/feature/trait-natural-illusionist",
+  "edition": "2014",
+  "name": "Natural Illusionist",
+  "source": {
+   "book": "PHB2014",
+   "page": 37
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You know the minor illusion cantrip. Intelligence is your spellcasting ability for it."
+  }
+ },
+ {
+  "id": "2014/feature/trait-speak-with-small-beasts",
+  "edition": "2014",
+  "name": "Speak with Small Beasts",
+  "source": {
+   "book": "PHB2014",
+   "page": 37
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts."
+  }
+ },
+ {
+  "id": "2014/feature/trait-variant-human-skill",
+  "edition": "2014",
+  "name": "Skills (Variant Human)",
+  "source": {
+   "book": "PHB2014",
+   "page": 31
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You gain proficiency in one skill of your choice."
+  }
+ },
+ {
+  "id": "2014/feature/trait-variant-human-feat",
+  "edition": "2014",
+  "name": "Feat (Variant Human)",
+  "source": {
+   "book": "PHB2014",
+   "page": 31
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "feature",
+  "data": {
+   "description": "You gain one feat of your choice. Choose it in the Feats step of the builder."
+  }
+ },
+ {
+  "id": "2014/species/mountain-dwarf",
+  "edition": "2014",
+  "name": "Mountain Dwarf",
+  "source": {
+   "book": "PHB2014",
+   "page": 20
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "con",
+    "amount": "2"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "str",
+    "amount": "2"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "As a mountain dwarf, you're strong and hardy, accustomed to a difficult life in rugged terrain. You're probably on the tall side (for a dwarf), and tend toward lighter coloration. The mountain dwarves of Faerûn are the shield dwarves of the North.",
+   "size": "medium",
+   "speed": 25,
+   "traits": [
+    "2014/feature/trait-darkvision",
+    "2014/feature/trait-dwarven-resilience",
+    "2014/feature/trait-stonecunning",
+    "2014/feature/trait-dwarven-combat-training",
+    "2014/feature/trait-tool-proficiency",
+    "2014/feature/trait-dwarven-armor-training"
+   ],
+   "parentSpeciesRef": "2014/species/dwarf",
+   "decisionPoints": [
+    {
+     "decisionId": "dwarf/tool",
+     "prompt": "Dwarven Tool Proficiency: choose one type of artisan's tools",
+     "count": 1,
+     "options": [
+      "smiths-tools",
+      "brewers-supplies",
+      "masons-tools"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "2014/species/wood-elf",
+  "edition": "2014",
+  "name": "Wood Elf",
+  "source": {
+   "book": "PHB2014",
+   "page": 24
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "dex",
+    "amount": "2"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "wis",
+    "amount": "1"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "As a wood elf, you have keen senses and intuition, and your fleet feet carry you quickly and stealthily through your native forests. Wood elves are reclusive and distrusting of non-elves, and tend toward copper, brown, and black hair with green, brown, or hazel eyes.",
+   "size": "medium",
+   "speed": 35,
+   "traits": [
+    "2014/feature/trait-darkvision",
+    "2014/feature/trait-fey-ancestry",
+    "2014/feature/trait-trance",
+    "2014/feature/trait-keen-senses",
+    "2014/feature/trait-elf-weapon-training",
+    "2014/feature/trait-fleet-of-foot",
+    "2014/feature/trait-mask-of-the-wild"
+   ],
+   "parentSpeciesRef": "2014/species/elf"
+  }
+ },
+ {
+  "id": "2014/species/dark-elf",
+  "edition": "2014",
+  "name": "Dark Elf (Drow)",
+  "source": {
+   "book": "PHB2014",
+   "page": 24
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "dex",
+    "amount": "2"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "cha",
+    "amount": "1"
+   },
+   {
+    "op": "sense",
+    "sense": "darkvision",
+    "range": 120
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "Descended from an earlier subrace of dark-skinned elves, the drow were banished from the surface world for following the goddess Lolth down the path to evil and corruption. Now they have built their own civilization in the depths of the Underdark, patterned after the Way of Lolth.\n\nDrow have black skin that resembles polished obsidian and stark white or pale yellow hair. They commonly have very pale eyes in shades of lilac, silver, pink, red, and blue.",
+   "size": "medium",
+   "speed": 30,
+   "traits": [
+    "2014/feature/trait-darkvision",
+    "2014/feature/trait-fey-ancestry",
+    "2014/feature/trait-trance",
+    "2014/feature/trait-keen-senses",
+    "2014/feature/trait-superior-darkvision",
+    "2014/feature/trait-sunlight-sensitivity",
+    "2014/feature/trait-drow-magic",
+    "2014/feature/trait-drow-weapon-training"
+   ],
+   "parentSpeciesRef": "2014/species/elf"
+  }
+ },
+ {
+  "id": "2014/species/stout-halfling",
+  "edition": "2014",
+  "name": "Stout Halfling",
+  "source": {
+   "book": "PHB2014",
+   "page": 28
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "dex",
+    "amount": "2"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "con",
+    "amount": "1"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "As a stout halfling, you're hardier than average and have some resistance to poison. Some say that stouts have dwarven blood. In the Forgotten Realms, these halflings are called stronghearts, and they're most common in the south.",
+   "size": "small",
+   "speed": 25,
+   "traits": [
+    "2014/feature/trait-brave",
+    "2014/feature/trait-halfling-nimbleness",
+    "2014/feature/trait-lucky",
+    "2014/feature/trait-stout-resilience"
+   ],
+   "parentSpeciesRef": "2014/species/halfling"
+  }
+ },
+ {
+  "id": "2014/species/forest-gnome",
+  "edition": "2014",
+  "name": "Forest Gnome",
+  "source": {
+   "book": "PHB2014",
+   "page": 37
+  },
+  "origin": "seed",
+  "effects": [
+   {
+    "op": "abilityBonus",
+    "ability": "int",
+    "amount": "2"
+   },
+   {
+    "op": "abilityBonus",
+    "ability": "dex",
+    "amount": "1"
+   }
+  ],
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "As a forest gnome, you have a natural knack for illusion and inherent quickness and stealth. In the worlds of D&D, forest gnomes are rare and secretive. They gather in hidden communities in sylvan forests, using illusions and trickery to conceal themselves from threats or to mask their escape should they be detected.",
+   "size": "small",
+   "speed": 25,
+   "traits": [
+    "2014/feature/trait-darkvision",
+    "2014/feature/trait-gnome-cunning",
+    "2014/feature/trait-natural-illusionist",
+    "2014/feature/trait-speak-with-small-beasts"
+   ],
+   "parentSpeciesRef": "2014/species/gnome"
+  }
+ },
+ {
+  "id": "2014/species/variant-human",
+  "edition": "2014",
+  "name": "Human (Variant)",
+  "source": {
+   "book": "PHB2014",
+   "page": 31
+  },
+  "origin": "seed",
+  "schemaVersion": 1,
+  "kind": "species",
+  "data": {
+   "description": "If your campaign uses the optional feat rules, your DM might allow these variant traits, all of which replace the standard human's +1 to every ability score.\n\nInstead you increase two different ability scores of your choice by 1, gain proficiency in one skill of your choice, and gain one feat of your choice.",
+   "size": "medium",
+   "speed": 30,
+   "traits": [
+    "2014/feature/trait-variant-human-skill",
+    "2014/feature/trait-variant-human-feat"
+   ],
+   "parentSpeciesRef": "2014/species/human",
+   "decisionPoints": [
+    {
+     "decisionId": "variant-human/ability-1",
+     "prompt": "Variant Human: choose an ability score to increase by 1",
+     "count": 1,
+     "options": [
+      "str",
+      "dex",
+      "con",
+      "int",
+      "wis",
+      "cha"
+     ]
+    },
+    {
+     "decisionId": "variant-human/ability-2",
+     "prompt": "Variant Human: choose a different ability score to increase by 1",
+     "count": 1,
+     "options": [
+      "str",
+      "dex",
+      "con",
+      "int",
+      "wis",
+      "cha"
+     ]
+    },
+    {
+     "decisionId": "variant-human/skill",
+     "prompt": "Variant Human: choose a skill proficiency",
+     "count": 1,
+     "options": [
+      "acrobatics",
+      "animalHandling",
+      "arcana",
+      "athletics",
+      "deception",
+      "history",
+      "insight",
+      "intimidation",
+      "investigation",
+      "medicine",
+      "nature",
+      "perception",
+      "performance",
+      "persuasion",
+      "religion",
+      "sleightOfHand",
+      "stealth",
+      "survival"
+     ]
+    }
+   ]
+  }
+ }
 ]
