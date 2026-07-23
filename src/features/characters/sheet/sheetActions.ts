@@ -43,6 +43,26 @@ export function applyAbilityImprovement(character: Character, classRef: string, 
   }));
 }
 
+/**
+ * Adds a spell to the character's spellbook (build.knownSpells) — the freeform
+ * escape hatch for spells learned from scrolls, other classes, or a wizard
+ * copying into their book, beyond whatever minimum the builder enforced.
+ */
+export function addKnownSpell(character: Character, spellRef: string): Promise<void> {
+  return patchBuild(character, (build) =>
+    build.knownSpells.includes(spellRef) ? build : { ...build, knownSpells: [...build.knownSpells, spellRef] },
+  );
+}
+
+/** Removes a spell from the spellbook. Granted spells (subclass/racial) aren't stored here, so they can't be removed this way. */
+export function removeKnownSpell(character: Character, spellRef: string): Promise<void> {
+  return patchBuild(character, (build) => ({
+    ...build,
+    knownSpells: build.knownSpells.filter((r) => r !== spellRef),
+    preparedSpells: build.preparedSpells.filter((r) => r !== spellRef),
+  }));
+}
+
 /** Adds a feat post-creation — used when a player takes a feat instead of an Ability Score Improvement. */
 export function addFeat(character: Character, featRef: string): Promise<void> {
   return patchBuild(character, (build) => ({
@@ -90,14 +110,23 @@ export function setDeathSave(character: Character, kind: 'successes' | 'failures
   return patch(character, (state) => ({ ...state, deathSaves: { ...state.deathSaves, [kind]: Math.min(3, Math.max(0, value)) } }));
 }
 
+/**
+ * Toggles one spell slot of `level`, returning a *dense* spent-count array.
+ * The array is indexed by spell level (1-9), so index 0 (and any skipped levels)
+ * would otherwise be holes — which serialize to null and fail CharacterSchema.parse
+ * on save, silently dropping the write (the "slots aren't clickable" bug). Filling
+ * gaps with 0 keeps every element a real number. Pure so it can be unit-tested.
+ */
+export function nextSlotsSpent(current: number[], level: number, slotIndex: number): number[] {
+  const spent = current[level] ?? 0;
+  const spending = slotIndex >= spent;
+  const out = Array.from({ length: Math.max(current.length, level + 1) }, (_, i) => current[i] ?? 0);
+  out[level] = Math.max(0, spending ? spent + 1 : spent - 1);
+  return out;
+}
+
 export function toggleSlotSpent(character: Character, level: number, slotIndex: number): Promise<void> {
-  return patch(character, (state) => {
-    const spent = state.spellSlotsSpent[level] ?? 0;
-    const spending = slotIndex >= spent;
-    const spellSlotsSpent = [...state.spellSlotsSpent];
-    spellSlotsSpent[level] = spending ? spent + 1 : spent - 1;
-    return { ...state, spellSlotsSpent };
-  });
+  return patch(character, (state) => ({ ...state, spellSlotsSpent: nextSlotsSpent(state.spellSlotsSpent, level, slotIndex) }));
 }
 
 export function adjustResourceSpent(character: Character, resourceId: string, delta: number, max: number): Promise<void> {
@@ -174,6 +203,11 @@ export function setPersonalityField(
   value: string,
 ): Promise<void> {
   return patch(character, (state) => ({ ...state, [field]: value }));
+}
+
+/** Persists an already-rolled result (e.g. from the freeform dice tray) to the roll log. */
+export function logRoll(character: Character, label: string, formula: string, rolls: number[], total: number): Promise<void> {
+  return appendRoll(character, label, formula, rolls, total);
 }
 
 function appendRoll(character: Character, label: string, formula: string, rolls: number[], total: number): Promise<void> {

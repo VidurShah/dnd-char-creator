@@ -6,8 +6,10 @@ import type { AdvantageMode } from '@/engine/dice';
 import { humanizeCamel } from '@/lib/text';
 import { CONDITIONS } from './conditions';
 import {
+  addKnownSpell,
   adjustResourceSpent,
   longRest,
+  removeKnownSpell,
   rollCheck,
   rollDamage,
   setDeathSave,
@@ -152,6 +154,10 @@ export function ActionsPanel({ character, sheet, index }: { character: Character
       {sheet.spellcasting && (
         <div>
           <p className="mb-1.5 font-mono text-xs uppercase tracking-wider text-ink-500 dark:text-kraft-300">Spellcasting</p>
+          <p className="mb-2 text-xs text-ink-700 dark:text-kraft-200">
+            Casting a leveled spell spends one slot of that level or higher — click a filled dot below to expend it (click again to refund).
+            Slots come back on a long rest (Pact slots on a short rest). Cantrips are free and never use a slot.
+          </p>
           <div className="mb-2 flex gap-4 text-sm">
             <span>
               Save DC <span className="font-mono">{sheet.spellcasting.saveDc}</span>
@@ -213,7 +219,7 @@ export function ActionsPanel({ character, sheet, index }: { character: Character
         </div>
       )}
 
-      <SpellList character={character} index={index} grantedSpellRefs={sheet.grantedSpellRefs} />
+      <SpellList character={character} index={index} grantedSpellRefs={sheet.grantedSpellRefs} spellcasting={sheet.spellcasting} />
 
       <div>
         <div className="mb-1.5 flex items-center justify-between">
@@ -365,24 +371,61 @@ export function ActionsPanel({ character, sheet, index }: { character: Character
   );
 }
 
+type SpellEntry = Extract<ContentEntry, { kind: 'spell' }>;
+
+function classShortIds(character: Character): string[] {
+  return character.build.classes.map((c) => c.classRef.split('/').pop() ?? c.classRef);
+}
+
+/**
+ * Spells carry no structured damage in the data, so we read what's rollable
+ * straight from the description text: every distinct NdM dice expression, plus
+ * whether it calls for a spell attack roll. Heuristic, but it turns Fire Bolt's
+ * "1d10 fire damage" / "make a ranged spell attack" into real buttons.
+ */
+function spellRolls(description: string): { hasAttack: boolean; dice: string[] } {
+  const hasAttack = /spell attack/i.test(description);
+  const dice = [...new Set((description.match(/\b\d+d\d+\b/g) ?? []).map((s) => s.toLowerCase()))];
+  return { hasAttack, dice };
+}
+
 function SpellList({
   character,
   index,
   grantedSpellRefs,
+  spellcasting,
 }: {
   character: Character;
   index: Map<string, ContentEntry>;
   grantedSpellRefs: string[];
+  spellcasting?: DerivedSheet['spellcasting'];
 }) {
+  const { flashes, flash } = useRollFlash();
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
+  const [adding, setAdding] = useState(false);
+  const [query, setQuery] = useState('');
+
   const grantedSet = new Set(grantedSpellRefs);
+  const knownSet = new Set(character.build.knownSpells);
   const allRefs = [...new Set([...character.build.knownSpells, ...grantedSpellRefs])];
   const spells = allRefs
     .map((ref) => index.get(ref))
-    .filter((e): e is Extract<ContentEntry, { kind: 'spell' }> => e?.kind === 'spell')
+    .filter((e): e is SpellEntry => e?.kind === 'spell')
     .sort((a, b) => a.data.level - b.data.level || a.name.localeCompare(b.name));
 
-  if (spells.length === 0) return null;
+  // Everything on this character's class spell list(s) they don't already have —
+  // the pool the spellbook can add from. A spellbook can hold spells you can't
+  // cast yet, so no level cap here.
+  const shortIds = classShortIds(character);
+  const addable = [...index.values()]
+    .filter((e): e is SpellEntry => e.kind === 'spell')
+    .filter((e) => !knownSet.has(e.id) && !grantedSet.has(e.id) && e.data.classLists.some((c) => shortIds.includes(c)))
+    .sort((a, b) => a.data.level - b.data.level || a.name.localeCompare(b.name));
+  const q = query.trim().toLowerCase();
+  const filteredAddable = q ? addable.filter((e) => e.name.toLowerCase().includes(q)) : addable;
+
+  // Nothing to show for a non-caster with an empty book and no class spell list.
+  if (spells.length === 0 && addable.length === 0) return null;
 
   function toggleExpanded(id: string) {
     setExpanded((prev) => {
@@ -395,21 +438,141 @@ function SpellList({
 
   return (
     <div>
-      <p className="mb-1.5 font-mono text-xs uppercase tracking-wider text-ink-500 dark:text-kraft-300">Known Spells</p>
-      <ul className="flex flex-col gap-1">
-        {spells.map((s) => (
-          <li key={s.id} className="text-sm">
-            <button type="button" onClick={() => toggleExpanded(s.id)} className="flex w-full items-baseline justify-between text-left hover:underline">
-              <span>
-                {s.name}
-                {grantedSet.has(s.id) && <span className="ml-1.5 text-xs italic text-ink-500 dark:text-kraft-300">(always prepared)</span>}
-              </span>
-              <span className="font-mono text-xs text-ink-700 dark:text-kraft-200">{s.data.level === 0 ? 'Cantrip' : `Lvl ${s.data.level}`}</span>
-            </button>
-            {expanded.has(s.id) && <p className="mt-1 text-xs text-ink-700 dark:text-kraft-200">{s.data.description}</p>}
-          </li>
-        ))}
-      </ul>
+      <div className="mb-1.5 flex items-center justify-between">
+        <p className="font-mono text-xs uppercase tracking-wider text-ink-500 dark:text-kraft-300">Spellbook</p>
+        {addable.length > 0 && (
+          <button
+            type="button"
+            onClick={() => setAdding((v) => !v)}
+            className="border border-ink-900/30 px-2 py-0.5 font-mono text-[11px] uppercase tracking-wide hover:border-rust-500 dark:border-kraft-100/30"
+          >
+            {adding ? 'Done' : '+ Add spell'}
+          </button>
+        )}
+      </div>
+
+      {adding && (
+        <div className="mb-3 border-2 border-dashed border-ink-900/25 p-2 dark:border-kraft-100/25">
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search your class spell list…"
+            className="mb-2 w-full border-b-2 border-dashed border-ink-900/30 bg-transparent px-1 py-1 text-sm outline-none focus:border-rust-500 dark:border-kraft-100/30"
+          />
+          <ul className="flex max-h-56 flex-col gap-0.5 overflow-y-auto">
+            {filteredAddable.slice(0, 60).map((s) => (
+              <li key={s.id}>
+                <button
+                  type="button"
+                  onClick={() => void addKnownSpell(character, s.id)}
+                  className="flex w-full items-baseline justify-between px-1 py-1 text-left text-sm hover:bg-ink-900/5 dark:hover:bg-kraft-100/5"
+                >
+                  <span>{s.name}</span>
+                  <span className="font-mono text-xs text-ink-700 dark:text-kraft-200">{s.data.level === 0 ? 'Cantrip' : `Lvl ${s.data.level}`}</span>
+                </button>
+              </li>
+            ))}
+            {filteredAddable.length === 0 && <li className="px-1 py-1 text-sm text-ink-700 dark:text-kraft-200">No matches.</li>}
+          </ul>
+        </div>
+      )}
+
+      {spells.length === 0 ? (
+        <p className="text-sm text-ink-700 dark:text-kraft-200">No spells yet.</p>
+      ) : (
+        <ul className="flex flex-col gap-1">
+          {spells.map((s) => {
+            const granted = grantedSet.has(s.id);
+            return (
+              <li key={s.id} className="text-sm">
+                <div className="flex items-baseline gap-2">
+                  <button type="button" onClick={() => toggleExpanded(s.id)} className="flex flex-1 items-baseline justify-between text-left hover:underline">
+                    <span>
+                      {s.name}
+                      {granted && <span className="ml-1.5 text-xs italic text-ink-500 dark:text-kraft-300">(always prepared)</span>}
+                    </span>
+                    <span className="font-mono text-xs text-ink-700 dark:text-kraft-200">{s.data.level === 0 ? 'Cantrip' : `Lvl ${s.data.level}`}</span>
+                  </button>
+                  {/* Granted spells come from a subclass/race, not the spellbook, so there's nothing to remove. */}
+                  {!granted && (
+                    <button
+                      type="button"
+                      onClick={() => void removeKnownSpell(character, s.id)}
+                      aria-label={`Remove ${s.name}`}
+                      className="shrink-0 font-mono text-xs text-ink-500 hover:text-rust-500 dark:text-kraft-300"
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+                {expanded.has(s.id) && (
+                  <div className="mt-1">
+                    {(() => {
+                      const { hasAttack, dice } = spellRolls(s.data.description);
+                      if (!hasAttack && dice.length === 0) return null;
+                      return (
+                        <div className="mb-1.5 flex flex-wrap gap-1.5">
+                          {hasAttack && spellcasting && (
+                            <RollButton
+                              flashKey={`spell-atk-${s.id}`}
+                              flashes={flashes}
+                              label={`${fmtMod(spellcasting.attackBonus)} Attack`}
+                              onClick={() => flash(`spell-atk-${s.id}`, rollCheck(character, `${s.name} spell attack`, spellcasting.attackBonus))}
+                            />
+                          )}
+                          {dice.map((d) => (
+                            <RollButton
+                              key={d}
+                              flashKey={`spell-dmg-${s.id}-${d}`}
+                              flashes={flashes}
+                              label={d}
+                              onClick={() => flash(`spell-dmg-${s.id}-${d}`, rollDamage(character, `${s.name} (${d})`, d, 0))}
+                            />
+                          ))}
+                        </div>
+                      );
+                    })()}
+                    <p className="text-xs text-ink-700 dark:text-kraft-200">{s.data.description}</p>
+                  </div>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </div>
+  );
+}
+
+/** A small dice-roll chip that shows the rolled total once clicked (shared shape with the attack buttons above). */
+function RollButton({
+  flashKey,
+  flashes,
+  label,
+  onClick,
+}: {
+  flashKey: string;
+  flashes: ReturnType<typeof useRollFlash>['flashes'];
+  label: string;
+  onClick: () => void;
+}) {
+  const rolled = flashes[flashKey];
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`border px-2 py-0.5 font-mono text-xs transition-colors ${
+        rolled ? 'border-rust-500 bg-rust-500/10' : 'border-ink-900/30 hover:border-rust-500 dark:border-kraft-100/30'
+      }`}
+    >
+      {rolled ? (
+        <>
+          <span className="text-rust-500">{rolled.total}</span> <span className="text-[10px]">[{rolled.rolls.join(', ')}]</span>
+        </>
+      ) : (
+        label
+      )}
+    </button>
   );
 }
