@@ -3,7 +3,7 @@ import type { Character } from '@/schema/character';
 import type { DerivedSheet } from '@/engine/compute';
 import type { AdvantageMode } from '@/engine/dice';
 import { ABILITY_LABEL, ABILITY_ORDER } from '../builder/builderState';
-import { humanizeCamel } from '@/lib/text';
+import { humanizeSkill } from '@/lib/text';
 import { rollCheck } from './sheetActions';
 import { useRollFlash } from './useRollFlash';
 import { RollModeToggle } from './RollModeToggle';
@@ -90,34 +90,41 @@ export function StatsPanel({ character, sheet }: { character: Character; sheet: 
       </div>
 
       <div>
-        <p className="mb-1.5 font-mono text-xs uppercase tracking-wider text-ink-500 dark:text-kraft-300">Skills</p>
+        <p className="mb-1.5 font-mono text-xs uppercase tracking-wider text-ink-500 dark:text-kraft-300">
+          Skills <span className="text-ink-900/30 dark:text-kraft-100/30">· proficient first · click any to roll</span>
+        </p>
         <div className="grid grid-cols-2 gap-1 sm:grid-cols-3">
-          {Object.entries(sheet.skills).map(([skill, data]) => {
-            const key = `skill-${skill}`;
-            const rolled = flashes[key];
-            return (
-              <button
-                key={skill}
-                type="button"
-                onClick={() => roll(key, humanizeCamel(skill), data.mod, checkMode)}
-                className={`flex items-center justify-between px-2 py-1 text-xs transition-colors ${rolled ? 'bg-rust-500/10' : 'hover:bg-ink-900/5 dark:hover:bg-kraft-100/5'}`}
-              >
-                <span className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-rust-500" />
-                  {humanizeCamel(skill)}
-                </span>
-                <span className="font-mono">
-                  {rolled ? (
-                    <span className="text-rust-500">
-                      {rolled.total} <span className="text-[10px]">[{rolled.rolls.join(', ')}]</span>
-                    </span>
-                  ) : (
-                    fmtMod(data.mod)
-                  )}
-                </span>
-              </button>
-            );
-          })}
+          {/* Proficient (and expertise) skills sort to the top; every skill is rollable. */}
+          {(Object.entries(sheet.skills) as [string, { mod: number; proficient: boolean }][])
+            .sort((a, b) => Number(b[1].proficient) - Number(a[1].proficient) || humanizeSkill(a[0]).localeCompare(humanizeSkill(b[0])))
+            .map(([skill, data]) => {
+              const key = `skill-${skill}`;
+              const rolled = flashes[key];
+              return (
+                <button
+                  key={skill}
+                  type="button"
+                  onClick={() => roll(key, humanizeSkill(skill), data.mod, checkMode)}
+                  className={`flex items-center justify-between px-2 py-1 text-xs transition-colors ${rolled ? 'bg-rust-500/10' : 'hover:bg-ink-900/5 dark:hover:bg-kraft-100/5'}`}
+                >
+                  <span className="flex items-center gap-1.5">
+                    <span
+                      className={`h-1.5 w-1.5 rounded-full ${data.proficient ? 'bg-rust-500' : 'border border-ink-900/30 dark:border-kraft-100/30'}`}
+                    />
+                    <span className={data.proficient ? '' : 'text-ink-700 dark:text-kraft-200'}>{humanizeSkill(skill)}</span>
+                  </span>
+                  <span className="font-mono">
+                    {rolled ? (
+                      <span className="text-rust-500">
+                        {rolled.total} <span className="text-[10px]">[{rolled.rolls.join(', ')}]</span>
+                      </span>
+                    ) : (
+                      fmtMod(data.mod)
+                    )}
+                  </span>
+                </button>
+              );
+            })}
         </div>
       </div>
     </div>

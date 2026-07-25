@@ -122,6 +122,9 @@ describe('computeSheet — golden characters', () => {
     expect(sheet.skills.perception).toEqual({ mod: 4, proficient: true });
     expect(sheet.skills.insight).toEqual({ mod: 4, proficient: true }); // from Acolyte background
     expect(sheet.skills.religion).toEqual({ mod: 3, proficient: true });
+    // Non-proficient skills are still derived (rollable at the plain ability mod) — all 18 present.
+    expect(Object.keys(sheet.skills)).toHaveLength(18);
+    expect(sheet.skills.acrobatics).toEqual({ mod: 2, proficient: false }); // dex mod, no proficiency
     expect(sheet.attacks).toEqual([
       { itemRef: '2014/item/longsword', name: 'Longsword', attackBonus: 6, damageDice: '1d8', damageBonus: 3, damageType: 'slashing' },
     ]);
