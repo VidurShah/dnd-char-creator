@@ -90,11 +90,23 @@ function buildSystemPrompt(character: Character, sheet: DerivedSheet, index: Map
  * tactics, feature/spell combos, party role, roleplay — and the model answers
  * grounded in this character's real sheet (passed as the system prompt).
  */
-export function ChatPanel({ character, sheet, index }: { character: Character; sheet: DerivedSheet; index: Map<string, ContentEntry> }) {
+export function ChatPanel({
+  character,
+  sheet,
+  index,
+  messages,
+  onMessagesChange,
+}: {
+  character: Character;
+  sheet: DerivedSheet;
+  index: Map<string, ContentEntry>;
+  /** Owned by the parent tray so the conversation survives closing/reopening. */
+  messages: ChatMessage[];
+  onMessagesChange: (messages: ChatMessage[]) => void;
+}) {
   const [apiKey, setApiKey] = useState<string | undefined>(undefined);
   const [model, setModel] = useState(DEFAULT_AI_MODEL);
   const [settingsLoaded, setSettingsLoaded] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -114,18 +126,23 @@ export function ChatPanel({ character, sheet, index }: { character: Character; s
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
   }, [messages, loading]);
 
+  // Clearing the conversation from the tray header should drop any stale error too.
+  useEffect(() => {
+    if (messages.length === 0) setError(null);
+  }, [messages.length]);
+
   async function send(text: string) {
     const trimmed = text.trim();
     if (!trimmed || loading) return;
     const next: ChatMessage[] = [...messages, { role: 'user', text: trimmed }];
-    setMessages(next);
+    onMessagesChange(next);
     setInput('');
     setError(null);
     setLoading(true);
     const res = await chatComplete(apiKey, model, systemPrompt, next);
     setLoading(false);
     if ('error' in res) setError(res.error);
-    else setMessages([...next, { role: 'model', text: res.text }]);
+    else onMessagesChange([...next, { role: 'model', text: res.text }]);
   }
 
   if (!settingsLoaded) return <p className="text-sm text-ink-700 dark:text-kraft-200">Loading…</p>;
@@ -199,18 +216,6 @@ export function ChatPanel({ character, sheet, index }: { character: Character; s
           Send
         </button>
       </form>
-      {messages.length > 0 && (
-        <button
-          type="button"
-          onClick={() => {
-            setMessages([]);
-            setError(null);
-          }}
-          className="self-start font-mono text-[11px] uppercase tracking-wide text-ink-500 underline hover:text-rust-500 dark:text-kraft-300"
-        >
-          Clear conversation
-        </button>
-      )}
     </div>
   );
 }
