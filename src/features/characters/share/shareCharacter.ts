@@ -74,7 +74,8 @@ export function buildShareModel(character: Character, sheet: DerivedSheet, index
 
   const saves = ABILITY_ORDER.map((a) => `${ABILITY_LABEL[a].slice(0, 3)} ${mod(sheet.savingThrows[a].mod)}${sheet.savingThrows[a].proficient ? '*' : ''}`).join(', ');
 
-  const proficientSkills = (Object.entries(sheet.skills) as [string, { mod: number }][])
+  const proficientSkills = (Object.entries(sheet.skills) as [string, { mod: number; proficient: boolean }][])
+    .filter(([, s]) => s.proficient)
     .sort((a, b) => a[0].localeCompare(b[0]))
     .map(([skill, s]) => `${humanizeSkill(skill)} ${mod(s.mod)}`);
   const skills = proficientSkills.length ? proficientSkills.join(', ') : 'None';

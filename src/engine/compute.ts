@@ -373,11 +373,15 @@ export function computeSheet(character: Character, index: Map<string, ContentEnt
     (sum, p) => sum + evalExpr((p.effect as Extract<Effect, { op: 'rollBonus' }>).amount, baseExprCtx),
     0,
   );
+  // Every skill is derived (not just proficient ones) so the sheet can show and roll
+  // them all. Non-proficient skills are just the governing ability mod plus any
+  // universal ability-check bonus / exhaustion penalty — no proficiency bonus.
   const skills: Partial<Record<Skill, DerivedSkill>> = {};
-  for (const skill of proficientSkills) {
-    const ability = SKILL_ABILITY[skill];
-    const expertiseBonus = expertiseSkills.has(skill) ? proficiencyBonus : 0;
-    skills[skill] = { mod: abilityMods[ability] + proficiencyBonus + expertiseBonus + checkBonus + exhaustionD20Penalty, proficient: true };
+  for (const skill of Object.keys(SKILL_ABILITY) as Skill[]) {
+    const proficient = proficientSkills.has(skill);
+    const profBonus = proficient ? proficiencyBonus : 0;
+    const expertiseBonus = proficient && expertiseSkills.has(skill) ? proficiencyBonus : 0;
+    skills[skill] = { mod: abilityMods[SKILL_ABILITY[skill]] + profBonus + expertiseBonus + checkBonus + exhaustionD20Penalty, proficient };
   }
   const passivePerception = 10 + (skills.perception?.mod ?? abilityMods.wis);
 
