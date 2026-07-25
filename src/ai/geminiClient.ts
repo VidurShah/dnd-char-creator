@@ -21,6 +21,16 @@ interface FunctionCall {
   args: unknown;
 }
 
+interface GenerateResult {
+  functionCalls: FunctionCall[];
+  text: string;
+}
+
+export interface ChatMessage {
+  role: 'user' | 'model';
+  text: string;
+}
+
 /**
  * How long to wait on a single generate call before giving up. The models this
  * app has quota for are preview/thinking models that intermittently stall or
@@ -34,7 +44,7 @@ function isRetryable(message: string): boolean {
   return /\b(503|429|500|unavailable|overloaded|high demand|try again)\b/i.test(message);
 }
 
-async function callProxyOnce(apiKeyOverride: string | undefined, model: string, contents: unknown, config: unknown): Promise<FunctionCall[]> {
+async function generateOnce(apiKeyOverride: string | undefined, model: string, contents: unknown, config: unknown): Promise<GenerateResult> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
   let res: Response;
@@ -55,17 +65,39 @@ async function callProxyOnce(apiKeyOverride: string | undefined, model: string, 
   }
   const body = await res.json().catch(() => ({}));
   if (!res.ok) throw new Error(body.error ?? `Gemini proxy error ${res.status}`);
-  return body.functionCalls ?? [];
+  return { functionCalls: body.functionCalls ?? [], text: body.text ?? '' };
 }
 
 /** Wraps a single generate call with one automatic retry on a transient overload error. */
-async function callProxy(apiKeyOverride: string | undefined, model: string, contents: unknown, config: unknown): Promise<FunctionCall[]> {
+async function generate(apiKeyOverride: string | undefined, model: string, contents: unknown, config: unknown): Promise<GenerateResult> {
   try {
-    return await callProxyOnce(apiKeyOverride, model, contents, config);
+    return await generateOnce(apiKeyOverride, model, contents, config);
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
     if (!isRetryable(message)) throw err;
-    return callProxyOnce(apiKeyOverride, model, contents, config);
+    return generateOnce(apiKeyOverride, model, contents, config);
+  }
+}
+
+/**
+ * Plain multi-turn chat completion — no tools, just a text reply given a system
+ * instruction and the running conversation. Returns the model's text or a
+ * user-facing error string (never throws) so the chat UI can render either.
+ */
+export async function chatComplete(
+  apiKeyOverride: string | undefined,
+  model: string,
+  systemInstruction: string,
+  messages: ChatMessage[],
+): Promise<{ text: string } | { error: string }> {
+  const contents = messages.map((m) => ({ role: m.role, parts: [{ text: m.text }] }));
+  try {
+    const result = await generate(apiKeyOverride, model, contents, { systemInstruction });
+    const text = result.text.trim();
+    if (!text) return { error: 'The model returned an empty reply. Try rephrasing.' };
+    return { text };
+  } catch (err) {
+    return { error: err instanceof Error ? err.message : 'The AI request failed.' };
   }
 }
 
@@ -94,7 +126,7 @@ export async function callToolWithValidation<T>(
   for (let attempt = 0; attempt < 2; attempt++) {
     let functionCalls: FunctionCall[];
     try {
-      functionCalls = await callProxy(apiKeyOverride, model, contents, config);
+      functionCalls = (await generate(apiKeyOverride, model, contents, config)).functionCalls;
     } catch (err) {
       return { error: err instanceof Error ? err.message : 'Gemini proxy request failed.' };
     }
