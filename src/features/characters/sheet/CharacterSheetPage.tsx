@@ -7,6 +7,7 @@ import { computeSheet } from '@/engine/compute';
 import { adjustHp, setTempHp, logRoll } from './sheetActions';
 import { DiceTray } from './DiceTray';
 import { LevelUpPanel } from './LevelUpPanel';
+import { SharePanel } from '../share/SharePanel';
 import { exportCharacter } from '@/db/exportImport';
 import { downloadJson } from '@/lib/download';
 import { StatsPanel } from './StatsPanel';
@@ -26,6 +27,7 @@ export function CharacterSheetPage() {
   const [tab, setTab] = useState<Tab>('Stats');
   const [hpInput, setHpInput] = useState('');
   const [showLevelUp, setShowLevelUp] = useState(false);
+  const [showShare, setShowShare] = useState(false);
 
   const sheet = useMemo(() => (character ? computeSheet(character, byId) : null), [character, byId]);
   const items = useMemo(() => entries.filter((e) => e.kind === 'item'), [entries]);
@@ -77,12 +79,23 @@ export function CharacterSheetPage() {
             >
               Level Up
             </button>
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setShowShare((v) => !v)}
+                className="border border-ink-900/30 px-2 py-1 font-mono text-[11px] uppercase tracking-wide hover:border-rust-500 dark:border-kraft-100/30"
+              >
+                Share
+              </button>
+              {showShare && sheet && <SharePanel character={character} sheet={sheet} index={byId} onClose={() => setShowShare(false)} />}
+            </div>
             <button
               type="button"
               onClick={() => exportCharacter(character.id).then((file) => downloadJson(`${character.name}.json`, file))}
               className="font-mono text-[11px] uppercase tracking-wide text-ink-700 underline dark:text-kraft-200"
+              title="Raw data for re-importing into Grimoire"
             >
-              Export
+              Export data
             </button>
             {showLevelUp && (
               <LevelUpPanel
