@@ -16,8 +16,9 @@ import { LorePanel } from './LorePanel';
 import { InventoryPanel } from './InventoryPanel';
 import { RollLogPanel } from './RollLogPanel';
 import { FeaturesPanel } from './FeaturesPanel';
+import { ChatPanel } from '../chat/ChatPanel';
 
-const TABS = ['Stats', 'Actions', 'Inventory', 'Features', 'Lore', 'Rolls'] as const;
+const TABS = ['Stats', 'Actions', 'Inventory', 'Features', 'Lore', 'Rolls', 'Advisor'] as const;
 type Tab = (typeof TABS)[number];
 
 export function CharacterSheetPage() {
@@ -170,6 +171,7 @@ export function CharacterSheetPage() {
       {tab === 'Features' && <FeaturesPanel features={sheet.features} />}
       {tab === 'Lore' && <LorePanel character={character} sheet={sheet} />}
       {tab === 'Rolls' && <RollLogPanel character={character} />}
+      {tab === 'Advisor' && <ChatPanel character={character} sheet={sheet} index={byId} />}
 
       <DiceTray onRoll={(label, formula, rolls, total) => void logRoll(character, label, formula, rolls, total)} />
     </div>

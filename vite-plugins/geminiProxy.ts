@@ -41,7 +41,7 @@ function makeHandler(env: Record<string, string>): Connect.NextHandleFunction {
       const timeout = new Promise<never>((_, reject) => setTimeout(() => reject(new Error('TIMEOUT')), 90_000));
       const response = await Promise.race([generate, timeout]);
       res.setHeader('content-type', 'application/json');
-      res.end(JSON.stringify({ functionCalls: response.functionCalls ?? [] }));
+      res.end(JSON.stringify({ functionCalls: response.functionCalls ?? [], text: response.text ?? '' }));
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Gemini proxy failed.';
       const timedOut = message === 'TIMEOUT';
