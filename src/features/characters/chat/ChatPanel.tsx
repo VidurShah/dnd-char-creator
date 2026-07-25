@@ -131,7 +131,7 @@ export function ChatPanel({ character, sheet, index }: { character: Character; s
   if (!settingsLoaded) return <p className="text-sm text-ink-700 dark:text-kraft-200">Loading…</p>;
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex h-full min-h-0 flex-col gap-3">
       <p className="text-sm text-ink-700 dark:text-kraft-200">
         Ask about how to play <span className="font-medium">{character.name}</span> — tactics, when to use a feature or spell, your role in
         the party, or roleplay ideas. Answers are based on this character's actual sheet.
@@ -139,7 +139,7 @@ export function ChatPanel({ character, sheet, index }: { character: Character; s
 
       <div
         ref={scrollRef}
-        className="flex max-h-[52vh] min-h-[16rem] flex-col gap-3 overflow-y-auto border-2 border-dashed border-ink-900/20 p-3 dark:border-kraft-100/20"
+        className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto border-2 border-dashed border-ink-900/20 p-3 dark:border-kraft-100/20"
       >
         {messages.length === 0 ? (
           <div className="m-auto flex flex-col items-center gap-2 text-center">
