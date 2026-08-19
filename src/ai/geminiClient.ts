@@ -1,12 +1,15 @@
 /**
- * Talks to the local /__api/gemini-generate endpoint (see
- * vite-plugins/geminiProxy.ts) instead of calling Gemini directly from the
- * browser — the API key never leaves the Vite dev/preview server process, so
- * it's never present in client code, the built bundle, or a network request
- * unless the player has explicitly pasted their own override key in Settings.
+ * Talks to the app's own /api/ai/generate endpoint (see server/routes/ai.ts)
+ * instead of calling Gemini directly from the browser — the API key never
+ * leaves the server process, so it's never present in client code, the built
+ * bundle, or a network request unless the player has explicitly pasted their
+ * own override key in Settings.
+ *
+ * Same origin in every environment: Vite proxies /api to the local API server
+ * in dev, and vercel.json rewrites it to the serverless function in prod.
  */
 
-const PROXY_PATH = '/__api/gemini-generate';
+const PROXY_PATH = '/api/ai/generate';
 
 export interface ToolDef {
   name: string;

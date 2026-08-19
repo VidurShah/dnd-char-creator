@@ -1,28 +1,35 @@
 /// <reference types="vitest/config" />
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import path from 'node:path';
-import { geminiProxyPlugin } from './vite-plugins/geminiProxy.js';
 
-export default defineConfig(({ mode }) => {
-  // '' prefix = load every var in .env, not just VITE_-prefixed ones — this is
-  // how GEMINI_API_KEY reaches the proxy plugin without ever being exposed to
-  // client code via import.meta.env (which only sees VITE_-prefixed vars).
-  const env = loadEnv(mode, process.cwd(), '');
+/**
+ * The API lives in a separate Express process (server/, started alongside Vite
+ * by `pnpm dev`) rather than in Vite middleware, so that the exact same code
+ * runs in production as a Vercel function. Proxying /api here keeps the
+ * browser on a single origin in dev, matching prod — no CORS, no env-specific
+ * base URL in the client.
+ */
+const API_ORIGIN = process.env.API_ORIGIN ?? 'http://localhost:3000';
 
-  return {
-    plugins: [react(), tailwindcss(), geminiProxyPlugin(env)],
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, './src'),
-        '@data': path.resolve(__dirname, './data'),
-      },
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      '@data': path.resolve(__dirname, './data'),
     },
-    test: {
-      environment: 'jsdom',
-      globals: true,
-      setupFiles: ['./tests/setup.ts'],
-    },
-  };
+  },
+  server: {
+    proxy: { '/api': API_ORIGIN },
+  },
+  preview: {
+    proxy: { '/api': API_ORIGIN },
+  },
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: ['./tests/setup.ts'],
+  },
 });
