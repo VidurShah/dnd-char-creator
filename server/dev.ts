@@ -1,4 +1,4 @@
-import { createApp } from './app';
+import { createApp } from './app.js';
 
 /**
  * Local API server. Started alongside Vite by `pnpm dev`; Vite proxies /api

@@ -9,7 +9,11 @@
  *
  * An Express app is itself a (req, res) => void handler, so exporting it
  * directly is all Vercel's Node runtime needs.
+ *
+ * The .js extension on the import is required, not cosmetic: Vercel transpiles
+ * each TS file to ESM without bundling, so an extensionless specifier survives
+ * into the output and Node's ESM loader rejects it at runtime.
  */
-import { createApp } from '../server/app';
+import { createApp } from '../server/app.js';
 
 export default createApp();

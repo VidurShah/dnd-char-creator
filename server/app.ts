@@ -1,5 +1,5 @@
 import express, { type Express, type NextFunction, type Request, type Response } from 'express';
-import { aiRouter } from './routes/ai';
+import { aiRouter } from './routes/ai.js';
 
 /**
  * The Grimoire API, as one Express app with two entry points so local and

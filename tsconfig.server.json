@@ -6,12 +6,13 @@
     "types": ["node"],
     "skipLibCheck": true,
 
-    /* Bundler-style resolution, deliberately: it lets server modules import
-       each other extensionlessly, which both tsx (dev) and Vercel's esbuild
-       based Node builder (prod) resolve. "nodenext" would demand explicit .js
-       specifiers pointing at .ts files, which esbuild does not resolve. */
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    /* nodenext, and relative imports carry explicit .js specifiers pointing at
+       .ts files. Vercel transpiles each TS file to ESM without bundling, so an
+       extensionless import survives into the output and Node's ESM loader
+       rejects it at runtime (ERR_MODULE_NOT_FOUND). This setting makes tsc
+       enforce the extensions rather than letting that reach production. */
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "resolveJsonModule": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",

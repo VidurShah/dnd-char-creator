@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { createRateLimiter, clientKey } from '../lib/rateLimit';
+import { createRateLimiter, clientKey } from '../lib/rateLimit.js';
 
 /**
  * Gemini proxy. Ported from the old vite-plugins/geminiProxy.ts, which only
