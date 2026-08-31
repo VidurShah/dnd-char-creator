@@ -22,15 +22,6 @@ import { FeedbackRequestSchema } from '../../src/schema/feedback.js';
 /** Per-user hourly cap, enforced against the table so it survives cold starts. */
 const HOURLY_LIMIT = 10;
 
-/** Issue titles get the first line, truncated; the full text lives in the body. */
-const TITLE_MAX = 70;
-
-function buildTitle(category: string, message: string): string {
-  const firstLine = message.split('\n')[0].trim();
-  const excerpt = firstLine.length > TITLE_MAX ? `${firstLine.slice(0, TITLE_MAX - 1)}…` : firstLine;
-  return `[${category}] ${excerpt}`;
-}
-
 function buildBody(message: string, context: Record<string, unknown> | undefined, userId: string): string {
   const lines = [message.trim(), '', '---', ''];
   if (context && Object.keys(context).length > 0) {
@@ -61,7 +52,7 @@ feedbackRouter.post('/', async (req, res) => {
 
   const userId = currentUserId(req)!;
   const db = getDb();
-  const { category, message, context } = parsed.data;
+  const { category, title, message, context } = parsed.data;
 
   const since = new Date(Date.now() - 60 * 60 * 1000);
   const [{ value: recent }] = await db
@@ -75,10 +66,12 @@ feedbackRouter.post('/', async (req, res) => {
   }
 
   const id = randomUUID();
-  await db.insert(feedback).values({ id, userId, category, message, context: context ?? null });
+  await db.insert(feedback).values({ id, userId, category, title, message, context: context ?? null });
 
   const issue = await createIssue({
-    title: buildTitle(category, message),
+    // The reporter's own title, verbatim — the category is already carried by
+    // a label, so prefixing it here would just duplicate that in every title.
+    title,
     body: buildBody(message, context, userId),
     labels: ['feedback', category],
   });

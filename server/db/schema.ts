@@ -76,6 +76,7 @@ export const feedback = pgTable(
     id: text('id').primaryKey(),
     userId: text('user_id').notNull(),
     category: text('category').notNull(),
+    title: text('title').notNull(),
     message: text('message').notNull(),
     /** Route, app build, edition, character id — whatever the client attached. */
     context: jsonb('context'),

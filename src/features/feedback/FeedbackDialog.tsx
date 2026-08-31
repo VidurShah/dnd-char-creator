@@ -5,7 +5,12 @@ import { Show } from '@clerk/react';
 import { Link } from 'react-router';
 import { authEnabled } from '@/features/auth/clerkConfig';
 import { withAuthHeaders } from '@/features/auth/authToken';
-import { FEEDBACK_CATEGORIES, FEEDBACK_MAX_LENGTH, type FeedbackCategory } from '@/schema/feedback';
+import {
+  FEEDBACK_CATEGORIES,
+  FEEDBACK_MAX_LENGTH,
+  FEEDBACK_TITLE_MAX_LENGTH,
+  type FeedbackCategory,
+} from '@/schema/feedback';
 
 const CATEGORY_LABELS: Record<FeedbackCategory, string> = {
   bug: "Something's broken",
@@ -24,20 +29,24 @@ type Phase = { state: 'form' } | { state: 'sending' } | { state: 'sent'; issueUr
 export function FeedbackDialog() {
   const [open, setOpen] = useState(false);
   const [category, setCategory] = useState<FeedbackCategory>('bug');
+  const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
   const [phase, setPhase] = useState<Phase>({ state: 'form' });
   const location = useLocation();
 
   if (!authEnabled) return null;
 
+  const canSend = title.trim().length > 0 && message.trim().length > 0;
+
   function reset() {
+    setTitle('');
     setMessage('');
     setCategory('bug');
     setPhase({ state: 'form' });
   }
 
   async function submit() {
-    if (!message.trim()) return;
+    if (!canSend) return;
     setPhase({ state: 'sending' });
     try {
       const res = await fetch('/api/feedback', {
@@ -45,6 +54,7 @@ export function FeedbackDialog() {
         headers: await withAuthHeaders({ 'content-type': 'application/json' }),
         body: JSON.stringify({
           category,
+          title: title.trim(),
           message: message.trim(),
           // Captured automatically so the reporter doesn't have to describe
           // where they were, which is the detail people always leave out.
@@ -126,14 +136,35 @@ export function FeedbackDialog() {
                   ))}
                 </select>
 
-                <label className="mb-1.5 block font-mono text-xs uppercase tracking-wider text-ink-500 dark:text-kraft-300">
-                  What happened?
+                <label
+                  htmlFor="feedback-title"
+                  className="mb-1.5 block font-mono text-xs uppercase tracking-wider text-ink-500 dark:text-kraft-300"
+                >
+                  Title
+                </label>
+                <input
+                  id="feedback-title"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value.slice(0, FEEDBACK_TITLE_MAX_LENGTH))}
+                  placeholder="Short summary — this becomes the issue title"
+                  className="mb-1 w-full border-b-2 border-dashed border-ink-900/30 bg-transparent px-1 py-1.5 text-sm outline-none focus:border-rust-500 dark:border-kraft-100/30"
+                />
+                <p className="mb-4 text-xs text-ink-500 dark:text-kraft-300">
+                  {title.length}/{FEEDBACK_TITLE_MAX_LENGTH}
+                </p>
+
+                <label
+                  htmlFor="feedback-message"
+                  className="mb-1.5 block font-mono text-xs uppercase tracking-wider text-ink-500 dark:text-kraft-300"
+                >
+                  Description
                 </label>
                 <textarea
+                  id="feedback-message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value.slice(0, FEEDBACK_MAX_LENGTH))}
                   rows={5}
-                  placeholder="The more specific, the more fixable."
+                  placeholder="Steps, what you expected, what happened instead."
                   className="mb-1 w-full resize-y border-2 border-ink-900/30 bg-transparent p-2 text-sm outline-none focus:border-rust-500 dark:border-kraft-100/30"
                 />
                 <p className="mb-4 text-xs text-ink-500 dark:text-kraft-300">
@@ -148,7 +179,7 @@ export function FeedbackDialog() {
                   <button
                     type="button"
                     className={primaryClass}
-                    disabled={!message.trim() || phase.state === 'sending'}
+                    disabled={!canSend || phase.state === 'sending'}
                     onClick={() => void submit()}
                   >
                     {phase.state === 'sending' ? 'Sending…' : 'Send'}

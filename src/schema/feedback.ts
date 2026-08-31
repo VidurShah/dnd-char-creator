@@ -6,10 +6,14 @@ export const FEEDBACK_CATEGORIES = ['bug', 'idea', 'content', 'other'] as const;
 export const FeedbackCategorySchema = z.enum(FEEDBACK_CATEGORIES);
 export type FeedbackCategory = z.infer<typeof FeedbackCategorySchema>;
 
+export const FEEDBACK_TITLE_MAX_LENGTH = 120;
 export const FEEDBACK_MAX_LENGTH = 4000;
 
 export const FeedbackRequestSchema = z.object({
   category: FeedbackCategorySchema,
+  /** Becomes the GitHub issue title verbatim. */
+  title: z.string().trim().min(1).max(FEEDBACK_TITLE_MAX_LENGTH),
+  /** Becomes the issue body. */
   message: z.string().trim().min(1).max(FEEDBACK_MAX_LENGTH),
   /**
    * Whatever the client can cheaply attach about where this came from — route,
