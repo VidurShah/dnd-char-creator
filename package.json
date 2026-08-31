@@ -26,6 +26,8 @@
     "dev:api": "tsx watch --env-file-if-exists=.env server/dev.ts"
   },
   "dependencies": {
+    "@clerk/express": "^2.1.64",
+    "@clerk/react": "^6.14.8",
     "@google/genai": "^2.12.0",
     "@radix-ui/react-dialog": "^1.1.19",
     "@radix-ui/react-popover": "^1.1.19",

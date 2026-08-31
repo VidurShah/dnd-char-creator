@@ -1,5 +1,6 @@
 import express, { type Express, type NextFunction, type Request, type Response } from 'express';
 import { aiRouter } from './routes/ai.js';
+import { authMiddleware, clerkConfigured, currentUserId } from './lib/auth.js';
 
 /**
  * The Grimoire API, as one Express app with two entry points so local and
@@ -40,6 +41,11 @@ export function createApp(): Express {
 
   app.use(parseJsonBody);
 
+  // Populates Clerk auth state on every request. Routes decide for themselves
+  // whether an account is required; nothing is protected wholesale, because
+  // most of Grimoire works fine signed out.
+  app.use(authMiddleware());
+
   /**
    * Mounted twice on purpose. Locally, Vite proxies the untouched path and
    * Express sees /api/ai/generate. On Vercel the request arrives via a
@@ -49,7 +55,13 @@ export function createApp(): Express {
    */
   for (const prefix of ['/api', '']) {
     app.get(`${prefix}/health`, (req, res) => {
-      res.json({ ok: true, seenPath: req.originalUrl });
+      res.json({ ok: true, seenPath: req.originalUrl, authConfigured: clerkConfigured });
+    });
+
+    // Lets the SPA render the right header state without guessing from a
+    // token it can't verify.
+    app.get(`${prefix}/me`, (req, res) => {
+      res.json({ userId: currentUserId(req) });
     });
     app.use(`${prefix}/ai`, aiRouter);
   }

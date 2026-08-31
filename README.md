@@ -71,7 +71,13 @@ value into the client bundle. See [.env.example](.env.example).
 | var | purpose |
 | --- | --- |
 | `GEMINI_API_KEY` | shared fallback key for `/api/ai/generate` |
+| `CLERK_SECRET_KEY` | server-side Clerk key; enables accounts |
+| `VITE_CLERK_PUBLISHABLE_KEY` | client Clerk key — public by design, hence the `VITE_` prefix |
 | `PORT` | local API port (default 3000) |
+
+Accounts are optional. With the Clerk keys unset, Grimoire runs as a
+local-only build: no account UI, every request anonymous, and the shared Gemini
+key usable without signing in. That's the supported path for a fresh clone.
 
 Players can paste their own Gemini key in Settings; it's stored locally and
 used instead of the server's, and it skips the shared-key rate limit.

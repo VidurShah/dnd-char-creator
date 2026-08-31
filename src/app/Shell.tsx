@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router';
+import { AccountMenu } from '@/features/auth/AccountMenu';
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   `rounded-sm px-3 py-1.5 text-sm font-medium uppercase tracking-wide transition-colors ${
@@ -15,7 +16,8 @@ export function Shell() {
           <span className="-rotate-1 font-display text-2xl tracking-tight text-ink-900 dark:text-kraft-100">
             Grimoire
           </span>
-          <nav className="flex gap-1">
+          <div className="flex items-center gap-3">
+            <nav className="flex gap-1">
             <NavLink to="/library" className={navLinkClass}>
               Library
             </NavLink>
@@ -25,7 +27,9 @@ export function Shell() {
             <NavLink to="/settings" className={navLinkClass}>
               Settings
             </NavLink>
-          </nav>
+            </nav>
+            <AccountMenu />
+          </div>
         </div>
       </header>
       <main className="mx-auto max-w-6xl px-6 py-8">
