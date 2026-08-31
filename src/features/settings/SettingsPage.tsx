@@ -1,3 +1,4 @@
+import { SyncStatusPanel } from '@/sync/SyncStatusPanel';
 import { useEffect, useState } from 'react';
 import { settingsRepo } from '@/db/repos';
 import { AI_MODELS, DEFAULT_AI_MODEL } from '@/ai/models';
@@ -39,6 +40,8 @@ export function SettingsPage() {
         extraction pipeline) — that key never leaves your machine and is never part of the built app, since a local
         proxy in the dev/preview server handles the actual API call. Nothing below is required.
       </p>
+
+      <SyncStatusPanel />
 
       <div className="mb-6">
         <label className="mb-1.5 block font-mono text-xs uppercase tracking-wider text-ink-500 dark:text-kraft-300">

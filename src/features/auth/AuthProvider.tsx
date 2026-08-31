@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { ClerkProvider } from '@clerk/react';
 import { CLERK_PUBLISHABLE_KEY, authEnabled } from './clerkConfig';
+import { SyncController } from '@/sync/SyncController';
 
 /**
  * Wraps the app in Clerk when it's configured, and is a pass-through when it
@@ -12,6 +13,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   return (
     <ClerkProvider publishableKey={CLERK_PUBLISHABLE_KEY!} afterSignOutUrl="/">
+      <SyncController />
       {children}
     </ClerkProvider>
   );
