@@ -1,5 +1,7 @@
 import express, { type Express, type NextFunction, type Request, type Response } from 'express';
 import { aiRouter } from './routes/ai.js';
+import { syncRouter } from './routes/sync.js';
+import { feedbackRouter } from './routes/feedback.js';
 import { authMiddleware, clerkConfigured, currentUserId } from './lib/auth.js';
 
 /**
@@ -64,6 +66,8 @@ export function createApp(): Express {
       res.json({ userId: currentUserId(req) });
     });
     app.use(`${prefix}/ai`, aiRouter);
+    app.use(`${prefix}/sync`, syncRouter);
+    app.use(`${prefix}/feedback`, feedbackRouter);
   }
 
   app.use((req, res) => {

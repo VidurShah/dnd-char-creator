@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from 'react-router';
 import { AccountMenu } from '@/features/auth/AccountMenu';
+import { FeedbackDialog } from '@/features/feedback/FeedbackDialog';
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   `rounded-sm px-3 py-1.5 text-sm font-medium uppercase tracking-wide transition-colors ${
@@ -28,6 +29,7 @@ export function Shell() {
               Settings
             </NavLink>
             </nav>
+            <FeedbackDialog />
             <AccountMenu />
           </div>
         </div>
