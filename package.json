@@ -23,10 +23,15 @@
     "extract:run": "tsx --env-file=.env scripts/extract/extract.ts",
     "extract:review": "tsx scripts/extract/review.ts",
     "extract:compile": "tsx scripts/extract/compile.ts",
-    "dev:api": "tsx watch --env-file-if-exists=.env server/dev.ts"
+    "dev:api": "tsx watch --env-file-if-exists=.env server/dev.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "dotenv -e .env -- tsx scripts/migrate.ts"
   },
   "dependencies": {
+    "@clerk/express": "^2.1.64",
+    "@clerk/react": "^6.14.8",
     "@google/genai": "^2.12.0",
+    "@neondatabase/serverless": "^1.1.0",
     "@radix-ui/react-dialog": "^1.1.19",
     "@radix-ui/react-popover": "^1.1.19",
     "@radix-ui/react-select": "^2.3.3",
@@ -34,6 +39,7 @@
     "cmdk": "^1.1.1",
     "dexie": "^4.4.4",
     "dexie-react-hooks": "^4.4.0",
+    "drizzle-orm": "^0.45.2",
     "express": "^5.2.1",
     "minisearch": "^7.2.0",
     "react": "^19.2.7",
@@ -52,6 +58,8 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
     "concurrently": "^10.0.5",
+    "dotenv-cli": "^11.0.0",
+    "drizzle-kit": "^0.31.10",
     "fake-indexeddb": "^6.2.5",
     "jsdom": "^29.1.1",
     "oxlint": "^1.71.0",

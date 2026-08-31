@@ -9,6 +9,8 @@
  * in dev, and vercel.json rewrites it to the serverless function in prod.
  */
 
+import { withAuthHeaders } from '@/features/auth/authToken';
+
 const PROXY_PATH = '/api/ai/generate';
 
 export interface ToolDef {
@@ -54,7 +56,10 @@ async function generateOnce(apiKeyOverride: string | undefined, model: string, c
   try {
     res = await fetch(PROXY_PATH, {
       method: 'POST',
-      headers: { 'content-type': 'application/json' },
+      // The bearer token is what lets the server bill this call to an account
+      // and fall back to its own Gemini key; without it, only a user-supplied
+      // key works.
+      headers: await withAuthHeaders({ 'content-type': 'application/json' }),
       body: JSON.stringify({ apiKey: apiKeyOverride || undefined, model, contents, config }),
       signal: controller.signal,
     });

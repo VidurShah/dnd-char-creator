@@ -8,12 +8,34 @@ export interface SettingsRecord {
   value: unknown;
 }
 
+/**
+ * One local write awaiting upload. Rows live here until the server accepts (or
+ * rejects) them, so a change made offline, or while signed out, still reaches
+ * the cloud once a session exists.
+ */
+export interface OutboxRecord {
+  /** `${table}:${id}` — one pending entry per document, latest write wins. */
+  key: string;
+  table: 'characters' | 'content';
+  id: string;
+  /** The doc's updatedAt (epoch ms); the server's conflict clock. */
+  updatedAt: number;
+  deleted: boolean;
+  queuedAt: number;
+}
+
 /** Schema shared by v1 and v2 — v2 changes no indexes, it only runs the sweep. */
 export const CONTENT_STORES = {
   characters: 'id, edition, name, updatedAt',
   content: 'id, edition, kind, name, origin',
   packs: 'id, edition, name',
   settings: 'key',
+} as const;
+
+/** v3 adds the sync outbox; every other store is unchanged. */
+export const V3_STORES = {
+  ...CONTENT_STORES,
+  outbox: 'key, table, queuedAt',
 } as const;
 
 /**
@@ -36,6 +58,7 @@ class DndDatabase extends Dexie {
   content!: EntityTable<ContentEntry, 'id'>;
   packs!: EntityTable<Pack, 'id'>;
   settings!: EntityTable<SettingsRecord, 'key'>;
+  outbox!: EntityTable<OutboxRecord, 'key'>;
 
   constructor() {
     super('dnd-char-creator');
@@ -51,6 +74,11 @@ class DndDatabase extends Dexie {
     // The schema is unchanged; this version exists only to run the cleanup.
     // Genuine user content (origin:'custom') is untouched.
     this.version(2).stores(CONTENT_STORES).upgrade(sweepShadowedPackContent);
+
+    // v3: cloud sync. Adds the outbox store only — no existing index changes,
+    // and no data migration, because tombstones live server-side and the
+    // character documents themselves are untouched by sync.
+    this.version(3).stores(V3_STORES);
   }
 }
 

@@ -1,27 +1,33 @@
 import { Router } from 'express';
-import { createRateLimiter, clientKey } from '../lib/rateLimit.js';
+import { createRateLimiter } from '../lib/rateLimit.js';
+import { clerkConfigured, currentUserId } from '../lib/auth.js';
 
 /**
- * Gemini proxy. Ported from the old vite-plugins/geminiProxy.ts, which only
- * ever ran inside the Vite dev/preview server — meaning a deployed static
- * build had no AI at all. Same contract, same request/response shape, now on a
- * real endpoint that exists in production.
+ * Gemini proxy. GEMINI_API_KEY stays server-side: it is read from process.env
+ * with no VITE_ prefix, so it is never part of import.meta.env, the client
+ * bundle, or any network payload.
  *
- * The point of the proxy is unchanged: GEMINI_API_KEY stays server-side. It is
- * read from process.env with no VITE_ prefix, so it is never part of
- * import.meta.env, the client bundle, or any network payload — unless the
- * player has explicitly pasted their own override key in Settings, which
- * travels in the request body and is used in place of ours.
+ * Two ways to use this endpoint:
+ *
+ *   - Signed in       -> falls back to the server's shared key, rate-limited
+ *                        per user.
+ *   - Own pasted key  -> uses that key, no limit, no account needed.
+ *
+ * On a deployment with accounts, signed-out visitors cannot spend the shared
+ * key. Before accounts existed the limit was per IP, which is trivially
+ * bypassed and made the public deployment's Gemini quota a free-for-all.
+ *
+ * When Clerk is NOT configured there are no accounts to require, and the only
+ * person the shared key can belong to is whoever runs the server — so it stays
+ * open. Otherwise a local `pnpm dev` clone with a GEMINI_API_KEY in .env would
+ * be locked out of its own key with no way to sign in.
  */
 
 /** Upstream ceiling. These preview/thinking models intermittently stall under load. */
 const UPSTREAM_TIMEOUT_MS = 90_000;
 
-/**
- * Only requests falling back to *our* key are limited — a player using their
- * own pasted key is spending their own quota, so throttling them is pointless.
- */
-const sharedKeyLimiter = createRateLimiter(30, 60 * 60 * 1000);
+/** Per-user budget on the shared key. Own-key requests are never limited. */
+const sharedKeyLimiter = createRateLimiter(50, 60 * 60 * 1000);
 
 interface GenerateBody {
   apiKey?: string;
@@ -40,8 +46,17 @@ aiRouter.post('/generate', async (req, res) => {
     return;
   }
 
-  const usingSharedKey = !body.apiKey;
-  const apiKey = body.apiKey || process.env.GEMINI_API_KEY;
+  const ownKey = body.apiKey?.trim();
+  const userId = currentUserId(req);
+
+  if (!ownKey && !userId && clerkConfigured) {
+    res.status(401).json({
+      error: 'Sign in to use the built-in AI, or add your own Gemini API key in Settings.',
+    });
+    return;
+  }
+
+  const apiKey = ownKey || process.env.GEMINI_API_KEY;
   if (!apiKey) {
     res.status(400).json({
       error: 'No Gemini API key configured — set GEMINI_API_KEY on the server, or paste one in Settings.',
@@ -49,8 +64,10 @@ aiRouter.post('/generate', async (req, res) => {
     return;
   }
 
-  if (usingSharedKey) {
-    const retryAfter = sharedKeyLimiter.check(clientKey(req.get('x-forwarded-for'), req.socket.remoteAddress));
+  if (!ownKey && userId) {
+    // Unauthenticated local use (no Clerk) is unlimited by design — it's the
+    // operator's own key on their own machine.
+    const retryAfter = sharedKeyLimiter.check(userId);
     if (retryAfter !== null) {
       res.set('retry-after', String(retryAfter));
       res.status(429).json({

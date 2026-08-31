@@ -32,5 +32,8 @@ dist-ssr
 # into data/<edition>/*.json, which IS committed.
 /data/packs/
 
-.env
-.env.local
+.vercel
+
+# Every .env variant is a secret — except the committed template.
+.env*
+!.env.example

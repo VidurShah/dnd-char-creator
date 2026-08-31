@@ -11,10 +11,13 @@ import { CharacterSheetPage } from './features/characters/sheet/CharacterSheetPa
 import { EntryEditorPage } from './features/library/editor/EntryEditorPage';
 import { SettingsPage } from './features/settings/SettingsPage';
 import { AIBuilderPage } from './features/characters/ai/AIBuilderPage';
+import { AuthProvider } from './features/auth/AuthProvider';
+import { SignInPage, SignUpPage } from './features/auth/AuthPages';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
       <Routes>
         <Route element={<Shell />}>
           <Route index element={<Navigate to="/library" replace />} />
@@ -25,9 +28,12 @@ createRoot(document.getElementById('root')!).render(
           <Route path="characters/templates" element={<TemplatesPage />} />
           <Route path="characters/ai-new" element={<AIBuilderPage />} />
           <Route path="settings" element={<SettingsPage />} />
+          <Route path="sign-in/*" element={<SignInPage />} />
+          <Route path="sign-up/*" element={<SignUpPage />} />
           <Route path="characters/:id" element={<CharacterSheetPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
+    </AuthProvider>
   </StrictMode>,
 );

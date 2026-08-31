@@ -2,6 +2,24 @@ import { db } from './dexie';
 import { CharacterSchema, type Character } from '@/schema/character';
 import { ContentEntrySchema, type ContentEntry } from '@/schema/content';
 import { PackSchema, type Pack } from '@/schema/pack';
+import { enqueue } from '@/sync/outbox';
+import { requestSync } from '@/sync/syncEngine';
+
+/**
+ * Every local write is queued for upload and nudges the sync engine. Writes
+ * still land in Dexie first and unconditionally: the local copy is what the UI
+ * renders (via useLiveQuery), so sync being unavailable — offline, signed out,
+ * or not configured — must never block saving a character.
+ */
+async function trackWrite(
+  table: 'characters' | 'content',
+  id: string,
+  updatedAt: number,
+  deleted = false,
+): Promise<void> {
+  await enqueue(table, id, updatedAt, deleted);
+  void requestSync();
+}
 
 // ---------------------------------------------------------------------------
 // Characters
@@ -17,9 +35,12 @@ export const characterRepo = {
   async save(character: Character): Promise<void> {
     const validated = CharacterSchema.parse(character);
     await db.characters.put(validated);
+    await trackWrite('characters', validated.id, validated.updatedAt);
   },
   async remove(id: string): Promise<void> {
     await db.characters.delete(id);
+    // The tombstone is the outbox entry; Dexie keeps no deleted row.
+    await trackWrite('characters', id, Date.now(), true);
   },
 };
 
@@ -37,9 +58,18 @@ export const contentRepo = {
   async save(entry: ContentEntry): Promise<void> {
     const validated = ContentEntrySchema.parse(entry);
     await db.content.put(validated);
+    // Only user-authored content syncs; seed and pack-imported entries ship
+    // with the app or are re-importable, so uploading them would be noise.
+    if (validated.origin === 'custom') {
+      await trackWrite('content', validated.id, Date.now());
+    }
   },
   async remove(id: string): Promise<void> {
+    const existing = await db.content.get(id);
     await db.content.delete(id);
+    if (existing?.origin === 'custom') {
+      await trackWrite('content', id, Date.now(), true);
+    }
   },
 };
 
