@@ -11,16 +11,52 @@ import type { Request, RequestHandler, Response, NextFunction } from 'express';
  * out, not a server that refuses to boot. Every helper here degrades to
  * "anonymous" rather than throwing when the keys are absent.
  */
-export const clerkConfigured = Boolean(process.env.CLERK_SECRET_KEY);
+
+/**
+ * The Express SDK needs the *publishable* key as well as the secret, and it
+ * looks for CLERK_PUBLISHABLE_KEY specifically. Nothing provisions that name
+ * here: the Vercel Marketplace integration writes NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
+ * and the Vite client needs the VITE_ prefix. All three carry the same value,
+ * so accept whichever exists rather than making the deployment depend on a
+ * hand-added alias.
+ *
+ * Getting this wrong is not a quiet failure — clerkMiddleware() throws on every
+ * request, which 500s the entire API including the health check and the AI
+ * proxy, neither of which has anything to do with accounts.
+ */
+const publishableKey =
+  process.env.CLERK_PUBLISHABLE_KEY ||
+  process.env.VITE_CLERK_PUBLISHABLE_KEY ||
+  process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+
+const secretKey = process.env.CLERK_SECRET_KEY;
+
+export const clerkConfigured = Boolean(secretKey && publishableKey);
 
 if (!clerkConfigured) {
-  console.warn('[auth] CLERK_SECRET_KEY is not set — all requests will be treated as signed out.');
+  const missing = [!secretKey && 'CLERK_SECRET_KEY', !publishableKey && 'a Clerk publishable key']
+    .filter(Boolean)
+    .join(' and ');
+  console.warn(`[auth] ${missing} not set — all requests will be treated as signed out.`);
 }
 
-/** Attaches Clerk's auth state to the request, or does nothing when unconfigured. */
+/**
+ * Attaches Clerk's auth state to the request, or does nothing when unconfigured.
+ *
+ * Errors from Clerk are swallowed into "signed out" rather than propagated.
+ * Authentication being broken should cost you the features that need an
+ * account, not the whole API.
+ */
 export function authMiddleware(): RequestHandler {
   if (!clerkConfigured) return (_req, _res, next) => next();
-  return clerkMiddleware();
+
+  const middleware = clerkMiddleware({ secretKey, publishableKey });
+  return (req, res, next) => {
+    Promise.resolve(middleware(req, res, next)).catch((err: unknown) => {
+      console.warn('[auth] Clerk failed to authenticate the request:', err instanceof Error ? err.message : err);
+      next();
+    });
+  };
 }
 
 /**
