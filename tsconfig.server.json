@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.server.tsbuildinfo",
+    "target": "es2023",
+    "lib": ["ES2023"],
+    "types": ["node"],
+    "skipLibCheck": true,
+
+    /* nodenext, and relative imports carry explicit .js specifiers pointing at
+       .ts files. Vercel transpiles each TS file to ESM without bundling, so an
+       extensionless import survives into the output and Node's ESM loader
+       rejects it at runtime (ERR_MODULE_NOT_FOUND). This setting makes tsc
+       enforce the extensions rather than letting that reach production. */
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "resolveJsonModule": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["server", "api"]
+}
