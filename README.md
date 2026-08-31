@@ -40,9 +40,12 @@ browser                     server/ (Express)
   which is what makes engine fixes retroactive across existing characters.
 - **`src/db/`** — Dexie. Characters, custom content, imported packs, settings.
 - **`server/`** — the API. One Express app with two entry points that share an
-  implementation: `server/dev.ts` for local, `api/[...path].ts` for Vercel's
-  Node runtime. It exists chiefly to hold `GEMINI_API_KEY` server-side — the
-  key is never in client code, the bundle, or a network payload.
+  implementation: `server/dev.ts` for local, `api/index.ts` for Vercel's Node
+  runtime. Holds `GEMINI_API_KEY` server-side, verifies Clerk sessions, and
+  serves sync and feedback.
+- **`src/sync/`** — cloud sync. An outbox queues local writes; a server-assigned
+  `rev` counter orders pulls. Conflicts are last-write-wins on each document's
+  `updatedAt` (see issue #1).
 
 See [CLAUDE.md](CLAUDE.md) for the engine and content conventions, which are
 worth reading before touching `src/engine/` or `src/schema/`.
@@ -58,6 +61,8 @@ worth reading before touching `src/engine/` or `src/schema/`.
 | `pnpm test` | Vitest |
 | `pnpm lint` | oxlint |
 | `pnpm validate:data` | Zod-parse every seed/extraction JSON, end to end |
+| `pnpm db:generate` | regenerate SQL migrations from the Drizzle schema |
+| `pnpm db:migrate` | apply `drizzle/*.sql` to `DATABASE_URL` |
 
 ⚠️ `npx tsc --noEmit` with no `-p` flag checks the root `tsconfig.json`, which
 is a solution-style file with `"files": []`. Run that way it type-checks
@@ -73,7 +78,15 @@ value into the client bundle. See [.env.example](.env.example).
 | `GEMINI_API_KEY` | shared fallback key for `/api/ai/generate` |
 | `CLERK_SECRET_KEY` | server-side Clerk key; enables accounts |
 | `VITE_CLERK_PUBLISHABLE_KEY` | client Clerk key — public by design, hence the `VITE_` prefix |
+| `DATABASE_URL` | Neon Postgres; enables sync and feedback |
+| `GITHUB_TOKEN` | fine-grained PAT so feedback opens issues |
 | `PORT` | local API port (default 3000) |
+
+Every one of these is optional except `GEMINI_API_KEY`, and each missing key
+disables exactly one feature rather than breaking the app. The server also
+accepts `CLERK_PUBLISHABLE_KEY` or `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` in place
+of the `VITE_` one — the Vercel Marketplace integration provisions the
+`NEXT_PUBLIC_` name.
 
 Accounts are optional. With the Clerk keys unset, Grimoire runs as a
 local-only build: no account UI, every request anonymous, and the shared Gemini
@@ -88,10 +101,17 @@ Vercel (SPA from `dist/`, API as a Node function) — [`vercel.json`](vercel.jso
 has the whole configuration. Set `GEMINI_API_KEY` in the Vercel project's
 environment variables.
 
+## Accounts and sync
+
+Signing in is optional. Without an account, characters live in this browser
+and nothing leaves your machine. Signing in backs the vault up and syncs it
+across devices, and lets you use the built-in AI without supplying your own
+Gemini key.
+
 ## Feedback
 
-Found a bug or have an idea? Open an issue on
-[the tracker](https://github.com/VidurShah/dnd-char-creator/issues).
+Use the Feedback button in the app — it opens an issue on
+[the tracker](https://github.com/VidurShah/dnd-char-creator/issues) for you.
 
 ## Legal
 
