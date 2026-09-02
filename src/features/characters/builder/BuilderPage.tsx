@@ -200,7 +200,7 @@ export function BuilderPage() {
               key={e.id}
               type="button"
               onClick={() => changeEdition(e.id)}
-              className={`px-3 py-1.5 font-mono text-xs uppercase tracking-wide ${
+              className={`whitespace-nowrap px-3 py-1.5 font-mono text-xs uppercase tracking-wide ${
                 state.edition === e.id
                   ? 'bg-ink-900 text-kraft-50 dark:bg-kraft-100 dark:text-ink-900'
                   : 'text-ink-700 dark:text-kraft-200'

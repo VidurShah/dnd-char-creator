@@ -92,7 +92,7 @@ export function LibraryPage() {
     <div>
       <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
         <h1 className="font-display text-xl text-ink-900 dark:text-kraft-100">Library</h1>
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-3">
           <div className="flex gap-1 border-2 border-ink-900/20 p-1 dark:border-kraft-100/20">
             {EDITIONS.map((e) => (
               <button
@@ -103,7 +103,7 @@ export function LibraryPage() {
                   setEdition(e.id);
                   setSelectedId(null);
                 }}
-                className={`px-3 py-1.5 font-mono text-xs uppercase tracking-wide transition-colors ${
+                className={`whitespace-nowrap px-3 py-1.5 font-mono text-xs uppercase tracking-wide transition-colors ${
                   edition === e.id
                     ? 'bg-ink-900 text-kraft-50 dark:bg-kraft-100 dark:text-ink-900'
                     : 'text-ink-700 disabled:cursor-not-allowed disabled:opacity-40 dark:text-kraft-200'

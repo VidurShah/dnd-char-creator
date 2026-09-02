@@ -17,6 +17,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.server.json",
     "validate:data": "tsx scripts/validateData.ts --strict-descriptions",
     "validate:data:loose": "tsx scripts/validateData.ts",
+    "check:responsive": "tsx scripts/checkResponsive.ts",
     "seed:srd51": "tsx scripts/seed/seed-srd51.ts",
     "seed:srd51:rules": "tsx scripts/seed/seed-srd51-rules.ts",
     "seed:srd52": "tsx scripts/seed/seed-srd52.ts",
