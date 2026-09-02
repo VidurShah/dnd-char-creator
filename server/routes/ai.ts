@@ -1,6 +1,11 @@
 import { Router } from 'express';
 import { createRateLimiter } from '../lib/rateLimit.js';
 import { clerkConfigured, currentUserId } from '../lib/auth.js';
+import {
+  AI_MODEL_IDS,
+  GenerateRequestSchema,
+  MAX_SHARED_KEY_CONTENTS_BYTES,
+} from '../../src/schema/aiProxy.js';
 
 /**
  * Gemini proxy. GEMINI_API_KEY stays server-side: it is read from process.env
@@ -21,6 +26,12 @@ import { clerkConfigured, currentUserId } from '../lib/auth.js';
  * person the shared key can belong to is whoever runs the server — so it stays
  * open. Otherwise a local `pnpm dev` clone with a GEMINI_API_KEY in .env would
  * be locked out of its own key with no way to sign in.
+ *
+ * Requests against the shared key are additionally constrained to the model
+ * allowlist and a size ceiling (see src/schema/aiProxy.ts). Neither applies to
+ * a player's own pasted key. The endpoint is reachable with curl, so those
+ * checks have to live here — the client's model dropdown is a UI affordance,
+ * not a control.
  */
 
 /** Upstream ceiling. These preview/thinking models intermittently stall under load. */
@@ -29,22 +40,15 @@ const UPSTREAM_TIMEOUT_MS = 90_000;
 /** Per-user budget on the shared key. Own-key requests are never limited. */
 const sharedKeyLimiter = createRateLimiter(50, 60 * 60 * 1000);
 
-interface GenerateBody {
-  apiKey?: string;
-  model: string;
-  contents: unknown;
-  config: unknown;
-}
-
 export const aiRouter: Router = Router();
 
 aiRouter.post('/generate', async (req, res) => {
-  const body = req.body as GenerateBody;
-
-  if (!body || typeof body.model !== 'string' || !body.model) {
-    res.status(400).json({ error: 'Request must include a model.' });
+  const parsed = GenerateRequestSchema.safeParse(req.body);
+  if (!parsed.success) {
+    res.status(400).json({ error: 'Malformed AI request.' });
     return;
   }
+  const body = parsed.data;
 
   const ownKey = body.apiKey?.trim();
   const userId = currentUserId(req);
@@ -62,6 +66,32 @@ aiRouter.post('/generate', async (req, res) => {
       error: 'No Gemini API key configured — set GEMINI_API_KEY on the server, or paste one in Settings.',
     });
     return;
+  }
+
+  /**
+   * Everything below constrains the *shared* key only. A player spending their
+   * own pasted key can ask for whatever model and prompt they like — it is their
+   * quota and their bill, and Grimoire has no business policing it.
+   *
+   * Without these, the endpoint is an open Gemini relay for anyone with an
+   * account: model, contents, and config went straight upstream, so the app was
+   * merely one possible client of the operator's key.
+   */
+  if (!ownKey) {
+    if (!(AI_MODEL_IDS as readonly string[]).includes(body.model)) {
+      res.status(400).json({
+        error: `Model "${body.model}" is not available on the shared key. Add your own Gemini API key in Settings to use another model.`,
+      });
+      return;
+    }
+
+    const contentsBytes = Buffer.byteLength(JSON.stringify(body.contents ?? null), 'utf8');
+    if (contentsBytes > MAX_SHARED_KEY_CONTENTS_BYTES) {
+      res.status(413).json({
+        error: 'That request is too large for the shared AI. Add your own Gemini API key in Settings to send it.',
+      });
+      return;
+    }
   }
 
   if (!ownKey && userId) {
