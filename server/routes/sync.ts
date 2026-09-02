@@ -23,6 +23,33 @@ import {
 /** How many rows one pull returns before the client must ask again. */
 const PULL_PAGE_SIZE = 200;
 
+/**
+ * Merges the per-table row sets into one rev-ordered page.
+ *
+ * Both tables draw from one sequence, so a single cursor orders them together.
+ *
+ * The caller must query each table with a limit of PULL_PAGE_SIZE + 1, and that
+ * extra row is what makes `hasMore` correct. Querying exactly PULL_PAGE_SIZE
+ * per table and inferring `hasMore` from the *merged* length silently truncates:
+ * a vault with 250 characters and no custom content returns 200 rows and
+ * `hasMore: false`, so the client's pull loop exits with 50 rows unapplied. It
+ * self-heals on the next tick because the cursor did advance, which is why it
+ * presented as "sync is slow on a big vault", one page per minute, rather than
+ * as a failure.
+ *
+ * With the +1, any table holding more than a page comes back over-full, so the
+ * merged set necessarily exceeds PULL_PAGE_SIZE and `hasMore` is true. And when
+ * the merged set fits, no table can have been truncated — truncation requires
+ * returning PULL_PAGE_SIZE + 1 rows, which would not fit.
+ */
+export function pageRecords(
+  all: SyncRecord[],
+  pageSize = PULL_PAGE_SIZE,
+): { records: SyncRecord[]; hasMore: boolean } {
+  const sorted = [...all].sort((a, b) => a.rev - b.rev);
+  return { records: sorted.slice(0, pageSize), hasMore: sorted.length > pageSize };
+}
+
 const TABLES = { characters, content: contentEntries } as const;
 
 export const syncRouter: Router = Router();
@@ -100,7 +127,8 @@ syncRouter.get('/pull', async (req, res) => {
       .from(table)
       .where(and(eq(table.userId, userId), gt(table.rev, since)))
       .orderBy(asc(table.rev))
-      .limit(PULL_PAGE_SIZE);
+      // +1: the extra row is how pageRecords() knows this table was truncated.
+      .limit(PULL_PAGE_SIZE + 1);
 
     for (const row of rows) {
       records.push({
@@ -114,11 +142,7 @@ syncRouter.get('/pull', async (req, res) => {
     }
   }
 
-  // Both tables draw from one sequence, so a single cursor orders them
-  // together. Sorting the merged set keeps that true across the page boundary.
-  records.sort((a, b) => a.rev - b.rev);
-  const page = records.slice(0, PULL_PAGE_SIZE);
-  const hasMore = records.length > PULL_PAGE_SIZE;
+  const { records: page, hasMore } = pageRecords(records);
 
   res.json({
     records: page,
