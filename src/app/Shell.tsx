@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from 'react-router';
 import { AccountMenu } from '@/features/auth/AccountMenu';
 import { FeedbackDialog } from '@/features/feedback/FeedbackDialog';
+import { useOnline } from '@/lib/useOnline';
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   `rounded-sm px-2 py-1.5 text-xs font-medium uppercase tracking-wide transition-colors sm:px-3 sm:text-sm ${
@@ -10,6 +11,8 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   }`;
 
 export function Shell() {
+  const online = useOnline();
+
   return (
     <div className="min-h-screen bg-kraft-100 text-ink-900 dark:bg-charcoal-900 dark:text-kraft-100">
       <header className="border-b-2 border-ink-900/15 dark:border-kraft-100/15">
@@ -40,6 +43,16 @@ export function Shell() {
             </NavLink>
           </nav>
           <div className="order-2 ml-auto flex items-center gap-2 sm:order-3 sm:ml-0 sm:gap-3">
+            {/* The sheet, dice, and Library all work with no network; sync and
+                the AI do not. Saying so is cheaper than letting those look broken. */}
+            {!online && (
+              <span
+                title="No network. Your characters and the Library still work; sync and the AI are paused."
+                className="border-2 border-rust-500/50 px-2 py-1 font-mono text-[11px] uppercase tracking-wide text-rust-600 dark:border-rust-500/60 dark:text-rust-500"
+              >
+                Offline
+              </span>
+            )}
             <FeedbackDialog />
             <AccountMenu />
           </div>
