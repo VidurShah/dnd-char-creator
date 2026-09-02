@@ -36,7 +36,22 @@ export const SpellPayloadSchema = z.object({
   duration: z.string(),
   concentration: z.boolean(),
   ritual: z.boolean(),
-  classLists: z.array(z.string()), // class ids that can learn/prepare this spell
+  /**
+   * Class ids that can learn/prepare this spell, always lowercase.
+   *
+   * Every consumer matches these case-sensitively against a lowercase class id
+   * (BuilderPage's spell pool, optionQuery, ActionsPanel's "+ Add Spell", the
+   * Library class facet), so a stray capital silently hides the spell from all
+   * of them. The extraction pipeline shipped 43 spells capitalized once already
+   * — Booming Blade and Green-Flame Blade among them — and nothing caught it,
+   * because a capital is still a valid string.
+   *
+   * Lowercasing here heals custom and synced entries at parse time. Seed JSON
+   * is cast rather than parsed at runtime (see src/content/loader.ts), so it is
+   * guarded separately by scripts/validateData.ts, which rejects non-lowercase
+   * rather than quietly fixing it.
+   */
+  classLists: z.array(z.string().transform((c) => c.toLowerCase())),
   description: z.string(),
   higherLevels: z.string().optional(),
 });

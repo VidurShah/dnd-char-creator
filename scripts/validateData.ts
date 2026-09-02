@@ -32,6 +32,14 @@ function collectFiles(edition: (typeof EDITIONS)[number]): string[] {
 let totalEntries = 0;
 let totalFailures = 0;
 let duplicateIds = 0;
+/**
+ * Non-lowercase classLists in *seed* JSON. The schema lowercases on parse, which
+ * heals custom and synced entries but hides the problem in files, so this check
+ * reads the raw entry before parsing and fails the run rather than fixing it —
+ * seed data has to be correct on disk, because loader.ts casts it instead of
+ * parsing it. See the classLists comment in src/schema/content.ts.
+ */
+let casingFailures = 0;
 const allEntries: ContentEntry[] = [];
 
 for (const edition of EDITIONS) {
@@ -48,6 +56,17 @@ for (const edition of EDITIONS) {
     const raw = loadJson(file);
     for (const entry of raw) {
       editionEntries++;
+      const rawClassLists = (entry as { data?: { classLists?: unknown } })?.data?.classLists;
+      if (Array.isArray(rawClassLists)) {
+        const offenders = rawClassLists.filter((c): c is string => typeof c === 'string' && c !== c.toLowerCase());
+        if (offenders.length > 0) {
+          casingFailures++;
+          const name = (entry as { name?: string })?.name ?? '<unnamed>';
+          console.error(
+            `CLASSLIST CASING [${edition}] ${path.basename(file)} :: ${name} — ${offenders.join(', ')} must be lowercase`,
+          );
+        }
+      }
       const result = ContentEntrySchema.safeParse(entry);
       if (!result.success) {
         editionFailures++;
@@ -155,6 +174,7 @@ for (const edition of EDITIONS) {
 
 console.log(`Referential integrity: ${danglingRefs === 0 ? 'OK' : `${danglingRefs} dangling ref(s)`}`);
 console.log(`Id uniqueness: ${duplicateIds === 0 ? 'OK' : `${duplicateIds} duplicate id(s)`}`);
+console.log(`classLists casing: ${casingFailures === 0 ? 'OK' : `${casingFailures} entr(ies) with non-lowercase class ids`}`);
 
 // --- Description coverage -------------------------------------------------
 // `description` is optional on every payload that has one, so missing prose is
@@ -190,9 +210,9 @@ if (missingDescriptions > 0 && strictDescriptions) {
 }
 
 const strictFailure = strictDescriptions && missingDescriptions > 0;
-if (totalFailures > 0 || danglingRefs > 0 || duplicateIds > 0 || strictFailure) {
+if (totalFailures > 0 || danglingRefs > 0 || duplicateIds > 0 || casingFailures > 0 || strictFailure) {
   console.error(
-    `\n${totalFailures} schema failure(s), ${danglingRefs} dangling ref(s), ${duplicateIds} duplicate id(s)` +
+    `\n${totalFailures} schema failure(s), ${danglingRefs} dangling ref(s), ${duplicateIds} duplicate id(s), ${casingFailures} casing failure(s)` +
       `${strictFailure ? `, ${missingDescriptions} missing description(s)` : ''} out of ${totalEntries} entries.`,
   );
   process.exit(1);
