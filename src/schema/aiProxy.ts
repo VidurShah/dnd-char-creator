@@ -34,6 +34,24 @@ export type AiModelId = (typeof AI_MODEL_IDS)[number];
  */
 export const MAX_SHARED_KEY_REQUEST_BYTES = 512 * 1024;
 
+/**
+ * Bytes one shared-key request will cost upstream.
+ *
+ * Counts `contents` and `config` together, and the together is the whole point:
+ * an earlier version measured `contents` alone, but the advisor puts its entire
+ * system prompt in `config.systemInstruction` and the builder puts its tool
+ * schema in `config.tools`. A 4 KB `contents` alongside a 900 KB
+ * `systemInstruction` sailed through a contents-only check and reached Google
+ * in full — the exact bulk-relay case the ceiling exists to stop.
+ *
+ * TextEncoder rather than Buffer so this stays importable from the browser;
+ * src/ai/models.ts pulls the allowlist out of this same module.
+ */
+export function sharedKeyRequestBytes(body: { contents?: unknown; config?: unknown }): number {
+  const serialized = JSON.stringify({ contents: body.contents ?? null, config: body.config ?? null });
+  return new TextEncoder().encode(serialized).length;
+}
+
 export const GenerateRequestSchema = z.object({
   /** The player's own pasted Gemini key. Present means "bill this to me". */
   apiKey: z.string().min(1).optional(),

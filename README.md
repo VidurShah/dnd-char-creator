@@ -65,7 +65,7 @@ worth reading before touching `src/engine/` or `src/schema/`.
 | `pnpm test` | Vitest |
 | `pnpm lint` | oxlint |
 | `pnpm validate:data` | Zod-parse every seed/extraction JSON, end to end |
-| `pnpm check:responsive` | drive the app in a real browser at phone widths; fails on horizontal overflow (needs `pnpm dev` running) |
+| `pnpm check:ui` | drive the app in a real browser; fails on horizontal overflow at phone widths, or if the header vanishes while a route loads (needs `pnpm dev` running) |
 | `pnpm db:generate` | regenerate SQL migrations from the Drizzle schema |
 | `pnpm db:migrate` | apply `drizzle/*.sql` to `DATABASE_URL` |
 

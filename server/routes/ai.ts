@@ -5,6 +5,7 @@ import {
   AI_MODEL_IDS,
   GenerateRequestSchema,
   MAX_SHARED_KEY_REQUEST_BYTES,
+  sharedKeyRequestBytes,
 } from '../../src/schema/aiProxy.js';
 
 /**
@@ -85,18 +86,16 @@ aiRouter.post('/generate', async (req, res) => {
       return;
     }
 
-    // `config` is measured alongside `contents`, not exempt from the ceiling.
-    // Gemini's config carries systemInstruction and tools — both arbitrarily
-    // large — so capping contents alone leaves the bulk-relay hole open: 4 KB of
-    // contents plus a systemInstruction filling the rest of express's 2mb body
-    // limit passes a contents-only check and goes upstream in full.
-    const requestBytes = Buffer.byteLength(
-      JSON.stringify({ contents: body.contents ?? null, config: body.config ?? null }),
-      'utf8',
-    );
-    if (requestBytes > MAX_SHARED_KEY_REQUEST_BYTES) {
+    // Measured in schema/aiProxy.ts so the "config counts too" rule is one
+    // testable function rather than a line of arithmetic here.
+    if (sharedKeyRequestBytes(body) > MAX_SHARED_KEY_REQUEST_BYTES) {
       res.status(413).json({
-        error: 'That request is too large for the shared AI. Add your own Gemini API key in Settings to send it.',
+        // Two very different callers hit this, and the server cannot tell them
+        // apart: someone relaying bulk content, and a player whose advisor
+        // conversation simply got long. Naming both keeps the second from being
+        // told to go buy an API key when the fix is a new chat.
+        error:
+          'That request is too large for the shared AI. If this is a long advisor conversation, start a new chat — otherwise add your own Gemini API key in Settings.',
       });
       return;
     }

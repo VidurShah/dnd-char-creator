@@ -192,7 +192,27 @@ export function ChatPanel({
         {loading && <p className="self-start font-mono text-xs text-ink-500 dark:text-kraft-300">Thinking…</p>}
       </div>
 
-      {error && <p className="text-sm text-rust-500">{error}</p>}
+      {error && (
+        <div className="flex flex-wrap items-center gap-2">
+          <p className="text-sm text-rust-500">{error}</p>
+          {/*
+            A conversation long enough to trip the server's size ceiling cannot
+            recover by retrying — every send carries the whole history, so it
+            fails identically forever. The way out is a fresh conversation, and
+            leaving the player to find that in the tray header is the difference
+            between a dead end and a one-click fix.
+          */}
+          {messages.length > 0 && (
+            <button
+              type="button"
+              onClick={() => onMessagesChange([])}
+              className="border-2 border-rust-500/50 px-2 py-1 font-mono text-[11px] uppercase tracking-wide text-rust-600 hover:border-rust-500 dark:text-rust-500"
+            >
+              New chat
+            </button>
+          )}
+        </div>
+      )}
 
       <form
         onSubmit={(e) => {
