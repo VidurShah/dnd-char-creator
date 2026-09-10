@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router';
 import { AccountMenu } from '@/features/auth/AccountMenu';
 import { FeedbackDialog } from '@/features/feedback/FeedbackDialog';
@@ -59,7 +60,16 @@ export function Shell() {
         </div>
       </header>
       <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
-        <Outlet />
+        {/*
+          The boundary belongs here, around the Outlet, not around Shell itself.
+          Above Shell it swallows the header with the page: every lazy route
+          navigation would blank the wordmark, nav, and offline badge to a bare
+          "Loading…", which on a slow phone is the whole app flickering away.
+          Here the chrome stays put and only the content area swaps.
+        */}
+        <Suspense fallback={<p className="text-sm text-ink-700 dark:text-kraft-200">Loading…</p>}>
+          <Outlet />
+        </Suspense>
       </main>
     </div>
   );

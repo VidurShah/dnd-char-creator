@@ -22,7 +22,9 @@ export const AI_MODEL_IDS = ['gemini-3.1-flash-lite'] as const;
 export type AiModelId = (typeof AI_MODEL_IDS)[number];
 
 /**
- * Ceiling on the serialized `contents` of one shared-key request.
+ * Ceiling on the serialized prompt of one shared-key request — `contents` and
+ * `config` together, since Gemini's config carries systemInstruction and tools
+ * and a payload parked there costs exactly as much upstream as one in contents.
  *
  * Sized well above real usage — the AI builder's system prompt is the content
  * catalog plus a character sheet, tens of KB — and well below express's 2mb
@@ -30,7 +32,7 @@ export type AiModelId = (typeof AI_MODEL_IDS)[number];
  * control. This is the spend control: it stops the endpoint being used as a
  * bulk relay for content that has nothing to do with building a character.
  */
-export const MAX_SHARED_KEY_CONTENTS_BYTES = 512 * 1024;
+export const MAX_SHARED_KEY_REQUEST_BYTES = 512 * 1024;
 
 export const GenerateRequestSchema = z.object({
   /** The player's own pasted Gemini key. Present means "bill this to me". */

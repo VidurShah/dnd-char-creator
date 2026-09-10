@@ -4,7 +4,7 @@ import { clerkConfigured, currentUserId } from '../lib/auth.js';
 import {
   AI_MODEL_IDS,
   GenerateRequestSchema,
-  MAX_SHARED_KEY_CONTENTS_BYTES,
+  MAX_SHARED_KEY_REQUEST_BYTES,
 } from '../../src/schema/aiProxy.js';
 
 /**
@@ -85,8 +85,16 @@ aiRouter.post('/generate', async (req, res) => {
       return;
     }
 
-    const contentsBytes = Buffer.byteLength(JSON.stringify(body.contents ?? null), 'utf8');
-    if (contentsBytes > MAX_SHARED_KEY_CONTENTS_BYTES) {
+    // `config` is measured alongside `contents`, not exempt from the ceiling.
+    // Gemini's config carries systemInstruction and tools — both arbitrarily
+    // large — so capping contents alone leaves the bulk-relay hole open: 4 KB of
+    // contents plus a systemInstruction filling the rest of express's 2mb body
+    // limit passes a contents-only check and goes upstream in full.
+    const requestBytes = Buffer.byteLength(
+      JSON.stringify({ contents: body.contents ?? null, config: body.config ?? null }),
+      'utf8',
+    );
+    if (requestBytes > MAX_SHARED_KEY_REQUEST_BYTES) {
       res.status(413).json({
         error: 'That request is too large for the shared AI. Add your own Gemini API key in Settings to send it.',
       });

@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router';
 import { Shell } from './Shell';
 
@@ -42,14 +42,9 @@ const SignUpPage = lazy(() => import('@/features/auth/AuthPages').then((m) => ({
 export function AppRoutes() {
   return (
     <Routes>
-      {/* Fallback copy matches what the pages show while their content index loads. */}
-      <Route
-        element={
-          <Suspense fallback={<p className="text-sm text-ink-700 dark:text-kraft-200">Loading…</p>}>
-            <Shell />
-          </Suspense>
-        }
-      >
+      {/* Shell renders the Suspense boundary itself, around its Outlet, so a
+          lazy route resolving doesn't take the header down with it. */}
+      <Route element={<Shell />}>
         <Route index element={<Navigate to="/library" replace />} />
         <Route path="library" element={<LibraryPage />} />
         <Route path="library/new" element={<EntryEditorPage />} />
