@@ -2,66 +2,61 @@ import type { ContentEntry, ContentKind } from '@/schema/content';
 import type { Edition } from '@/schema/common';
 import { contentRepo } from '@/db/repos';
 
-import spells2014 from '@data/2014/spells.json';
-import items2014 from '@data/2014/items.json';
-import species2014 from '@data/2014/species.json';
-import backgrounds2014 from '@data/2014/backgrounds.json';
-import feats2014 from '@data/2014/feats.json';
-import features2014 from '@data/2014/features.json';
+type JsonModule = { default: ContentEntry[] };
+type Glob = Record<string, () => Promise<JsonModule>>;
 
-import spells2024 from '@data/2024/spells.json';
-import items2024 from '@data/2024/items.json';
-import species2024 from '@data/2024/species.json';
-import backgrounds2024 from '@data/2024/backgrounds.json';
-import feats2024 from '@data/2024/feats.json';
-import features2024 from '@data/2024/features.json';
-
-// Each data/<edition>/classes/*.json file holds one class entry plus its
-// feature/subclass entries (see scripts/seed/seed-srd51-rules.ts and
-// seed-srd52.ts). Globbed eagerly so adding a new class file needs no import
-// list maintenance.
-function loadClassModules(pattern: Record<string, { default: ContentEntry[] }>): ContentEntry[] {
-  return Object.values(pattern).flatMap((mod) => mod.default);
-}
-
-const classes2014 = loadClassModules(
-  import.meta.glob('@data/2014/classes/*.json', { eager: true }) as Record<string, { default: ContentEntry[] }>,
-);
-const classes2024 = loadClassModules(
-  import.meta.glob('@data/2024/classes/*.json', { eager: true }) as Record<string, { default: ContentEntry[] }>,
-);
-
-// Seed content ships as static JSON (never stored in IndexedDB) so new app
-// versions "migrate" seed data simply by shipping a new build.
-//
-// features.json holds only features nothing references — browsable Library
-// content. Features that belong to a class, subclass, species, or background
-// live alongside their referrer in that entry's own file.
-const SEED_BY_EDITION: Record<Edition, ContentEntry[]> = {
+/**
+ * Seed content, one lazily-loaded chunk per edition.
+ *
+ * Statically importing both editions put every byte of spells.json and
+ * items.json for 2014 *and* 2024 into the entry bundle — about 1.9 MB of raw
+ * JSON, downloaded and parsed before first paint. A character is edition-locked
+ * by design, so a player opening a 5e sheet was paying the full cost of 5.5e
+ * content they can never reference.
+ *
+ * Non-eager glob instead: each file becomes its own chunk, fetched only when an
+ * edition is first asked for. `loadContentIndex` was already async and
+ * useContentIndex already renders a loading state, so nothing above this had to
+ * change.
+ *
+ * Globbed rather than listed so adding a class or content file needs no import
+ * list maintenance — the same reason the classes directory was already globbed.
+ */
+const SEED_GLOBS: Record<Edition, Glob[]> = {
   '2014': [
-    ...(spells2014 as ContentEntry[]),
-    ...(items2014 as ContentEntry[]),
-    ...(species2014 as ContentEntry[]),
-    ...(backgrounds2014 as ContentEntry[]),
-    ...(feats2014 as ContentEntry[]),
-    ...(features2014 as ContentEntry[]),
-    ...classes2014,
+    import.meta.glob('@data/2014/*.json') as Glob,
+    import.meta.glob('@data/2014/classes/*.json') as Glob,
   ],
   '2024': [
-    ...(spells2024 as ContentEntry[]),
-    ...(items2024 as ContentEntry[]),
-    ...(species2024 as ContentEntry[]),
-    ...(backgrounds2024 as ContentEntry[]),
-    ...(feats2024 as ContentEntry[]),
-    ...(features2024 as ContentEntry[]),
-    ...classes2024,
+    import.meta.glob('@data/2024/*.json') as Glob,
+    import.meta.glob('@data/2024/classes/*.json') as Glob,
   ],
 };
 
+/**
+ * Parsed seed entries per edition. Seed content is immutable for the life of a
+ * build — new app versions "migrate" it simply by shipping new JSON — so one
+ * fetch-and-parse per edition per session is all that is ever needed, and
+ * switching back and forth between editions stays instant.
+ */
+const seedCache = new Map<Edition, Promise<ContentEntry[]>>();
+
+function loadSeed(edition: Edition): Promise<ContentEntry[]> {
+  let pending = seedCache.get(edition);
+  if (!pending) {
+    // Cached as the promise, not the result: two components mounting at once
+    // would otherwise each kick off their own fetch of the same chunks.
+    pending = Promise.all(
+      SEED_GLOBS[edition].flatMap((glob) => Object.values(glob).map((importModule) => importModule())),
+    ).then((modules) => modules.flatMap((m) => m.default));
+    seedCache.set(edition, pending);
+  }
+  return pending;
+}
+
 /** Seed entries merged with this edition's custom/imported IndexedDB entries. */
 export async function loadContentIndex(edition: Edition): Promise<ContentEntry[]> {
-  const seed = SEED_BY_EDITION[edition];
-  const custom = await contentRepo.listByEdition(edition);
+  const [seed, custom] = await Promise.all([loadSeed(edition), contentRepo.listByEdition(edition)]);
 
   const merged = new Map<string, ContentEntry>();
   for (const entry of seed) merged.set(entry.id, entry);

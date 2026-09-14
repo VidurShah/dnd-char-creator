@@ -13,7 +13,7 @@ import { ChatPanel } from './ChatPanel';
 export function AdvisorTray({ character, sheet, index }: { character: Character; sheet: DerivedSheet; index: Map<string, ContentEntry> }) {
   const [open, setOpen] = useState(false);
   // Held here (not in ChatPanel) so the conversation survives closing the tray;
-  // only the explicit Clear button wipes it.
+  // only an explicit "New chat" wipes it.
   const [messages, setMessages] = useState<ChatMessage[]>([]);
 
   return (
@@ -32,14 +32,20 @@ export function AdvisorTray({ character, sheet, index }: { character: Character;
           <div className="mb-3 flex items-center justify-between">
             <h2 className="font-display text-lg text-ink-900 dark:text-kraft-100">Advisor</h2>
             <div className="flex items-center gap-3">
+              {/*
+                "New chat" rather than "Clear": the same wipe, framed as the
+                thing a player actually wants. It is also the remedy the server
+                names when a long conversation trips the shared-key size ceiling,
+                so the label has to match that wording.
+              */}
               <button
                 type="button"
                 onClick={() => setMessages([])}
                 disabled={messages.length === 0}
-                title="Forget this conversation and start fresh"
-                className="font-mono text-[11px] uppercase tracking-wide text-ink-500 underline hover:text-rust-500 disabled:cursor-default disabled:opacity-30 disabled:hover:text-ink-500 dark:text-kraft-300"
+                title="Start a fresh conversation about this character"
+                className="border-2 border-ink-900/30 px-2 py-1 font-mono text-[11px] uppercase tracking-wide text-ink-700 hover:border-ink-900/60 disabled:cursor-default disabled:opacity-30 disabled:hover:border-ink-900/30 dark:border-kraft-100/30 dark:text-kraft-200"
               >
-                Clear
+                New chat
               </button>
               <button
                 type="button"

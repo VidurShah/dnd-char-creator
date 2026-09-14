@@ -53,7 +53,8 @@ export function CharactersPage() {
     <div>
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
         <h1 className="font-display text-xl text-ink-900 dark:text-kraft-100">Characters</h1>
-        <div className="flex items-center gap-2">
+        {/* Wraps: five action buttons measured 457px against a 390px viewport. */}
+        <div className="flex flex-wrap items-center gap-2">
           <button
             type="button"
             onClick={handleExportVault}

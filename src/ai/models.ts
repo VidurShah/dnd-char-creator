@@ -8,6 +8,18 @@
 // geminiClient.ts still enforces a request timeout + one transient-error retry as a
 // safety net. Re-verify a model with a real function-calling call before switching:
 //   curl ".../models/<id>:generateContent?key=$GEMINI_API_KEY" -d '{"contents":[...],"tools":[...]}'
-export const AI_MODELS = [{ id: 'gemini-3.1-flash-lite', label: 'Gemini 3.1 Flash Lite' }] as const;
+// The id list itself lives in src/schema/aiProxy.ts, which the server imports to
+// enforce the allowlist — a client-side list alone is only a suggestion, since
+// /api/ai/generate is reachable directly.
+import { AI_MODEL_IDS, type AiModelId } from '@/schema/aiProxy';
 
-export const DEFAULT_AI_MODEL = 'gemini-3.1-flash-lite';
+const LABELS: Record<AiModelId, string> = {
+  'gemini-3.1-flash-lite': 'Gemini 3.1 Flash Lite',
+};
+
+export const AI_MODELS = AI_MODEL_IDS.map((id) => ({ id, label: LABELS[id] }));
+
+// Annotated `string`, not AiModelId: callers hold it in useState and assign a
+// saved id back, so a literal type here would narrow that state to one value.
+// Derived from the allowlist so the default is always a member of it.
+export const DEFAULT_AI_MODEL: string = AI_MODEL_IDS[0];
