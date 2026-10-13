@@ -26,7 +26,8 @@
     "extract:compile": "tsx scripts/extract/compile.ts",
     "dev:api": "tsx watch --env-file-if-exists=.env server/dev.ts",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "dotenv -e .env -- tsx scripts/migrate.ts"
+    "db:migrate": "dotenv -e .env -- tsx scripts/migrate.ts",
+    "check:bundle": "tsx scripts/checkBundleSize.ts"
   },
   "dependencies": {
     "@clerk/express": "^2.1.64",
@@ -50,6 +51,7 @@
     "zustand": "^5.0.14"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "^0.5.9",
     "@tailwindcss/vite": "^4.3.3",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
