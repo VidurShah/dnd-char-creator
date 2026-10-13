@@ -48,7 +48,15 @@ function loadSeed(edition: Edition): Promise<ContentEntry[]> {
     // would otherwise each kick off their own fetch of the same chunks.
     pending = Promise.all(
       SEED_GLOBS[edition].flatMap((glob) => Object.values(glob).map((importModule) => importModule())),
-    ).then((modules) => modules.flatMap((m) => m.default));
+    )
+      .then((modules) => modules.flatMap((m) => m.default))
+      .catch((err: unknown) => {
+        // Don't cache a failure. Opening an uncached edition offline rejects
+        // here; without this the rejection would stick for the rest of the
+        // session and the edition would stay broken after reconnecting.
+        seedCache.delete(edition);
+        throw err;
+      });
     seedCache.set(edition, pending);
   }
   return pending;

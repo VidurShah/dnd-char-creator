@@ -2,8 +2,8 @@ import { useState } from 'react';
 import type { Character } from '@/schema/character';
 import type { ContentEntry } from '@/schema/content';
 import type { DerivedSheet } from '@/engine/compute';
-import type { ChatMessage } from '@/ai/geminiClient';
 import { ChatPanel } from './ChatPanel';
+import type { AdvisorMessage } from './grounding';
 
 /**
  * The per-character AI advisor as a pop-out tray on the right edge — same pattern
@@ -14,7 +14,7 @@ export function AdvisorTray({ character, sheet, index }: { character: Character;
   const [open, setOpen] = useState(false);
   // Held here (not in ChatPanel) so the conversation survives closing the tray;
   // only an explicit "New chat" wipes it.
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<AdvisorMessage[]>([]);
 
   return (
     <>

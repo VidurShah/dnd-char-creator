@@ -29,7 +29,11 @@ export default defineConfig({
          * edition, which is what makes it available offline afterwards.
          */
         chunkFileNames(chunk) {
-          const fromData = chunk.moduleIds?.some((id) => id.replace(/\\/g, '/').includes('/data/'));
+          // Only the per-edition seed directories. A bare '/data/' match also
+          // caught data/guidance/, which the builder routes import statically —
+          // landing it here kept it out of the precache, so the builder failed
+          // to load offline on a fresh install.
+          const fromData = chunk.moduleIds?.some((id) => /\/data\/(2014|2024)\//.test(id.replace(/\\/g, '/')));
           return fromData ? 'assets/data/[name]-[hash].js' : 'assets/[name]-[hash].js';
         },
       },
@@ -75,8 +79,8 @@ function pwa() {
       name: 'Grimoire',
       short_name: 'Grimoire',
       description: 'A local-first D&D 5e and 5.5e character creator and play companion.',
-      theme_color: '#e9dcc0',
-      background_color: '#e9dcc0',
+      theme_color: '#ede0c3',
+      background_color: '#ede0c3',
       display: 'standalone',
       start_url: '/characters',
       icons: [

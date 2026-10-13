@@ -95,6 +95,36 @@ describe('character share export', () => {
     expect(html).not.toMatch(/<script/i);
   });
 
+  it('prints every skill, not just the proficient ones, with proficiency marked', () => {
+    const c = wizard();
+    const { print } = buildShareModel(c, computeSheet(c, index), index);
+    expect(print.skills).toHaveLength(18);
+    expect(print.skills.find((s) => s.name === 'Arcana')).toMatchObject({ ability: 'INT' });
+    expect(print.hitDice).toEqual([{ die: 'd6', count: 1 }]);
+  });
+
+  it('adds a spell page with slot boxes for a caster, and none for a non-caster', () => {
+    const c = wizard();
+    const html = shareModelToHtml(buildShareModel(c, computeSheet(c, index), index));
+    expect(html).toContain('Spell slots');
+    // Cantrips are always known: no prepared box in front of them.
+    expect(html).toMatch(/<h2>Cantrips<\/h2><ul class="spells"><li>Mage Hand/);
+
+    const fighter = wizard();
+    fighter.build.classes = [{ classRef: '2014/class/fighter', levels: 1, decisionsByLevel: {} }];
+    fighter.build.levelOrder = [{ classRef: '2014/class/fighter' }];
+    fighter.build.knownSpells = [];
+    const plain = shareModelToHtml(buildShareModel(fighter, computeSheet(fighter, index), index));
+    expect(plain).not.toContain('Spell slots');
+  });
+
+  it('includes full feature text only when asked', () => {
+    const c = wizard();
+    const model = buildShareModel(c, computeSheet(c, index), index);
+    expect(shareModelToHtml(model)).toContain('Features &amp; traits</p>');
+    expect(shareModelToHtml(model, { includeReference: false })).not.toContain('Features &amp; traits</p>');
+  });
+
   it('escapes HTML-special characters in user text', () => {
     const c = wizard();
     c.name = 'Bob <script>alert(1)</script>';
