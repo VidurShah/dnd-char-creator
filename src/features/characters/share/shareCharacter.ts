@@ -1,6 +1,7 @@
 import type { Character } from '@/schema/character';
 import type { ContentEntry } from '@/schema/content';
-import type { DerivedSheet } from '@/engine/compute';
+import { SKILL_ABILITY, type DerivedSheet } from '@/engine/compute';
+import type { Skill } from '@/schema/common';
 import { ABILITY_LABEL, ABILITY_ORDER } from '../builder/builderState';
 import { humanizeSkill, humanizeSlug } from '@/lib/text';
 
@@ -31,6 +32,26 @@ export interface ShareModel {
   inventory: string[];
   currency?: string;
   lore: { label: string; value: string }[];
+  /**
+   * Structured facts for the printable sheet, which lays out what the
+   * Markdown above flattens into lines: every skill rather than only the
+   * proficient ones, slots and resources as boxes to tick, and blanks where
+   * play-time state gets written in pencil.
+   */
+  print: {
+    level: number;
+    edition: string;
+    identity: string;
+    combat: { label: string; value: string }[];
+    hp: { max: number; current: number };
+    hitDice: { die: string; count: number }[];
+    saves: { label: string; mod: string; proficient: boolean }[];
+    skills: { name: string; ability: string; mod: string; proficient: boolean }[];
+    resources: { name: string; max: number; recharge: string }[];
+    coins: { coin: string; amount: number }[];
+    slots: { label: string; count: number }[];
+    spells: { label: string; items: { name: string; alwaysPrepared: boolean }[] }[];
+  };
 }
 
 const SECTION_LABEL: Record<string, string> = {
@@ -163,7 +184,67 @@ export function buildShareModel(character: Character, sheet: DerivedSheet, index
   pushLore('Flaws', character.state.flaws);
   pushLore('Backstory', character.state.notes);
 
-  return { name: character.name, subtitle, vitals, abilities, saves, skills, otherProficiencies, attacks, spellcasting, spells, features, inventory, currency, lore };
+  const abbrev = (a: keyof typeof ABILITY_LABEL) => ABILITY_LABEL[a].slice(0, 3).toUpperCase();
+
+  const hitDice = new Map<string, number>();
+  for (const c of character.build.classes) {
+    const entry = index.get(c.classRef);
+    if (entry?.kind === 'class') hitDice.set(entry.data.hitDie, (hitDice.get(entry.data.hitDie) ?? 0) + c.levels);
+  }
+
+  const slots: { label: string; count: number }[] = [];
+  if (sheet.spellcasting) {
+    sheet.spellcasting.slots.forEach((count, lvl) => {
+      if (lvl >= 1 && count > 0) slots.push({ label: `Level ${lvl}`, count });
+    });
+    const pact = sheet.spellcasting.pactSlots;
+    if (pact) slots.push({ label: `Pact (level ${pact.level}, short rest)`, count: pact.count });
+  }
+
+  const printSpells = [...byLevel.keys()]
+    .sort((a, b) => a - b)
+    .map((level) => {
+      const items = spellRefs
+        .map((ref) => index.get(ref))
+        .filter((e): e is Extract<ContentEntry, { kind: 'spell' }> => e?.kind === 'spell' && e.data.level === level)
+        .map((e) => ({ name: e.name, alwaysPrepared: grantedSet.has(e.id) }))
+        .sort((a, b) => a.name.localeCompare(b.name));
+      return { label: level === 0 ? 'Cantrips' : `Level ${level}`, items };
+    });
+
+  const print: ShareModel['print'] = {
+    level: sheet.totalLevel,
+    edition: editionLabel,
+    identity: [species, classLine || undefined, background ? `${background} background` : undefined].filter(Boolean).join(' · '),
+    combat: [
+      { label: 'Armor Class', value: String(sheet.ac.value) },
+      { label: 'Initiative', value: mod(sheet.initiative) },
+      { label: 'Speed', value: `${sheet.speed} ft` },
+      { label: 'Proficiency', value: mod(sheet.proficiencyBonus) },
+      { label: 'Passive Perception', value: String(sheet.passivePerception) },
+    ],
+    hp: { max: sheet.hp.max, current: character.state.hp.current },
+    hitDice: [...hitDice.entries()].map(([die, count]) => ({ die, count })),
+    saves: ABILITY_ORDER.map((a) => ({ label: abbrev(a), mod: mod(sheet.savingThrows[a].mod), proficient: sheet.savingThrows[a].proficient })),
+    skills: (Object.keys(SKILL_ABILITY) as Skill[])
+      .map((skill) => ({
+        name: humanizeSkill(skill),
+        ability: abbrev(SKILL_ABILITY[skill]),
+        mod: mod(sheet.skills[skill]?.mod ?? 0),
+        proficient: sheet.skills[skill]?.proficient ?? false,
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name)),
+    resources: sheet.resources.map((r) => ({
+      name: r.label,
+      max: r.max,
+      recharge: r.recharge === 'short' ? 'short rest' : r.recharge === 'long' ? 'long rest' : '',
+    })),
+    coins: (['pp', 'gp', 'ep', 'sp', 'cp'] as const).map((coin) => ({ coin: coin.toUpperCase(), amount: cur[coin] })),
+    slots,
+    spells: printSpells,
+  };
+
+  return { name: character.name, subtitle, vitals, abilities, saves, skills, otherProficiencies, attacks, spellcasting, spells, features, inventory, currency, lore, print };
 }
 
 // --- Markdown ---------------------------------------------------------------
@@ -226,93 +307,248 @@ function esc(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-export function shareModelToHtml(m: ShareModel): string {
-  const abilityCells = m.abilities
-    .map((a) => `<div class="stat"><div class="k">${esc(a.label)}</div><div class="v">${a.score}</div><div class="m">${esc(a.mod)}</div></div>`)
+/** `n` empty checkboxes, for ticking off slots, uses, and hit dice in pencil. */
+function boxes(n: number): string {
+  return n > 0 ? `<span class="boxes">${'<i></i>'.repeat(Math.min(n, 20))}</span>` : '';
+}
+
+function dot(filled: boolean): string {
+  return `<span class="dot${filled ? ' on' : ''}"></span>`;
+}
+
+export interface ShareHtmlOptions {
+  /**
+   * Append the full text of every feature and the roleplay notes after the
+   * sheet. Defaults on for the downloaded file, which should be complete; the
+   * print button lets the player leave it off to keep a level-1 sheet on one
+   * page.
+   */
+  includeReference?: boolean;
+}
+
+/**
+ * A self-contained HTML character sheet, laid out to print like one.
+ *
+ * Page 1 is the sheet a player keeps on the table: abilities, saves and every
+ * skill, combat numbers, attacks, features with uses to tick, equipment and
+ * coin — with blank boxes for current HP, temp HP and notes, since the point
+ * of paper is writing on it. Spellcasters get a second page with slots to tick
+ * and the spell list with prepared boxes. The optional reference pages carry
+ * full feature text.
+ *
+ * Print-to-PDF from the browser is the delivery mechanism, so it needs no PDF
+ * library, no network, and no script: it prints the same offline.
+ */
+export function shareModelToHtml(m: ShareModel, { includeReference = true }: ShareHtmlOptions = {}): string {
+  const p = m.print;
+
+  const abilities = m.abilities
+    .map(
+      (a) =>
+        `<div class="ability"><div class="lbl">${esc(a.label.slice(0, 3).toUpperCase())}</div><div class="mod">${esc(a.mod)}</div><div class="score">${a.score}</div></div>`,
+    )
     .join('');
-  const vitalCells = m.vitals.map((v) => `<div class="pill"><span class="pk">${esc(v.label)}</span><span class="pv">${esc(v.value)}</span></div>`).join('');
-  const profRows = m.otherProficiencies.map((p) => `<p><b>${esc(p.label)}:</b> ${esc(p.value)}</p>`).join('');
+
+  const saves = p.saves
+    .map((sv) => `<li>${dot(sv.proficient)}<span class="name">${esc(sv.label)}</span><span class="num">${esc(sv.mod)}</span></li>`)
+    .join('');
+
+  const skills = p.skills
+    .map(
+      (sk) =>
+        `<li>${dot(sk.proficient)}<span class="name">${esc(sk.name)} <small>${esc(sk.ability)}</small></span><span class="num">${esc(sk.mod)}</span></li>`,
+    )
+    .join('');
+
+  const combat = p.combat.map((c) => `<div class="stat"><div class="v">${esc(c.value)}</div><div class="lbl">${esc(c.label)}</div></div>`).join('');
+
+  const hitDice = p.hitDice.map((h) => `<span class="hd">${h.count}${esc(h.die)} ${boxes(h.count)}</span>`).join(' ');
 
   const attacks = m.attacks.length
-    ? `<section><h2>Attacks</h2>${m.attacks
-        .map((a) => `<p><b>${esc(a.name)}</b> — ${esc(a.attack)} to hit, ${esc(a.damage)}</p>`)
-        .join('')}</section>`
-    : '';
+    ? `<table class="attacks"><thead><tr><th>Attack</th><th>To hit</th><th>Damage</th></tr></thead><tbody>${m.attacks
+        .map((a) => `<tr><td>${esc(a.name)}</td><td>${esc(a.attack)}</td><td>${esc(a.damage)}</td></tr>`)
+        .join('')}</tbody></table>`
+    : '<p class="muted">No attacks.</p>';
 
-  const spellcasting = m.spellcasting
-    ? `<section><h2>Spellcasting</h2><p>${esc(m.spellcasting.line)}</p><p><b>Slots:</b> ${esc(m.spellcasting.slots)}</p>${m.spells
-        .map((g) => `<p><b>${esc(g.label)}:</b> ${esc(g.names.join(', '))}</p>`)
-        .join('')}</section>`
-    : '';
+  const resources = p.resources
+    .map((r) => `<li><b>${esc(r.name)}</b> ${boxes(r.max)}${r.recharge ? ` <small>/ ${esc(r.recharge)}</small>` : ''}</li>`)
+    .join('');
+  const featureNames = m.features
+    .flatMap((g) => g.items.map((f) => f.name))
+    .filter((name, i, all) => all.indexOf(name) === i)
+    .map((name) => `<li>${esc(name)}</li>`)
+    .join('');
 
-  const features = m.features.length
-    ? `<section><h2>Features &amp; Traits</h2>${m.features
-        .map(
-          (g) =>
-            `<h3>${esc(g.section)}</h3>${g.items
-              .map((f) => `<details><summary>${esc(f.name)}</summary>${f.description ? `<p>${esc(f.description)}</p>` : ''}</details>`)
-              .join('')}`,
-        )
-        .join('')}</section>`
-    : '';
+  const equipment = m.inventory.map((i) => `<li>${esc(i)}</li>`).join('');
+  const coins = p.coins.map((c) => `<div class="coin"><div class="lbl">${c.coin}</div><div class="v">${c.amount || ''}</div></div>`).join('');
 
-  const equipment =
-    m.inventory.length || m.currency
-      ? `<section><h2>Equipment</h2><ul>${m.inventory.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>${
-          m.currency ? `<p><b>Coin:</b> ${esc(m.currency)}</p>` : ''
-        }</section>`
+  const proficiencies = m.otherProficiencies.map((x) => `<p><b>${esc(x.label)}:</b> ${esc(x.value)}</p>`).join('');
+
+  const spellPage =
+    m.spellcasting || p.spells.length
+      ? `<section class="page">
+  <header class="sheet-head"><h1>${esc(m.name)}</h1><p class="ident">Spellcasting</p></header>
+  ${m.spellcasting ? `<div class="box"><p class="caster">${esc(m.spellcasting.line)}</p></div>` : ''}
+  ${
+    p.slots.length
+      ? `<div class="box"><h2>Spell slots</h2><ul class="slots">${p.slots
+          .map((sl) => `<li><span class="name">${esc(sl.label)}</span>${boxes(sl.count)}</li>`)
+          .join('')}</ul></div>`
+      : ''
+  }
+  <div class="spell-cols">${p.spells
+    .map(
+      (g) =>
+        `<div class="box keep"><h2>${esc(g.label)}</h2><ul class="spells">${g.items
+          // Cantrips are always known, so they get no prepared box.
+          .map((sp) => `<li>${sp.alwaysPrepared ? dot(true) : g.label === 'Cantrips' ? '' : '<i class="check"></i>'}${esc(sp.name)}</li>`)
+          .join('')}</ul></div>`,
+    )
+    .join('')}</div>
+  <p class="legend">${dot(true)} always prepared · <i class="check"></i> tick the ones you have prepared</p>
+</section>`
       : '';
 
-  const lore = m.lore.length
-    ? `<section><h2>Roleplay</h2>${m.lore.map((l) => `<p><b>${esc(l.label)}:</b> ${esc(l.value)}</p>`).join('')}</section>`
-    : '';
+  const referencePage =
+    includeReference && (m.features.length || m.lore.length)
+      ? `<section class="page reference">
+  <header class="sheet-head"><h1>${esc(m.name)}</h1><p class="ident">Features &amp; traits</p></header>
+  ${m.features
+    .map(
+      (g) =>
+        `<h2>${esc(g.section)}</h2>${g.items
+          .map((f) => `<div class="keep feat"><h3>${esc(f.name)}</h3>${f.description ? `<p>${esc(f.description)}</p>` : ''}</div>`)
+          .join('')}`,
+    )
+    .join('')}
+  ${m.lore.length ? `<h2>Roleplay</h2>${m.lore.map((l) => `<div class="keep feat"><h3>${esc(l.label)}</h3><p>${esc(l.value)}</p></div>`).join('')}` : ''}
+</section>`
+      : '';
 
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(m.name)} — character sheet</title>
 <style>
-  :root { --ink:#2b2620; --kraft:#f4ecd8; --rust:#b5502f; --line:rgba(43,38,32,.18); }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--kraft); color:var(--ink); font:16px/1.5 ui-serif,Georgia,'Times New Roman',serif; }
-  .wrap { max-width: 800px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
-  h1 { margin:0 0 .1rem; font-size: 2rem; }
-  .subtitle { color: var(--rust); font-style: italic; margin: 0 0 1rem; }
-  .pills { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.25rem; }
-  .pill { border:1px solid var(--line); padding:.25rem .6rem; font-size:.8rem; }
-  .pk { text-transform:uppercase; letter-spacing:.04em; opacity:.6; margin-right:.4rem; }
-  .pv { font-weight:600; }
-  .stats { display:grid; grid-template-columns:repeat(6,1fr); gap:.5rem; margin:0 0 1.25rem; }
-  .stat { border:2px solid var(--line); text-align:center; padding:.5rem .25rem; }
-  .stat .k { font-size:.7rem; text-transform:uppercase; letter-spacing:.05em; opacity:.6; }
-  .stat .v { font-size:1.5rem; font-weight:700; line-height:1.1; }
-  .stat .m { font-size:.85rem; color:var(--rust); }
-  section { margin-top:1.5rem; }
-  h2 { font-size:1.15rem; border-bottom:2px solid var(--line); padding-bottom:.2rem; margin:0 0 .6rem; }
-  h3 { font-size:.95rem; text-transform:uppercase; letter-spacing:.04em; opacity:.7; margin:1rem 0 .3rem; }
-  p { margin:.35rem 0; }
-  details { border-bottom:1px solid var(--line); padding:.3rem 0; }
-  summary { cursor:pointer; font-weight:600; }
-  details p { font-size:.9rem; opacity:.9; white-space:pre-line; margin:.4rem 0 .2rem 1rem; }
-  ul { margin:.3rem 0; padding-left:1.2rem; }
-  footer { margin-top:2rem; padding-top:.75rem; border-top:1px solid var(--line); font-size:.75rem; opacity:.55; }
-  @media (prefers-color-scheme: dark) { :root { --ink:#e8dcc0; --kraft:#211d17; --line:rgba(232,220,192,.2); } }
-  @media print { body { background:#fff; color:#000; } .pill,.stat { border-color:#999; } details[open] summary~* { display:block; } details:not([open]) > *:not(summary){ } }
+  /* One fixed paper look, on screen and in print: this page is a sheet, not an app. */
+  :root { --ink:#1f1b16; --muted:#6b6257; --line:#1f1b16; --soft:#c9bfae; --paper:#fffdf8; --desk:#e9e2d3; }
+  * { box-sizing:border-box; }
+  html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body { margin:0; background:var(--desk); color:var(--ink); font:10pt/1.35 ui-serif,Georgia,'Times New Roman',serif; }
+  /* 186mm fits inside both A4 and US Letter at 12mm margins, so one layout prints on either. */
+  .page { width:186mm; margin:12mm auto; padding:8mm; background:var(--paper); box-shadow:0 1px 6px rgba(0,0,0,.15); }
+  @media screen and (max-width: 800px) { .page { width:auto; margin:12px; padding:14px; } }
+  h1 { margin:0; font-size:20pt; line-height:1.1; }
+  h2 { margin:0 0 1.5mm; font:700 7.5pt/1.2 ui-sans-serif,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
+  h3 { margin:0; font-size:10pt; }
+  p { margin:1mm 0; }
+  ul { list-style:none; margin:0; padding:0; }
+  small, .muted { color:var(--muted); }
+  .sheet-head { display:flex; justify-content:space-between; align-items:flex-end; gap:6mm; border-bottom:1.5pt solid var(--line); padding-bottom:2mm; margin-bottom:3mm; }
+  .ident { margin:0; text-align:right; color:var(--muted); font-size:9pt; }
+  .ident b { color:var(--ink); }
+  .box { border:1pt solid var(--line); border-radius:1.5mm; padding:2mm 2.5mm; }
+  .keep, .box { break-inside:avoid; page-break-inside:avoid; }
+
+  .grid { display:grid; grid-template-columns:24mm 1fr 1fr; gap:3mm; }
+  .abilities { display:flex; flex-direction:column; gap:2mm; }
+  .ability { border:1pt solid var(--line); border-radius:1.5mm; text-align:center; padding:.8mm 0 1.2mm; }
+  .ability .lbl, .stat .lbl, .coin .lbl { font:700 6.5pt ui-sans-serif,system-ui,sans-serif; letter-spacing:.08em; color:var(--muted); text-transform:uppercase; }
+  .ability .mod { font-size:16pt; font-weight:700; line-height:1.1; }
+  .ability .score { display:inline-block; min-width:9mm; border:1pt solid var(--soft); border-radius:3mm; font-size:8.5pt; }
+  .col { display:flex; flex-direction:column; gap:3mm; min-width:0; }
+
+  .stats { display:grid; grid-template-columns:repeat(5,1fr); gap:2mm; }
+  .stat { border:1pt solid var(--line); border-radius:1.5mm; text-align:center; padding:1.5mm .5mm; }
+  .stat .v { font-size:12pt; font-weight:700; white-space:nowrap; }
+  .hp { display:grid; grid-template-columns:1fr 1fr; gap:2mm; }
+  .write { border:1pt solid var(--line); border-radius:1.5mm; padding:1.5mm 2mm; min-height:15mm; }
+  .write .lbl { font:700 6.5pt ui-sans-serif,system-ui,sans-serif; letter-spacing:.08em; color:var(--muted); text-transform:uppercase; }
+  .pencil { color:var(--soft); font-size:8pt; }
+  .hd { white-space:nowrap; margin-right:3mm; }
+
+  .checks li { display:flex; align-items:center; gap:1.5mm; padding:0; border-bottom:.5pt dotted var(--soft); }
+  .checks .name { flex:1; }
+  .checks .num { font-weight:700; min-width:7mm; text-align:right; }
+  .two { columns:2; column-gap:4mm; }
+  .two li { break-inside:avoid; }
+  .dot { display:inline-block; width:2.4mm; height:2.4mm; border:.8pt solid var(--line); border-radius:50%; flex:none; }
+  .dot.on { background:var(--line); }
+  .boxes { display:inline-flex; gap:.8mm; vertical-align:middle; }
+  .boxes i, i.check { display:inline-block; width:2.8mm; height:2.8mm; border:.8pt solid var(--line); flex:none; }
+  i.check { margin-right:1.5mm; vertical-align:-.4mm; }
+
+  table.attacks { width:100%; border-collapse:collapse; }
+  .attacks th { text-align:left; font:700 6.5pt ui-sans-serif,system-ui,sans-serif; letter-spacing:.08em; color:var(--muted); text-transform:uppercase; border-bottom:1pt solid var(--line); }
+  .attacks td { padding:.6mm 0; border-bottom:.5pt dotted var(--soft); }
+  .attacks td:nth-child(2) { font-weight:700; width:12mm; }
+
+  .lower { display:grid; grid-template-columns:1fr 1fr; gap:3mm; margin-top:3mm; }
+  .feats li, .equip li { padding:0; border-bottom:.5pt dotted var(--soft); }
+  .coins { display:grid; grid-template-columns:repeat(5,1fr); gap:1.5mm; margin-top:2mm; }
+  .coin { border:1pt solid var(--line); border-radius:1.5mm; text-align:center; min-height:9mm; }
+  .coin .v { font-size:9pt; }
+  .notes { min-height:42mm; background:repeating-linear-gradient(transparent 0 6.5mm, var(--soft) 6.5mm calc(6.5mm + .5pt)); }
+  .profs { margin-top:3mm; font-size:8.5pt; }
+
+  .caster { font-weight:700; margin:0; }
+  .slots li { display:flex; align-items:center; gap:3mm; padding:.6mm 0; }
+  .slots .name { min-width:45mm; }
+  .spell-cols { columns:2; column-gap:3mm; margin-top:3mm; }
+  .spell-cols .box { margin-bottom:3mm; }
+  .spells li { padding:.4mm 0; border-bottom:.5pt dotted var(--soft); display:flex; align-items:center; gap:1.5mm; }
+  .legend { color:var(--muted); font-size:8pt; }
+  .page > .box { margin-top:3mm; }
+
+  .reference h2 { margin-top:4mm; }
+  .reference .feat { margin:0 0 2.5mm; }
+  .reference .feat p { white-space:pre-line; font-size:9pt; }
+
+  @page { size:auto; margin:12mm; }
+  @media print {
+    body { background:none; }
+    .page { width:auto; margin:0; padding:0; box-shadow:none; }
+    .page + .page { break-before:page; page-break-before:always; }
+  }
 </style></head>
-<body><div class="wrap">
-  <h1>${esc(m.name)}</h1>
-  <p class="subtitle">${esc(m.subtitle)}</p>
-  <div class="pills">${vitalCells}</div>
-  <div class="stats">${abilityCells}</div>
-  <section><h2>Proficiencies</h2>
-    <p><b>Saving Throws:</b> ${esc(m.saves)} <span style="opacity:.6">(* = proficient)</span></p>
-    <p><b>Skills:</b> ${esc(m.skills)}</p>
-    ${profRows}
-  </section>
-  ${attacks}
-  ${spellcasting}
-  ${features}
-  ${equipment}
-  ${lore}
-  <footer>Made with Grimoire.</footer>
-</div></body></html>`;
+<body>
+<section class="page">
+  <header class="sheet-head">
+    <div><h1>${esc(m.name)}</h1></div>
+    <p class="ident"><b>${esc(p.identity)}</b><br>Level ${p.level} · ${esc(p.edition)}</p>
+  </header>
+  <div class="grid">
+    <div class="abilities">${abilities}</div>
+    <div class="col">
+      <div class="box"><h2>Saving throws</h2><ul class="checks">${saves}</ul></div>
+      <div class="box"><h2>Skills</h2><ul class="checks">${skills}</ul></div>
+    </div>
+    <div class="col">
+      <div class="stats">${combat}</div>
+      <div class="hp">
+        <div class="write"><div class="lbl">Current HP</div><div class="pencil">max ${p.hp.max}</div></div>
+        <div class="write"><div class="lbl">Temp HP</div></div>
+      </div>
+      <div class="box"><h2>Hit dice</h2>${hitDice || '<span class="muted">—</span>'}
+        <h2 style="margin-top:2mm">Death saves</h2>
+        <span class="hd">Successes ${boxes(3)}</span> <span class="hd">Failures ${boxes(3)}</span>
+      </div>
+      <div class="box keep"><h2>Attacks</h2>${attacks}</div>
+      <div class="box keep"><h2>Features &amp; traits</h2>
+        ${resources ? `<ul class="feats">${resources}</ul>` : ''}
+        <ul class="feats two">${featureNames}</ul>
+      </div>
+    </div>
+  </div>
+  <div class="lower">
+    <div class="box keep"><h2>Equipment</h2>
+      <ul class="equip two">${equipment || '<li class="muted">—</li>'}</ul>
+      <div class="coins">${coins}</div>
+    </div>
+    <div class="box notes keep"><h2>Notes</h2></div>
+  </div>
+  ${proficiencies ? `<div class="profs">${proficiencies}</div>` : ''}
+</section>
+${spellPage}
+${referencePage}
+</body></html>`;
 }

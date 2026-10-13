@@ -817,7 +817,7 @@ function humanizeResourceId(id: string): string {
     .join(' ');
 }
 
-const SKILL_ABILITY: Record<Skill, Ability> = {
+export const SKILL_ABILITY: Record<Skill, Ability> = {
   acrobatics: 'dex',
   animalHandling: 'wis',
   arcana: 'int',
