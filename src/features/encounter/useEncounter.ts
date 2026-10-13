@@ -48,20 +48,32 @@ export function useEncounter(): {
  */
 export function useEditionIndexes(editions: Edition[]): Partial<Record<Edition, Map<string, ContentEntry>>> {
   const [indexes, setIndexes] = useState<Partial<Record<Edition, Map<string, ContentEntry>>>>({});
+  /** Bumped when the network comes back, to retry an edition that failed to load offline. */
+  const [attempt, setAttempt] = useState(0);
   const key = [...new Set(editions)].sort().join(',');
+
+  useEffect(() => {
+    const retry = () => setAttempt((n) => n + 1);
+    window.addEventListener('online', retry);
+    return () => window.removeEventListener('online', retry);
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
     for (const edition of key ? (key.split(',') as Edition[]) : []) {
-      loadContentIndex(edition).then((entries) => {
-        if (cancelled) return;
-        setIndexes((prev) => (prev[edition] ? prev : { ...prev, [edition]: new Map(entries.map((e) => [e.id, e])) }));
-      });
+      loadContentIndex(edition)
+        .then((entries) => {
+          if (cancelled) return;
+          setIndexes((prev) => (prev[edition] ? prev : { ...prev, [edition]: new Map(entries.map((e) => [e.id, e])) }));
+        })
+        // The loader drops a failed load from its cache, so the 'online'
+        // retry above refetches instead of replaying the failure.
+        .catch((err: unknown) => console.warn(`[encounter] could not load ${edition} content`, err));
     }
     return () => {
       cancelled = true;
     };
-  }, [key]);
+  }, [key, attempt]);
 
   return indexes;
 }
