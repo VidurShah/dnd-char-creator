@@ -29,3 +29,8 @@ export const WEAPON_MASTERY_DESCRIPTIONS: Record<string, string> = {
   Topple: "If you hit, you can force the target to make a Constitution saving throw (DC = 8 + prof + relevant ability mod); on a failure, it's knocked prone.",
   Vex: "If you hit, you have advantage on your next attack roll against that same target before the end of your next turn.",
 };
+
+/** Concentration save after taking damage (PHB 2024 p.364): DC 10 or half the damage, whichever is higher, to a maximum of DC 30. */
+export function concentrationDc2024(damage: number): number {
+  return Math.min(30, Math.max(10, Math.floor(damage / 2)));
+}

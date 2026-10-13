@@ -81,6 +81,12 @@ export function CharactersPage() {
             }}
           />
           <Link
+            to="/encounter"
+            className="border-2 border-ink-900/30 px-3 py-1.5 font-mono text-xs uppercase tracking-wide text-ink-700 hover:border-ink-900/60 dark:border-kraft-100/30 dark:text-kraft-200"
+          >
+            Run Encounter
+          </Link>
+          <Link
             to="/characters/templates"
             className="border-2 border-ink-900/30 px-3 py-1.5 font-mono text-xs uppercase tracking-wide text-ink-700 hover:border-ink-900/60 dark:border-kraft-100/30 dark:text-kraft-200"
           >

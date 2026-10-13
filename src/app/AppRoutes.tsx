@@ -36,6 +36,7 @@ const SettingsPage = lazy(() => import('@/features/settings/SettingsPage').then(
 const AIBuilderPage = lazy(() =>
   import('@/features/characters/ai/AIBuilderPage').then((m) => ({ default: m.AIBuilderPage })),
 );
+const EncounterPage = lazy(() => import('@/features/encounter/EncounterPage').then((m) => ({ default: m.EncounterPage })));
 const SignInPage = lazy(() => import('@/features/auth/AuthPages').then((m) => ({ default: m.SignInPage })));
 const SignUpPage = lazy(() => import('@/features/auth/AuthPages').then((m) => ({ default: m.SignUpPage })));
 
@@ -52,6 +53,7 @@ export function AppRoutes() {
         <Route path="characters/new" element={<BuilderPage />} />
         <Route path="characters/templates" element={<TemplatesPage />} />
         <Route path="characters/ai-new" element={<AIBuilderPage />} />
+        <Route path="encounter" element={<EncounterPage />} />
         <Route path="settings" element={<SettingsPage />} />
         <Route path="sign-in/*" element={<SignInPage />} />
         <Route path="sign-up/*" element={<SignUpPage />} />

@@ -19,3 +19,8 @@ export function exhaustionEffects2014(level: number): Exhaustion2014Effects {
     dead: level >= 6,
   };
 }
+
+/** Concentration save after taking damage (PHB 2014 p.203): DC 10 or half the damage, whichever is higher. */
+export function concentrationDc2014(damage: number): number {
+  return Math.max(10, Math.floor(damage / 2));
+}
