@@ -59,3 +59,25 @@ export const SyncPullResponseSchema = z.object({
   hasMore: z.boolean(),
 });
 export type SyncPullResponse = z.infer<typeof SyncPullResponseSchema>;
+
+/**
+ * Storage limits on what one account can push. Shared so the client can skip a
+ * document it already knows the server will refuse, rather than letting it
+ * wedge every push behind it.
+ *
+ * A character document is realistically a few kilobytes and a custom content
+ * entry rarely more than tens; anything near the per-document cap is a bug or
+ * abuse, not a big character.
+ */
+export const MAX_SYNC_DOC_BYTES = 512 * 1024;
+/** Live (non-deleted) rows across characters and custom content. */
+export const MAX_SYNC_ROWS = 5_000;
+/** Total stored document bytes across both tables. */
+export const MAX_SYNC_TOTAL_BYTES = 25 * 1024 * 1024;
+
+const encoder = new TextEncoder();
+
+/** Serialized UTF-8 size of a document, the unit every sync limit is measured in. */
+export function syncDocBytes(doc: unknown): number {
+  return encoder.encode(JSON.stringify(doc ?? {})).length;
+}

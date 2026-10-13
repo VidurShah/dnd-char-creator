@@ -1,10 +1,14 @@
 import { Router } from 'express';
-import { and, asc, eq, gt, sql } from 'drizzle-orm';
+import { and, asc, eq, gt, inArray, isNull, sql } from 'drizzle-orm';
 import { getDb, dbConfigured } from '../db/client.js';
 import { characters, contentEntries, SYNC_REV_SEQUENCE } from '../db/schema.js';
 import { currentUserId, requireUser } from '../lib/auth.js';
 import {
+  MAX_SYNC_DOC_BYTES,
+  MAX_SYNC_ROWS,
+  MAX_SYNC_TOTAL_BYTES,
   SyncPushRequestSchema,
+  syncDocBytes,
   type SyncChange,
   type SyncRecord,
 } from '../../src/schema/sync.js';
@@ -52,6 +56,90 @@ export function pageRecords(
 
 const TABLES = { characters, content: contentEntries } as const;
 
+/** A table's live footprint: rows and stored document bytes, tombstones excluded. */
+interface Usage {
+  rows: number;
+  bytes: number;
+}
+
+/**
+ * What the user's live footprint would be after this push, alongside what it is
+ * now.
+ *
+ * Stored sizes come from octet_length(doc::text), incoming ones from the JSON
+ * the client sent. jsonb's text form spaces things slightly differently, so the
+ * two units differ by a few percent — fine for a quota whose job is to stop a
+ * runaway, not to bill by the byte.
+ *
+ * Changes the staleness guard will go on to reject are still counted, which
+ * errs toward refusing a push near the limit rather than admitting one past it.
+ */
+async function projectUsage(
+  userId: string,
+  changes: SyncChange[],
+): Promise<{ current: Usage; projected: Usage }> {
+  const db = getDb();
+  const current: Usage = { rows: 0, bytes: 0 };
+  const projected: Usage = { rows: 0, bytes: 0 };
+
+  for (const [name, table] of Object.entries(TABLES) as [keyof typeof TABLES, typeof characters][]) {
+    const [totals] = await db
+      .select({
+        rows: sql<number>`count(*)::int`,
+        bytes: sql<number>`coalesce(sum(octet_length(${table.doc}::text)), 0)::bigint`,
+      })
+      .from(table)
+      .where(and(eq(table.userId, userId), isNull(table.deletedAt)));
+    let rows = Number(totals.rows);
+    let bytes = Number(totals.bytes);
+    current.rows += rows;
+    current.bytes += bytes;
+
+    const touched = changes.filter((c) => c.table === name);
+    if (touched.length > 0) {
+      const existing = await db
+        .select({ id: table.id, bytes: sql<number>`octet_length(${table.doc}::text)` })
+        .from(table)
+        .where(and(eq(table.userId, userId), isNull(table.deletedAt), inArray(table.id, touched.map((c) => c.id))));
+      const live = new Map(existing.map((r) => [r.id, Number(r.bytes)]));
+
+      for (const change of touched) {
+        const before = live.get(change.id);
+        if (before !== undefined) {
+          rows -= 1;
+          bytes -= before;
+        }
+        if (!change.deleted) {
+          rows += 1;
+          bytes += syncDocBytes(change.doc);
+        }
+      }
+    }
+    projected.rows += rows;
+    projected.bytes += bytes;
+  }
+
+  return { current, projected };
+}
+
+/**
+ * Returns why a push would take the user over a storage limit, or null.
+ *
+ * Only a push that *grows* usage past a limit is refused. An account already
+ * over (say, because a limit was lowered) can always shrink — deletes and
+ * smaller rewrites must go through, or there would be no way back under.
+ */
+export function quotaViolation(current: Usage, projected: Usage): string | null {
+  if (projected.rows > MAX_SYNC_ROWS && projected.rows > current.rows) {
+    return `Your cloud vault is full (${MAX_SYNC_ROWS.toLocaleString('en-US')} characters and custom entries). Delete some to keep syncing.`;
+  }
+  if (projected.bytes > MAX_SYNC_TOTAL_BYTES && projected.bytes > current.bytes) {
+    const mb = Math.round(MAX_SYNC_TOTAL_BYTES / (1024 * 1024));
+    return `Your cloud vault is full (${mb} MB). Delete some characters or custom content to keep syncing.`;
+  }
+  return null;
+}
+
 export const syncRouter: Router = Router();
 
 syncRouter.use(requireUser);
@@ -71,8 +159,28 @@ syncRouter.post('/push', async (req, res) => {
     return;
   }
   const userId = currentUserId(req)!;
-  const db = getDb();
 
+  // Every limit is checked before anything is written, so a refused push
+  // leaves the stored vault exactly as it was.
+  const oversized = parsed.data.changes.filter(
+    (c) => !c.deleted && syncDocBytes(c.doc) > MAX_SYNC_DOC_BYTES,
+  );
+  if (oversized.length > 0) {
+    res.status(413).json({
+      error: `${oversized.length === 1 ? 'A document is' : `${oversized.length} documents are`} too large to sync (limit ${MAX_SYNC_DOC_BYTES / 1024} KB each).`,
+      oversized: oversized.map((c) => ({ table: c.table, id: c.id })),
+    });
+    return;
+  }
+
+  const { current, projected } = await projectUsage(userId, parsed.data.changes);
+  const violation = quotaViolation(current, projected);
+  if (violation) {
+    res.status(413).json({ error: violation });
+    return;
+  }
+
+  const db = getDb();
   const accepted: { table: SyncChange['table']; id: string }[] = [];
   const rejected: { table: SyncChange['table']; id: string }[] = [];
 

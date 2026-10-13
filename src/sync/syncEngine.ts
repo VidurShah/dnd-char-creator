@@ -2,8 +2,10 @@ import { db } from '@/db/dexie';
 import { CharacterSchema } from '@/schema/character';
 import { ContentEntrySchema } from '@/schema/content';
 import {
+  MAX_SYNC_DOC_BYTES,
   SyncPullResponseSchema,
   SyncPushResponseSchema,
+  syncDocBytes,
   type SyncRecord,
 } from '@/schema/sync';
 import { withAuthHeaders } from '@/features/auth/authToken';
@@ -114,9 +116,18 @@ async function applyRecord(record: SyncRecord): Promise<void> {
   await (table as any).put(parsed.data);
 }
 
-async function push(): Promise<void> {
+/**
+ * Pushes the outbox. Returns how many queued documents were held back for being
+ * over the server's per-document size limit.
+ *
+ * Those are skipped here rather than sent: the server refuses the whole push
+ * when any document is oversized, so sending one would wedge every other change
+ * behind it on every run. They stay in the outbox, so if the document shrinks
+ * it uploads on the next run.
+ */
+async function push(): Promise<number> {
   const queued = await pending();
-  if (queued.length === 0) return;
+  if (queued.length === 0) return 0;
 
   const changes = await Promise.all(
     queued.map(async (entry) => ({
@@ -134,7 +145,10 @@ async function push(): Promise<void> {
 
   // A queued row whose document has since vanished locally is a delete that
   // raced its own upload; treat it as one rather than pushing an empty doc.
-  const payload = changes.map((c) => (c.doc || c.deleted ? c : { ...c, deleted: true }));
+  const all = changes.map((c) => (c.doc || c.deleted ? c : { ...c, deleted: true }));
+  const payload = all.filter((c) => c.deleted || syncDocBytes(c.doc) <= MAX_SYNC_DOC_BYTES);
+  const skipped = all.length - payload.length;
+  if (payload.length === 0) return skipped;
 
   const res = await fetch('/api/sync/push', {
     method: 'POST',
@@ -145,6 +159,7 @@ async function push(): Promise<void> {
 
   const { accepted, rejected } = SyncPushResponseSchema.parse(await res.json());
   await clear([...accepted, ...rejected]);
+  return skipped;
 }
 
 async function pull(): Promise<void> {
@@ -170,8 +185,18 @@ async function pull(): Promise<void> {
 async function runOnce(): Promise<void> {
   try {
     await setStatus({ state: 'syncing', lastSyncedAt: status.lastSyncedAt });
-    await push();
+    const skipped = await push();
     await pull();
+    if (skipped > 0) {
+      // Everything else synced, but this needs the player's attention: the
+      // document will never upload as it stands.
+      await setStatus({
+        state: 'error',
+        lastSyncedAt: Date.now(),
+        error: `${skipped === 1 ? 'One item is' : `${skipped} items are`} too large to back up (over ${MAX_SYNC_DOC_BYTES / 1024} KB). Everything else is synced.`,
+      });
+      return;
+    }
     await setStatus({ state: 'idle', lastSyncedAt: Date.now() });
   } catch (err) {
     // A failed run deliberately leaves the outbox untouched, so nothing is
