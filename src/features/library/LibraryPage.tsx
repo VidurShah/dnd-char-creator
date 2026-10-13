@@ -31,7 +31,8 @@ export function LibraryPage() {
   const [edition, setEdition] = useState<Edition>(initialEdition);
   const [activeKind, setActiveKind] = useState<ContentKind | 'all'>('all');
   const [query, setQuery] = useState('');
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  // ?entry=<id> opens straight to one entry — the advisor's citations link here.
+  const [selectedId, setSelectedId] = useState<string | null>(searchParams.get('entry'));
   const [spellFilters, setSpellFilters] = useState(emptySpellFilters());
   const [itemFilters, setItemFilters] = useState(emptyItemFilters());
 

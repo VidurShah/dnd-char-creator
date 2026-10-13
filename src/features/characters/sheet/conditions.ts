@@ -1,7 +1,8 @@
 /**
- * Standard 5e conditions. Not sourced from content data — no 'condition' kind
- * entries are seeded yet, so this is a fixed reference list for the UI until
- * that content lands.
+ * Standard 5e conditions, as the ids the sheet stores. The rules text lives in
+ * the seeded `condition` content entries (data/<edition>/conditions.json,
+ * e.g. "2014/condition/grappled"); this list stays as the fixed set of
+ * toggles the sheet offers.
  */
 export const CONDITIONS = [
   'blinded',

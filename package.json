@@ -27,7 +27,8 @@
     "dev:api": "tsx watch --env-file-if-exists=.env server/dev.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "dotenv -e .env -- tsx scripts/migrate.ts",
-    "check:bundle": "tsx scripts/checkBundleSize.ts"
+    "check:bundle": "tsx scripts/checkBundleSize.ts",
+    "seed:conditions": "tsx scripts/seed/seed-conditions.ts"
   },
   "dependencies": {
     "@clerk/express": "^2.1.64",
