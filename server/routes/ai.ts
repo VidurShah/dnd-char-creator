@@ -1,5 +1,7 @@
 import { Router } from 'express';
 import { createRateLimiter } from '../lib/rateLimit.js';
+import { consumeSharedAiQuota, SHARED_AI_LIMIT, SHARED_AI_WINDOW_MS } from '../lib/aiQuota.js';
+import { dbConfigured } from '../db/client.js';
 import { clerkConfigured, currentUserId } from '../lib/auth.js';
 import {
   AI_MODEL_IDS,
@@ -38,8 +40,14 @@ import {
 /** Upstream ceiling. These preview/thinking models intermittently stall under load. */
 const UPSTREAM_TIMEOUT_MS = 90_000;
 
-/** Per-user budget on the shared key. Own-key requests are never limited. */
-const sharedKeyLimiter = createRateLimiter(50, 60 * 60 * 1000);
+/**
+ * Per-user budget on the shared key. Own-key requests are never limited.
+ *
+ * Two layers: this per-instance map is a free first gate, and the Postgres
+ * quota behind it (lib/aiQuota.ts) is the real ceiling across instances. With
+ * no database configured — a local clone — the map is all there is.
+ */
+const sharedKeyLimiter = createRateLimiter(SHARED_AI_LIMIT, SHARED_AI_WINDOW_MS);
 
 export const aiRouter: Router = Router();
 
@@ -104,7 +112,16 @@ aiRouter.post('/generate', async (req, res) => {
   if (!ownKey && userId) {
     // Unauthenticated local use (no Clerk) is unlimited by design — it's the
     // operator's own key on their own machine.
-    const retryAfter = sharedKeyLimiter.check(userId);
+    let retryAfter = sharedKeyLimiter.check(userId);
+    if (retryAfter === null && dbConfigured) {
+      try {
+        retryAfter = await consumeSharedAiQuota(userId);
+      } catch (err) {
+        // Fail open to the in-memory gate. A database outage should cost the
+        // cross-instance accuracy of the quota, not the AI feature itself.
+        console.warn('[ai] usage quota check failed:', err instanceof Error ? err.message : err);
+      }
+    }
     if (retryAfter !== null) {
       res.set('retry-after', String(retryAfter));
       res.status(429).json({

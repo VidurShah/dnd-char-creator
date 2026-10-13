@@ -1,12 +1,11 @@
 /**
  * Dead-simple fixed-window in-memory rate limiter.
  *
- * In-memory is genuinely the right call here rather than a placeholder for
- * Redis: on Vercel each serverless instance has its own map, so the real
- * enforced ceiling is (limit x live instances). That's a leaky bucket by
- * design — it exists to stop one browser tab hammering the shared Gemini key
- * in a loop, not to be an airtight quota. Anything stricter needs per-user
- * accounting in Postgres, which arrives with accounts in Phase 2.
+ * On Vercel each serverless instance has its own map, so on its own the
+ * enforced ceiling is (limit x live instances). That's why it is only a first
+ * gate: it turns away a client already known to be over budget without a
+ * database round trip, and the shared-key quota proper lives in Postgres
+ * (lib/aiQuota.ts), where every instance sees the same count.
  */
 interface Window {
   count: number;
@@ -34,7 +33,11 @@ export function createRateLimiter(limit: number, windowMs: number): RateLimiter 
             if (now >= w.resetAt) windows.delete(k);
           }
         }
-        windows.set(key, { count: 1, resetAt: now + windowMs });
+        // Windows are aligned to the epoch rather than starting at a key's
+        // first request, matching the Postgres quota's windows. Otherwise this
+        // gate could still be refusing a user into an hour the shared quota
+        // has already reset.
+        windows.set(key, { count: 1, resetAt: Math.floor(now / windowMs) * windowMs + windowMs });
         return null;
       }
 
