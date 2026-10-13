@@ -19,7 +19,7 @@ function loadJson(filePath: string): unknown[] {
 
 function collectFiles(edition: (typeof EDITIONS)[number]): string[] {
   const dir = path.join(ROOT, 'data', edition);
-  const files = ['spells.json', 'items.json', 'feats.json', 'species.json', 'backgrounds.json', 'features.json']
+  const files = ['spells.json', 'items.json', 'feats.json', 'species.json', 'backgrounds.json', 'features.json', 'conditions.json']
     .map((f) => path.join(dir, f))
     .filter(existsSync);
   const classesDir = path.join(dir, 'classes');

@@ -43,7 +43,9 @@ export function EntryDetail({ entry, byId }: { entry: ContentEntry; byId?: Entry
       {entry.kind === 'spell' && <SpellDetail data={entry.data} />}
       {entry.kind === 'item' && <ItemDetail data={entry.data} />}
       {entry.kind === 'feat' && <FeatDetail data={entry.data} />}
-      {entry.kind === 'feature' && <p className="whitespace-pre-line text-sm leading-relaxed">{entry.data.description}</p>}
+      {(entry.kind === 'feature' || entry.kind === 'condition') && (
+        <p className="whitespace-pre-line text-sm leading-relaxed">{entry.data.description}</p>
+      )}
       {entry.kind === 'class' && <ClassDetail data={entry.data} byId={byId} />}
       {entry.kind === 'subclass' && <SubclassDetail data={entry.data} byId={byId} />}
       {entry.kind === 'species' && <SpeciesDetail data={entry.data} byId={byId} />}
