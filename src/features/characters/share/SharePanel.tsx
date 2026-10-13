@@ -3,6 +3,7 @@ import type { Character } from '@/schema/character';
 import type { ContentEntry } from '@/schema/content';
 import type { DerivedSheet } from '@/engine/compute';
 import { downloadText } from '@/lib/download';
+import { printHtml } from '@/lib/printHtml';
 import { buildShareModel, shareModelToHtml, shareModelToMarkdown } from './shareCharacter';
 
 /** Filesystem-safe slug for the download filename. */
@@ -11,9 +12,9 @@ function fileSlug(name: string): string {
 }
 
 /**
- * Popover offering three shareable renderings of one character: a copy-to-clipboard
- * text summary (paste into Discord/chat), a styled printable HTML one-pager, and the
- * raw Markdown. All derived from the live sheet — never the persisted JSON, which is
+ * Popover offering the shareable renderings of one character: a copy-to-clipboard
+ * text summary (paste into Discord/chat), a printed paper sheet, the same sheet as
+ * a downloadable HTML file, and the raw Markdown. All derived from the live sheet — never the persisted JSON, which is
  * for re-import, not reading.
  */
 export function SharePanel({
@@ -29,6 +30,7 @@ export function SharePanel({
 }) {
   const model = useMemo(() => buildShareModel(character, sheet, index), [character, sheet, index]);
   const [copied, setCopied] = useState(false);
+  const [withReference, setWithReference] = useState(false);
   const slug = fileSlug(character.name);
 
   async function copySummary() {
@@ -60,6 +62,18 @@ export function SharePanel({
         </button>
         <button
           type="button"
+          onClick={() => printHtml(shareModelToHtml(model, { includeReference: withReference }))}
+          className="border-2 border-ink-900/30 px-3 py-1.5 text-left font-mono text-xs uppercase tracking-wide text-ink-700 hover:border-rust-500 dark:border-kraft-100/30 dark:text-kraft-200"
+        >
+          Print sheet
+        </button>
+        {/* Off by default: full feature text adds pages, and the sheet is meant to fit one for a low-level character. */}
+        <label className="flex items-center gap-1.5 pl-1 text-[11px] text-ink-700 dark:text-kraft-200">
+          <input type="checkbox" checked={withReference} onChange={(e) => setWithReference(e.target.checked)} />
+          Include full feature text
+        </label>
+        <button
+          type="button"
           onClick={() => downloadText(`${slug}.html`, shareModelToHtml(model), 'text/html')}
           className="border-2 border-ink-900/30 px-3 py-1.5 text-left font-mono text-xs uppercase tracking-wide text-ink-700 hover:border-rust-500 dark:border-kraft-100/30 dark:text-kraft-200"
         >
@@ -74,7 +88,7 @@ export function SharePanel({
         </button>
       </div>
       <p className="mt-2 text-[11px] leading-snug text-ink-500 dark:text-kraft-300">
-        Text is great for chat; the HTML sheet opens in any browser and prints to PDF.
+        Text is great for chat. Print sheet lays out a paper character sheet; choose "Save as PDF" in the print dialog for a file.
       </p>
     </div>
   );

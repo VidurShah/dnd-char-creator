@@ -1,7 +1,8 @@
-/// <reference types="vitest/config" />
 import { defineConfig } from 'vite';
+import { configDefaults } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
+import { VitePWA } from 'vite-plugin-pwa';
 import path from 'node:path';
 
 /**
@@ -14,7 +15,29 @@ import path from 'node:path';
 const API_ORIGIN = process.env.API_ORIGIN ?? 'http://localhost:3000';
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), tailwindcss(), pwa()],
+  build: {
+    rollupOptions: {
+      output: {
+        /**
+         * Seed-content chunks go to assets/data/ so the service worker can tell
+         * them apart from app code by path alone. They are runtime-cached on
+         * demand rather than precached: precaching them would pull ~1.9 MB of
+         * both editions' spells and items back onto first load, undoing the
+         * split in src/content/loader.ts. Opening a character caches that
+         * edition, which is what makes it available offline afterwards.
+         */
+        chunkFileNames(chunk) {
+          // Only the per-edition seed directories. A bare '/data/' match also
+          // caught data/guidance/, which the builder routes import statically —
+          // landing it here kept it out of the precache, so the builder failed
+          // to load offline on a fresh install.
+          const fromData = chunk.moduleIds?.some((id) => /\/data\/(2014|2024)\//.test(id.replace(/\\/g, '/')));
+          return fromData ? 'assets/data/[name]-[hash].js' : 'assets/[name]-[hash].js';
+        },
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -31,5 +54,67 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: ['./tests/setup.ts'],
+    // Agent worktrees under .claude/ hold full checkouts of other branches;
+    // without this a local run also executes every one of their test copies.
+    exclude: [...configDefaults.exclude, '.claude/**'],
   },
 });
+
+/**
+ * Offline support.
+ *
+ * Grimoire is local-first in every other respect — Dexie holds the characters,
+ * computeSheet() is pure and client-side — but the app shell still had to come
+ * off the network to boot, so a play companion meant for a table in a basement
+ * or a game store simply did not open without signal. This closes that gap and
+ * makes the app installable to a phone home screen, which is how it actually
+ * gets used at a table.
+ */
+function pwa() {
+  return VitePWA({
+    registerType: 'autoUpdate',
+    includeAssets: ['favicon.svg', 'icons.svg', 'apple-touch-icon.png'],
+    manifest: {
+      name: 'Grimoire',
+      short_name: 'Grimoire',
+      description: 'A local-first D&D 5e and 5.5e character creator and play companion.',
+      theme_color: '#ede0c3',
+      background_color: '#ede0c3',
+      display: 'standalone',
+      start_url: '/characters',
+      icons: [
+        { src: 'pwa-192.png', sizes: '192x192', type: 'image/png' },
+        { src: 'pwa-512.png', sizes: '512x512', type: 'image/png' },
+        // Separate art: a maskable icon is cropped to a platform-chosen shape,
+        // so its content sits inside the safe circle rather than filling the square.
+        { src: 'pwa-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+      ],
+    },
+    workbox: {
+      // The shell only. Seed content lands in assets/data/ (see chunkFileNames)
+      // and is runtime-cached instead, so first load stays small.
+      globPatterns: ['**/*.{css,html,svg,png,ico,woff2}', 'assets/*.js'],
+      navigateFallback: 'index.html',
+      // Sync and AI must never be served stale, and must fail rather than lie
+      // when offline -- the sync engine already surfaces that as an error state.
+      navigateFallbackDenylist: [/^\/api\//],
+      runtimeCaching: [
+        {
+          // Seed content: immutable for the life of a build and content-hashed,
+          // so cache-first is safe and a new build simply misses and refetches.
+          urlPattern: ({ url }) => url.pathname.startsWith('/assets/data/'),
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'grimoire-seed-content',
+            expiration: { maxEntries: 200, maxAgeSeconds: 60 * 60 * 24 * 90 },
+            cacheableResponse: { statuses: [0, 200] },
+          },
+        },
+        {
+          urlPattern: ({ url }) => url.pathname.startsWith('/api/'),
+          handler: 'NetworkOnly',
+        },
+      ],
+    },
+  });
+}

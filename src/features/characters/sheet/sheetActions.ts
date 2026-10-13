@@ -234,3 +234,8 @@ export function rollDamage(character: Character, label: string, dice: string, mo
   void appendRoll(character, label, `${dice}${modifier >= 0 ? '+' : ''}${modifier}`, result.rolls, result.total);
   return result;
 }
+
+/** Starts or ends concentration. `on` is the spell (or effect) name, or undefined to drop it. */
+export function setConcentration(character: Character, on: string | undefined): Promise<void> {
+  return patch(character, (state) => ({ ...state, concentratingOn: on?.trim() || undefined }));
+}

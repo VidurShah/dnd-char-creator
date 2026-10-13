@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Show, useUser } from '@clerk/react';
 import { authEnabled } from '@/features/auth/clerkConfig';
+import { useOnline } from '@/lib/useOnline';
 import { requestSync, subscribeToSync, type SyncStatus } from './syncEngine';
 
 function describe(status: SyncStatus): string {
@@ -21,6 +22,7 @@ function describe(status: SyncStatus): string {
 /** Account and sync section for the Settings page. */
 export function SyncStatusPanel() {
   const [status, setStatus] = useState<SyncStatus | null>(null);
+  const online = useOnline();
   const { user } = useUser();
 
   useEffect(() => subscribeToSync(setStatus), []);
@@ -43,13 +45,16 @@ export function SyncStatusPanel() {
           Signed in as <span className="font-medium">{user?.primaryEmailAddress?.emailAddress ?? '—'}</span>
         </p>
         <p className="mt-1 text-xs text-ink-700 dark:text-kraft-200">
-          {describe(status)}
+          {/* Offline outranks the sync state: "Sync failed" is alarming and
+              unhelpful when the real answer is that there is no network and
+              nothing has been lost. */}
+          {online ? describe(status) : 'Offline — your changes are saved here and will upload when you reconnect.'}
           {status.pending > 0 && ` · ${status.pending} change${status.pending === 1 ? '' : 's'} waiting to upload`}
         </p>
         <button
           type="button"
           onClick={() => void requestSync()}
-          disabled={status.state === 'syncing'}
+          disabled={status.state === 'syncing' || !online}
           className="mt-2 border-2 border-ink-900/30 px-3 py-1.5 font-mono text-xs uppercase tracking-wide text-ink-700 hover:border-ink-900/60 disabled:opacity-50 dark:border-kraft-100/30 dark:text-kraft-200"
         >
           Sync now

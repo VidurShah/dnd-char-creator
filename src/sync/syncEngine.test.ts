@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest';
 import { db } from '@/db/dexie';
 import { enqueue, pendingCount } from './outbox';
-import { requestSync, setSyncEnabled } from './syncEngine';
+import { requestSync, setSyncEnabled, subscribeToSync, type SyncStatus } from './syncEngine';
 
 /**
  * Auth is stubbed so these tests stay hermetic. Without it they'd pick up
@@ -167,6 +167,33 @@ describe('sync engine', () => {
     // The good row still lands.
     expect(await db.characters.get('c1')).toBeDefined();
     expect(await db.characters.get('bad')).toBeUndefined();
+  });
+
+  it('holds back an oversized document without blocking the rest of the push', async () => {
+    const huge = { ...character, id: 'huge', name: 'x'.repeat(600 * 1024) };
+    await db.characters.bulkPut([character, huge] as never);
+    await enqueue('characters', 'c1', 500);
+    await enqueue('characters', 'huge', 500);
+
+    let pushed: string[] = [];
+    vi.mocked(globalThis.fetch).mockImplementation((input, init) => {
+      if (String(input).includes('/push')) {
+        const { changes } = JSON.parse(String(init?.body)) as { changes: { id: string }[] };
+        pushed = changes.map((c) => c.id);
+        return jsonResponse({ accepted: [{ table: 'characters', id: 'c1' }], rejected: [] });
+      }
+      return jsonResponse({ records: [], cursor: 0, hasMore: false });
+    });
+    let last: SyncStatus | null = null;
+    const unsubscribe = subscribeToSync((s) => (last = s));
+    await setSyncEnabled(true);
+    await requestSync();
+    unsubscribe();
+
+    expect(pushed).toEqual(['c1']);
+    // Kept, so it uploads if it ever shrinks — and visibly reported meanwhile.
+    expect(await pendingCount()).toBe(1);
+    expect(last).toMatchObject({ state: 'error', error: expect.stringContaining('too large') });
   });
 
   it('does nothing at all while signed out', async () => {

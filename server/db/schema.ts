@@ -1,4 +1,4 @@
-import { bigint, index, jsonb, pgTable, primaryKey, text, timestamp } from 'drizzle-orm/pg-core';
+import { bigint, index, integer, jsonb, pgTable, primaryKey, text, timestamp } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
 
 /**
@@ -84,4 +84,23 @@ export const feedback = pgTable(
     createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [index('feedback_user_created_idx').on(t.userId, t.createdAt)],
+);
+
+/**
+ * Shared-key AI usage, one row per user per fixed window.
+ *
+ * This is the real quota on the operator's Gemini key. The in-memory limiter in
+ * server/lib/rateLimit.ts is per serverless instance, so on its own the
+ * enforced ceiling was (limit x live instances); this table is shared by every
+ * instance. See server/lib/aiQuota.ts for the atomic increment.
+ */
+export const aiUsage = pgTable(
+  'ai_usage',
+  {
+    userId: text('user_id').notNull(),
+    /** Epoch ms at the start of the window, floored to the window length. */
+    windowStart: bigint('window_start', { mode: 'number' }).notNull(),
+    count: integer('count').notNull().default(0),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.windowStart] })],
 );

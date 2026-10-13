@@ -5,7 +5,11 @@ PHB + Tasha's) and 5.5e (2024, PHB2024). Build a character, level it up, and run
 it at the table — with an AI advisor that knows your actual sheet.
 
 Characters live in your browser (IndexedDB), so the app works offline and
-nothing leaves your machine unless you ask it to.
+nothing leaves your machine unless you ask it to. It installs to a phone home
+screen and runs with no network: the sheet, dice, HP and conditions tracking,
+and the whole content Library are all available at a table with no signal.
+Only cloud sync and the AI need a connection, and the header says so when
+there isn't one.
 
 ## Quick start
 
@@ -61,6 +65,7 @@ worth reading before touching `src/engine/` or `src/schema/`.
 | `pnpm test` | Vitest |
 | `pnpm lint` | oxlint |
 | `pnpm validate:data` | Zod-parse every seed/extraction JSON, end to end |
+| `pnpm check:ui` | drive the app in a real browser; fails on horizontal overflow at phone widths, or if the header vanishes while a route loads (needs `pnpm dev` running) |
 | `pnpm db:generate` | regenerate SQL migrations from the Drizzle schema |
 | `pnpm db:migrate` | apply `drizzle/*.sql` to `DATABASE_URL` |
 

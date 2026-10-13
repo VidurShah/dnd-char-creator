@@ -53,7 +53,8 @@ export function CharactersPage() {
     <div>
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
         <h1 className="font-display text-xl text-ink-900 dark:text-kraft-100">Characters</h1>
-        <div className="flex items-center gap-2">
+        {/* Wraps: five action buttons measured 457px against a 390px viewport. */}
+        <div className="flex flex-wrap items-center gap-2">
           <button
             type="button"
             onClick={handleExportVault}
@@ -79,6 +80,12 @@ export function CharactersPage() {
               e.target.value = '';
             }}
           />
+          <Link
+            to="/encounter"
+            className="border-2 border-ink-900/30 px-3 py-1.5 font-mono text-xs uppercase tracking-wide text-ink-700 hover:border-ink-900/60 dark:border-kraft-100/30 dark:text-kraft-200"
+          >
+            Run Encounter
+          </Link>
           <Link
             to="/characters/templates"
             className="border-2 border-ink-900/30 px-3 py-1.5 font-mono text-xs uppercase tracking-wide text-ink-700 hover:border-ink-900/60 dark:border-kraft-100/30 dark:text-kraft-200"

@@ -60,7 +60,9 @@ export function mapCandidate(candidate: ExtractionCandidate, edition: '2014' | '
             duration: candidate.duration ?? 'Instantaneous',
             concentration: candidate.concentration ?? false,
             ritual: candidate.ritual ?? false,
-            classLists: candidate.classLists ?? [],
+            // Lowercased at the boundary: every consumer matches these case-sensitively
+            // against a lowercase class id, and the model returns them capitalized.
+            classLists: (candidate.classLists ?? []).map((c) => c.toLowerCase()),
             description: candidate.description,
             higherLevels: candidate.higherLevels,
           },

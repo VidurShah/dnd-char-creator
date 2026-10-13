@@ -22,6 +22,34 @@ describe('content loader', () => {
     expect(grouped.feature?.length).toBeGreaterThan(50);
   });
 
+  // Regression: the extraction pipeline emitted 43 spells with capitalized
+  // classLists ("Wizard" not "wizard") while every SRD spell used lowercase.
+  // Every consumer matches case-sensitively, so those spells were invisible to
+  // the builder's spell pool, "+ Add Spell" on the sheet, and the Library class
+  // facet — Booming Blade and Green-Flame Blade among them. Schema-valid,
+  // type-correct, and only findable by looking at a rendered screen.
+  it.each(['2014', '2024'] as const)('stores every %s spell classList lowercase', async (edition) => {
+    const entries = await loadContentIndex(edition);
+    const offenders = entries
+      .filter((e) => e.kind === 'spell')
+      .flatMap((e) => (e.kind === 'spell' ? e.data.classLists : []))
+      .filter((c) => c !== c.toLowerCase());
+    expect(offenders).toEqual([]);
+  });
+
+  it('offers the Tasha\'s cantrips to a wizard, not just SRD ones', async () => {
+    const entries = await loadContentIndex('2014');
+    // The exact filter BuilderPage and ActionsPanel apply to build a spell pool.
+    const wizardCantrips = entries
+      .filter((e) => e.kind === 'spell' && e.data.classLists.includes('wizard') && e.data.level === 0)
+      .map((e) => e.name);
+
+    expect(wizardCantrips).toContain('Fire Bolt'); // SRD, was always present
+    expect(wizardCantrips).toContain('Booming Blade'); // extracted, was excluded
+    expect(wizardCantrips).toContain('Green-Flame Blade');
+    expect(wizardCantrips).toContain('Lightning Lure');
+  });
+
   it('finds Fireball by name search', async () => {
     const entries = await loadContentIndex('2014');
     const index = buildSearchIndex(entries);

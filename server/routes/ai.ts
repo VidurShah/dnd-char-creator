@@ -1,6 +1,14 @@
 import { Router } from 'express';
 import { createRateLimiter } from '../lib/rateLimit.js';
+import { consumeSharedAiQuota, SHARED_AI_LIMIT, SHARED_AI_WINDOW_MS } from '../lib/aiQuota.js';
+import { dbConfigured } from '../db/client.js';
 import { clerkConfigured, currentUserId } from '../lib/auth.js';
+import {
+  AI_MODEL_IDS,
+  GenerateRequestSchema,
+  MAX_SHARED_KEY_REQUEST_BYTES,
+  sharedKeyRequestBytes,
+} from '../../src/schema/aiProxy.js';
 
 /**
  * Gemini proxy. GEMINI_API_KEY stays server-side: it is read from process.env
@@ -21,30 +29,35 @@ import { clerkConfigured, currentUserId } from '../lib/auth.js';
  * person the shared key can belong to is whoever runs the server — so it stays
  * open. Otherwise a local `pnpm dev` clone with a GEMINI_API_KEY in .env would
  * be locked out of its own key with no way to sign in.
+ *
+ * Requests against the shared key are additionally constrained to the model
+ * allowlist and a size ceiling (see src/schema/aiProxy.ts). Neither applies to
+ * a player's own pasted key. The endpoint is reachable with curl, so those
+ * checks have to live here — the client's model dropdown is a UI affordance,
+ * not a control.
  */
 
 /** Upstream ceiling. These preview/thinking models intermittently stall under load. */
 const UPSTREAM_TIMEOUT_MS = 90_000;
 
-/** Per-user budget on the shared key. Own-key requests are never limited. */
-const sharedKeyLimiter = createRateLimiter(50, 60 * 60 * 1000);
-
-interface GenerateBody {
-  apiKey?: string;
-  model: string;
-  contents: unknown;
-  config: unknown;
-}
+/**
+ * Per-user budget on the shared key. Own-key requests are never limited.
+ *
+ * Two layers: this per-instance map is a free first gate, and the Postgres
+ * quota behind it (lib/aiQuota.ts) is the real ceiling across instances. With
+ * no database configured — a local clone — the map is all there is.
+ */
+const sharedKeyLimiter = createRateLimiter(SHARED_AI_LIMIT, SHARED_AI_WINDOW_MS);
 
 export const aiRouter: Router = Router();
 
 aiRouter.post('/generate', async (req, res) => {
-  const body = req.body as GenerateBody;
-
-  if (!body || typeof body.model !== 'string' || !body.model) {
-    res.status(400).json({ error: 'Request must include a model.' });
+  const parsed = GenerateRequestSchema.safeParse(req.body);
+  if (!parsed.success) {
+    res.status(400).json({ error: 'Malformed AI request.' });
     return;
   }
+  const body = parsed.data;
 
   const ownKey = body.apiKey?.trim();
   const userId = currentUserId(req);
@@ -64,10 +77,51 @@ aiRouter.post('/generate', async (req, res) => {
     return;
   }
 
+  /**
+   * Everything below constrains the *shared* key only. A player spending their
+   * own pasted key can ask for whatever model and prompt they like — it is their
+   * quota and their bill, and Grimoire has no business policing it.
+   *
+   * Without these, the endpoint is an open Gemini relay for anyone with an
+   * account: model, contents, and config went straight upstream, so the app was
+   * merely one possible client of the operator's key.
+   */
+  if (!ownKey) {
+    if (!(AI_MODEL_IDS as readonly string[]).includes(body.model)) {
+      res.status(400).json({
+        error: `Model "${body.model}" is not available on the shared key. Add your own Gemini API key in Settings to use another model.`,
+      });
+      return;
+    }
+
+    // Measured in schema/aiProxy.ts so the "config counts too" rule is one
+    // testable function rather than a line of arithmetic here.
+    if (sharedKeyRequestBytes(body) > MAX_SHARED_KEY_REQUEST_BYTES) {
+      res.status(413).json({
+        // Two very different callers hit this, and the server cannot tell them
+        // apart: someone relaying bulk content, and a player whose advisor
+        // conversation simply got long. Naming both keeps the second from being
+        // told to go buy an API key when the fix is a new chat.
+        error:
+          'That request is too large for the shared AI. If this is a long advisor conversation, start a new chat — otherwise add your own Gemini API key in Settings.',
+      });
+      return;
+    }
+  }
+
   if (!ownKey && userId) {
     // Unauthenticated local use (no Clerk) is unlimited by design — it's the
     // operator's own key on their own machine.
-    const retryAfter = sharedKeyLimiter.check(userId);
+    let retryAfter = sharedKeyLimiter.check(userId);
+    if (retryAfter === null && dbConfigured) {
+      try {
+        retryAfter = await consumeSharedAiQuota(userId);
+      } catch (err) {
+        // Fail open to the in-memory gate. A database outage should cost the
+        // cross-instance accuracy of the quota, not the AI feature itself.
+        console.warn('[ai] usage quota check failed:', err instanceof Error ? err.message : err);
+      }
+    }
     if (retryAfter !== null) {
       res.set('retry-after', String(retryAfter));
       res.status(429).json({
